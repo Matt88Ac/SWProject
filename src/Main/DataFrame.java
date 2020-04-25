@@ -10,7 +10,7 @@ public class DataFrame {
 
     public DataFrame(String Name){
 
-        this.records =  new ArrayList<String[]>();
+        this.records = new ArrayList<>();
         int i=0;
 
         BufferedReader br = null;
