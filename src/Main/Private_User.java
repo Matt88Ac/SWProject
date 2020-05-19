@@ -1,4 +1,6 @@
 package Main;
+import java.time.LocalDate;
+
 
 public class Private_User extends User {
     public Product all_prod = new Product(false);
@@ -11,6 +13,9 @@ public class Private_User extends User {
     private double Age;
     private int Gender;
     private String Email;
+    private LocalDate last_time_had_sports;
+    private double cals_burned_last_week;
+    private double hours_of_training_in_week;
 
 
     public Private_User(String us /*username*/, String ps /*password*/,
@@ -26,6 +31,11 @@ public class Private_User extends User {
         this.Country = country;
         this.Gender = gender; // 1 for a male, 0 for a female ;
         this.Email = email;
+
+        this.cals_burned_last_week = 0;
+        this.last_time_had_sports = null;
+        this.hours_of_training_in_week = 0;
+
     }
 
     public String Get_fname(){
@@ -65,6 +75,11 @@ public class Private_User extends User {
     }
 
     public void Add_product_to_private_list(){
+
+    }
+
+    public void had_sports(double calories_burned, double training_duration_in_hours){
+        this.last_time_had_sports = LocalDate.now();
 
     }
 
