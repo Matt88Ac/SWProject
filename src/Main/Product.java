@@ -16,7 +16,7 @@ public class Product {
         j_food = new ArrayList<Junk_Food>();
 
         if (private_user == true){
-
+            return;
         }
 
         else{
