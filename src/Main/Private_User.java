@@ -64,4 +64,8 @@ public class Private_User extends User {
         return this.weight;
     }
 
+    public void Add_product_to_private_list(){
+
+    }
+
 }
