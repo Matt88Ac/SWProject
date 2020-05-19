@@ -20,9 +20,11 @@ public class Product {
         }
 
         else{
-
-
-
+            this.Fill_Dry_Food();
+            this.Fill_Junk_Food();
+            this.Fill_Meds();
+            this.Fill_MFD();
+            this.Fill_Vegs();
         }
 
     }
@@ -31,6 +33,21 @@ public class Product {
 
     }
 
+    private void Fill_Junk_Food() {
+
+    }
+
+    private void Fill_Meds() {
+
+    }
+
+    private void Fill_MFD() {
+
+    }
+
+    private void Fill_Vegs() {
+
+    }
 
 
 
