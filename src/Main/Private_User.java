@@ -75,12 +75,34 @@ public class Private_User extends User {
     }
 
     public void Add_product_to_private_list(){
+        Meds meds = null;
+        Veg veg = null;
+        Meat_Fish_Dai mfd = null;
+        Dry_Food dry_food = null;
+        Junk_Food junk_food = null;
 
+
+
+        /*
+
+        Gotta add selection choices and stuff like that.
+
+
+         */
+    }
+
+    public String Get_Username() {
+        return this.username;
+    }
+
+    public String Get_Password(){
+        return this.password;
     }
 
     public void had_sports(double calories_burned, double training_duration_in_hours){
         this.last_time_had_sports = LocalDate.now();
-
     }
+
+
 
 }
