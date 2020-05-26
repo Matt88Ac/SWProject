@@ -13,14 +13,15 @@ public class Private_User extends User {
     private double Age;
     private int Gender;
     private String Email;
+    private int Purpose;
     private LocalDate last_time_had_sports;
     private double cals_burned_last_week;
     private double hours_of_training_in_week;
 
 
-    public Private_User(String us /*username*/, String ps /*password*/,
+    public Private_User(String us /*username*/, char[] ps /*password*/,
                         double weight, double height, String fname, String last_Name, String country, String city,
-                        double age, int gender, String email){
+                        double age, int gender, String email,int Purpose){
         super(us, ps);
         this.First_Name = fname;
         this.height = height;
@@ -29,9 +30,10 @@ public class Private_User extends User {
         this.Age = age;
         this.City = city;
         this.Country = country;
-        this.Gender = gender; // 1 for a male, 0 for a female ;
+        this.Gender = gender; // 1 for a female , 0 for a male ;
         this.Email = email;
-
+        this.Purpose = Purpose;//2 for Gain Weight ,1 for Stay at the same weight ,0 for  lose weight
+        
         this.cals_burned_last_week = 0;
         this.last_time_had_sports = null;
         this.hours_of_training_in_week = 0;
@@ -95,7 +97,7 @@ public class Private_User extends User {
         return this.username;
     }
 
-    public String Get_Password(){
+    public char[] Get_Password(){
         return this.password;
     }
 

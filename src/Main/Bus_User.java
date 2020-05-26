@@ -4,7 +4,7 @@ public class Bus_User extends User{
 
     private String company;
 
-    public Bus_User(String us, String ps, String company) {
+    public Bus_User(String us, char[] ps, String company) {
         super(us, ps);
         this.company = company;
     }
@@ -17,7 +17,7 @@ public class Bus_User extends User{
         return this.username;
     }
 
-    public String Get_Password(){
+    public char[] Get_Password(){
         return this.password;
     }
 
