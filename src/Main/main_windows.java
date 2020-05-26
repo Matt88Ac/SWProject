@@ -106,6 +106,25 @@ public class main_windows {
 		Button_back.setBounds(737, 472, 89, 23);
 		log_in_page.add(Button_back);
 		
+		JPanel business_page = new JPanel();
+		frame.getContentPane().add(business_page, "name_337916315403200");
+		business_page.setLayout(null);
+		
+		JLabel lblNewLabel_18 = new JLabel("business_page");
+		lblNewLabel_18.setFont(new Font("Tahoma", Font.PLAIN, 93));
+		lblNewLabel_18.setBounds(72, 71, 717, 355);
+		business_page.add(lblNewLabel_18);
+		
+		JPanel Private_User = new JPanel();
+		frame.getContentPane().add(Private_User, "name_339221586896400");
+		Private_User.setLayout(null);
+		
+		JLabel lblNewLabel_19 = new JLabel("Private_User");
+		lblNewLabel_19.setFont(new Font("Tahoma", Font.PLAIN, 90));
+		lblNewLabel_19.setBounds(51, 53, 752, 361);
+		Private_User.add(lblNewLabel_19);
+		
+		
 		name_text_Field = new JTextField();
 		name_text_Field.addKeyListener(new KeyAdapter() {
 			@Override
@@ -145,6 +164,33 @@ public class main_windows {
 								if(f.getName ().contains(name_text_Field.getText())) 
 								{
 									System.out.println(f.getName ());
+									if(f.getName ().contains("bus_")) 
+									{
+										
+										String whole=user_id +"/"+ f.getName();
+										try
+										{
+											String readF=new Scanner (new File (whole)).useDelimiter ("\\A").next ();
+											String splitHere="\n";
+											String[] tokens=readF.split(splitHere);
+											if(password_Field.getText().equals(tokens [1]))
+											{
+												log_in_page.setVisible(false);
+												business_page.setVisible(true);
+												
+											}else 
+											{
+												JOptionPane.showMessageDialog(null, "Incorrect Password." + "!");
+											}
+										
+										}catch(IOException e1) 
+										{
+										System.out.println("Error: " + e1);
+										}
+										
+										
+									}else
+									{
 								
 									String whole=user_id +"/"+ f.getName();
 									try
@@ -155,7 +201,7 @@ public class main_windows {
 										if(password_Field.getText().equals(tokens [1]))
 										{
 											log_in_page.setVisible(false);
-											admin_page.setVisible(true);
+											Private_User.setVisible(true);
 										}else 
 										{
 											JOptionPane.showMessageDialog(null, "Incorrect Password." + "!");
@@ -165,6 +211,7 @@ public class main_windows {
 									{
 									System.out.println("Error: " + e1);
 									}
+								}
 								}
 							}
 					}
@@ -836,6 +883,8 @@ public class main_windows {
 		
 		b_Button_save.setBounds(548, 472, 89, 23);
 		regist_page_Business.add(b_Button_save);
+		
+		
 		b_Button_save.addMouseListener(new MouseAdapter() {
 			@Override
 			public void mouseClicked(MouseEvent e) {
@@ -846,7 +895,7 @@ public class main_windows {
 				
 				try {
 					
-					outFile = new FileWriter ("data\\"+b_username_text_Field.getText()+".txt");
+					outFile = new FileWriter ("data\\"+"bus_"+b_username_text_Field.getText()+".txt");
 				} catch (IOException e1) {
 					System.out.println("Error: " + e1);
 				
@@ -888,7 +937,7 @@ public class main_windows {
 				
 				try {
 					
-					outFile = new FileWriter ("data\\"+b_username_text_Field.getText()+".txt");
+					outFile = new FileWriter ("data\\"+"bus_"+b_username_text_Field.getText()+".txt");
 				} catch (IOException e1) {
 					System.out.println("Error: " + e1);
 				
