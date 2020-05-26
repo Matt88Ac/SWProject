@@ -619,6 +619,7 @@ public class main_windows {
 		country_text_Field.setColumns(10);
 		
 		JPanel regist_page_Business = new JPanel();
+		regist_page_Business.setBackground(new Color(227, 227, 227));
 		
 		JButton Button_goto_Business = new JButton("\u05DE\u05E9\u05EA\u05DE\u05E9 \u05E2\u05E1\u05E7\u05D9");
 		Button_goto_Business.addMouseListener(new MouseAdapter() {
@@ -635,7 +636,15 @@ public class main_windows {
 			public void actionPerformed(ActionEvent e) {
 				
 
-				
+				if(username_text_Field.getText().isEmpty()&&passwordField.getText().isEmpty()&&weight_spinner.getValue().equals(1.0)&&
+						height_spinner.getValue().equals(1.0)&&user_name_text_Field.getText().isEmpty()&&user_lastname_text_Field.getText().isEmpty()&&
+						country_text_Field.getText().isEmpty()&&city_text_Field.getText().isEmpty()&&age_spinner.getValue().equals(1.0)&&
+						email_text_Field.getText().isEmpty())
+				{
+					JOptionPane.showMessageDialog(null, "You have to fill all" + "!");
+
+					
+				}else {
 				FileWriter outFile = null;
 				
 				try {
@@ -677,7 +686,7 @@ public class main_windows {
 						(double)weight_spinner.getValue(), (double)height_spinner.getValue(), user_name_text_Field.getText(),
 						user_lastname_text_Field.getText(),country_text_Field.getText(), city_text_Field.getText(),
 						(double)age_spinner.getValue(), Gender_comboBox.getSelectedIndex(), email_text_Field.getText(),Purpose_comboBox.getSelectedIndex());
-				
+				}	
 			}
 		});
 		
@@ -686,7 +695,16 @@ public class main_windows {
 			public void mouseClicked(MouseEvent e) {
 			
 				
-				
+				if(username_text_Field.getText().isEmpty()&&passwordField.getText().isEmpty()&&weight_spinner.getValue().equals(1.0)&&
+						height_spinner.getValue().equals(1.0)&&user_name_text_Field.getText().isEmpty()&&user_lastname_text_Field.getText().isEmpty()&&
+						country_text_Field.getText().isEmpty()&&city_text_Field.getText().isEmpty()&&age_spinner.getValue().equals(1.0)&&
+						email_text_Field.getText().isEmpty())
+				{
+					JOptionPane.showMessageDialog(null, "You have to fill all" + "!");
+
+					
+					
+				}else {
 				FileWriter outFile = null;
 				
 				try {
@@ -728,7 +746,7 @@ public class main_windows {
 						(double)weight_spinner.getValue(), (double)height_spinner.getValue(), user_name_text_Field.getText(),
 						user_lastname_text_Field.getText(),country_text_Field.getText(), city_text_Field.getText(),
 						(double)age_spinner.getValue(), Gender_comboBox.getSelectedIndex(), email_text_Field.getText(),Purpose_comboBox.getSelectedIndex());
-				
+				}
 			}
 		});
 		
@@ -883,6 +901,14 @@ public class main_windows {
 		
 		b_Button_save.setBounds(548, 472, 89, 23);
 		regist_page_Business.add(b_Button_save);
+		
+		JLabel business_gif = new JLabel("  ");
+		Image busin = new ImageIcon(this.getClass().getResource("/business.gif")).getImage();
+		business_gif.setIcon (new ImageIcon(busin));
+		
+		business_gif.setBounds(-165, -42, 703, 600);
+		regist_page_Business.add(business_gif);
+		
 		
 		
 		b_Button_save.addMouseListener(new MouseAdapter() {
