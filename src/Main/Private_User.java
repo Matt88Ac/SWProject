@@ -99,6 +99,9 @@ public class Private_User extends User {
         this.last_time_had_sports = LocalDate.now();
     }
 
+    private void Extract_Data(){
 
+
+    }
 
 }

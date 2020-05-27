@@ -3,11 +3,11 @@ import java.util.ArrayList;
 import java.util.Optional;
 
 public class Product {
-    public static ArrayList<Dry_Food> d_food = null;
-    public static ArrayList<Veg> veg_food = null;
-    public static ArrayList<Meat_Fish_Dai> MFD_food = null;
-    public static ArrayList<Junk_Food> j_food = null;
-    public static ArrayList<Meds> meds = null;
+    public ArrayList<Dry_Food> d_food = null;
+    public ArrayList<Veg> veg_food = null;
+    public ArrayList<Meat_Fish_Dai> MFD_food = null;
+    public ArrayList<Junk_Food> j_food = null;
+    public ArrayList<Meds> meds = null;
 
     public Product(boolean private_user){
 
@@ -22,7 +22,6 @@ public class Product {
         if (private_user){
             return;
         }
-
         else{
             this.Fill_Dry_Food();
             this.Fill_Junk_Food();
@@ -34,6 +33,8 @@ public class Product {
     }
 
     private void Fill_Dry_Food() {
+        Dry_Food pasta = new Dry_Food("Pasta", 131, 5, 1.1, 0.6, 25,0, 33,
+                1,0, 62,0,7,0.5,7,18,58,0.5,44);
 
     }
 
