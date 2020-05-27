@@ -3,10 +3,14 @@ package Main;
 public class Bus_User extends User{
 
     private String company;
+    private String Country;
+    private String City;
 
-    public Bus_User(String us, char[] ps, String company) {
+    public Bus_User(String us, char[] ps, String company, String city, String country) {
         super(us, ps);
         this.company = company;
+        this.City = city;
+        this.Country = country;
     }
 
     public String Get_Company_Name(){

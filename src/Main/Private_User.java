@@ -12,7 +12,6 @@ public class Private_User extends User {
     private String City;
     private double Age;
     private int Gender;
-    private String Email;
     private int Purpose;
     private LocalDate last_time_had_sports;
     private double cals_burned_last_week;
@@ -31,7 +30,6 @@ public class Private_User extends User {
         this.City = city;
         this.Country = country;
         this.Gender = gender; // 1 for a female , 0 for a male ;
-        this.Email = email;
         this.Purpose = Purpose;//2 for Gain Weight ,1 for Stay at the same weight ,0 for  lose weight
         
         this.cals_burned_last_week = 0;
@@ -46,10 +44,6 @@ public class Private_User extends User {
 
     public String Get_lname(){
         return this.Last_Name;
-    }
-
-    public String Get_Email(){
-        return this.Email;
     }
 
     public String Get_City(){
