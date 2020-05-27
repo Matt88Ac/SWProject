@@ -1,6 +1,20 @@
 package Main;
 import java.time.LocalDate;
 
+import java.io.BufferedReader;
+import java.io.File;
+import java.io.FileInputStream;
+import java.io.FileReader;
+import java.io.IOException;
+import java.io.InputStreamReader;
+import java.nio.charset.Charset;
+import java.nio.charset.StandardCharsets;
+import java.nio.file.Files;
+import java.nio.file.Path;
+import java.nio.file.Paths;
+import java.util.List;
+import java.util.Scanner;
+
 
 public class Private_User extends User {
     public Product all_prod = new Product(false);
@@ -16,7 +30,7 @@ public class Private_User extends User {
     private LocalDate last_time_had_sports;
     private double cals_burned_last_week;
     private double hours_of_training_in_week;
-
+    private String path;
 
     public Private_User(String us /*username*/, char[] ps /*password*/,
                         double weight, double height, String fname, String last_Name, String country, String city,
@@ -31,7 +45,7 @@ public class Private_User extends User {
         this.Country = country;
         this.Gender = gender; // 1 for a female , 0 for a male ;
         this.Purpose = Purpose;//2 for Gain Weight ,1 for Stay at the same weight ,0 for  lose weight
-        
+        this.path = null;
         this.cals_burned_last_week = 0;
         this.last_time_had_sports = null;
         this.hours_of_training_in_week = 0;
@@ -71,6 +85,8 @@ public class Private_User extends User {
     }
 
     public void Add_product_to_private_list(){
+        if (this.path == null){ return; }
+
         Meds meds = null;
         Veg veg = null;
         Meat_Fish_Dai mfd = null;
@@ -87,6 +103,10 @@ public class Private_User extends User {
          */
     }
 
+    public void Update_Path(String path){ this.path = path; }
+
+    public  String Get_Path(){ return this.path; }
+
     public String Get_Username() {
         return this.username;
     }
@@ -100,8 +120,7 @@ public class Private_User extends User {
     }
 
     private void Extract_Data(){
-
-
+        if(this.path == null){ return; }
     }
 
 }

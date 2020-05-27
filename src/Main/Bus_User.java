@@ -3,14 +3,15 @@ package Main;
 public class Bus_User extends User{
 
     private String company;
-    private String Country;
-    private String City;
+    private String country;
+    private String city;
+    private String path = null;
 
     public Bus_User(String us, char[] ps, String company, String city, String country) {
         super(us, ps);
         this.company = company;
-        this.City = city;
-        this.Country = country;
+        this.city = city;
+        this.country = country;
     }
 
     public String Get_Company_Name(){
@@ -26,7 +27,9 @@ public class Bus_User extends User{
     }
 
     public void Add_Product_To_Sell_List(){
-
+        if (this.path == null){
+            return;
+        }
         Meds meds = null;
         Veg veg = null;
         Meat_Fish_Dai mfd = null;
@@ -43,7 +46,19 @@ public class Bus_User extends User{
          */
     }
 
+    public void setPath(String path){
+        this.path = path;
+    }
+
+    public String getPath(){
+        return this.path;
+    }
+
     public void Pull_Product_Out(String name, String type){
+        if(this.path == null){
+            return;
+        }
+
         if (type == "Veg"){
             for (Veg veg:this.p.veg_food) {
                 if (veg.GetName() == name){
@@ -95,4 +110,11 @@ public class Bus_User extends User{
 
     }
 
+    public String getCity() {
+        return this.city;
+    }
+
+    public String getCountry() {
+        return this.country;
+    }
 }
