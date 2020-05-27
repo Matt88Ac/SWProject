@@ -50,7 +50,6 @@ public class Product {
                 1,0,68.4,0,0,0.2,10,12,43,0,35);
         this.d_food.add(rice);
 
-        
     }
 
     private void Fill_Junk_Food() {
@@ -67,13 +66,5 @@ public class Product {
     private void Fill_Vegs() {
 
     }
-
-    public void Add_Product(Optional<Veg> veg, Optional<Meds> med, Optional<Meat_Fish_Dai> mfd,
-                            Optional<Dry_Food> dfood, Optional<Junk_Food> jfood){
-
-
-    }
-
-
 
 }
