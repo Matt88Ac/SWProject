@@ -8,5 +8,4 @@ isreal
 holon
 24.0
 0
-tomas@gmail.com
 2

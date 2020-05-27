@@ -34,7 +34,7 @@ public class Private_User extends User {
 
     public Private_User(String us /*username*/, char[] ps /*password*/,
                         double weight, double height, String fname, String last_Name, String country, String city,
-                        double age, int gender, String email,int Purpose){
+                        double age, int gender,int Purpose){
         super(us, ps);
         this.First_Name = fname;
         this.height = height;
