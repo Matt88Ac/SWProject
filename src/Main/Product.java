@@ -104,6 +104,24 @@ public class Product {
         this.MFD_food.add(cooked_tilapia);
         this.MFD_food.add(cooked_salmon);
 
+        Meat_Fish_Dai raw_tuna = new Meat_Fish_Dai("Tuna", 232, 21.5, 12, 2.3,
+                9.3,2.6,83,341,0,55,2,0,1.6,69,23,
+                216,0.9,183);
+
+        this.MFD_food.add(raw_tuna);
+
+        Meat_Fish_Dai american_cheese = new Meat_Fish_Dai("American Cheese", 307, 16.1, 23, 6.2,
+                9,13,78,1279,0,45,0,0,1,1375,34,
+                768,2.2,295);
+
+        Meat_Fish_Dai cotege_cheese = new Meat_Fish_Dai("Cottage", 81, 10.5, 2.3, 4,
+                4.8,1.3,12,307,0,81,0,0,0,111,9,
+                150,0.51,125);
+
+        this.MFD_food.add(american_cheese);
+        this.MFD_food.add(cotege_cheese);
+
+
 
     }
 
