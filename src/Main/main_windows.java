@@ -20,14 +20,17 @@ import javax.swing.JPasswordField;
 import javax.swing.JSpinner;
 import javax.swing.SpinnerNumberModel;
 
+
 import java.util.Scanner;
 
 import javax.swing.JComboBox;
+
 import javax.swing.DefaultComboBoxModel;
 import java.awt.event.KeyAdapter;
 import java.awt.event.KeyEvent;
 import java.awt.event.ActionListener;
 import java.awt.event.ActionEvent;
+import javax.swing.JFormattedTextField;
  
 public class main_windows {
 
@@ -39,15 +42,28 @@ public class main_windows {
 	private JTextField user_lastname_text_Field;
 	private JTextField username_text_Field;
 	private JPasswordField passwordField;
-	private JTextField email_text_Field;
 	private JTextField city_text_Field;
 	private JTextField country_text_Field;
 	private JTextField b_username_text_Field;
 	private JPasswordField passwordField_1;
-	private JTextField b_email_text_Field;
 	private JTextField b_city_text_Field;
 	private JTextField b_country_text_Field;
 	private JTextField b_company_field;
+	private JTextField textField;
+	private JTextField textField_1;
+	private JTextField textField_2;
+	private JTextField textField_3;
+	private JTextField textField_4;
+	private JTextField textField_5;
+	private JTextField textField_6;
+	private JTextField textField_7;
+	private JTextField textField_8;
+	private JTextField textField_9;
+	private JTextField textField_10;
+	private JTextField textField_11;
+	private JTextField textField_12;
+	private JTextField textField_13;
+	private JTextField textField_14;
 
 	/**
 	 * Launch the application.
@@ -58,8 +74,8 @@ public class main_windows {
 				try {
 					main_windows window = new main_windows();
 					window.frame.setVisible(true);
-				} catch (Exception e) {
-					e.printStackTrace();
+				} catch (Exception e1) {
+					System.out.println("Error: " + e1);
 				}
 			}
 		});
@@ -77,7 +93,7 @@ public class main_windows {
 	 */
 	private void initialize() {
 		frame = new JFrame();
-		frame.setBounds(100, 100, 852, 545);
+		frame.setBounds(0, -49, 852, 545);
 		frame.setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
 		frame.getContentPane().setLayout(new CardLayout(0, 0));
 		
@@ -85,6 +101,7 @@ public class main_windows {
 		start_page.setBackground(new Color(248, 191, 88));
 		frame.getContentPane().add(start_page, "name_830499986510200");
 		start_page.setLayout(null);
+		JPanel add_food_page = new JPanel();
 
 		JPanel log_in_page = new JPanel();
 		log_in_page.setBackground(new Color(42, 200, 125));
@@ -121,8 +138,81 @@ public class main_windows {
 		
 		JLabel lblNewLabel_19 = new JLabel("Private_User");
 		lblNewLabel_19.setFont(new Font("Tahoma", Font.PLAIN, 90));
-		lblNewLabel_19.setBounds(51, 53, 752, 361);
+		lblNewLabel_19.setBounds(10, 430, 606, 57);
 		Private_User.add(lblNewLabel_19);
+		
+		JButton btnNewButton_2 = new JButton("");
+		btnNewButton_2.addActionListener(new ActionListener() {
+			public void actionPerformed(ActionEvent e) {
+				Private_User.setVisible(false);
+				add_food_page.setVisible(true);
+			}
+		});
+		btnNewButton_2.setBackground(new Color(135, 206, 250));
+		btnNewButton_2.setIcon(new ImageIcon("C:\\Users\\oleg1\\Documents\\GitHub\\SWProject\\gif\\159059408251378162.png"));
+		btnNewButton_2.setBounds(10, 11, 100, 100);
+		Private_User.add(btnNewButton_2);
+		
+		JButton btnNewButton_3 = new JButton("\u05E2\u05D3\u05E7\u05D5\u05DF \u05D0\u05E8\u05D5\u05D7\u05D4");
+		btnNewButton_3.setBackground(new Color(135, 206, 250));
+		btnNewButton_3.setBounds(10, 125, 100, 100);
+		Private_User.add(btnNewButton_3);
+		
+		JButton btnNewButton_4 = new JButton("\u05E0\u05EA\u05D5\u05E0\u05D9\u05DD");
+		btnNewButton_4.setBackground(new Color(135, 206, 250));
+		btnNewButton_4.setBounds(10, 235, 100, 100);
+		Private_User.add(btnNewButton_4);
+		
+		JButton btnNewButton_6 = new JButton("\u05E2\u05D3\u05E7\u05D5\u05DF \u05E4\u05E8\u05D8\u05D9\u05DD");
+		btnNewButton_6.setBackground(new Color(135, 206, 250));
+		btnNewButton_6.setBounds(120, 341, 100, 100);
+		Private_User.add(btnNewButton_6);
+		
+		JButton btnNewButton_7 = new JButton("\u05D9\u05E6\u05D9\u05D0");
+		btnNewButton_7.addActionListener(new ActionListener() {
+			public void actionPerformed(ActionEvent e) {
+				Private_User.setVisible(false);
+				start_page.setVisible(false);
+				
+			
+			}
+		});
+		btnNewButton_7.setBounds(722, 23, 89, 23);
+		Private_User.add(btnNewButton_7);
+		
+		JLabel lblNewLabel_9 = new JLabel(" cal \u05E7\u05DC\u05D5\u05E8\u05D9\u05D5\u05EA");
+		lblNewLabel_9.setBounds(140, 27, 113, 14);
+		Private_User.add(lblNewLabel_9);
+		
+		JLabel lblNewLabel_20 = new JLabel("\u05E0\u05EA\u05E8\u05D0\u05DFsalt");
+		lblNewLabel_20.setBounds(140, 53, 100, 14);
+		Private_User.add(lblNewLabel_20);
+		
+		JLabel lblNewLabel_20_1 = new JLabel("\u05D7\u05DC\u05D1\u05D5\u05E0\u05D9\u05DDprot");
+		lblNewLabel_20_1.setBounds(140, 83, 100, 14);
+		Private_User.add(lblNewLabel_20_1);
+		
+		JLabel lblNewLabel_20_2 = new JLabel("\u05E9\u05D5\u05DE\u05E0\u05D9\u05DD fat");
+		lblNewLabel_20_2.setBounds(140, 108, 100, 14);
+		Private_User.add(lblNewLabel_20_2);
+		
+		JLabel lblNewLabel_20_3 = new JLabel("\u05E7\u05D5\u05DC\u05E1\u05D8\u05E8\u05D5\u05DC coles");
+		lblNewLabel_20_3.setBounds(140, 133, 100, 14);
+		Private_User.add(lblNewLabel_20_3);
+		
+		JLabel lblNewLabel_21 = new JLabel("New label");
+		lblNewLabel_21.setBounds(395, 430, 416, 14);
+		Private_User.add(lblNewLabel_21);
+		
+		JButton btnNewButton_3_1 = new JButton("\u05E2\u05D3\u05E7\u05D5\u05DF \u05E4\u05D9\u05DC\u05D5\u05EA \u05D2\u05D5\u05E4\u05E0\u05D9\u05EA");
+		btnNewButton_3_1.setBackground(new Color(135, 206, 250));
+		btnNewButton_3_1.setBounds(10, 341, 100, 100);
+		Private_User.add(btnNewButton_3_1);
+		
+		JButton btnNewButton_3_2 = new JButton("\u05E4\u05D9\u05E8\u05E1\u05D5\u05DE\u05D5\u05EA");
+		btnNewButton_3_2.setBackground(new Color(135, 206, 250));
+		btnNewButton_3_2.setBounds(120, 235, 100, 100);
+		Private_User.add(btnNewButton_3_2);
 		
 		
 		name_text_Field = new JTextField();
@@ -154,8 +244,12 @@ public class main_windows {
 				admin_page.setVisible(true);
 				
 				} else {
+					String user_id;
 					
-					String user_id = "C:\\Users\\oleg1\\Documents\\GitHub\\SWProject\\data";
+					//outFile = new FileWriter ( fileChooser.getSelectedFile()+"\\"+username_text_Field.getText()+".txt");
+					 user_id = "C:\\Users\\oleg1\\Documents\\GitHub\\SWProject\\data";
+					
+		
 					File dir = new File (user_id);
 					for (File f : dir.listFiles()) 
 					{
@@ -202,6 +296,7 @@ public class main_windows {
 										{
 											log_in_page.setVisible(false);
 											Private_User.setVisible(true);
+											
 										}else 
 										{
 											JOptionPane.showMessageDialog(null, "Incorrect Password." + "!");
@@ -346,6 +441,7 @@ public class main_windows {
 			public void mouseClicked(MouseEvent e) {
 				start_page.setVisible(false);
 				log_in_page.setVisible(true);
+				name_text_Field.requestFocus();
 				
 			}
 		});
@@ -407,28 +503,24 @@ public class main_windows {
 		lblNewLabel_8.setBounds(733, 138, 70, 14);
 		regist_page.add(lblNewLabel_8);
 		
-		JLabel lblNewLabel_9 = new JLabel("\u05D3\u05D5\u05D0\u05E8 \u05D0\u05DC\u05E7\u05D8\u05E8\u05D5\u05E0\u05D9:");
-		lblNewLabel_9.setBounds(736, 169, 89, 14);
-		regist_page.add(lblNewLabel_9);
-		
 		JLabel lblNewLabel_10 = new JLabel("\u05D2\u05D9\u05DC:");
-		lblNewLabel_10.setBounds(737, 260, 46, 14);
+		lblNewLabel_10.setBounds(737, 231, 46, 14);
 		regist_page.add(lblNewLabel_10);
 		
 		JLabel lblNewLabel_11 = new JLabel("\u05D2\u05D5\u05D1\u05D4:");
-		lblNewLabel_11.setBounds(737, 291, 46, 14);
+		lblNewLabel_11.setBounds(737, 262, 46, 14);
 		regist_page.add(lblNewLabel_11);
 		
 		JLabel lblNewLabel_12 = new JLabel("\u05DE\u05E9\u05E7\u05DC:");
-		lblNewLabel_12.setBounds(737, 322, 46, 14);
+		lblNewLabel_12.setBounds(737, 293, 46, 14);
 		regist_page.add(lblNewLabel_12);
 		
 		JLabel lblNewLabel_13 = new JLabel("\u05DE\u05D9\u05DF:");
-		lblNewLabel_13.setBounds(737, 354, 46, 14);
+		lblNewLabel_13.setBounds(737, 324, 46, 14);
 		regist_page.add(lblNewLabel_13);
 		
 		JLabel lblNewLabel_14 = new JLabel("\u05DE\u05D8\u05E8\u05D4:");
-		lblNewLabel_14.setBounds(737, 389, 46, 14);
+		lblNewLabel_14.setBounds(737, 355, 46, 14);
 		regist_page.add(lblNewLabel_14);
 		
 		user_name_text_Field = new JTextField();
@@ -475,25 +567,12 @@ public class main_windows {
 			@Override
 			public void keyPressed(KeyEvent e) {
 				if(e.getKeyCode()==KeyEvent.VK_ENTER) {
-					email_text_Field.requestFocus();
+					city_text_Field.requestFocus();
 				}
 			}
 		});
 		passwordField.setBounds(575, 135, 150, 20);
 		regist_page.add(passwordField);
-		
-		email_text_Field = new JTextField();
-		email_text_Field.addKeyListener(new KeyAdapter() {
-			@Override
-			public void keyPressed(KeyEvent e) {
-				if(e.getKeyCode()==KeyEvent.VK_ENTER) {
-					city_text_Field.requestFocus();
-				}
-			}
-		});
-		email_text_Field.setBounds(575, 166, 150, 20);
-		regist_page.add(email_text_Field);
-		email_text_Field.setColumns(50);
 		
 		JButton Button_save = new JButton("\u05E9\u05DE\u05D5\u05E8");
 		
@@ -505,7 +584,7 @@ public class main_windows {
 		Purpose_comboBox.setModel(new DefaultComboBoxModel(new String[] {"\u05DC\u05E8\u05D3\u05EA \u05D1\u05DE\u05E9\u05E7\u05DC", "\u05DC\u05D4\u05D9\u05E9\u05D0\u05E8 \u05D1\u05D0\u05D5\u05EA\u05D5 \u05DE\u05E9\u05E7\u05DC", "\u05DC\u05E2\u05DC\u05D5\u05EA \u05D1\u05DE\u05E9\u05E7\u05DC"}));
 		Purpose_comboBox.setForeground(new Color(0, 0, 0));
 		Purpose_comboBox.setMaximumRowCount(3);
-		Purpose_comboBox.setBounds(576, 385, 151, 22);
+		Purpose_comboBox.setBounds(576, 352, 151, 22);
 		regist_page.add(Purpose_comboBox);
 		Purpose_comboBox.addKeyListener(new KeyAdapter() {
 			@Override
@@ -521,7 +600,7 @@ public class main_windows {
 		Gender_comboBox.setToolTipText("...");
 		Gender_comboBox.setModel(new DefaultComboBoxModel(new String[] {"\u05D6\u05DB\u05E8", "\u05E0\u05E7\u05D1\u05D4"}));
 		Gender_comboBox.setMaximumRowCount(2);
-		Gender_comboBox.setBounds(576, 350, 150, 22);
+		Gender_comboBox.setBounds(576, 321, 150, 22);
 		regist_page.add(Gender_comboBox);
 		Gender_comboBox.addKeyListener(new KeyAdapter() {
 			@Override
@@ -536,7 +615,7 @@ public class main_windows {
 		
 		JSpinner weight_spinner = new JSpinner();
 		weight_spinner.setModel(new SpinnerNumberModel(1.0, 0.0, 300.0, 1.0));
-		weight_spinner.setBounds(576, 319, 151, 20);
+		weight_spinner.setBounds(576, 290, 151, 20);
 		regist_page.add(weight_spinner);
 		weight_spinner.addKeyListener(new KeyAdapter() {
 			@Override
@@ -550,7 +629,7 @@ public class main_windows {
 		
 		JSpinner height_spinner = new JSpinner();
 		height_spinner.setModel(new SpinnerNumberModel(1.0, 1.0, 300.0, 1.0));
-		height_spinner.setBounds(576, 288, 150, 20);
+		height_spinner.setBounds(576, 259, 150, 20);
 		regist_page.add(height_spinner);
 		height_spinner.addKeyListener(new KeyAdapter() {
 			@Override
@@ -564,7 +643,7 @@ public class main_windows {
 		
 		JSpinner age_spinner = new JSpinner();
 		age_spinner.setModel(new SpinnerNumberModel(1.0, 1.0, 120.0, 1.0));
-		age_spinner.setBounds(575, 257, 151, 20);
+		age_spinner.setBounds(575, 228, 151, 20);
 		regist_page.add(age_spinner);
 		age_spinner.addKeyListener(new KeyAdapter() {
 			@Override
@@ -583,11 +662,11 @@ public class main_windows {
 	
 
 		JLabel lblNewLabel_16 = new JLabel("\u05E2\u05D9\u05E8: ");
-		lblNewLabel_16.setBounds(737, 204, 76, 14);
+		lblNewLabel_16.setBounds(733, 169, 76, 14);
 		regist_page.add(lblNewLabel_16);
 		
 		JLabel lblNewLabel_17 = new JLabel("\u05DE\u05D3\u05D9\u05E0\u05D4:");
-		lblNewLabel_17.setBounds(737, 229, 46, 14);
+		lblNewLabel_17.setBounds(737, 200, 46, 14);
 		regist_page.add(lblNewLabel_17);
 		
 		city_text_Field = new JTextField();
@@ -600,7 +679,7 @@ public class main_windows {
 			}
 		});
 		
-		city_text_Field.setBounds(575, 197, 150, 20);
+		city_text_Field.setBounds(575, 166, 150, 20);
 		regist_page.add(city_text_Field);
 		city_text_Field.setColumns(10);
 		
@@ -614,7 +693,7 @@ public class main_windows {
 				}
 			}
 		});
-		country_text_Field.setBounds(575, 226, 150, 20);
+		country_text_Field.setBounds(575, 197, 150, 20);
 		regist_page.add(country_text_Field);
 		country_text_Field.setColumns(10);
 		
@@ -631,15 +710,18 @@ public class main_windows {
 		});
 		Button_goto_Business.setBounds(391, 472, 124, 23);
 		regist_page.add(Button_goto_Business);
+		JLabel label_1=new JLabel();
+		label_1.setToolTipText("");
+		label_1.setBounds(352, 380, 473, 23);
+		regist_page.add(label_1);
 		
 		Button_save.addActionListener(new ActionListener() {
 			public void actionPerformed(ActionEvent e) {
 				
 
-				if(username_text_Field.getText().isEmpty()&&passwordField.getText().isEmpty()&&weight_spinner.getValue().equals(1.0)&&
-						height_spinner.getValue().equals(1.0)&&user_name_text_Field.getText().isEmpty()&&user_lastname_text_Field.getText().isEmpty()&&
-						country_text_Field.getText().isEmpty()&&city_text_Field.getText().isEmpty()&&age_spinner.getValue().equals(1.0)&&
-						email_text_Field.getText().isEmpty())
+				if(username_text_Field.getText().isEmpty()||passwordField.getText().isEmpty()||weight_spinner.getValue().equals(1.0)||
+						height_spinner.getValue().equals(1.0)||user_name_text_Field.getText().isEmpty()||user_lastname_text_Field.getText().isEmpty()||
+						country_text_Field.getText().isEmpty()||city_text_Field.getText().isEmpty()||age_spinner.getValue().equals(1.0))
 				{
 					JOptionPane.showMessageDialog(null, "You have to fill all" + "!");
 
@@ -648,6 +730,7 @@ public class main_windows {
 				FileWriter outFile = null;
 				
 				try {
+					
 					
 					outFile = new FileWriter ("data\\"+username_text_Field.getText()+".txt");
 				} catch (IOException e1) {
@@ -670,11 +753,10 @@ public class main_windows {
 					outStream.write(city_text_Field.getText()+"\n");
 					outStream.write(age_spinner.getValue().toString()+"\n");
 					outStream.write(Gender_comboBox.getSelectedIndex()+"\n");
-					outStream.write(email_text_Field.getText()+"\n");
 					outStream.write(Purpose_comboBox.getSelectedIndex()+"\n");
 					outStream.close ();
 				} catch (IOException e1) {
-					System.out.println("Error: " + e);
+					System.out.println("Error: " + e1);
 				}
 				
 				
@@ -682,10 +764,10 @@ public class main_windows {
 				
 					regist_page.setVisible(false);
 					start_page.setVisible(true);
-				new Private_User(username_text_Field.getText(),passwordField.getPassword(),
+					/*					new Private_User(username_text_Field.getText(),passwordField.getPassword(),
 						(double)weight_spinner.getValue(), (double)height_spinner.getValue(), user_name_text_Field.getText(),
 						user_lastname_text_Field.getText(),country_text_Field.getText(), city_text_Field.getText(),
-						(double)age_spinner.getValue(), Gender_comboBox.getSelectedIndex(), email_text_Field.getText(),Purpose_comboBox.getSelectedIndex());
+						(double)age_spinner.getValue(), Gender_comboBox.getSelectedIndex(),Purpose_comboBox.getSelectedIndex());*/
 				}	
 			}
 		});
@@ -695,10 +777,9 @@ public class main_windows {
 			public void mouseClicked(MouseEvent e) {
 			
 				
-				if(username_text_Field.getText().isEmpty()&&passwordField.getText().isEmpty()&&weight_spinner.getValue().equals(1.0)&&
-						height_spinner.getValue().equals(1.0)&&user_name_text_Field.getText().isEmpty()&&user_lastname_text_Field.getText().isEmpty()&&
-						country_text_Field.getText().isEmpty()&&city_text_Field.getText().isEmpty()&&age_spinner.getValue().equals(1.0)&&
-						email_text_Field.getText().isEmpty())
+				if(username_text_Field.getText().isEmpty()||passwordField.getText().isEmpty()||weight_spinner.getValue().equals(1.0)||
+						height_spinner.getValue().equals(1.0)||user_name_text_Field.getText().isEmpty()||user_lastname_text_Field.getText().isEmpty()||
+						country_text_Field.getText().isEmpty()||city_text_Field.getText().isEmpty()||age_spinner.getValue().equals(1.0))
 				{
 					JOptionPane.showMessageDialog(null, "You have to fill all" + "!");
 
@@ -708,7 +789,6 @@ public class main_windows {
 				FileWriter outFile = null;
 				
 				try {
-					
 					outFile = new FileWriter ("data\\"+username_text_Field.getText()+".txt");
 				} catch (IOException e1) {
 					System.out.println("Error: " + e1);
@@ -730,11 +810,10 @@ public class main_windows {
 					outStream.write(city_text_Field.getText()+"\n");
 					outStream.write(age_spinner.getValue().toString()+"\n");
 					outStream.write(Gender_comboBox.getSelectedIndex()+"\n");
-					outStream.write(email_text_Field.getText()+"\n");
 					outStream.write(Purpose_comboBox.getSelectedIndex()+"\n");
 					outStream.close ();
 				} catch (IOException e1) {
-					System.out.println("Error: " + e);
+					System.out.println("Error: " + e1);
 				}
 				
 				
@@ -745,7 +824,7 @@ public class main_windows {
 				new Private_User(username_text_Field.getText(),passwordField.getPassword(),
 						(double)weight_spinner.getValue(), (double)height_spinner.getValue(), user_name_text_Field.getText(),
 						user_lastname_text_Field.getText(),country_text_Field.getText(), city_text_Field.getText(),
-						(double)age_spinner.getValue(), Gender_comboBox.getSelectedIndex(), email_text_Field.getText(),Purpose_comboBox.getSelectedIndex());
+						(double)age_spinner.getValue(), Gender_comboBox.getSelectedIndex(),Purpose_comboBox.getSelectedIndex());
 				}
 			}
 		});
@@ -774,6 +853,29 @@ public class main_windows {
 		});
 		Button_goto_Business_1.setBounds(10, 113, 124, 23);
 		admin_page.add(Button_goto_Business_1);
+		
+		JButton btnNewButton = new JButton("business_page");
+		btnNewButton.addMouseListener(new MouseAdapter() {
+			@Override
+			public void mouseClicked(MouseEvent e) {
+				admin_page.setVisible(false);
+				business_page.setVisible(true);
+				
+			}
+		});
+		btnNewButton.setBounds(10, 150, 124, 23);
+		admin_page.add(btnNewButton);
+		
+		JButton btnNewButton_1 = new JButton("Private_User");
+		btnNewButton_1.addMouseListener(new MouseAdapter() {
+			@Override
+			public void mouseClicked(MouseEvent e) {
+				Private_User.setVisible(true);
+				admin_page.setVisible(false);
+			}
+		});
+		btnNewButton_1.setBounds(10, 184, 124, 23);
+		admin_page.add(btnNewButton_1);
 		
 		
 		frame.getContentPane().add(regist_page_Business, "name_269455872836600");
@@ -806,7 +908,7 @@ public class main_windows {
 			@Override
 			public void keyPressed(KeyEvent e) {
 				if(e.getKeyCode()==KeyEvent.VK_ENTER) {
-					b_email_text_Field.requestFocus();
+					b_city_text_Field.requestFocus();
 					
 				}
 			}
@@ -814,26 +916,8 @@ public class main_windows {
 		passwordField_1.setBounds(561, 96, 150, 20);
 		regist_page_Business.add(passwordField_1);
 		
-		b_email_text_Field = new JTextField();
-		b_email_text_Field.addKeyListener(new KeyAdapter() {
-			@Override
-			public void keyPressed(KeyEvent e) {
-				if(e.getKeyCode()==KeyEvent.VK_ENTER) {
-					b_city_text_Field.requestFocus();
-					
-				}
-			}
-		});
-		b_email_text_Field.setColumns(50);
-		b_email_text_Field.setBounds(561, 127, 150, 20);
-		regist_page_Business.add(b_email_text_Field);
-		
-		JLabel lblNewLabel_9_1 = new JLabel("\u05D3\u05D5\u05D0\u05E8 \u05D0\u05DC\u05E7\u05D8\u05E8\u05D5\u05E0\u05D9:");
-		lblNewLabel_9_1.setBounds(722, 130, 89, 14);
-		regist_page_Business.add(lblNewLabel_9_1);
-		
 		JLabel lblNewLabel_16_1 = new JLabel("\u05E2\u05D9\u05E8: ");
-		lblNewLabel_16_1.setBounds(723, 165, 76, 14);
+		lblNewLabel_16_1.setBounds(719, 126, 76, 14);
 		regist_page_Business.add(lblNewLabel_16_1);
 		
 		b_city_text_Field = new JTextField();
@@ -847,7 +931,7 @@ public class main_windows {
 			}
 		});
 		b_city_text_Field.setColumns(10);
-		b_city_text_Field.setBounds(561, 158, 150, 20);
+		b_city_text_Field.setBounds(561, 124, 150, 20);
 		regist_page_Business.add(b_city_text_Field);
 		
 		JButton b_Button_save = new JButton("\u05E9\u05DE\u05D5\u05E8");
@@ -862,11 +946,11 @@ public class main_windows {
 			}
 		});
 		b_country_text_Field.setColumns(10);
-		b_country_text_Field.setBounds(561, 187, 150, 20);
+		b_country_text_Field.setBounds(561, 155, 150, 20);
 		regist_page_Business.add(b_country_text_Field);
 		
 		JLabel lblNewLabel_17_1 = new JLabel("\u05DE\u05D3\u05D9\u05E0\u05D4:");
-		lblNewLabel_17_1.setBounds(723, 190, 46, 14);
+		lblNewLabel_17_1.setBounds(719, 156, 46, 14);
 		regist_page_Business.add(lblNewLabel_17_1);
 		
 		b_company_field = new JTextField();
@@ -910,18 +994,108 @@ public class main_windows {
 		regist_page_Business.add(business_gif);
 		
 		
+		frame.getContentPane().add(add_food_page, "name_85480630022700");
+		add_food_page.setLayout(null);
+		
+		textField = new JTextField();
+		textField.setBounds(532, 11, 152, 20);
+		add_food_page.add(textField);
+		textField.setColumns(10);
+		
+		textField_1 = new JTextField();
+		textField_1.setColumns(10);
+		textField_1.setBounds(532, 39, 152, 20);
+		add_food_page.add(textField_1);
+		
+		textField_2 = new JTextField();
+		textField_2.setColumns(10);
+		textField_2.setBounds(532, 68, 152, 20);
+		add_food_page.add(textField_2);
+		
+		textField_3 = new JTextField();
+		textField_3.setColumns(10);
+		textField_3.setBounds(532, 99, 152, 20);
+		add_food_page.add(textField_3);
+		
+		textField_4 = new JTextField();
+		textField_4.setColumns(10);
+		textField_4.setBounds(532, 130, 152, 20);
+		add_food_page.add(textField_4);
+		
+		textField_5 = new JTextField();
+		textField_5.setColumns(10);
+		textField_5.setBounds(532, 161, 152, 20);
+		add_food_page.add(textField_5);
+		
+		textField_6 = new JTextField();
+		textField_6.setColumns(10);
+		textField_6.setBounds(532, 192, 152, 20);
+		add_food_page.add(textField_6);
+		
+		textField_7 = new JTextField();
+		textField_7.setColumns(10);
+		textField_7.setBounds(532, 223, 152, 20);
+		add_food_page.add(textField_7);
+		
+		textField_8 = new JTextField();
+		textField_8.setColumns(10);
+		textField_8.setBounds(532, 254, 152, 20);
+		add_food_page.add(textField_8);
+		
+		textField_9 = new JTextField();
+		textField_9.setColumns(10);
+		textField_9.setBounds(532, 285, 152, 20);
+		add_food_page.add(textField_9);
+		
+		textField_10 = new JTextField();
+		textField_10.setColumns(10);
+		textField_10.setBounds(532, 316, 152, 20);
+		add_food_page.add(textField_10);
+		
+		textField_11 = new JTextField();
+		textField_11.setColumns(10);
+		textField_11.setBounds(532, 345, 152, 20);
+		add_food_page.add(textField_11);
+		
+		textField_12 = new JTextField();
+		textField_12.setColumns(10);
+		textField_12.setBounds(532, 376, 152, 20);
+		add_food_page.add(textField_12);
+		
+		textField_13 = new JTextField();
+		textField_13.setColumns(10);
+		textField_13.setBounds(532, 407, 152, 20);
+		add_food_page.add(textField_13);
+		
+		textField_14 = new JTextField();
+		textField_14.setColumns(10);
+		textField_14.setBounds(532, 438, 152, 20);
+		add_food_page.add(textField_14);
+		
+		JButton btnNewButton_5 = new JButton("\u05E9\u05DE\u05D5\u05E8 ");
+		btnNewButton_5.addActionListener(new ActionListener() {
+			public void actionPerformed(ActionEvent e) {
+			}
+		});
+		btnNewButton_5.setBounds(532, 469, 152, 23);
+		add_food_page.add(btnNewButton_5);
+		
+		
 		
 		b_Button_save.addMouseListener(new MouseAdapter() {
 			@Override
 			public void mouseClicked(MouseEvent e) {
 			
-				
+				if(b_city_text_Field.getText().isEmpty()||
+						b_country_text_Field.getText().isEmpty()||b_company_field.getText().isEmpty()||
+						passwordField_1.getText().isEmpty()||b_username_text_Field.getText().isEmpty()) 
+				{
+					JOptionPane.showMessageDialog(null, "You have to fill all" + "!");	
+				}else {
 				
 				FileWriter outFile = null;
 				
-				try {
-					
-					outFile = new FileWriter ("data\\"+"bus_"+b_username_text_Field.getText()+".txt");
+				try {outFile = new FileWriter ("data\\"+"bus_"+b_username_text_Field.getText()+".txt");
 				} catch (IOException e1) {
 					System.out.println("Error: " + e1);
 				
@@ -937,10 +1111,9 @@ public class main_windows {
 					outStream.write(b_company_field.getText()+"\n");
 					outStream.write(b_country_text_Field.getText()+"\n");
 					outStream.write(b_city_text_Field.getText()+"\n");
-					outStream.write(b_email_text_Field.getText()+"\n");
 					outStream.close ();
 				} catch (IOException e1) {
-					System.out.println("Error: " + e);
+					System.out.println("Error: " + e1);
 				}
 				
 				
@@ -949,26 +1122,35 @@ public class main_windows {
 				regist_page_Business.setVisible(false);
 					start_page.setVisible(true);
 					
-				new Bus_User(b_username_text_Field.getText(),passwordField_1.getPassword(),b_company_field.getText());
-				
+				new Bus_User(b_username_text_Field.getText(),passwordField_1.getPassword(),b_company_field.getText(),b_country_text_Field.getText(),b_city_text_Field.getText());
+				}
 			}
 		});
 		b_Button_save.addActionListener(new ActionListener() {
 			public void actionPerformed(ActionEvent e) {
 				
 
-
-				
+				if(b_city_text_Field.getText().isEmpty()||
+						b_country_text_Field.getText().isEmpty()||b_company_field.getText().isEmpty()||
+						passwordField_1.getText().isEmpty()||b_username_text_Field.getText().isEmpty()) 
+				{
+					JOptionPane.showMessageDialog(null, "You have to fill all" + "!");	
+				}else {
+					
+					
+					
 				FileWriter outFile = null;
 				
+						
+				BufferedWriter outStream=null;
+				
 				try {
-					
 					outFile = new FileWriter ("data\\"+"bus_"+b_username_text_Field.getText()+".txt");
 				} catch (IOException e1) {
 					System.out.println("Error: " + e1);
 				
 				}
-				BufferedWriter outStream =new BufferedWriter(outFile);
+				 outStream =new BufferedWriter(outFile);
 			
 				try {
 					
@@ -979,10 +1161,9 @@ public class main_windows {
 					outStream.write(b_company_field.getText()+"\n");
 					outStream.write(b_country_text_Field.getText()+"\n");
 					outStream.write(b_city_text_Field.getText()+"\n");
-					outStream.write(b_email_text_Field.getText()+"\n");
 					outStream.close ();
 				} catch (IOException e1) {
-					System.out.println("Error: " + e);
+					System.out.println("Error: " + e1);
 				}
 				
 				
@@ -991,8 +1172,8 @@ public class main_windows {
 				regist_page_Business.setVisible(false);
 					start_page.setVisible(true);
 					
-				new Bus_User(b_username_text_Field.getText(),passwordField_1.getPassword(),b_company_field.getText());
-				
+				new Bus_User(b_username_text_Field.getText(),passwordField_1.getPassword(),b_company_field.getText(),b_country_text_Field.getText(),b_city_text_Field.getText());
+				}	
 			}
 		});
 		
