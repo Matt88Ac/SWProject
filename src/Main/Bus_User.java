@@ -14,7 +14,6 @@ public class Bus_User extends User{
         this.company = company;
         this.city = city;
         this.country = country;
-
     }
 
     public String Get_Company_Name(){

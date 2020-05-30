@@ -30,26 +30,9 @@ import java.awt.event.KeyAdapter;
 import java.awt.event.KeyEvent;
 import java.awt.event.ActionListener;
 import java.awt.event.ActionEvent;
-import javax.swing.JFormattedTextField;
 import javax.swing.SwingConstants;
-import javax.swing.JToolBar;
-import javax.swing.JLayeredPane;
-import javax.swing.UIManager;
-import javax.swing.border.BevelBorder;
-import javax.swing.border.EmptyBorder;
-import javax.swing.JTabbedPane;
-import javax.swing.border.LineBorder;
-import javax.swing.JScrollBar;
 import javax.swing.JScrollPane;
-import javax.swing.JTable;
-import java.awt.event.AdjustmentListener;
-import java.awt.event.AdjustmentEvent;
-import javax.swing.JList;
-import javax.swing.JInternalFrame;
 import javax.swing.ScrollPaneConstants;
-import javax.swing.Box;
-import javax.swing.JSeparator;
-import javax.swing.JTextArea;
 import javax.swing.JRadioButton;
  
 public class main_windows {
@@ -69,20 +52,7 @@ public class main_windows {
 	private JTextField b_city_text_Field;
 	private JTextField b_country_text_Field;
 	private JTextField b_company_field;
-	private JTextField textField_1;
-	private JTextField textField_2;
-	private JTextField textField_3;
-	private JTextField textField_4;
-	private JTextField textField_5;
-	private JTextField textField_6;
-	private JTextField textField_7;
-	private JTextField textField_8;
-	private JTextField textField_9;
-	private JTextField textField_10;
-	private JTextField textField_11;
-	private JTextField textField_12;
-	private JTextField textField_13;
-	private JTextField textField_14;
+	private JTextField food_name_text_Field;
 
 	/**
 	 * Launch the application.
@@ -324,6 +294,10 @@ public class main_windows {
 		{
 			public void actionPerformed(ActionEvent e)
 			{
+				File file =new File("C:\\data");
+				file.mkdirs();
+				
+				
 				if (name_text_Field.getText().isEmpty() || password_Field.getText().isEmpty())
 				{
 				JOptionPane.showMessageDialog(null, "Please Input Username and Password." + "!");
@@ -337,30 +311,28 @@ public class main_windows {
 					String user_id;
 					
 					//outFile = new FileWriter ( fileChooser.getSelectedFile()+"\\"+username_text_Field.getText()+".txt");
-					 user_id = "C:\\Users\\oleg1\\Documents\\GitHub\\SWProject\\data";
+					 user_id = "C:\\data";
 					
 		
 					File dir = new File (user_id);
 					for (File f : dir.listFiles()) 
 					{
-							if (f.getName ().contains (".txt"))
+						String tmp_bus = "bus_" + name_text_Field.getText()	+".txt";
+						String tmp_reg_user = name_text_Field.getText() + ".txt";
+						if (f.getName ().equals(tmp_bus))
 							{
-								if(f.getName ().contains(name_text_Field.getText())) 
-								{
-									System.out.println(f.getName ());
-									if(f.getName ().contains("bus_")) 
-									{
+								
 										
-										String whole=user_id +"/"+ f.getName();
-										try
-										{
-											String readF=new Scanner (new File (whole)).useDelimiter ("\\A").next ();
-											String splitHere="\n";
-											String[] tokens=readF.split(splitHere);
-											if(password_Field.getText().equals(tokens [1]))
-											{
+									String whole=user_id +"\\"+ f.getName();
+									try
+									{
+										String readF = new Scanner(new File (whole)).useDelimiter ("\\A").next ();
+										String splitHere="\n";
+										String[] tokens=readF.split(splitHere);
+										if(password_Field.getText().equals(tokens [1]))											{
 												log_in_page.setVisible(false);
 												business_page.setVisible(true);
+												Bus_User bus_user=new Bus_User(tokens[0],tokens[1], tokens[2], tokens[3],tokens[4]);
 												
 											}else 
 											{
@@ -373,10 +345,9 @@ public class main_windows {
 										}
 										
 										
-									}else
-									{
+									}else if(f.getName().equals(tmp_reg_user)){
 								
-									String whole=user_id +"/"+ f.getName();
+									String whole=user_id +"\\"+ f.getName();
 									try
 									{
 										String readF=new Scanner (new File (whole)).useDelimiter ("\\A").next ();
@@ -386,6 +357,9 @@ public class main_windows {
 										{
 											log_in_page.setVisible(false);
 											Private_User_page.setVisible(true);
+											Private_User private_user	= new Private_User(tokens[0], tokens[1],
+													Double.parseDouble(tokens[2]),Double.parseDouble(tokens[3]),tokens[4],tokens [5],tokens [6],tokens [7],
+													Double.parseDouble(tokens[8]),Integer.parseInt(tokens[9]),Integer.parseInt(tokens[10]));
 											
 										}else 
 										{
@@ -397,11 +371,11 @@ public class main_windows {
 									System.out.println("Error: " + e1);
 									}
 								}
-								}
+								
 							}
 					}
 			}
-			}
+			
 			
 		});	
 			
@@ -465,6 +439,9 @@ public class main_windows {
 			@Override
 			public void mouseClicked(MouseEvent e) {
 				
+				File file =new File("C:\\data");
+				file.mkdirs();
+				
 					if (name_text_Field.getText().isEmpty() || password_Field.getText().isEmpty())
 					{
 					JOptionPane.showMessageDialog(null, "Please Input Username and Password." + "!");
@@ -476,17 +453,18 @@ public class main_windows {
 					
 					} else {
 						
-						String user_id = "C:\\Users\\oleg1\\Documents\\GitHub\\SWProject\\data";
+						String user_id = "C:\\data";
 						File dir = new File (user_id);
+						int i=0;
 						for (File f : dir.listFiles()) 
 						{
 								if (f.getName ().contains (".txt"))
 								{
-									if(f.getName ().contains(name_text_Field.getText())) 
-									{
+									if(f.getName().equals(name_text_Field.getText())) 
+									{	i++;
 										System.out.println(f.getName ());
 									
-										String whole=user_id +"/"+ f.getName();
+										String whole=user_id +"\\"+ f.getName();
 										try
 										{
 											String readF=new Scanner (new File (whole)).useDelimiter ("\\A").next ();
@@ -497,7 +475,7 @@ public class main_windows {
 												log_in_page.setVisible(false);
 												admin_page.setVisible(true);
 											}else 
-											{
+											{i=0;
 												JOptionPane.showMessageDialog(null, "Incorrect Password." + "!");
 											}
 										
@@ -507,7 +485,7 @@ public class main_windows {
 										}
 									}
 								}
-						}
+						} if(i==0) {JOptionPane.showMessageDialog(null, "Incorrect username." + "!");}
 				}
 			}
 		});
@@ -817,12 +795,15 @@ public class main_windows {
 
 					
 				}else {
+					File file =new File("C:\\data");
+					file.mkdirs();
+					
 				FileWriter outFile = null;
 				
 				try {
 					
 					
-					outFile = new FileWriter ("data\\"+username_text_Field.getText()+".txt");
+					outFile = new FileWriter ("C:\\data"+"\\"+username_text_Field.getText()+".txt");
 				} catch (IOException e1) {
 					System.out.println("Error: " + e1);
 				
@@ -854,10 +835,7 @@ public class main_windows {
 				
 					regist_page.setVisible(false);
 					start_page.setVisible(true);
-					/*					new Private_User(username_text_Field.getText(),passwordField.getPassword(),
-						(double)weight_spinner.getValue(), (double)height_spinner.getValue(), user_name_text_Field.getText(),
-						user_lastname_text_Field.getText(),country_text_Field.getText(), city_text_Field.getText(),
-						(double)age_spinner.getValue(), Gender_comboBox.getSelectedIndex(),Purpose_comboBox.getSelectedIndex());*/
+	
 				}	
 			}
 		});
@@ -877,9 +855,10 @@ public class main_windows {
 					
 				}else {
 				FileWriter outFile = null;
-				
+				File file =new File("C:\\data");
+				file.mkdirs();
 				try {
-					outFile = new FileWriter ("data\\"+username_text_Field.getText()+".txt");
+					outFile = new FileWriter ("C:\\data"+"\\"+username_text_Field.getText()+".txt");
 				} catch (IOException e1) {
 					System.out.println("Error: " + e1);
 				
@@ -911,10 +890,7 @@ public class main_windows {
 				
 					regist_page.setVisible(false);
 					start_page.setVisible(true);
-				new Private_User(username_text_Field.getText(),passwordField.getPassword(),
-						(double)weight_spinner.getValue(), (double)height_spinner.getValue(), user_name_text_Field.getText(),
-						user_lastname_text_Field.getText(),country_text_Field.getText(), city_text_Field.getText(),
-						(double)age_spinner.getValue(), Gender_comboBox.getSelectedIndex(),Purpose_comboBox.getSelectedIndex());
+				
 				}
 			}
 		});
@@ -1087,76 +1063,6 @@ public class main_windows {
 		frame.getContentPane().add(add_food_page, "name_85480630022700");
 		add_food_page.setLayout(null);
 		
-		textField_1 = new JTextField();
-		textField_1.setColumns(10);
-		textField_1.setBounds(532, 39, 152, 20);
-		add_food_page.add(textField_1);
-		
-		textField_2 = new JTextField();
-		textField_2.setColumns(10);
-		textField_2.setBounds(532, 68, 152, 20);
-		add_food_page.add(textField_2);
-		
-		textField_3 = new JTextField();
-		textField_3.setColumns(10);
-		textField_3.setBounds(532, 99, 152, 20);
-		add_food_page.add(textField_3);
-		
-		textField_4 = new JTextField();
-		textField_4.setColumns(10);
-		textField_4.setBounds(532, 130, 152, 20);
-		add_food_page.add(textField_4);
-		
-		textField_5 = new JTextField();
-		textField_5.setColumns(10);
-		textField_5.setBounds(532, 161, 152, 20);
-		add_food_page.add(textField_5);
-		
-		textField_6 = new JTextField();
-		textField_6.setColumns(10);
-		textField_6.setBounds(532, 192, 152, 20);
-		add_food_page.add(textField_6);
-		
-		textField_7 = new JTextField();
-		textField_7.setColumns(10);
-		textField_7.setBounds(532, 223, 152, 20);
-		add_food_page.add(textField_7);
-		
-		textField_8 = new JTextField();
-		textField_8.setColumns(10);
-		textField_8.setBounds(532, 254, 152, 20);
-		add_food_page.add(textField_8);
-		
-		textField_9 = new JTextField();
-		textField_9.setColumns(10);
-		textField_9.setBounds(532, 285, 152, 20);
-		add_food_page.add(textField_9);
-		
-		textField_10 = new JTextField();
-		textField_10.setColumns(10);
-		textField_10.setBounds(532, 316, 152, 20);
-		add_food_page.add(textField_10);
-		
-		textField_11 = new JTextField();
-		textField_11.setColumns(10);
-		textField_11.setBounds(532, 345, 152, 20);
-		add_food_page.add(textField_11);
-		
-		textField_12 = new JTextField();
-		textField_12.setColumns(10);
-		textField_12.setBounds(532, 376, 152, 20);
-		add_food_page.add(textField_12);
-		
-		textField_13 = new JTextField();
-		textField_13.setColumns(10);
-		textField_13.setBounds(532, 407, 152, 20);
-		add_food_page.add(textField_13);
-		
-		textField_14 = new JTextField();
-		textField_14.setColumns(10);
-		textField_14.setBounds(532, 438, 152, 20);
-		add_food_page.add(textField_14);
-		
 		JButton btnNewButton_5 = new JButton("\u05E9\u05DE\u05D5\u05E8 ");
 		btnNewButton_5.addActionListener(new ActionListener() {
 			public void actionPerformed(ActionEvent e) {
@@ -1175,8 +1081,8 @@ public class main_windows {
 		btnNewButton_2.setBounds(693, 469, 133, 23);
 		add_food_page.add(btnNewButton_2);
 		
-		JLabel lblNewLabel_22 = new JLabel("New label");
-		lblNewLabel_22.setBounds(694, 11, 142, 20);
+		JLabel lblNewLabel_22 = new JLabel("\u05E1\u05D5\u05D2 \u05D4\u05D0\u05D5\u05DB\u05DC:");
+		lblNewLabel_22.setBounds(694, 70, 142, 20);
 		add_food_page.add(lblNewLabel_22);
 		JRadioButton dro_RadioButton = new JRadioButton("\u05E7\u05D8\u05E0\u05D9\u05D5\u05EA \u05D5\u05DE\u05D0\u05DB\u05DC\u05D9\u05DD \u05D9\u05D1\u05E9\u05D9\u05DD");
 		JRadioButton met_RadioButton = new JRadioButton("\u05D1\u05E9\u05E8 \u05D7\u05DC\u05D1 \u05D3\u05D2\u05D9\u05DD");
@@ -1218,17 +1124,200 @@ public class main_windows {
 				fru_RadioButton.setSelected(false);
 			}
 		});
-		dro_RadioButton.setBounds(532, 10, 152, 23);
+		dro_RadioButton.setBounds(532, 69, 152, 23);
 		add_food_page.add(dro_RadioButton);
 		
-			met_RadioButton.setBounds(428, 10, 109, 23);
+			met_RadioButton.setBounds(428, 69, 109, 23);
 		add_food_page.add(met_RadioButton);
 		
-		junk_RadioButton.setBounds(307, 10, 119, 23);
+		junk_RadioButton.setBounds(307, 69, 119, 23);
 		add_food_page.add(junk_RadioButton);
 		
-		fru_RadioButton.setBounds(218, 10, 87, 23);
+		fru_RadioButton.setBounds(218, 69, 87, 23);
 		add_food_page.add(fru_RadioButton);
+		
+		food_name_text_Field = new JTextField();
+		food_name_text_Field.setBounds(532, 42, 152, 20);
+		add_food_page.add(food_name_text_Field);
+		food_name_text_Field.setColumns(10);
+		
+		JLabel lblNewLabel_23 = new JLabel("\u05E9\u05DD \u05D4\u05D0\u05D5\u05DB\u05DC:");
+		lblNewLabel_23.setBounds(693, 45, 87, 14);
+		add_food_page.add(lblNewLabel_23);
+		
+		JLabel lblNewLabel_24 = new JLabel("\u05D0\u05E0\u05E8\u05D2\u05D9\u05D4");
+		lblNewLabel_24.setBounds(694, 102, 56, 14);
+		add_food_page.add(lblNewLabel_24);
+		
+		JLabel lblNewLabel_25 = new JLabel("\u05E0\u05EA\u05E8\u05D0\u05DF");
+		lblNewLabel_25.setBounds(694, 195, 56, 14);
+		add_food_page.add(lblNewLabel_25);
+		
+		JLabel lblNewLabel_26 = new JLabel("\u05D7\u05DC\u05D1\u05D5\u05E0\u05D9\u05DD");
+		lblNewLabel_26.setBounds(694, 257, 46, 14);
+		add_food_page.add(lblNewLabel_26);
+		
+		JLabel lblNewLabel_27 = new JLabel("\u05E9\u05D5\u05DE\u05E0\u05D9\u05DD");
+		lblNewLabel_27.setBounds(694, 133, 46, 14);
+		add_food_page.add(lblNewLabel_27);
+		
+		JLabel lblNewLabel_28 = new JLabel("\u05E4\u05D7\u05DE\u05D9\u05DE\u05D5\u05EA");
+		lblNewLabel_28.setBounds(694, 226, 46, 14);
+		add_food_page.add(lblNewLabel_28);
+		
+		JLabel lblNewLabel_29 = new JLabel("\u05DB\u05D5\u05DC\u05E1\u05D8\u05D9\u05E8\u05D5\u05DC");
+		lblNewLabel_29.setBounds(694, 164, 56, 14);
+		add_food_page.add(lblNewLabel_29);
+		
+		JSpinner spinner = new JSpinner();
+		spinner.setBounds(638, 99, 46, 20);
+		add_food_page.add(spinner);
+		
+		JSpinner spinner_1 = new JSpinner();
+		spinner_1.setBounds(638, 130, 46, 20);
+		add_food_page.add(spinner_1);
+		
+		JSpinner spinner_2 = new JSpinner();
+		spinner_2.setBounds(638, 161, 46, 20);
+		add_food_page.add(spinner_2);
+		
+		JSpinner spinner_3 = new JSpinner();
+		spinner_3.setBounds(638, 192, 46, 20);
+		add_food_page.add(spinner_3);
+		
+		JSpinner spinner_4 = new JSpinner();
+		spinner_4.setBounds(638, 223, 46, 20);
+		add_food_page.add(spinner_4);
+		
+		JSpinner spinner_5 = new JSpinner();
+		spinner_5.setBounds(638, 254, 46, 20);
+		add_food_page.add(spinner_5);
+		
+		JLabel lblNewLabel_30 = new JLabel("(\u05E7\u05DC\u05D5\u05E8\u05D9\u05D5\u05EA)");
+		lblNewLabel_30.setHorizontalAlignment(SwingConstants.RIGHT);
+		lblNewLabel_30.setBounds(572, 102, 56, 14);
+		add_food_page.add(lblNewLabel_30);
+		
+		JLabel lblNewLabel_30_1 = new JLabel("(\u05D2\u05E8\u05DD)");
+		lblNewLabel_30_1.setHorizontalAlignment(SwingConstants.RIGHT);
+		lblNewLabel_30_1.setBounds(582, 133, 46, 14);
+		add_food_page.add(lblNewLabel_30_1);
+		
+		JLabel lblNewLabel_30_2 = new JLabel("(\u05DE''\u05D2)");
+		lblNewLabel_30_2.setHorizontalAlignment(SwingConstants.RIGHT);
+		lblNewLabel_30_2.setBounds(582, 164, 46, 14);
+		add_food_page.add(lblNewLabel_30_2);
+		
+		JLabel lblNewLabel_30_3 = new JLabel("(\u05DE''\u05D2)");
+		lblNewLabel_30_3.setHorizontalAlignment(SwingConstants.RIGHT);
+		lblNewLabel_30_3.setBounds(582, 195, 46, 14);
+		add_food_page.add(lblNewLabel_30_3);
+		
+		JLabel lblNewLabel_30_4 = new JLabel("(\u05D2\u05E8\u05DD)");
+		lblNewLabel_30_4.setHorizontalAlignment(SwingConstants.RIGHT);
+		lblNewLabel_30_4.setBounds(582, 226, 46, 14);
+		add_food_page.add(lblNewLabel_30_4);
+		
+		JLabel lblNewLabel_30_5 = new JLabel("(\u05D2\u05E8\u05DD)");
+		lblNewLabel_30_5.setHorizontalAlignment(SwingConstants.RIGHT);
+		lblNewLabel_30_5.setBounds(582, 257, 46, 14);
+		add_food_page.add(lblNewLabel_30_5);
+		
+		JLabel lblNewLabel_31 = new JLabel("\u05E1\u05D5\u05E7\u05E8");
+		lblNewLabel_31.setBounds(693, 290, 46, 14);
+		add_food_page.add(lblNewLabel_31);
+		
+		JLabel lblNewLabel_31_1 = new JLabel("\u05E9\u05D5\u05DE\u05DF \u05E8\u05D5\u05D5\u05D9");
+		lblNewLabel_31_1.setBounds(693, 315, 46, 14);
+		add_food_page.add(lblNewLabel_31_1);
+		
+		JLabel lblNewLabel_31_2 = new JLabel("\u05E1\u05D1\u05D9\u05DD \u05EA\u05D6\u05D5\u05E0\u05EA\u05D9\u05D9\u05DD");
+		lblNewLabel_31_2.setBounds(693, 340, 87, 14);
+		add_food_page.add(lblNewLabel_31_2);
+		
+		JLabel lblNewLabel_32 = new JLabel("\u05DE\u05D9\u05DD");
+		lblNewLabel_32.setBounds(694, 365, 86, 14);
+		add_food_page.add(lblNewLabel_32);
+		
+		JLabel lblNewLabel_32_1 = new JLabel("\u05D5\u05D5\u05D8\u05DE\u05D9\u05DF C");
+		lblNewLabel_32_1.setBounds(694, 390, 86, 14);
+		add_food_page.add(lblNewLabel_32_1);
+		
+		JLabel lblNewLabel_32_2 = new JLabel("\u05D5\u05D5\u05D9\u05D8\u05DE\u05D9\u05DF B9");
+		lblNewLabel_32_2.setBounds(694, 415, 86, 14);
+		add_food_page.add(lblNewLabel_32_2);
+		
+		JLabel lblNewLabel_32_3 = new JLabel("\u05D1\u05E8\u05D6\u05DC");
+		lblNewLabel_32_3.setBounds(693, 440, 86, 14);
+		add_food_page.add(lblNewLabel_32_3);
+		
+		JLabel lblNewLabel_33 = new JLabel("\u05E1\u05D9\u05D3\u05DF");
+		lblNewLabel_33.setBounds(532, 290, 46, 14);
+		add_food_page.add(lblNewLabel_33);
+		
+		JLabel lblNewLabel_34 = new JLabel("\u05DE\u05D2\u05D0\u05D6\u05D9\u05D5\u05DD");
+		lblNewLabel_34.setBounds(532, 315, 46, 14);
+		add_food_page.add(lblNewLabel_34);
+		
+		JLabel lblNewLabel_35 = new JLabel("\u05D6\u05E8\u05D7\u05DF");
+		lblNewLabel_35.setBounds(532, 340, 46, 14);
+		add_food_page.add(lblNewLabel_35);
+		
+		JLabel lblNewLabel_36 = new JLabel("\u05D0\u05D1\u05E5");
+		lblNewLabel_36.setBounds(532, 365, 46, 14);
+		add_food_page.add(lblNewLabel_36);
+		
+		JLabel lblNewLabel_37 = new JLabel("\u05D0\u05E9\u05DC\u05D2\u05DF");
+		lblNewLabel_37.setBounds(532, 390, 46, 14);
+		add_food_page.add(lblNewLabel_37);
+		
+		JSpinner spinner_5_1 = new JSpinner();
+		spinner_5_1.setBounds(638, 287, 46, 20);
+		add_food_page.add(spinner_5_1);
+		
+		JSpinner spinner_5_2 = new JSpinner();
+		spinner_5_2.setBounds(638, 312, 46, 20);
+		add_food_page.add(spinner_5_2);
+		
+		JSpinner spinner_5_3 = new JSpinner();
+		spinner_5_3.setBounds(638, 337, 46, 20);
+		add_food_page.add(spinner_5_3);
+		
+		JSpinner spinner_5_4 = new JSpinner();
+		spinner_5_4.setBounds(638, 362, 46, 20);
+		add_food_page.add(spinner_5_4);
+		
+		JSpinner spinner_5_5 = new JSpinner();
+		spinner_5_5.setBounds(638, 387, 46, 20);
+		add_food_page.add(spinner_5_5);
+		
+		JSpinner spinner_5_6 = new JSpinner();
+		spinner_5_6.setBounds(638, 412, 46, 20);
+		add_food_page.add(spinner_5_6);
+		
+		JSpinner spinner_5_7 = new JSpinner();
+		spinner_5_7.setBounds(638, 437, 46, 20);
+		add_food_page.add(spinner_5_7);
+		
+		JSpinner spinner_5_8 = new JSpinner();
+		spinner_5_8.setBounds(476, 287, 46, 20);
+		add_food_page.add(spinner_5_8);
+		
+		JSpinner spinner_5_9 = new JSpinner();
+		spinner_5_9.setBounds(476, 312, 46, 20);
+		add_food_page.add(spinner_5_9);
+		
+		JSpinner spinner_5_10 = new JSpinner();
+		spinner_5_10.setBounds(476, 337, 46, 20);
+		add_food_page.add(spinner_5_10);
+		
+		JSpinner spinner_5_11 = new JSpinner();
+		spinner_5_11.setBounds(476, 362, 46, 20);
+		add_food_page.add(spinner_5_11);
+		
+		JSpinner spinner_5_12 = new JSpinner();
+		spinner_5_12.setBounds(476, 387, 46, 20);
+		add_food_page.add(spinner_5_12);
 		
 		
 		frame.getContentPane().add(ate_food_page, "name_133487254905400");
@@ -1357,7 +1446,7 @@ ate_food_page.add(button_food_1);
 				regist_page_Business.setVisible(false);
 					start_page.setVisible(true);
 					
-				new Bus_User(b_username_text_Field.getText(),passwordField_1.getPassword(),b_company_field.getText(),b_country_text_Field.getText(),b_city_text_Field.getText());
+				
 				}
 			}
 		});
@@ -1406,9 +1495,7 @@ ate_food_page.add(button_food_1);
 				
 				regist_page_Business.setVisible(false);
 					start_page.setVisible(true);
-					
-				new Bus_User(b_username_text_Field.getText(),passwordField_1.getPassword(),b_company_field.getText(),b_country_text_Field.getText(),b_city_text_Field.getText());
-				}	
+						}	
 			}
 		});
 		

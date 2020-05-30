@@ -30,7 +30,7 @@ public class Private_User extends User {
 
     public Private_User(String us /*username*/, String ps /*password*/,
                         double weight, double height, String fname, String last_Name, String country, String city,
-                        double age, int gender,int Purpose) throws IOException {
+                        double age, int gender,int Purpose) throws IOException{
         super(us, ps);
         this.First_Name = fname;
         this.height = height;
@@ -114,5 +114,62 @@ public class Private_User extends User {
     public void had_sports(double calories_burned, double training_duration_in_hours){
         this.last_time_had_sports = LocalDate.now();
     }
+
+    public void Extract_Data() throws IOException {
+        if(this.path == null){ return; }
+        String fname = "data_" + this.username;
+        String food_path = "food_data_" + this.username + ".txt";
+
+        File file = new File(this.path+"\\"+food_path);
+        BufferedReader br = new BufferedReader(new FileReader(file));
+        int i=0;
+        ArrayList<String> attr = new ArrayList<>();
+        String st;
+        while ((st = br.readLine()) != null){
+            if (st == "-"){
+                if(attr.get(0) == "Meds"){
+                    this.p.meds.add(new Meds(attr.get(1), attr.get(2)));
+                    i=0;
+                }
+
+                if(attr.get(0) == "Dry Food"){
+                    this.p.d_food.add(new Dry_Food(attr.get(1), Double.parseDouble(attr.get(2)), Double.parseDouble(attr.get(3)),
+                            Double.parseDouble(attr.get(4)), Double.parseDouble(attr.get(5))
+                            ,0, 0, Double.parseDouble(attr.get(6)),0,0,0,0,0,0,
+                            0,0,0,0,0));
+                    i=0;
+                }
+
+                if(attr.get(0) == "Junk Food"){
+                    this.p.j_food.add(new Junk_Food(attr.get(1), Double.parseDouble(attr.get(2)), Double.parseDouble(attr.get(3)),
+                            Double.parseDouble(attr.get(4)), Double.parseDouble(attr.get(5))
+                            ,0, 0, Double.parseDouble(attr.get(6)),0,0,0,0,0,0,
+                            0,0,0,0,0));
+                    i=0;
+                }
+
+                if(attr.get(0) == "Vegs"){
+                    this.p.veg_food.add(new Veg(attr.get(1), Double.parseDouble(attr.get(2)), Double.parseDouble(attr.get(3)),
+                            Double.parseDouble(attr.get(4)), Double.parseDouble(attr.get(5))
+                            ,0, 0, Double.parseDouble(attr.get(6)),0,0,0,0,0,0,
+                            0,0,0,0,0));
+                    i=0;
+
+                }
+
+                if(attr.get(0) == "MFD") {
+                    this.p.MFD_food.add(new Meat_Fish_Dai(attr.get(1), Double.parseDouble(attr.get(2)), Double.parseDouble(attr.get(3)),
+                            Double.parseDouble(attr.get(4)), Double.parseDouble(attr.get(5))
+                            ,0, 0, Double.parseDouble(attr.get(6)),0,0,0,0,0,0,
+                            0,0,0,0,0));
+                    i=0;
+                }
+
+            }
+
+    }
+
+
+}
 
 }
