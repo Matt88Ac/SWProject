@@ -10,7 +10,7 @@ public class Product {
     public ArrayList<Meds> meds = null;
 
     public Product(boolean private_user){
-        
+
             this.d_food = new ArrayList<Dry_Food>();
             this.veg_food = new ArrayList<Veg>();
             this.MFD_food = new ArrayList<Meat_Fish_Dai>();
@@ -50,6 +50,19 @@ public class Product {
     }
 
     private void Fill_Junk_Food() {
+        Junk_Food pizza = new Junk_Food("Pizza", 266, 11,11,3.6, 33,4.5,17,
+                600, 2.3, 43,1.4,0,3,188,24,216,1,172);
+
+        Junk_Food burger = new Junk_Food("Burger", 300, 16.5,11,6, 36,1.2,33,
+                440, 2, 38.5,0,0,3,62,27,134,2.5,197);
+        this.j_food.add(pizza);
+        this.j_food.add(burger);
+
+        Junk_Food fries =  new Junk_Food("Fries", 196, 2,13,1.25, 18.5,0,0,
+                141, 1.6, 65,9.7,0,1,9,23,52,0,401);
+        this.j_food.add(fries);
+        
+
     }
 
     private void Fill_MFD() {
