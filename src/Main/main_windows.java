@@ -911,10 +911,6 @@ public class main_windows {
 				
 					regist_page.setVisible(false);
 					start_page.setVisible(true);
-				new Private_User(username_text_Field.getText(),passwordField.getPassword(),
-						(double)weight_spinner.getValue(), (double)height_spinner.getValue(), user_name_text_Field.getText(),
-						user_lastname_text_Field.getText(),country_text_Field.getText(), city_text_Field.getText(),
-						(double)age_spinner.getValue(), Gender_comboBox.getSelectedIndex(),Purpose_comboBox.getSelectedIndex());
 				}
 			}
 		});
@@ -1356,8 +1352,7 @@ ate_food_page.add(button_food_1);
 				
 				regist_page_Business.setVisible(false);
 					start_page.setVisible(true);
-					
-				new Bus_User(b_username_text_Field.getText(),passwordField_1.getPassword(),b_company_field.getText(),b_country_text_Field.getText(),b_city_text_Field.getText());
+
 				}
 			}
 		});
@@ -1407,8 +1402,7 @@ ate_food_page.add(button_food_1);
 				regist_page_Business.setVisible(false);
 					start_page.setVisible(true);
 					
-				new Bus_User(b_username_text_Field.getText(),passwordField_1.getPassword(),b_company_field.getText(),b_country_text_Field.getText(),b_city_text_Field.getText());
-				}	
+				}
 			}
 		});
 		
