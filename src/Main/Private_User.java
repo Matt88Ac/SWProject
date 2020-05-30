@@ -81,8 +81,6 @@ public class Private_User extends User {
     }
 
     public void Add_product_to_private_list(){
-        if (this.path == null){ return; }
-
         Meds meds = null;
         Veg veg = null;
         Meat_Fish_Dai mfd = null;
