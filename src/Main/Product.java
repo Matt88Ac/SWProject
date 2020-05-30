@@ -1,6 +1,5 @@
 package Main;
 import java.util.ArrayList;
-import java.util.Optional;
 
 public class Product {
     public ArrayList<Dry_Food> d_food = null;
@@ -47,6 +46,10 @@ public class Product {
                 1,0,68.4,0,0,0.2,10,12,43,0,35);
         this.d_food.add(rice);
 
+        Dry_Food couscous = new Dry_Food("Couscous", 319,4.2,6.3,0,69,1,128,
+                532,0,0,0,0,0.3,21,0,0,0,0);
+        this.d_food.add(couscous);
+
     }
 
     private void Fill_Junk_Food() {
@@ -61,11 +64,46 @@ public class Product {
         Junk_Food fries =  new Junk_Food("Fries", 196, 2,13,1.25, 18.5,0,0,
                 141, 1.6, 65,9.7,0,1,9,23,52,0,401);
         this.j_food.add(fries);
-        
+
+        Junk_Food sushi = new Junk_Food("Sushi", 93,2.9,0.6,2,18.4,0,4,
+                429,1,76,1,0,0,6,13,60,0.3,47);
+        this.j_food.add(sushi);
+
 
     }
 
     private void Fill_MFD() {
+        Meat_Fish_Dai roasted_chicken = new Meat_Fish_Dai("Roasted Chicken", 239, 27.3, 13.6, 0,
+                0,4,88,82,0,59.5,0,0,1.2,15,23,
+                182,2,223);
+
+        Meat_Fish_Dai roasted_beef = new Meat_Fish_Dai("Roasted Beef", 250, 27.1, 15, 0,
+                0,6,86,900,0,59.5,0,0,2.2,12,14,
+                111,3.6,136);
+
+        Meat_Fish_Dai roasted_duck = new Meat_Fish_Dai("Roasted Duck", 337, 19, 28.3, 0,
+                0,10.6,84,59,0,52.5,0,0,2.7,11,16,
+                156,1.86,204);
+        this.MFD_food.add(roasted_beef);
+        this.MFD_food.add(roasted_chicken);
+        this.MFD_food.add(roasted_duck);
+
+        Meat_Fish_Dai roasted_lamb = new Meat_Fish_Dai("Roasted Lamb", 294, 24.5, 21, 0,
+                0,4,97,72,0,53.5,0,0,1.88,17,23,
+                188,4.5,310);
+
+        Meat_Fish_Dai cooked_tilapia = new Meat_Fish_Dai("Cooked Tilapia", 128, 26.5, 2.6, 0,
+                0,4,57,56,0,72,0,0,0.7,14,34,
+                204,0.4,380);
+
+        Meat_Fish_Dai cooked_salmon = new Meat_Fish_Dai("Cooked Salmon", 188, 25.5, 9, 0,
+                0,1.5,56,405,0,66,0.5,0,0.5,9,33,
+                319,0.5,449);
+
+        this.MFD_food.add(roasted_lamb);
+        this.MFD_food.add(cooked_tilapia);
+        this.MFD_food.add(cooked_salmon);
+
 
     }
 
