@@ -890,10 +890,6 @@ public class main_windows {
 				
 					regist_page.setVisible(false);
 					start_page.setVisible(true);
-<<<<<<< HEAD
-				
-=======
->>>>>>> c713b452695abcec58e01698dfb7121d0928c2eb
 				}
 			}
 		});
@@ -1448,12 +1444,7 @@ ate_food_page.add(button_food_1);
 				
 				regist_page_Business.setVisible(false);
 					start_page.setVisible(true);
-<<<<<<< HEAD
-					
-				
-=======
 
->>>>>>> c713b452695abcec58e01698dfb7121d0928c2eb
 				}
 			}
 		});
@@ -1502,13 +1493,10 @@ ate_food_page.add(button_food_1);
 				
 				regist_page_Business.setVisible(false);
 					start_page.setVisible(true);
-<<<<<<< HEAD
-						}	
-=======
-					
+						}
+
 				}
->>>>>>> c713b452695abcec58e01698dfb7121d0928c2eb
-			}
+
 		});
 		
 		

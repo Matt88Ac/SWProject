@@ -18,8 +18,7 @@ public abstract class User {
     }
 
     public void Extract_Data() throws IOException {
-        String fname = "data_" + this.username;
-        String food_path = "food_data_" + this.username + ".txt";
+        String food_path = "data\\" +"food_" + this.username + ".txt";
 
         File file = new File("C:\\"+food_path);
         BufferedReader br = new BufferedReader(new FileReader(file));
