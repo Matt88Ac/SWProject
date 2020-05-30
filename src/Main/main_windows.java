@@ -313,14 +313,14 @@ public class main_windows {
 					//outFile = new FileWriter ( fileChooser.getSelectedFile()+"\\"+username_text_Field.getText()+".txt");
 					 user_id = "C:\\data";
 					
-		
+					 int flag=0;
 					File dir = new File (user_id);
 					for (File f : dir.listFiles()) 
 					{
 						String tmp_bus = "bus_" + name_text_Field.getText()	+".txt";
 						String tmp_reg_user = name_text_Field.getText() + ".txt";
 						if (f.getName ().equals(tmp_bus))
-							{
+							{flag=1;
 								
 										
 									String whole=user_id +"\\"+ f.getName();
@@ -346,6 +346,7 @@ public class main_windows {
 										
 										
 									}else if(f.getName().equals(tmp_reg_user)){
+										flag=1;
 								
 									String whole=user_id +"\\"+ f.getName();
 									try
@@ -372,7 +373,7 @@ public class main_windows {
 									}
 								}
 								
-							}
+							}if(flag==0) {JOptionPane.showMessageDialog(null, "Incorrect Username." + "!");}
 					}
 			}
 			
@@ -437,45 +438,50 @@ public class main_windows {
 		login_Button.addMouseListener(new MouseAdapter() {
 			@SuppressWarnings({ "deprecation", "resource" })
 			@Override
-			public void mouseClicked(MouseEvent e) {
-				
+			public void mouseClicked(MouseEvent e)
+			{
 				File file =new File("C:\\data");
 				file.mkdirs();
 				
-					if (name_text_Field.getText().isEmpty() || password_Field.getText().isEmpty())
-					{
-					JOptionPane.showMessageDialog(null, "Please Input Username and Password." + "!");
-					} else if (name_text_Field.getText().equals("admin") && password_Field.getText().equals("12345")) 
-					{
-					JOptionPane.showMessageDialog (null, "Admin Login Success" + "!");
-					log_in_page.setVisible(false);
-					admin_page.setVisible(true);
+				
+				if (name_text_Field.getText().isEmpty() || password_Field.getText().isEmpty())
+				{
+				JOptionPane.showMessageDialog(null, "Please Input Username and Password." + "!");
+				} else if (name_text_Field.getText().equals("admin") && password_Field.getText().equals("12345")) 
+				{
+				JOptionPane.showMessageDialog (null, "Admin Login Success" + "!");
+				log_in_page.setVisible(false);
+				admin_page.setVisible(true);
+				
+				} else {
+					String user_id;
 					
-					} else {
-						
-						String user_id = "C:\\data";
-						File dir = new File (user_id);
-						int i=0;
-						for (File f : dir.listFiles()) 
-						{
-								if (f.getName ().contains (".txt"))
-								{
-									if(f.getName().equals(name_text_Field.getText())) 
-									{	i++;
-										System.out.println(f.getName ());
-									
-										String whole=user_id +"\\"+ f.getName();
-										try
-										{
-											String readF=new Scanner (new File (whole)).useDelimiter ("\\A").next ();
-											String splitHere="\n";
-											String[] tokens=readF.split(splitHere);
-											if(password_Field.getText().equals(tokens [1]))
-											{
+					//outFile = new FileWriter ( fileChooser.getSelectedFile()+"\\"+username_text_Field.getText()+".txt");
+					 user_id = "C:\\data";
+					
+					 int flag=0;
+					File dir = new File (user_id);
+					for (File f : dir.listFiles()) 
+					{
+						String tmp_bus = "bus_" + name_text_Field.getText()	+".txt";
+						String tmp_reg_user = name_text_Field.getText() + ".txt";
+						if (f.getName ().equals(tmp_bus))
+							{flag=1;
+								
+										
+									String whole=user_id +"\\"+ f.getName();
+									try
+									{
+										String readF = new Scanner(new File (whole)).useDelimiter ("\\A").next ();
+										String splitHere="\n";
+										String[] tokens=readF.split(splitHere);
+										if(password_Field.getText().equals(tokens [1]))											{
 												log_in_page.setVisible(false);
-												admin_page.setVisible(true);
+												business_page.setVisible(true);
+												Bus_User bus_user=new Bus_User(tokens[0],tokens[1], tokens[2], tokens[3],tokens[4]);
+												
 											}else 
-											{i=0;
+											{
 												JOptionPane.showMessageDialog(null, "Incorrect Password." + "!");
 											}
 										
@@ -483,12 +489,42 @@ public class main_windows {
 										{
 										System.out.println("Error: " + e1);
 										}
+										
+										
+									}else if(f.getName().equals(tmp_reg_user)){
+										flag=1;
+								
+									String whole=user_id +"\\"+ f.getName();
+									try
+									{
+										String readF=new Scanner (new File (whole)).useDelimiter ("\\A").next ();
+										String splitHere="\n";
+										String[] tokens=readF.split(splitHere);
+										if(password_Field.getText().equals(tokens [1]))
+										{
+											log_in_page.setVisible(false);
+											Private_User_page.setVisible(true);
+											Private_User private_user	= new Private_User(tokens[0], tokens[1],
+													Double.parseDouble(tokens[2]),Double.parseDouble(tokens[3]),tokens[4],tokens [5],tokens [6],tokens [7],
+													Double.parseDouble(tokens[8]),Integer.parseInt(tokens[9]),Integer.parseInt(tokens[10]));
+											
+										}else 
+										{
+											JOptionPane.showMessageDialog(null, "Incorrect Password." + "!");
+										}
+									
+									}catch(IOException e1) 
+									{
+									System.out.println("Error: " + e1);
 									}
 								}
-						} if(i==0) {JOptionPane.showMessageDialog(null, "Incorrect username." + "!");}
-				}
+								
+							}if(flag==0) {JOptionPane.showMessageDialog(null, "Incorrect Username." + "!");}
+					}
 			}
-		});
+			
+			
+		});	
 		login_Button.setBounds(513, 122, 128, 39);
 		log_in_page.add(login_Button);
 		
@@ -890,10 +926,7 @@ public class main_windows {
 				
 					regist_page.setVisible(false);
 					start_page.setVisible(true);
-<<<<<<< HEAD
-				
-=======
->>>>>>> c713b452695abcec58e01698dfb7121d0928c2eb
+
 				}
 			}
 		});
@@ -1448,12 +1481,7 @@ ate_food_page.add(button_food_1);
 				
 				regist_page_Business.setVisible(false);
 					start_page.setVisible(true);
-<<<<<<< HEAD
-					
-				
-=======
 
->>>>>>> c713b452695abcec58e01698dfb7121d0928c2eb
 				}
 			}
 		});
@@ -1502,13 +1530,12 @@ ate_food_page.add(button_food_1);
 				
 				regist_page_Business.setVisible(false);
 					start_page.setVisible(true);
-<<<<<<< HEAD
 						}	
-=======
+
 					
 				}
->>>>>>> c713b452695abcec58e01698dfb7121d0928c2eb
-			}
+
+			
 		});
 		
 		
