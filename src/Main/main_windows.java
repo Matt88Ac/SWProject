@@ -31,6 +31,26 @@ import java.awt.event.KeyEvent;
 import java.awt.event.ActionListener;
 import java.awt.event.ActionEvent;
 import javax.swing.JFormattedTextField;
+import javax.swing.SwingConstants;
+import javax.swing.JToolBar;
+import javax.swing.JLayeredPane;
+import javax.swing.UIManager;
+import javax.swing.border.BevelBorder;
+import javax.swing.border.EmptyBorder;
+import javax.swing.JTabbedPane;
+import javax.swing.border.LineBorder;
+import javax.swing.JScrollBar;
+import javax.swing.JScrollPane;
+import javax.swing.JTable;
+import java.awt.event.AdjustmentListener;
+import java.awt.event.AdjustmentEvent;
+import javax.swing.JList;
+import javax.swing.JInternalFrame;
+import javax.swing.ScrollPaneConstants;
+import javax.swing.Box;
+import javax.swing.JSeparator;
+import javax.swing.JTextArea;
+import javax.swing.JRadioButton;
  
 public class main_windows {
 
@@ -49,7 +69,6 @@ public class main_windows {
 	private JTextField b_city_text_Field;
 	private JTextField b_country_text_Field;
 	private JTextField b_company_field;
-	private JTextField textField;
 	private JTextField textField_1;
 	private JTextField textField_2;
 	private JTextField textField_3;
@@ -93,15 +112,46 @@ public class main_windows {
 	 */
 	private void initialize() {
 		frame = new JFrame();
-		frame.setBounds(0, -49, 852, 545);
+		frame.setResizable(false);
+		frame.setBounds(0,0, 852, 545);
 		frame.setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
 		frame.getContentPane().setLayout(new CardLayout(0, 0));
-		
+		JPanel Private_User_page = new JPanel();
 		JPanel start_page = new JPanel();
 		start_page.setBackground(new Color(248, 191, 88));
 		frame.getContentPane().add(start_page, "name_830499986510200");
 		start_page.setLayout(null);
 		JPanel add_food_page = new JPanel();
+
+		JPanel data_analysis_page = new JPanel();
+		JPanel sport_activity_page = new JPanel();
+		frame.getContentPane().add(sport_activity_page, "name_135054560240100");
+		sport_activity_page.setLayout(null);
+		
+		JButton btnNewButton_3 = new JButton("\u05D7\u05D6\u05E8\u05D4");
+		btnNewButton_3.addActionListener(new ActionListener() {
+			public void actionPerformed(ActionEvent e) {
+				Private_User_page.setVisible(true);
+				sport_activity_page.setVisible(false);
+			}
+		});
+		btnNewButton_3.setBounds(747, 482, 89, 23);
+		sport_activity_page.add(btnNewButton_3);
+		
+		JPanel set_rdata_page = new JPanel();
+		frame.getContentPane().add(set_rdata_page, "name_135834242867900");
+		set_rdata_page.setLayout(null);
+		JPanel recommend_food_page = new JPanel();
+		
+		JButton btnNewButton_4 = new JButton("\u05D7\u05D6\u05E8\u05D4");
+		btnNewButton_4.addActionListener(new ActionListener() {
+			public void actionPerformed(ActionEvent e) {
+				set_rdata_page.setVisible(false);
+				Private_User_page.setVisible(true);
+			}
+		});
+		btnNewButton_4.setBounds(747, 482, 89, 23);
+		set_rdata_page.add(btnNewButton_4);
 
 		JPanel log_in_page = new JPanel();
 		log_in_page.setBackground(new Color(42, 200, 125));
@@ -111,7 +161,7 @@ public class main_windows {
 		JLabel lblNewLabel = new JLabel("\u05E9\u05DD \u05DE\u05E9\u05EA\u05DE\u05E9 : ");
 		lblNewLabel.setBounds(731, 11, 95, 28);
 		log_in_page.add(lblNewLabel);
-		
+		JPanel ate_food_page = new JPanel();
 		JButton Button_back = new JButton("\u05D7\u05D6\u05E8\u05D4");
 		Button_back.addMouseListener(new MouseAdapter() {
 			@Override
@@ -132,87 +182,127 @@ public class main_windows {
 		lblNewLabel_18.setBounds(72, 71, 717, 355);
 		business_page.add(lblNewLabel_18);
 		
-		JPanel Private_User = new JPanel();
-		frame.getContentPane().add(Private_User, "name_339221586896400");
-		Private_User.setLayout(null);
+		
+		frame.getContentPane().add(Private_User_page, "name_339221586896400");
+		Private_User_page.setLayout(null);
 		
 		JLabel lblNewLabel_19 = new JLabel("Private_User");
-		lblNewLabel_19.setFont(new Font("Tahoma", Font.PLAIN, 90));
 		lblNewLabel_19.setBounds(10, 430, 606, 57);
-		Private_User.add(lblNewLabel_19);
+		lblNewLabel_19.setFont(new Font("Tahoma", Font.PLAIN, 90));
+		Private_User_page.add(lblNewLabel_19);
 		
-		JButton btnNewButton_2 = new JButton("");
-		btnNewButton_2.addActionListener(new ActionListener() {
+		JButton add_new_food_Button = new JButton("");
+		add_new_food_Button.setBounds(10, 11, 100, 100);
+		add_new_food_Button.addActionListener(new ActionListener() {
 			public void actionPerformed(ActionEvent e) {
-				Private_User.setVisible(false);
+				Private_User_page.setVisible(false);
 				add_food_page.setVisible(true);
 			}
 		});
-		btnNewButton_2.setBackground(new Color(135, 206, 250));
-		btnNewButton_2.setIcon(new ImageIcon("C:\\Users\\oleg1\\Documents\\GitHub\\SWProject\\gif\\159059408251378162.png"));
-		btnNewButton_2.setBounds(10, 11, 100, 100);
-		Private_User.add(btnNewButton_2);
+		add_new_food_Button.setBackground(new Color(255, 255, 255));
+		add_new_food_Button.setIcon(new ImageIcon("C:\\Users\\oleg1\\Documents\\GitHub\\SWProject\\gif\\159059408251378162.png"));
+		Private_User_page.add(add_new_food_Button);
 		
-		JButton btnNewButton_3 = new JButton("\u05E2\u05D3\u05E7\u05D5\u05DF \u05D0\u05E8\u05D5\u05D7\u05D4");
-		btnNewButton_3.setBackground(new Color(135, 206, 250));
-		btnNewButton_3.setBounds(10, 125, 100, 100);
-		Private_User.add(btnNewButton_3);
+		JButton ate_food_Button = new JButton("");
+		ate_food_Button.setBounds(10, 124, 100, 100);
+		ate_food_Button.addActionListener(new ActionListener() {
+			public void actionPerformed(ActionEvent e) {
+				ate_food_page.setVisible(true);
+				Private_User_page.setVisible(false);
+			}
+		});
+		ate_food_Button.setBackground(new Color(255, 255, 255));
+		ate_food_Button.setIcon(new ImageIcon("C:\\Users\\oleg1\\Documents\\GitHub\\SWProject\\gif\\food_eat.png"));
+		Private_User_page.add(ate_food_Button);
+		/*add_new_food_Button.setBackground(new Color(135, 206, 250));
+		add_new_food_Button.setIcon(new ImageIcon("C:\\Users\\oleg1\\Documents\\GitHub\\SWProject\\gif\\159059408251378162.png"));
+		add_new_food_Button.setBounds(10, 11, 100, 100);
+		Private_User_page.add(add_new_food_Button);*/
 		
-		JButton btnNewButton_4 = new JButton("\u05E0\u05EA\u05D5\u05E0\u05D9\u05DD");
-		btnNewButton_4.setBackground(new Color(135, 206, 250));
-		btnNewButton_4.setBounds(10, 235, 100, 100);
-		Private_User.add(btnNewButton_4);
+		JButton data_Button_4 = new JButton("");
+		data_Button_4.setBounds(10, 235, 100, 100);
+		data_Button_4.addActionListener(new ActionListener() {
+			public void actionPerformed(ActionEvent e) {
+				data_analysis_page.setVisible(true);
+				Private_User_page.setVisible(false);
+			}
+		});
+		data_Button_4.setBackground(new Color(255, 255, 255));
+		data_Button_4.setIcon(new ImageIcon("C:\\Users\\oleg1\\Documents\\GitHub\\SWProject\\gif\\data_analysis.png"));
+		Private_User_page.add(data_Button_4);
 		
-		JButton btnNewButton_6 = new JButton("\u05E2\u05D3\u05E7\u05D5\u05DF \u05E4\u05E8\u05D8\u05D9\u05DD");
-		btnNewButton_6.setBackground(new Color(135, 206, 250));
+		JButton btnNewButton_6 = new JButton("");
+		btnNewButton_6.addActionListener(new ActionListener() {
+			public void actionPerformed(ActionEvent e) {
+				Private_User_page.setVisible(false);
+				set_rdata_page.setVisible(true);
+			}
+		});
 		btnNewButton_6.setBounds(120, 341, 100, 100);
-		Private_User.add(btnNewButton_6);
+		btnNewButton_6.setBackground(new Color(255, 255, 255));
+		btnNewButton_6.setIcon(new ImageIcon("C:\\Users\\oleg1\\Documents\\GitHub\\SWProject\\gif\\imageedit.png"));
+		Private_User_page.add(btnNewButton_6);
 		
 		JButton btnNewButton_7 = new JButton("\u05D9\u05E6\u05D9\u05D0");
+		btnNewButton_7.setBounds(722, 23, 89, 23);
 		btnNewButton_7.addActionListener(new ActionListener() {
 			public void actionPerformed(ActionEvent e) {
-				Private_User.setVisible(false);
+				Private_User_page.setVisible(false);
 				start_page.setVisible(false);
 				
 			
 			}
 		});
-		btnNewButton_7.setBounds(722, 23, 89, 23);
-		Private_User.add(btnNewButton_7);
+		Private_User_page.add(btnNewButton_7);
 		
 		JLabel lblNewLabel_9 = new JLabel(" cal \u05E7\u05DC\u05D5\u05E8\u05D9\u05D5\u05EA");
 		lblNewLabel_9.setBounds(140, 27, 113, 14);
-		Private_User.add(lblNewLabel_9);
+		Private_User_page.add(lblNewLabel_9);
 		
 		JLabel lblNewLabel_20 = new JLabel("\u05E0\u05EA\u05E8\u05D0\u05DFsalt");
 		lblNewLabel_20.setBounds(140, 53, 100, 14);
-		Private_User.add(lblNewLabel_20);
+		Private_User_page.add(lblNewLabel_20);
 		
 		JLabel lblNewLabel_20_1 = new JLabel("\u05D7\u05DC\u05D1\u05D5\u05E0\u05D9\u05DDprot");
 		lblNewLabel_20_1.setBounds(140, 83, 100, 14);
-		Private_User.add(lblNewLabel_20_1);
+		Private_User_page.add(lblNewLabel_20_1);
 		
 		JLabel lblNewLabel_20_2 = new JLabel("\u05E9\u05D5\u05DE\u05E0\u05D9\u05DD fat");
 		lblNewLabel_20_2.setBounds(140, 108, 100, 14);
-		Private_User.add(lblNewLabel_20_2);
+		Private_User_page.add(lblNewLabel_20_2);
 		
 		JLabel lblNewLabel_20_3 = new JLabel("\u05E7\u05D5\u05DC\u05E1\u05D8\u05E8\u05D5\u05DC coles");
 		lblNewLabel_20_3.setBounds(140, 133, 100, 14);
-		Private_User.add(lblNewLabel_20_3);
+		Private_User_page.add(lblNewLabel_20_3);
 		
 		JLabel lblNewLabel_21 = new JLabel("New label");
 		lblNewLabel_21.setBounds(395, 430, 416, 14);
-		Private_User.add(lblNewLabel_21);
+		Private_User_page.add(lblNewLabel_21);
 		
-		JButton btnNewButton_3_1 = new JButton("\u05E2\u05D3\u05E7\u05D5\u05DF \u05E4\u05D9\u05DC\u05D5\u05EA \u05D2\u05D5\u05E4\u05E0\u05D9\u05EA");
-		btnNewButton_3_1.setBackground(new Color(135, 206, 250));
-		btnNewButton_3_1.setBounds(10, 341, 100, 100);
-		Private_User.add(btnNewButton_3_1);
+		JButton sport_Button_3_1 = new JButton("");
+		sport_Button_3_1.addActionListener(new ActionListener() {
+			public void actionPerformed(ActionEvent e) {
+				Private_User_page.setVisible(false);
+				sport_activity_page.setVisible(true);
+				
+			}
+		});
+		sport_Button_3_1.setBounds(10, 341, 100, 100);
+		sport_Button_3_1.setIcon(new ImageIcon("C:\\Users\\oleg1\\Documents\\GitHub\\SWProject\\gif\\add_sport_4.gif"));
+		sport_Button_3_1.setBackground(new Color(255, 255, 255));
+		Private_User_page.add(sport_Button_3_1);
 		
-		JButton btnNewButton_3_2 = new JButton("\u05E4\u05D9\u05E8\u05E1\u05D5\u05DE\u05D5\u05EA");
-		btnNewButton_3_2.setBackground(new Color(135, 206, 250));
+		JButton btnNewButton_3_2 = new JButton("");
+		btnNewButton_3_2.addActionListener(new ActionListener() {
+			public void actionPerformed(ActionEvent e) {
+				Private_User_page.setVisible(false);
+				recommend_food_page.setVisible(true);
+			}
+		});
 		btnNewButton_3_2.setBounds(120, 235, 100, 100);
-		Private_User.add(btnNewButton_3_2);
+		btnNewButton_3_2.setIcon(new ImageIcon("C:\\Users\\oleg1\\Documents\\GitHub\\SWProject\\gif\\recommend_food_1.png"));	
+		btnNewButton_3_2.setBackground(new Color(255, 255, 255));
+		Private_User_page.add(btnNewButton_3_2);
 		
 		
 		name_text_Field = new JTextField();
@@ -295,7 +385,7 @@ public class main_windows {
 										if(password_Field.getText().equals(tokens [1]))
 										{
 											log_in_page.setVisible(false);
-											Private_User.setVisible(true);
+											Private_User_page.setVisible(true);
 											
 										}else 
 										{
@@ -870,7 +960,7 @@ public class main_windows {
 		btnNewButton_1.addMouseListener(new MouseAdapter() {
 			@Override
 			public void mouseClicked(MouseEvent e) {
-				Private_User.setVisible(true);
+				Private_User_page.setVisible(true);
 				admin_page.setVisible(false);
 			}
 		});
@@ -997,11 +1087,6 @@ public class main_windows {
 		frame.getContentPane().add(add_food_page, "name_85480630022700");
 		add_food_page.setLayout(null);
 		
-		textField = new JTextField();
-		textField.setBounds(532, 11, 152, 20);
-		add_food_page.add(textField);
-		textField.setColumns(10);
-		
 		textField_1 = new JTextField();
 		textField_1.setColumns(10);
 		textField_1.setBounds(532, 39, 152, 20);
@@ -1079,6 +1164,156 @@ public class main_windows {
 		});
 		btnNewButton_5.setBounds(532, 469, 152, 23);
 		add_food_page.add(btnNewButton_5);
+		
+		JButton btnNewButton_2 = new JButton("\u05D7\u05D6\u05D5\u05E8");
+		btnNewButton_2.addActionListener(new ActionListener() {
+			public void actionPerformed(ActionEvent e) {
+				add_food_page.setVisible(false);
+				Private_User_page.setVisible(true);
+			}
+		});
+		btnNewButton_2.setBounds(693, 469, 133, 23);
+		add_food_page.add(btnNewButton_2);
+		
+		JLabel lblNewLabel_22 = new JLabel("New label");
+		lblNewLabel_22.setBounds(694, 11, 142, 20);
+		add_food_page.add(lblNewLabel_22);
+		JRadioButton dro_RadioButton = new JRadioButton("\u05E7\u05D8\u05E0\u05D9\u05D5\u05EA \u05D5\u05DE\u05D0\u05DB\u05DC\u05D9\u05DD \u05D9\u05D1\u05E9\u05D9\u05DD");
+		JRadioButton met_RadioButton = new JRadioButton("\u05D1\u05E9\u05E8 \u05D7\u05DC\u05D1 \u05D3\u05D2\u05D9\u05DD");
+		JRadioButton junk_RadioButton = new JRadioButton("\u05D7\u05EA\u05D9\u05E4\u05D9\u05DD \u05D5\u05D0\u05DB\u05DC \u05DE\u05E2\u05D9\u05E8");
+		JRadioButton fru_RadioButton = new JRadioButton("\u05E4\u05E8\u05D5\u05EA \u05D5\u05D9\u05E8\u05E7\u05D5\u05EA");
+		fru_RadioButton.addMouseListener(new MouseAdapter() {
+			@Override
+			public void mouseClicked(MouseEvent e) {
+				dro_RadioButton.setSelected(false);
+				met_RadioButton.setSelected(false);
+				junk_RadioButton.setSelected(false);
+				fru_RadioButton.setSelected(true);
+			}
+		});
+		junk_RadioButton.addMouseListener(new MouseAdapter() {
+			@Override
+			public void mouseClicked(MouseEvent e) {
+				dro_RadioButton.setSelected(false);
+				met_RadioButton.setSelected(false);
+				junk_RadioButton.setSelected(true);
+				fru_RadioButton.setSelected(false);
+			}
+		});
+		met_RadioButton.addMouseListener(new MouseAdapter() {
+			@Override
+			public void mouseClicked(MouseEvent e) {
+				dro_RadioButton.setSelected(false);
+				met_RadioButton.setSelected(true);
+				junk_RadioButton.setSelected(false);
+				fru_RadioButton.setSelected(false);
+			}
+		});
+		dro_RadioButton.addMouseListener(new MouseAdapter() {
+			@Override
+			public void mouseClicked(MouseEvent e) {
+				dro_RadioButton.setSelected(true);
+				met_RadioButton.setSelected(false);
+				junk_RadioButton.setSelected(false);
+				fru_RadioButton.setSelected(false);
+			}
+		});
+		dro_RadioButton.setBounds(532, 10, 152, 23);
+		add_food_page.add(dro_RadioButton);
+		
+			met_RadioButton.setBounds(428, 10, 109, 23);
+		add_food_page.add(met_RadioButton);
+		
+		junk_RadioButton.setBounds(307, 10, 119, 23);
+		add_food_page.add(junk_RadioButton);
+		
+		fru_RadioButton.setBounds(218, 10, 87, 23);
+		add_food_page.add(fru_RadioButton);
+		
+		
+		frame.getContentPane().add(ate_food_page, "name_133487254905400");
+		
+		JButton back_Button_3 = new JButton("\u05D7\u05D6\u05E8\u05D4");
+		back_Button_3.setBounds(747, 482, 89, 23);
+		back_Button_3.addActionListener(new ActionListener() {
+			public void actionPerformed(ActionEvent e) {
+				ate_food_page.setVisible(false);
+				Private_User_page.setVisible(true);
+			}
+		});
+		ate_food_page.setLayout(null);
+		ate_food_page.add(back_Button_3);
+JScrollPane scrollPane = new JScrollPane();
+scrollPane.setToolTipText("");
+scrollPane.setHorizontalScrollBarPolicy(ScrollPaneConstants.HORIZONTAL_SCROLLBAR_ALWAYS);
+scrollPane.setVerticalScrollBarPolicy(ScrollPaneConstants.VERTICAL_SCROLLBAR_NEVER);
+scrollPane.setBounds(10, 11, 826, 138);
+ate_food_page.add(scrollPane);
+JButton button_food_3 = new JButton("but_3");
+button_food_3.setBounds(230, 143, 100, 100);
+ate_food_page.add(button_food_3);
+JButton button_food_4 = new JButton("but_4");
+button_food_4.setBounds(335, 143, 100, 100);
+ate_food_page.add(button_food_4);
+JButton button_food_5 = new JButton("but_5");
+button_food_5.setBounds(440, 143, 100, 100);
+ate_food_page.add(button_food_5);
+JButton button_food_6 = new JButton("but_6");
+button_food_6.setBounds(545, 143, 100, 100);
+ate_food_page.add(button_food_6);
+JButton button_food_7 = new JButton("but_7");
+button_food_7.setBounds(650, 143, 100, 100);
+ate_food_page.add(button_food_7);
+JButton button_food_8 = new JButton("but_8");
+button_food_8.setBounds(755, 143, 100, 100);
+ate_food_page.add(button_food_8);
+JButton button_food_9 = new JButton("but_9");
+button_food_9.setBounds(860, 143, 100, 100);
+ate_food_page.add(button_food_9);
+JButton button_food_10 = new JButton("but_10");
+button_food_10.setBounds(860, 143, 100, 100);
+ate_food_page.add(button_food_10);
+JButton button_food_2 = new JButton("but_2");
+button_food_2.setBounds(127, 143, 100, 100);
+ate_food_page.add(button_food_2);
+
+JButton button_food_1 = new JButton("but_1");
+button_food_1.addActionListener(new ActionListener() {
+	public void actionPerformed(ActionEvent e) {
+	}
+});
+button_food_1.setBounds(20, 143, 100, 100);
+ate_food_page.add(button_food_1);
+		
+		
+		frame.getContentPane().add(data_analysis_page, "name_134629289762800");
+		data_analysis_page.setLayout(null);
+		
+		JButton back_Button_4 = new JButton("\u05D7\u05D6\u05E8\u05D4");
+		back_Button_4.addActionListener(new ActionListener() {
+			public void actionPerformed(ActionEvent e) {
+				Private_User_page.setVisible(true);
+				data_analysis_page.setVisible(false);
+			}
+		});
+		back_Button_4.setBounds(747, 482, 89, 23);
+		data_analysis_page.add(back_Button_4);
+		
+		
+		frame.getContentPane().add(recommend_food_page, "name_145319149516600");
+		recommend_food_page.setLayout(null);
+		
+		JButton btnNewButton_8 = new JButton("\u05D7\u05D6\u05E8\u05D4");
+		btnNewButton_8.addActionListener(new ActionListener() {
+			public void actionPerformed(ActionEvent e) {
+				Private_User_page.setVisible(true);
+				recommend_food_page.setVisible(false);
+			}
+		});
+		btnNewButton_8.setBounds(747, 482, 89, 23);
+		recommend_food_page.add(btnNewButton_8);
+		
+	
 		
 		
 		
