@@ -1,5 +1,7 @@
 package Main;
 
+import java.io.IOException;
+
 public class Bus_User extends User{
 
     private String company;
@@ -7,11 +9,12 @@ public class Bus_User extends User{
     private String city;
     private String path = null;
 
-    public Bus_User(String us, char[] ps, String company, String city, String country) {
+    public Bus_User(String us, String ps, String company, String city, String country) throws IOException {
         super(us, ps);
         this.company = company;
         this.city = city;
         this.country = country;
+
     }
 
     public String Get_Company_Name(){
@@ -22,7 +25,7 @@ public class Bus_User extends User{
         return this.username;
     }
 
-    public char[] Get_Password(){
+    public String Get_Password(){
         return this.password;
     }
 
