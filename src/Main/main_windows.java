@@ -11,6 +11,7 @@ import java.awt.event.MouseAdapter;
 import java.awt.event.MouseEvent;
 import java.io.BufferedWriter;
 import java.io.File;
+import java.io.FileNotFoundException;
 import java.io.FileWriter;
 import java.io.IOException;
 
@@ -170,7 +171,8 @@ public class main_windows {
 			}
 		});
 		add_new_food_Button.setBackground(new Color(255, 255, 255));
-		add_new_food_Button.setIcon(new ImageIcon("C:\\Users\\oleg1\\Documents\\GitHub\\SWProject\\gif\\159059408251378162.png"));
+		Image foo1= new ImageIcon(this.getClass().getResource("/159059408251378162.png")).getImage();
+		add_new_food_Button.setIcon(new ImageIcon(foo1));
 		Private_User_page.add(add_new_food_Button);
 		
 		JButton ate_food_Button = new JButton("");
@@ -182,7 +184,8 @@ public class main_windows {
 			}
 		});
 		ate_food_Button.setBackground(new Color(255, 255, 255));
-		ate_food_Button.setIcon(new ImageIcon("C:\\Users\\oleg1\\Documents\\GitHub\\SWProject\\gif\\food_eat.png"));
+		Image foo= new ImageIcon(this.getClass().getResource("/food_eat.png")).getImage();
+		ate_food_Button.setIcon(new ImageIcon(foo));
 		Private_User_page.add(ate_food_Button);
 		/*add_new_food_Button.setBackground(new Color(135, 206, 250));
 		add_new_food_Button.setIcon(new ImageIcon("C:\\Users\\oleg1\\Documents\\GitHub\\SWProject\\gif\\159059408251378162.png"));
@@ -198,7 +201,8 @@ public class main_windows {
 			}
 		});
 		data_Button_4.setBackground(new Color(255, 255, 255));
-		data_Button_4.setIcon(new ImageIcon("C:\\Users\\oleg1\\Documents\\GitHub\\SWProject\\gif\\data_analysis.png"));
+		Image ana = new ImageIcon(this.getClass().getResource("/data_analysis.png")).getImage();
+		data_Button_4.setIcon(new ImageIcon(ana));
 		Private_User_page.add(data_Button_4);
 		
 		JButton btnNewButton_6 = new JButton("");
@@ -210,7 +214,8 @@ public class main_windows {
 		});
 		btnNewButton_6.setBounds(120, 341, 100, 100);
 		btnNewButton_6.setBackground(new Color(255, 255, 255));
-		btnNewButton_6.setIcon(new ImageIcon("C:\\Users\\oleg1\\Documents\\GitHub\\SWProject\\gif\\imageedit.png"));
+		Image ima = new ImageIcon(this.getClass().getResource("/imageedit.png")).getImage();
+		btnNewButton_6.setIcon(new ImageIcon(ima));
 		Private_User_page.add(btnNewButton_6);
 		
 		JButton btnNewButton_7 = new JButton("\u05D9\u05E6\u05D9\u05D0");
@@ -258,7 +263,8 @@ public class main_windows {
 			}
 		});
 		sport_Button_3_1.setBounds(10, 341, 100, 100);
-		sport_Button_3_1.setIcon(new ImageIcon("C:\\Users\\oleg1\\Documents\\GitHub\\SWProject\\gif\\add_sport_4.gif"));
+		Image spo = new ImageIcon(this.getClass().getResource("/add_sport_4.gif")).getImage();
+		sport_Button_3_1.setIcon(new ImageIcon(spo));
 		sport_Button_3_1.setBackground(new Color(255, 255, 255));
 		Private_User_page.add(sport_Button_3_1);
 		
@@ -270,7 +276,8 @@ public class main_windows {
 			}
 		});
 		btnNewButton_3_2.setBounds(120, 235, 100, 100);
-		btnNewButton_3_2.setIcon(new ImageIcon("C:\\Users\\oleg1\\Documents\\GitHub\\SWProject\\gif\\recommend_food_1.png"));	
+		Image rec = new ImageIcon(this.getClass().getResource("/recommend_food_1.png")).getImage();
+		btnNewButton_3_2.setIcon(new ImageIcon(rec));	
 		btnNewButton_3_2.setBackground(new Color(255, 255, 255));
 		Private_User_page.add(btnNewButton_3_2);
 		
@@ -326,7 +333,7 @@ public class main_windows {
 									String whole=user_id +"\\"+ f.getName();
 									try
 									{
-										String readF = new Scanner(new File (whole)).useDelimiter ("\\A").next ();
+										String readF = extracted(whole).useDelimiter ("\\A").next ();
 										String splitHere="\n";
 										String[] tokens=readF.split(splitHere);
 										if(password_Field.getText().equals(tokens [1]))											{
@@ -341,7 +348,7 @@ public class main_windows {
 										
 										}catch(IOException e1) 
 										{
-										System.out.println("Error: " + e1);
+										System.out.println("Error:2 " + e1);
 										}
 										
 										
@@ -351,7 +358,7 @@ public class main_windows {
 									String whole=user_id +"\\"+ f.getName();
 									try
 									{
-										String readF=new Scanner (new File (whole)).useDelimiter ("\\A").next ();
+										String readF=extracted(whole).useDelimiter ("\\A").next ();
 										String splitHere="\n";
 										String[] tokens=readF.split(splitHere);
 										if(password_Field.getText().equals(tokens [1]))
@@ -369,12 +376,16 @@ public class main_windows {
 									
 									}catch(IOException e1) 
 									{
-									System.out.println("Error: " + e1);
+									System.out.println("Error:1 " + e1);
 									}
 								}
 								
 							}if(flag==0) {JOptionPane.showMessageDialog(null, "Incorrect Username." + "!");}
 					}
+			}
+
+			private Scanner extracted(String whole) throws FileNotFoundException {
+				return new Scanner(new File (whole));
 			}
 			
 			
@@ -1452,10 +1463,12 @@ ate_food_page.add(button_food_1);
 				{
 					JOptionPane.showMessageDialog(null, "You have to fill all" + "!");	
 				}else {
+					
+					File file =new File("C:\\data");
+					file.mkdirs();
+					FileWriter outFile = null;
 				
-				FileWriter outFile = null;
-				
-				try {outFile = new FileWriter ("data\\"+"bus_"+b_username_text_Field.getText()+".txt");
+				try {outFile = new FileWriter ("C:\\data"+"bus_"+b_username_text_Field.getText()+".txt");
 				} catch (IOException e1) {
 					System.out.println("Error: " + e1);
 				
@@ -1499,12 +1512,14 @@ ate_food_page.add(button_food_1);
 					
 					
 				FileWriter outFile = null;
+				File file =new File("C:\\data");
+				file.mkdirs();
 				
 						
 				BufferedWriter outStream=null;
 				
 				try {
-					outFile = new FileWriter ("data\\"+"bus_"+b_username_text_Field.getText()+".txt");
+					outFile = new FileWriter ("C:\\data\\"+"bus_"+b_username_text_Field.getText()+".txt");
 				} catch (IOException e1) {
 					System.out.println("Error: " + e1);
 				

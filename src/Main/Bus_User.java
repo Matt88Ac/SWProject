@@ -29,9 +29,6 @@ public class Bus_User extends User{
     }
 
     public void Add_Product_To_Sell_List(){
-        if (this.path == null){
-            return;
-        }
         Meds meds = null;
         Veg veg = null;
         Meat_Fish_Dai mfd = null;
