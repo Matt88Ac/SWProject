@@ -93,11 +93,15 @@ public class main_windows {
 		frame.getContentPane().add(start_page, "name_830499986510200");
 		start_page.setLayout(null);
 		JPanel add_food_page = new JPanel();
-
+		JSpinner weight_spinner = new JSpinner();
 		JPanel data_analysis_page = new JPanel();
 		JPanel sport_activity_page = new JPanel();
 		frame.getContentPane().add(sport_activity_page, "name_135054560240100");
 		sport_activity_page.setLayout(null);
+		JSpinner height_spinner = new JSpinner();
+		JSpinner age_spinner = new JSpinner();
+		JComboBox Gender_comboBox = new JComboBox();
+		JComboBox Purpose_comboBox = new JComboBox();
 		
 		JButton btnNewButton_3 = new JButton("\u05D7\u05D6\u05E8\u05D4");
 		btnNewButton_3.addActionListener(new ActionListener() {
@@ -139,6 +143,8 @@ public class main_windows {
 			public void mouseClicked(MouseEvent e) {
 				log_in_page.setVisible(false);
 				start_page.setVisible(true);
+				name_text_Field.setText("");
+				password_Field.setText("");
 			}
 		});
 		Button_back.setBounds(737, 472, 89, 23);
@@ -156,6 +162,12 @@ public class main_windows {
 		
 		frame.getContentPane().add(Private_User_page, "name_339221586896400");
 		Private_User_page.setLayout(null);
+		JSpinner spinner = new JSpinner();
+		JRadioButton dro_RadioButton = new JRadioButton("\u05E7\u05D8\u05E0\u05D9\u05D5\u05EA \u05D5\u05DE\u05D0\u05DB\u05DC\u05D9\u05DD \u05D9\u05D1\u05E9\u05D9\u05DD");
+		JRadioButton met_RadioButton = new JRadioButton("\u05D1\u05E9\u05E8 \u05D7\u05DC\u05D1 \u05D3\u05D2\u05D9\u05DD");
+		JRadioButton junk_RadioButton = new JRadioButton("\u05D7\u05EA\u05D9\u05E4\u05D9\u05DD \u05D5\u05D0\u05DB\u05DC \u05DE\u05E2\u05D9\u05E8");
+		JRadioButton fru_RadioButton = new JRadioButton("\u05E4\u05E8\u05D5\u05EA \u05D5\u05D9\u05E8\u05E7\u05D5\u05EA");
+		
 		
 		JLabel lblNewLabel_19 = new JLabel("Private_User");
 		lblNewLabel_19.setBounds(10, 430, 606, 57);
@@ -164,12 +176,7 @@ public class main_windows {
 		
 		JButton add_new_food_Button = new JButton("");
 		add_new_food_Button.setBounds(10, 11, 100, 100);
-		add_new_food_Button.addActionListener(new ActionListener() {
-			public void actionPerformed(ActionEvent e) {
-				Private_User_page.setVisible(false);
-				add_food_page.setVisible(true);
-			}
-		});
+		
 		add_new_food_Button.setBackground(new Color(255, 255, 255));
 		Image foo1= new ImageIcon(this.getClass().getResource("/159059408251378162.png")).getImage();
 		add_new_food_Button.setIcon(new ImageIcon(foo1));
@@ -224,6 +231,8 @@ public class main_windows {
 			public void actionPerformed(ActionEvent e) {
 				Private_User_page.setVisible(false);
 				start_page.setVisible(false);
+				name_text_Field.setText("");
+				password_Field.setText("");
 				
 			
 			}
@@ -297,8 +306,10 @@ public class main_windows {
 		JPanel admin_page = new JPanel();
 		JButton login_Button = new JButton("\u05D0\u05D9\u05E9\u05D5\u05E8");
 		
+		
 		login_Button.addActionListener(new ActionListener() 
 		{
+			@SuppressWarnings("deprecation")
 			public void actionPerformed(ActionEvent e)
 			{
 				File file =new File("C:\\data");
@@ -341,6 +352,7 @@ public class main_windows {
 												business_page.setVisible(true);
 												Bus_User bus_user=new Bus_User(tokens[0],tokens[1], tokens[2], tokens[3],tokens[4]);
 												
+												
 											}else 
 											{
 												JOptionPane.showMessageDialog(null, "Incorrect Password." + "!");
@@ -353,15 +365,16 @@ public class main_windows {
 										
 										
 									}else if(f.getName().equals(tmp_reg_user)){
+										
 										flag=1;
 								
 									String whole=user_id +"\\"+ f.getName();
 									try
-									{
-										String readF=extracted(whole).useDelimiter ("\\A").next ();
+									{	
+										String readF=extracted(whole).useDelimiter("\\A").next();
 										String splitHere="\n";
 										String[] tokens=readF.split(splitHere);
-										if(password_Field.getText().equals(tokens [1]))
+										if(password_Field.getText().equals(tokens[1]))
 										{
 											log_in_page.setVisible(false);
 											Private_User_page.setVisible(true);
@@ -376,7 +389,9 @@ public class main_windows {
 									
 									}catch(IOException e1) 
 									{
+										
 									System.out.println("Error:1 " + e1);
+									System.out.println("Error:1 " + e1.toString());
 									}
 								}
 								
@@ -569,11 +584,40 @@ public class main_windows {
 		regist_page.setLayout(null);
 		
 		JButton Button_page_2 = new JButton("\u05DE\u05D9\u05E9\u05EA\u05DE\u05E9 \u05D7\u05D3\u05E9");
+		Button_page_2.addActionListener(new ActionListener() {
+			public void actionPerformed(ActionEvent e) {
+				start_page.setVisible(false);
+				regist_page.setVisible(true);
+
+				username_text_Field.setText("");
+				passwordField.setText("");
+				weight_spinner.setValue(1);
+				height_spinner.setValue(1);
+				user_name_text_Field.setText("");
+				user_lastname_text_Field.setText("");
+				country_text_Field.setText("");
+				city_text_Field.setText("");
+				age_spinner.setValue(1);
+				Gender_comboBox.setSelectedIndex(0);
+				Purpose_comboBox.setSelectedIndex(0);
+			}
+		});
 		Button_page_2.addMouseListener(new MouseAdapter() {
 			@Override
 			public void mouseClicked(MouseEvent e) {
 				start_page.setVisible(false);
 				regist_page.setVisible(true);
+				username_text_Field.setText("");
+				passwordField.setText("");
+				weight_spinner.setValue(0);
+				height_spinner.setValue(0);
+				user_name_text_Field.setText("");
+				user_lastname_text_Field.setText("");
+				country_text_Field.setText("");
+				city_text_Field.setText("");
+				age_spinner.setValue(0);
+				Gender_comboBox.setSelectedIndex(0);
+				Purpose_comboBox.setSelectedIndex(0);
 			}
 		});
 		Button_page_2.setBounds(10, 45, 118, 23);
@@ -694,7 +738,7 @@ public class main_windows {
 		Button_save.setBounds(577, 472, 89, 23);
 		regist_page.add(Button_save);
 		
-		JComboBox Purpose_comboBox = new JComboBox();
+		
 		Purpose_comboBox.setToolTipText("...");
 		Purpose_comboBox.setModel(new DefaultComboBoxModel(new String[] {"\u05DC\u05E8\u05D3\u05EA \u05D1\u05DE\u05E9\u05E7\u05DC", "\u05DC\u05D4\u05D9\u05E9\u05D0\u05E8 \u05D1\u05D0\u05D5\u05EA\u05D5 \u05DE\u05E9\u05E7\u05DC", "\u05DC\u05E2\u05DC\u05D5\u05EA \u05D1\u05DE\u05E9\u05E7\u05DC"}));
 		Purpose_comboBox.setForeground(new Color(0, 0, 0));
@@ -711,7 +755,7 @@ public class main_windows {
 			}
 		});
 		
-		JComboBox Gender_comboBox = new JComboBox();
+		
 		Gender_comboBox.setToolTipText("...");
 		Gender_comboBox.setModel(new DefaultComboBoxModel(new String[] {"\u05D6\u05DB\u05E8", "\u05E0\u05E7\u05D1\u05D4"}));
 		Gender_comboBox.setMaximumRowCount(2);
@@ -728,7 +772,7 @@ public class main_windows {
 		});
 		
 		
-		JSpinner weight_spinner = new JSpinner();
+		
 		weight_spinner.setModel(new SpinnerNumberModel(1.0, 0.0, 300.0, 1.0));
 		weight_spinner.setBounds(576, 290, 151, 20);
 		regist_page.add(weight_spinner);
@@ -742,7 +786,7 @@ public class main_windows {
 			}
 		});
 		
-		JSpinner height_spinner = new JSpinner();
+		
 		height_spinner.setModel(new SpinnerNumberModel(1.0, 1.0, 300.0, 1.0));
 		height_spinner.setBounds(576, 259, 150, 20);
 		regist_page.add(height_spinner);
@@ -756,7 +800,7 @@ public class main_windows {
 			}
 		});
 		
-		JSpinner age_spinner = new JSpinner();
+		
 		age_spinner.setModel(new SpinnerNumberModel(1.0, 1.0, 120.0, 1.0));
 		age_spinner.setBounds(575, 228, 151, 20);
 		regist_page.add(age_spinner);
@@ -821,6 +865,11 @@ public class main_windows {
 			public void mouseClicked(MouseEvent e) {
 				regist_page.setVisible(false);
 				regist_page_Business.setVisible(true);
+				b_username_text_Field.setText("");
+				passwordField_1.setText("");
+				b_company_field.setText("");
+				b_country_text_Field.setText("");
+				b_city_text_Field.setText("");
 			}
 		});
 		Button_goto_Business.setBounds(391, 472, 124, 23);
@@ -879,13 +928,18 @@ public class main_windows {
 				
 				
 				
-				
 					regist_page.setVisible(false);
 					start_page.setVisible(true);
 	
 				}	
 			}
 		});
+		
+		
+
+	
+		
+		
 		
 		Button_save.addMouseListener(new MouseAdapter() {
 			@Override
@@ -1110,13 +1164,10 @@ public class main_windows {
 		frame.getContentPane().add(add_food_page, "name_85480630022700");
 		add_food_page.setLayout(null);
 		
-		JButton btnNewButton_5 = new JButton("\u05E9\u05DE\u05D5\u05E8 ");
-		btnNewButton_5.addActionListener(new ActionListener() {
-			public void actionPerformed(ActionEvent e) {
-			}
-		});
-		btnNewButton_5.setBounds(532, 469, 152, 23);
-		add_food_page.add(btnNewButton_5);
+		JButton food_save_Button = new JButton("\u05E9\u05DE\u05D5\u05E8 ");
+		
+		food_save_Button.setBounds(532, 469, 152, 23);
+		add_food_page.add(food_save_Button);
 		
 		JButton btnNewButton_2 = new JButton("\u05D7\u05D6\u05D5\u05E8");
 		btnNewButton_2.addActionListener(new ActionListener() {
@@ -1125,16 +1176,14 @@ public class main_windows {
 				Private_User_page.setVisible(true);
 			}
 		});
+		
 		btnNewButton_2.setBounds(693, 469, 133, 23);
 		add_food_page.add(btnNewButton_2);
 		
 		JLabel lblNewLabel_22 = new JLabel("\u05E1\u05D5\u05D2 \u05D4\u05D0\u05D5\u05DB\u05DC:");
 		lblNewLabel_22.setBounds(694, 70, 142, 20);
 		add_food_page.add(lblNewLabel_22);
-		JRadioButton dro_RadioButton = new JRadioButton("\u05E7\u05D8\u05E0\u05D9\u05D5\u05EA \u05D5\u05DE\u05D0\u05DB\u05DC\u05D9\u05DD \u05D9\u05D1\u05E9\u05D9\u05DD");
-		JRadioButton met_RadioButton = new JRadioButton("\u05D1\u05E9\u05E8 \u05D7\u05DC\u05D1 \u05D3\u05D2\u05D9\u05DD");
-		JRadioButton junk_RadioButton = new JRadioButton("\u05D7\u05EA\u05D9\u05E4\u05D9\u05DD \u05D5\u05D0\u05DB\u05DC \u05DE\u05E2\u05D9\u05E8");
-		JRadioButton fru_RadioButton = new JRadioButton("\u05E4\u05E8\u05D5\u05EA \u05D5\u05D9\u05E8\u05E7\u05D5\u05EA");
+		
 		fru_RadioButton.addMouseListener(new MouseAdapter() {
 			@Override
 			public void mouseClicked(MouseEvent e) {
@@ -1182,8 +1231,105 @@ public class main_windows {
 		
 		fru_RadioButton.setBounds(218, 69, 87, 23);
 		add_food_page.add(fru_RadioButton);
+		dro_RadioButton.addKeyListener(new KeyAdapter() {
+			@Override
+			public void keyPressed(KeyEvent e) {
+				if(e.getKeyCode()==KeyEvent.VK_LEFT) {
+					met_RadioButton.requestFocus();
+			}
+				if(e.getKeyCode()==KeyEvent.VK_SPACE) {
+				
+				met_RadioButton.setSelected(false);
+				junk_RadioButton.setSelected(false);
+				fru_RadioButton.setSelected(false);
+				}
+				if(e.getKeyCode()==KeyEvent.VK_ENTER) {
+					spinner.requestFocus();
+					
+				}
+		  }
+		});
+		met_RadioButton.addKeyListener(new KeyAdapter() {
+			@Override
+			public void keyPressed(KeyEvent e) {
+				if(e.getKeyCode()==KeyEvent.VK_RIGHT) {
+					dro_RadioButton.requestFocus();
+			}
+				if(e.getKeyCode()==KeyEvent.VK_LEFT) {
+					junk_RadioButton.requestFocus();
+			}
+				if(e.getKeyCode()==KeyEvent.VK_SPACE) {
+				
+				dro_RadioButton.setSelected(false);
+				junk_RadioButton.setSelected(false);
+				fru_RadioButton.setSelected(false);
+				}
+				if(e.getKeyCode()==KeyEvent.VK_ENTER) {
+					spinner.requestFocus();
+					
+				}
+				
+			}
+		});
+		
+		junk_RadioButton.addKeyListener(new KeyAdapter() {
+			@Override
+			public void keyPressed(KeyEvent e) {
+			
+					if(e.getKeyCode()==KeyEvent.VK_LEFT) {
+						fru_RadioButton.requestFocus();
+				}
+					if(e.getKeyCode()==KeyEvent.VK_RIGHT) {
+						met_RadioButton.requestFocus();
+				}
+					if(e.getKeyCode()==KeyEvent.VK_SPACE) {
+					
+					dro_RadioButton.setSelected(false);
+					met_RadioButton.setSelected(false);
+					fru_RadioButton.setSelected(false);
+					}
+					if(e.getKeyCode()==KeyEvent.VK_ENTER) {
+						spinner.requestFocus();
+					}
+					
+				
+			}
+		});
+		fru_RadioButton.addKeyListener(new KeyAdapter() {
+			@Override
+			public void keyPressed(KeyEvent e) {
+
+				
+				if(e.getKeyCode()==KeyEvent.VK_RIGHT) {
+					junk_RadioButton.requestFocus();
+			}
+				if(e.getKeyCode()==KeyEvent.VK_SPACE) {
+				
+				dro_RadioButton.setSelected(false);
+				met_RadioButton.setSelected(false);
+				junk_RadioButton.setSelected(false);
+				}
+				if(e.getKeyCode()==KeyEvent.VK_ENTER) {
+					spinner.requestFocus();
+				}
+			}
+		});
+		
+		
+		
+		
+		
 		
 		food_name_text_Field = new JTextField();
+		food_name_text_Field.addKeyListener(new KeyAdapter() {
+			@Override
+			public void keyPressed(KeyEvent e) {
+				if(e.getKeyCode()==KeyEvent.VK_ENTER) {
+					
+					dro_RadioButton.requestFocus();
+				}
+			}
+		});
 		food_name_text_Field.setBounds(532, 42, 152, 20);
 		add_food_page.add(food_name_text_Field);
 		food_name_text_Field.setColumns(10);
@@ -1216,27 +1362,33 @@ public class main_windows {
 		lblNewLabel_29.setBounds(694, 164, 56, 14);
 		add_food_page.add(lblNewLabel_29);
 		
-		JSpinner spinner = new JSpinner();
+	
+		spinner.setModel(new SpinnerNumberModel(new Integer(0), new Integer(0), null, new Integer(1)));
 		spinner.setBounds(638, 99, 46, 20);
 		add_food_page.add(spinner);
 		
 		JSpinner spinner_1 = new JSpinner();
+		spinner_1.setModel(new SpinnerNumberModel(new Integer(0), new Integer(0), null, new Integer(1)));
 		spinner_1.setBounds(638, 130, 46, 20);
 		add_food_page.add(spinner_1);
 		
 		JSpinner spinner_2 = new JSpinner();
+		spinner_2.setModel(new SpinnerNumberModel(new Integer(0), new Integer(0), null, new Integer(1)));
 		spinner_2.setBounds(638, 161, 46, 20);
 		add_food_page.add(spinner_2);
 		
 		JSpinner spinner_3 = new JSpinner();
+		spinner_3.setModel(new SpinnerNumberModel(new Integer(0), new Integer(0), null, new Integer(1)));
 		spinner_3.setBounds(638, 192, 46, 20);
 		add_food_page.add(spinner_3);
 		
 		JSpinner spinner_4 = new JSpinner();
+		spinner_4.setModel(new SpinnerNumberModel(new Integer(0), new Integer(0), null, new Integer(1)));
 		spinner_4.setBounds(638, 223, 46, 20);
 		add_food_page.add(spinner_4);
 		
 		JSpinner spinner_5 = new JSpinner();
+		spinner_5.setModel(new SpinnerNumberModel(new Integer(0), new Integer(0), null, new Integer(1)));
 		spinner_5.setBounds(638, 254, 46, 20);
 		add_food_page.add(spinner_5);
 		
@@ -1319,52 +1471,326 @@ public class main_windows {
 		add_food_page.add(lblNewLabel_37);
 		
 		JSpinner spinner_5_1 = new JSpinner();
+		spinner_5_1.setModel(new SpinnerNumberModel(new Integer(0), new Integer(0), null, new Integer(1)));
 		spinner_5_1.setBounds(638, 287, 46, 20);
 		add_food_page.add(spinner_5_1);
 		
 		JSpinner spinner_5_2 = new JSpinner();
+		spinner_5_2.setModel(new SpinnerNumberModel(new Integer(0), new Integer(0), null, new Integer(1)));
 		spinner_5_2.setBounds(638, 312, 46, 20);
 		add_food_page.add(spinner_5_2);
 		
 		JSpinner spinner_5_3 = new JSpinner();
+		spinner_5_3.setModel(new SpinnerNumberModel(new Integer(0), new Integer(0), null, new Integer(1)));
 		spinner_5_3.setBounds(638, 337, 46, 20);
 		add_food_page.add(spinner_5_3);
 		
 		JSpinner spinner_5_4 = new JSpinner();
+		spinner_5_4.setModel(new SpinnerNumberModel(new Integer(0), new Integer(0), null, new Integer(1)));
 		spinner_5_4.setBounds(638, 362, 46, 20);
 		add_food_page.add(spinner_5_4);
 		
 		JSpinner spinner_5_5 = new JSpinner();
+		spinner_5_5.setModel(new SpinnerNumberModel(new Integer(0), new Integer(0), null, new Integer(1)));
 		spinner_5_5.setBounds(638, 387, 46, 20);
 		add_food_page.add(spinner_5_5);
 		
 		JSpinner spinner_5_6 = new JSpinner();
+		spinner_5_6.setModel(new SpinnerNumberModel(new Integer(0), new Integer(0), null, new Integer(1)));
 		spinner_5_6.setBounds(638, 412, 46, 20);
 		add_food_page.add(spinner_5_6);
 		
 		JSpinner spinner_5_7 = new JSpinner();
+		spinner_5_7.setModel(new SpinnerNumberModel(new Integer(0), new Integer(0), null, new Integer(1)));
 		spinner_5_7.setBounds(638, 437, 46, 20);
 		add_food_page.add(spinner_5_7);
 		
 		JSpinner spinner_5_8 = new JSpinner();
+		spinner_5_8.setModel(new SpinnerNumberModel(new Integer(0), new Integer(0), null, new Integer(1)));
 		spinner_5_8.setBounds(476, 287, 46, 20);
 		add_food_page.add(spinner_5_8);
 		
 		JSpinner spinner_5_9 = new JSpinner();
+		spinner_5_9.setModel(new SpinnerNumberModel(new Integer(0), new Integer(0), null, new Integer(1)));
 		spinner_5_9.setBounds(476, 312, 46, 20);
 		add_food_page.add(spinner_5_9);
 		
 		JSpinner spinner_5_10 = new JSpinner();
+		spinner_5_10.setModel(new SpinnerNumberModel(new Integer(0), new Integer(0), null, new Integer(1)));
 		spinner_5_10.setBounds(476, 337, 46, 20);
 		add_food_page.add(spinner_5_10);
 		
 		JSpinner spinner_5_11 = new JSpinner();
+		spinner_5_11.setModel(new SpinnerNumberModel(new Integer(0), new Integer(0), null, new Integer(1)));
 		spinner_5_11.setBounds(476, 362, 46, 20);
 		add_food_page.add(spinner_5_11);
 		
 		JSpinner spinner_5_12 = new JSpinner();
+		spinner_5_12.setModel(new SpinnerNumberModel(new Integer(0), new Integer(0), null, new Integer(1)));
 		spinner_5_12.setBounds(476, 387, 46, 20);
 		add_food_page.add(spinner_5_12);
+		food_save_Button.addActionListener(new ActionListener() {
+			public void actionPerformed(ActionEvent e) {
+				
+
+				
+				
+				if(food_name_text_Field.getText().isEmpty()||spinner.getValue().equals(0)||spinner_1.getValue().equals(0)||spinner_2.getValue().equals(0)||spinner_3.getValue().equals(0)||
+						spinner_4.getValue().equals(0)||spinner_5.getValue().equals(0)||(dro_RadioButton.isSelected()==false&&met_RadioButton.isSelected()==false&&junk_RadioButton.isSelected()==false&&fru_RadioButton.isSelected()==false))
+				{
+					JOptionPane.showMessageDialog(null, "You have to fill the critic parameters" + "!");
+
+					
+				}else {
+					File file =new File("C:\\data");
+					file.mkdirs();
+					
+				FileWriter outFile = null;
+				
+				try {
+					
+					
+					outFile = new FileWriter ("C:\\data"+"\\"+"food_"+food_name_text_Field.getText()+"_"+name_text_Field.getText()+".txt");
+				} catch (IOException e1) {
+					System.out.println("Error: " + e1);
+				
+				}
+				BufferedWriter outStream =new BufferedWriter(outFile);
+			
+				try {
+					
+					
+					outStream.write(food_name_text_Field.getText()+"\n");
+					if(dro_RadioButton.isSelected()==true) 
+					outStream.write("1");
+					else if(met_RadioButton.isSelected()==true)
+						outStream.write("2");
+					else if(junk_RadioButton.isSelected()==true)
+						outStream.write("3");
+					else if(fru_RadioButton.isSelected()==true)
+						outStream.write("4");
+					outStream.write("\n");
+					outStream.write(spinner.getValue().toString()+"\n");
+					outStream.write(spinner_1.getValue().toString()+"\n");
+					outStream.write(spinner_2.getValue().toString()+"\n");
+					outStream.write(spinner_3.getValue().toString()+"\n");
+					outStream.write(spinner_4.getValue().toString()+"\n");
+					outStream.write(spinner_5.getValue().toString()+"\n");
+					outStream.write(spinner_5_1.getValue().toString()+"\n");
+					outStream.write(spinner_5_2.getValue().toString()+"\n");
+					outStream.write(spinner_5_3.getValue().toString()+"\n");
+					outStream.write(spinner_5_4.getValue().toString()+"\n");
+					outStream.write(spinner_5_5.getValue().toString()+"\n");
+					outStream.write(spinner_5_6.getValue().toString()+"\n");
+					outStream.write(spinner_5_7.getValue().toString()+"\n");
+					outStream.write(spinner_5_8.getValue().toString()+"\n");
+					outStream.write(spinner_5_9.getValue().toString()+"\n");
+					outStream.write(spinner_5_10.getValue().toString()+"\n");
+					outStream.write(spinner_5_11.getValue().toString()+"\n");
+					outStream.write(spinner_5_12.getValue().toString()+"\n");
+					outStream.write(name_text_Field.getText()+"\n");
+					outStream.close ();
+				} catch (IOException e1) {
+					System.out.println("Error: " + e1);
+				}
+				
+				
+				
+					add_food_page.setVisible(false);
+					Private_User_page.setVisible(true);
+	
+				}	
+				
+				
+				
+				
+				
+			}
+		});
+		add_new_food_Button.addActionListener(new ActionListener() {
+			public void actionPerformed(ActionEvent e) {
+				
+				food_name_text_Field.setText("");
+				dro_RadioButton.setSelected(false);
+				met_RadioButton.setSelected(false);
+				junk_RadioButton.setSelected(false);
+				fru_RadioButton.setSelected(false);
+				spinner.setValue(0);
+				spinner_1.setValue(0);
+				spinner_2.setValue(0);
+				spinner_3.setValue(0);
+				spinner_4.setValue(0);
+				spinner_5.setValue(0);
+				spinner_5_1.setValue(0);
+				spinner_5_2.setValue(0);
+				spinner_5_3.setValue(0);
+				spinner_5_4.setValue(0);
+				spinner_5_5.setValue(0);
+				spinner_5_6.setValue(0);
+				spinner_5_7.setValue(0);
+				spinner_5_8.setValue(0);
+				spinner_5_9.setValue(0);
+				spinner_5_10.setValue(0);
+				spinner_5_11.setValue(0);
+				spinner_5_12.setValue(0);
+				
+				
+				Private_User_page.setVisible(false);
+				add_food_page.setVisible(true);
+			}
+		});
+		
+		
+		spinner.addKeyListener(new KeyAdapter() {
+			@Override
+			public void keyPressed(KeyEvent e) {
+				if(e.getKeyCode()==KeyEvent.VK_ENTER) {
+					spinner_1.requestFocus();
+					
+				}
+			}
+		});
+		spinner_1.addKeyListener(new KeyAdapter() {
+			@Override
+			public void keyPressed(KeyEvent e) {
+				if(e.getKeyCode()==KeyEvent.VK_ENTER) {
+					spinner_2.requestFocus();
+					
+				}
+			}
+		});
+		spinner_2.addKeyListener(new KeyAdapter() {
+			@Override
+			public void keyPressed(KeyEvent e) {
+				if(e.getKeyCode()==KeyEvent.VK_ENTER) {
+					spinner_3.requestFocus();
+					
+				}
+			}
+		});
+		spinner_3.addKeyListener(new KeyAdapter() {
+			@Override
+			public void keyPressed(KeyEvent e) {
+				if(e.getKeyCode()==KeyEvent.VK_ENTER) {
+					spinner_4.requestFocus();
+					
+				}
+			}
+		});
+		spinner_4.addKeyListener(new KeyAdapter() {
+			@Override
+			public void keyPressed(KeyEvent e) {
+				if(e.getKeyCode()==KeyEvent.VK_ENTER) {
+					spinner_5.requestFocus();
+					
+				}
+			}
+		});
+		spinner_5.addKeyListener(new KeyAdapter() {
+			@Override
+			public void keyPressed(KeyEvent e) {
+				if(e.getKeyCode()==KeyEvent.VK_ENTER) {
+					spinner_5_1.requestFocus();
+					
+				}
+			}
+		});
+		spinner_5_1.addKeyListener(new KeyAdapter() {
+			@Override
+			public void keyPressed(KeyEvent e) {
+				if(e.getKeyCode()==KeyEvent.VK_ENTER) {
+					spinner_5_2.requestFocus();
+					
+				}
+			}
+		});spinner_5_2.addKeyListener(new KeyAdapter() {
+			@Override
+			public void keyPressed(KeyEvent e) {
+				if(e.getKeyCode()==KeyEvent.VK_ENTER) {
+					spinner_5_3.requestFocus();
+					
+				}
+			}
+		});spinner_5_3.addKeyListener(new KeyAdapter() {
+			@Override
+			public void keyPressed(KeyEvent e) {
+				if(e.getKeyCode()==KeyEvent.VK_ENTER) {
+					spinner_5_4.requestFocus();
+					
+				}
+			}
+		});spinner_5_4.addKeyListener(new KeyAdapter() {
+			@Override
+			public void keyPressed(KeyEvent e) {
+				if(e.getKeyCode()==KeyEvent.VK_ENTER) {
+					spinner_5_5.requestFocus();
+					
+				}
+			}
+		});spinner_5_5.addKeyListener(new KeyAdapter() {
+			@Override
+			public void keyPressed(KeyEvent e) {
+				if(e.getKeyCode()==KeyEvent.VK_ENTER) {
+					spinner_5_6.requestFocus();
+					
+				}
+			}
+		});spinner_5_6.addKeyListener(new KeyAdapter() {
+			@Override
+			public void keyPressed(KeyEvent e) {
+				if(e.getKeyCode()==KeyEvent.VK_ENTER) {
+					spinner_5_7.requestFocus();
+					
+				}
+			}
+		});spinner_5_7.addKeyListener(new KeyAdapter() {
+			@Override
+			public void keyPressed(KeyEvent e) {
+				if(e.getKeyCode()==KeyEvent.VK_ENTER) {
+					spinner_5_8.requestFocus();
+					
+				}
+			}
+		});spinner_5_8.addKeyListener(new KeyAdapter() {
+			@Override
+			public void keyPressed(KeyEvent e) {
+				if(e.getKeyCode()==KeyEvent.VK_ENTER) {
+					spinner_5_9.requestFocus();
+					
+				}
+			}
+		});spinner_5_9.addKeyListener(new KeyAdapter() {
+			@Override
+			public void keyPressed(KeyEvent e) {
+				if(e.getKeyCode()==KeyEvent.VK_ENTER) {
+					spinner_5_10.requestFocus();
+					
+				}
+			}
+		});spinner_5_10.addKeyListener(new KeyAdapter() {
+			@Override
+			public void keyPressed(KeyEvent e) {
+				if(e.getKeyCode()==KeyEvent.VK_ENTER) {
+					spinner_5_11.requestFocus();
+					
+				}
+			}
+		});spinner_5_11.addKeyListener(new KeyAdapter() {
+			@Override
+			public void keyPressed(KeyEvent e) {
+				if(e.getKeyCode()==KeyEvent.VK_ENTER) {
+					spinner_5_12.requestFocus();
+					
+				}
+			}
+		});spinner_5_12.addKeyListener(new KeyAdapter() {
+			@Override
+			public void keyPressed(KeyEvent e) {
+				if(e.getKeyCode()==KeyEvent.VK_ENTER) {
+					food_save_Button.doClick();
+				}
+			}
+		});
 		
 		
 		frame.getContentPane().add(ate_food_page, "name_133487254905400");
