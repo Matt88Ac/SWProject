@@ -162,11 +162,16 @@ public class main_windows {
 		
 		frame.getContentPane().add(Private_User_page, "name_339221586896400");
 		Private_User_page.setLayout(null);
-		JSpinner spinner = new JSpinner();
+		JSpinner cal_spinner = new JSpinner();
+		cal_spinner.setBounds(638, 99, 46, 20);
 		JRadioButton dro_RadioButton = new JRadioButton("\u05E7\u05D8\u05E0\u05D9\u05D5\u05EA \u05D5\u05DE\u05D0\u05DB\u05DC\u05D9\u05DD \u05D9\u05D1\u05E9\u05D9\u05DD");
+		dro_RadioButton.setBounds(532, 69, 152, 23);
 		JRadioButton met_RadioButton = new JRadioButton("\u05D1\u05E9\u05E8 \u05D7\u05DC\u05D1 \u05D3\u05D2\u05D9\u05DD");
+		met_RadioButton.setBounds(428, 69, 109, 23);
 		JRadioButton junk_RadioButton = new JRadioButton("\u05D7\u05EA\u05D9\u05E4\u05D9\u05DD \u05D5\u05D0\u05DB\u05DC \u05DE\u05E2\u05D9\u05E8");
+		junk_RadioButton.setBounds(307, 69, 119, 23);
 		JRadioButton fru_RadioButton = new JRadioButton("\u05E4\u05E8\u05D5\u05EA \u05D5\u05D9\u05E8\u05E7\u05D5\u05EA");
+		fru_RadioButton.setBounds(218, 69, 87, 23);
 		
 		
 		JLabel lblNewLabel_19 = new JLabel("Private_User");
@@ -289,6 +294,10 @@ public class main_windows {
 		btnNewButton_3_2.setIcon(new ImageIcon(rec));	
 		btnNewButton_3_2.setBackground(new Color(255, 255, 255));
 		Private_User_page.add(btnNewButton_3_2);
+		
+		JLabel lblNewLabel_38 = new JLabel("\u05E4\u05D7\u05DE\u05D9\u05DE\u05D5\u05EA carbo");
+		lblNewLabel_38.setBounds(140, 158, 80, 14);
+		Private_User_page.add(lblNewLabel_38);
 		
 		
 		name_text_Field = new JTextField();
@@ -1165,19 +1174,17 @@ public class main_windows {
 		add_food_page.setLayout(null);
 		
 		JButton food_save_Button = new JButton("\u05E9\u05DE\u05D5\u05E8 ");
-		
 		food_save_Button.setBounds(532, 469, 152, 23);
 		add_food_page.add(food_save_Button);
 		
 		JButton btnNewButton_2 = new JButton("\u05D7\u05D6\u05D5\u05E8");
+		btnNewButton_2.setBounds(693, 469, 133, 23);
 		btnNewButton_2.addActionListener(new ActionListener() {
 			public void actionPerformed(ActionEvent e) {
 				add_food_page.setVisible(false);
 				Private_User_page.setVisible(true);
 			}
 		});
-		
-		btnNewButton_2.setBounds(693, 469, 133, 23);
 		add_food_page.add(btnNewButton_2);
 		
 		JLabel lblNewLabel_22 = new JLabel("\u05E1\u05D5\u05D2 \u05D4\u05D0\u05D5\u05DB\u05DC:");
@@ -1220,16 +1227,9 @@ public class main_windows {
 				fru_RadioButton.setSelected(false);
 			}
 		});
-		dro_RadioButton.setBounds(532, 69, 152, 23);
 		add_food_page.add(dro_RadioButton);
-		
-			met_RadioButton.setBounds(428, 69, 109, 23);
 		add_food_page.add(met_RadioButton);
-		
-		junk_RadioButton.setBounds(307, 69, 119, 23);
 		add_food_page.add(junk_RadioButton);
-		
-		fru_RadioButton.setBounds(218, 69, 87, 23);
 		add_food_page.add(fru_RadioButton);
 		dro_RadioButton.addKeyListener(new KeyAdapter() {
 			@Override
@@ -1244,7 +1244,7 @@ public class main_windows {
 				fru_RadioButton.setSelected(false);
 				}
 				if(e.getKeyCode()==KeyEvent.VK_ENTER) {
-					spinner.requestFocus();
+					cal_spinner.requestFocus();
 					
 				}
 		  }
@@ -1265,7 +1265,7 @@ public class main_windows {
 				fru_RadioButton.setSelected(false);
 				}
 				if(e.getKeyCode()==KeyEvent.VK_ENTER) {
-					spinner.requestFocus();
+					cal_spinner.requestFocus();
 					
 				}
 				
@@ -1289,7 +1289,7 @@ public class main_windows {
 					fru_RadioButton.setSelected(false);
 					}
 					if(e.getKeyCode()==KeyEvent.VK_ENTER) {
-						spinner.requestFocus();
+						cal_spinner.requestFocus();
 					}
 					
 				
@@ -1310,7 +1310,7 @@ public class main_windows {
 				junk_RadioButton.setSelected(false);
 				}
 				if(e.getKeyCode()==KeyEvent.VK_ENTER) {
-					spinner.requestFocus();
+					cal_spinner.requestFocus();
 				}
 			}
 		});
@@ -1321,6 +1321,7 @@ public class main_windows {
 		
 		
 		food_name_text_Field = new JTextField();
+		food_name_text_Field.setBounds(532, 42, 152, 20);
 		food_name_text_Field.addKeyListener(new KeyAdapter() {
 			@Override
 			public void keyPressed(KeyEvent e) {
@@ -1330,7 +1331,6 @@ public class main_windows {
 				}
 			}
 		});
-		food_name_text_Field.setBounds(532, 42, 152, 20);
 		add_food_page.add(food_name_text_Field);
 		food_name_text_Field.setColumns(10);
 		
@@ -1363,180 +1363,191 @@ public class main_windows {
 		add_food_page.add(lblNewLabel_29);
 		
 	
-		spinner.setModel(new SpinnerNumberModel(new Integer(0), new Integer(0), null, new Integer(1)));
-		spinner.setBounds(638, 99, 46, 20);
-		add_food_page.add(spinner);
+		cal_spinner.setModel(new SpinnerNumberModel(new Integer(0), new Integer(0), null, new Integer(1)));
+		add_food_page.add(cal_spinner);
 		
-		JSpinner spinner_1 = new JSpinner();
-		spinner_1.setModel(new SpinnerNumberModel(new Integer(0), new Integer(0), null, new Integer(1)));
-		spinner_1.setBounds(638, 130, 46, 20);
-		add_food_page.add(spinner_1);
+		JSpinner Fat_spinner = new JSpinner();
+		Fat_spinner.setBounds(638, 130, 46, 20);
+		Fat_spinner.setModel(new SpinnerNumberModel(new Integer(0), new Integer(0), null, new Integer(1)));
+		add_food_page.add(Fat_spinner);
 		
-		JSpinner spinner_2 = new JSpinner();
-		spinner_2.setModel(new SpinnerNumberModel(new Integer(0), new Integer(0), null, new Integer(1)));
-		spinner_2.setBounds(638, 161, 46, 20);
-		add_food_page.add(spinner_2);
+		JSpinner coles_spinner = new JSpinner();
+		coles_spinner.setBounds(638, 161, 46, 20);
+		coles_spinner.setModel(new SpinnerNumberModel(new Integer(0), new Integer(0), null, new Integer(1)));
+		add_food_page.add(coles_spinner);
 		
-		JSpinner spinner_3 = new JSpinner();
-		spinner_3.setModel(new SpinnerNumberModel(new Integer(0), new Integer(0), null, new Integer(1)));
-		spinner_3.setBounds(638, 192, 46, 20);
-		add_food_page.add(spinner_3);
+		JSpinner salt_spinner = new JSpinner();
+		salt_spinner.setBounds(638, 192, 46, 20);
+		salt_spinner.setModel(new SpinnerNumberModel(new Integer(0), new Integer(0), null, new Integer(1)));
+		add_food_page.add(salt_spinner);
 		
-		JSpinner spinner_4 = new JSpinner();
-		spinner_4.setModel(new SpinnerNumberModel(new Integer(0), new Integer(0), null, new Integer(1)));
-		spinner_4.setBounds(638, 223, 46, 20);
-		add_food_page.add(spinner_4);
+		JSpinner carbo_spinner = new JSpinner();
+		carbo_spinner.setBounds(638, 223, 46, 20);
+		carbo_spinner.setModel(new SpinnerNumberModel(new Integer(0), new Integer(0), null, new Integer(1)));
+		add_food_page.add(carbo_spinner);
 		
-		JSpinner spinner_5 = new JSpinner();
-		spinner_5.setModel(new SpinnerNumberModel(new Integer(0), new Integer(0), null, new Integer(1)));
-		spinner_5.setBounds(638, 254, 46, 20);
-		add_food_page.add(spinner_5);
+		JSpinner prot_spinner = new JSpinner();
+		prot_spinner.setBounds(638, 254, 46, 20);
+		prot_spinner.setModel(new SpinnerNumberModel(new Integer(0), new Integer(0), null, new Integer(1)));
+		add_food_page.add(prot_spinner);
 		
 		JLabel lblNewLabel_30 = new JLabel("(\u05E7\u05DC\u05D5\u05E8\u05D9\u05D5\u05EA)");
-		lblNewLabel_30.setHorizontalAlignment(SwingConstants.RIGHT);
 		lblNewLabel_30.setBounds(572, 102, 56, 14);
+		lblNewLabel_30.setHorizontalAlignment(SwingConstants.RIGHT);
 		add_food_page.add(lblNewLabel_30);
 		
 		JLabel lblNewLabel_30_1 = new JLabel("(\u05D2\u05E8\u05DD)");
-		lblNewLabel_30_1.setHorizontalAlignment(SwingConstants.RIGHT);
 		lblNewLabel_30_1.setBounds(582, 133, 46, 14);
+		lblNewLabel_30_1.setHorizontalAlignment(SwingConstants.RIGHT);
 		add_food_page.add(lblNewLabel_30_1);
 		
 		JLabel lblNewLabel_30_2 = new JLabel("(\u05DE''\u05D2)");
-		lblNewLabel_30_2.setHorizontalAlignment(SwingConstants.RIGHT);
 		lblNewLabel_30_2.setBounds(582, 164, 46, 14);
+		lblNewLabel_30_2.setHorizontalAlignment(SwingConstants.RIGHT);
 		add_food_page.add(lblNewLabel_30_2);
 		
 		JLabel lblNewLabel_30_3 = new JLabel("(\u05DE''\u05D2)");
-		lblNewLabel_30_3.setHorizontalAlignment(SwingConstants.RIGHT);
 		lblNewLabel_30_3.setBounds(582, 195, 46, 14);
+		lblNewLabel_30_3.setHorizontalAlignment(SwingConstants.RIGHT);
 		add_food_page.add(lblNewLabel_30_3);
 		
 		JLabel lblNewLabel_30_4 = new JLabel("(\u05D2\u05E8\u05DD)");
-		lblNewLabel_30_4.setHorizontalAlignment(SwingConstants.RIGHT);
 		lblNewLabel_30_4.setBounds(582, 226, 46, 14);
+		lblNewLabel_30_4.setHorizontalAlignment(SwingConstants.RIGHT);
 		add_food_page.add(lblNewLabel_30_4);
 		
 		JLabel lblNewLabel_30_5 = new JLabel("(\u05D2\u05E8\u05DD)");
-		lblNewLabel_30_5.setHorizontalAlignment(SwingConstants.RIGHT);
 		lblNewLabel_30_5.setBounds(582, 257, 46, 14);
+		lblNewLabel_30_5.setHorizontalAlignment(SwingConstants.RIGHT);
 		add_food_page.add(lblNewLabel_30_5);
 		
 		JLabel lblNewLabel_31 = new JLabel("\u05E1\u05D5\u05E7\u05E8");
-		lblNewLabel_31.setBounds(693, 290, 46, 14);
+		lblNewLabel_31.setBounds(693, 315, 46, 14);
 		add_food_page.add(lblNewLabel_31);
 		
 		JLabel lblNewLabel_31_1 = new JLabel("\u05E9\u05D5\u05DE\u05DF \u05E8\u05D5\u05D5\u05D9");
-		lblNewLabel_31_1.setBounds(693, 315, 46, 14);
+		lblNewLabel_31_1.setBounds(694, 340, 46, 14);
 		add_food_page.add(lblNewLabel_31_1);
 		
 		JLabel lblNewLabel_31_2 = new JLabel("\u05E1\u05D1\u05D9\u05DD \u05EA\u05D6\u05D5\u05E0\u05EA\u05D9\u05D9\u05DD");
-		lblNewLabel_31_2.setBounds(693, 340, 87, 14);
+		lblNewLabel_31_2.setBounds(693, 365, 87, 14);
 		add_food_page.add(lblNewLabel_31_2);
 		
 		JLabel lblNewLabel_32 = new JLabel("\u05DE\u05D9\u05DD");
-		lblNewLabel_32.setBounds(694, 365, 86, 14);
+		lblNewLabel_32.setBounds(694, 390, 86, 14);
 		add_food_page.add(lblNewLabel_32);
 		
 		JLabel lblNewLabel_32_1 = new JLabel("\u05D5\u05D5\u05D8\u05DE\u05D9\u05DF C");
-		lblNewLabel_32_1.setBounds(694, 390, 86, 14);
+		lblNewLabel_32_1.setBounds(694, 415, 86, 14);
 		add_food_page.add(lblNewLabel_32_1);
 		
 		JLabel lblNewLabel_32_2 = new JLabel("\u05D5\u05D5\u05D9\u05D8\u05DE\u05D9\u05DF B9");
-		lblNewLabel_32_2.setBounds(694, 415, 86, 14);
+		lblNewLabel_32_2.setBounds(694, 444, 86, 14);
 		add_food_page.add(lblNewLabel_32_2);
 		
 		JLabel lblNewLabel_32_3 = new JLabel("\u05D1\u05E8\u05D6\u05DC");
-		lblNewLabel_32_3.setBounds(693, 440, 86, 14);
+		lblNewLabel_32_3.setBounds(532, 315, 35, 14);
 		add_food_page.add(lblNewLabel_32_3);
 		
 		JLabel lblNewLabel_33 = new JLabel("\u05E1\u05D9\u05D3\u05DF");
-		lblNewLabel_33.setBounds(532, 290, 46, 14);
+		lblNewLabel_33.setBounds(532, 340, 46, 14);
 		add_food_page.add(lblNewLabel_33);
 		
 		JLabel lblNewLabel_34 = new JLabel("\u05DE\u05D2\u05D0\u05D6\u05D9\u05D5\u05DD");
-		lblNewLabel_34.setBounds(532, 315, 46, 14);
+		lblNewLabel_34.setBounds(532, 365, 46, 14);
 		add_food_page.add(lblNewLabel_34);
 		
 		JLabel lblNewLabel_35 = new JLabel("\u05D6\u05E8\u05D7\u05DF");
-		lblNewLabel_35.setBounds(532, 340, 46, 14);
+		lblNewLabel_35.setBounds(532, 390, 46, 14);
 		add_food_page.add(lblNewLabel_35);
 		
 		JLabel lblNewLabel_36 = new JLabel("\u05D0\u05D1\u05E5");
-		lblNewLabel_36.setBounds(532, 365, 46, 14);
+		lblNewLabel_36.setBounds(532, 415, 46, 14);
 		add_food_page.add(lblNewLabel_36);
 		
 		JLabel lblNewLabel_37 = new JLabel("\u05D0\u05E9\u05DC\u05D2\u05DF");
-		lblNewLabel_37.setBounds(532, 390, 46, 14);
+		lblNewLabel_37.setBounds(532, 444, 46, 14);
 		add_food_page.add(lblNewLabel_37);
 		
 		JSpinner spinner_5_1 = new JSpinner();
+		spinner_5_1.setBounds(638, 312, 46, 20);
 		spinner_5_1.setModel(new SpinnerNumberModel(new Integer(0), new Integer(0), null, new Integer(1)));
-		spinner_5_1.setBounds(638, 287, 46, 20);
 		add_food_page.add(spinner_5_1);
 		
 		JSpinner spinner_5_2 = new JSpinner();
+		spinner_5_2.setBounds(638, 337, 46, 20);
 		spinner_5_2.setModel(new SpinnerNumberModel(new Integer(0), new Integer(0), null, new Integer(1)));
-		spinner_5_2.setBounds(638, 312, 46, 20);
 		add_food_page.add(spinner_5_2);
 		
 		JSpinner spinner_5_3 = new JSpinner();
+		spinner_5_3.setBounds(638, 362, 46, 20);
 		spinner_5_3.setModel(new SpinnerNumberModel(new Integer(0), new Integer(0), null, new Integer(1)));
-		spinner_5_3.setBounds(638, 337, 46, 20);
 		add_food_page.add(spinner_5_3);
 		
 		JSpinner spinner_5_4 = new JSpinner();
+		spinner_5_4.setBounds(638, 387, 46, 20);
 		spinner_5_4.setModel(new SpinnerNumberModel(new Integer(0), new Integer(0), null, new Integer(1)));
-		spinner_5_4.setBounds(638, 362, 46, 20);
 		add_food_page.add(spinner_5_4);
 		
 		JSpinner spinner_5_5 = new JSpinner();
+		spinner_5_5.setBounds(638, 412, 46, 20);
 		spinner_5_5.setModel(new SpinnerNumberModel(new Integer(0), new Integer(0), null, new Integer(1)));
-		spinner_5_5.setBounds(638, 387, 46, 20);
 		add_food_page.add(spinner_5_5);
 		
 		JSpinner spinner_5_6 = new JSpinner();
+		spinner_5_6.setBounds(638, 438, 46, 20);
 		spinner_5_6.setModel(new SpinnerNumberModel(new Integer(0), new Integer(0), null, new Integer(1)));
-		spinner_5_6.setBounds(638, 412, 46, 20);
 		add_food_page.add(spinner_5_6);
 		
 		JSpinner spinner_5_7 = new JSpinner();
+		spinner_5_7.setBounds(476, 312, 46, 20);
 		spinner_5_7.setModel(new SpinnerNumberModel(new Integer(0), new Integer(0), null, new Integer(1)));
-		spinner_5_7.setBounds(638, 437, 46, 20);
 		add_food_page.add(spinner_5_7);
 		
 		JSpinner spinner_5_8 = new JSpinner();
+		spinner_5_8.setBounds(476, 337, 46, 20);
 		spinner_5_8.setModel(new SpinnerNumberModel(new Integer(0), new Integer(0), null, new Integer(1)));
-		spinner_5_8.setBounds(476, 287, 46, 20);
 		add_food_page.add(spinner_5_8);
 		
 		JSpinner spinner_5_9 = new JSpinner();
+		spinner_5_9.setBounds(476, 362, 46, 20);
 		spinner_5_9.setModel(new SpinnerNumberModel(new Integer(0), new Integer(0), null, new Integer(1)));
-		spinner_5_9.setBounds(476, 312, 46, 20);
 		add_food_page.add(spinner_5_9);
 		
 		JSpinner spinner_5_10 = new JSpinner();
+		spinner_5_10.setBounds(476, 387, 46, 20);
 		spinner_5_10.setModel(new SpinnerNumberModel(new Integer(0), new Integer(0), null, new Integer(1)));
-		spinner_5_10.setBounds(476, 337, 46, 20);
 		add_food_page.add(spinner_5_10);
 		
 		JSpinner spinner_5_11 = new JSpinner();
+		spinner_5_11.setBounds(476, 412, 46, 20);
 		spinner_5_11.setModel(new SpinnerNumberModel(new Integer(0), new Integer(0), null, new Integer(1)));
-		spinner_5_11.setBounds(476, 362, 46, 20);
 		add_food_page.add(spinner_5_11);
 		
 		JSpinner spinner_5_12 = new JSpinner();
+		spinner_5_12.setBounds(476, 438, 46, 20);
 		spinner_5_12.setModel(new SpinnerNumberModel(new Integer(0), new Integer(0), null, new Integer(1)));
-		spinner_5_12.setBounds(476, 387, 46, 20);
 		add_food_page.add(spinner_5_12);
+		
+		JLabel lblNewLabel_39 = new JLabel("______________________________________________________");
+		lblNewLabel_39.setBounds(462, 260, 364, 29);
+		add_food_page.add(lblNewLabel_39);
+		
+		JLabel lblNewLabel_40 = new JLabel("\u05E1\u05D3\u05D5\u05EA \u05D7\u05D5\u05D1\u05D4");
+		lblNewLabel_40.setBounds(758, 20, 67, 14);
+		add_food_page.add(lblNewLabel_40);
+		
+		JLabel lblNewLabel_41 = new JLabel("\u05E1\u05D3\u05D5\u05EA \u05DC\u05D0 \u05D7\u05D5\u05D1\u05D4");
+		lblNewLabel_41.setBounds(721, 290, 87, 14);
+		add_food_page.add(lblNewLabel_41);
 		food_save_Button.addActionListener(new ActionListener() {
 			public void actionPerformed(ActionEvent e) {
 				
 
 				
 				
-				if(food_name_text_Field.getText().isEmpty()||spinner.getValue().equals(0)||spinner_1.getValue().equals(0)||spinner_2.getValue().equals(0)||spinner_3.getValue().equals(0)||
-						spinner_4.getValue().equals(0)||spinner_5.getValue().equals(0)||(dro_RadioButton.isSelected()==false&&met_RadioButton.isSelected()==false&&junk_RadioButton.isSelected()==false&&fru_RadioButton.isSelected()==false))
+				if(food_name_text_Field.getText().isEmpty()||cal_spinner.getValue().equals(0)||Fat_spinner.getValue().equals(0)||coles_spinner.getValue().equals(0)||salt_spinner.getValue().equals(0)||
+						carbo_spinner.getValue().equals(0)||prot_spinner.getValue().equals(0)||(dro_RadioButton.isSelected()==false&&met_RadioButton.isSelected()==false&&junk_RadioButton.isSelected()==false&&fru_RadioButton.isSelected()==false))
 				{
 					JOptionPane.showMessageDialog(null, "You have to fill the critic parameters" + "!");
 
@@ -1570,12 +1581,12 @@ public class main_windows {
 					else if(fru_RadioButton.isSelected()==true)
 						outStream.write("4");
 					outStream.write("\n");
-					outStream.write(spinner.getValue().toString()+"\n");
-					outStream.write(spinner_1.getValue().toString()+"\n");
-					outStream.write(spinner_2.getValue().toString()+"\n");
-					outStream.write(spinner_3.getValue().toString()+"\n");
-					outStream.write(spinner_4.getValue().toString()+"\n");
-					outStream.write(spinner_5.getValue().toString()+"\n");
+					outStream.write(cal_spinner.getValue().toString()+"\n");
+					outStream.write(Fat_spinner.getValue().toString()+"\n");
+					outStream.write(coles_spinner.getValue().toString()+"\n");
+					outStream.write(salt_spinner.getValue().toString()+"\n");
+					outStream.write(carbo_spinner.getValue().toString()+"\n");
+					outStream.write(prot_spinner.getValue().toString()+"\n");
 					outStream.write(spinner_5_1.getValue().toString()+"\n");
 					outStream.write(spinner_5_2.getValue().toString()+"\n");
 					outStream.write(spinner_5_3.getValue().toString()+"\n");
@@ -1615,12 +1626,12 @@ public class main_windows {
 				met_RadioButton.setSelected(false);
 				junk_RadioButton.setSelected(false);
 				fru_RadioButton.setSelected(false);
-				spinner.setValue(0);
-				spinner_1.setValue(0);
-				spinner_2.setValue(0);
-				spinner_3.setValue(0);
-				spinner_4.setValue(0);
-				spinner_5.setValue(0);
+				cal_spinner.setValue(0);
+				Fat_spinner.setValue(0);
+				coles_spinner.setValue(0);
+				salt_spinner.setValue(0);
+				carbo_spinner.setValue(0);
+				prot_spinner.setValue(0);
 				spinner_5_1.setValue(0);
 				spinner_5_2.setValue(0);
 				spinner_5_3.setValue(0);
@@ -1641,52 +1652,52 @@ public class main_windows {
 		});
 		
 		
-		spinner.addKeyListener(new KeyAdapter() {
+		cal_spinner.addKeyListener(new KeyAdapter() {
 			@Override
 			public void keyPressed(KeyEvent e) {
 				if(e.getKeyCode()==KeyEvent.VK_ENTER) {
-					spinner_1.requestFocus();
+					Fat_spinner.requestFocus();
 					
 				}
 			}
 		});
-		spinner_1.addKeyListener(new KeyAdapter() {
+		Fat_spinner.addKeyListener(new KeyAdapter() {
 			@Override
 			public void keyPressed(KeyEvent e) {
 				if(e.getKeyCode()==KeyEvent.VK_ENTER) {
-					spinner_2.requestFocus();
+					coles_spinner.requestFocus();
 					
 				}
 			}
 		});
-		spinner_2.addKeyListener(new KeyAdapter() {
+		coles_spinner.addKeyListener(new KeyAdapter() {
 			@Override
 			public void keyPressed(KeyEvent e) {
 				if(e.getKeyCode()==KeyEvent.VK_ENTER) {
-					spinner_3.requestFocus();
+					salt_spinner.requestFocus();
 					
 				}
 			}
 		});
-		spinner_3.addKeyListener(new KeyAdapter() {
+		salt_spinner.addKeyListener(new KeyAdapter() {
 			@Override
 			public void keyPressed(KeyEvent e) {
 				if(e.getKeyCode()==KeyEvent.VK_ENTER) {
-					spinner_4.requestFocus();
+					carbo_spinner.requestFocus();
 					
 				}
 			}
 		});
-		spinner_4.addKeyListener(new KeyAdapter() {
+		carbo_spinner.addKeyListener(new KeyAdapter() {
 			@Override
 			public void keyPressed(KeyEvent e) {
 				if(e.getKeyCode()==KeyEvent.VK_ENTER) {
-					spinner_5.requestFocus();
+					prot_spinner.requestFocus();
 					
 				}
 			}
 		});
-		spinner_5.addKeyListener(new KeyAdapter() {
+		prot_spinner.addKeyListener(new KeyAdapter() {
 			@Override
 			public void keyPressed(KeyEvent e) {
 				if(e.getKeyCode()==KeyEvent.VK_ENTER) {
@@ -1805,12 +1816,6 @@ public class main_windows {
 		});
 		ate_food_page.setLayout(null);
 		ate_food_page.add(back_Button_3);
-JScrollPane scrollPane = new JScrollPane();
-scrollPane.setToolTipText("");
-scrollPane.setHorizontalScrollBarPolicy(ScrollPaneConstants.HORIZONTAL_SCROLLBAR_ALWAYS);
-scrollPane.setVerticalScrollBarPolicy(ScrollPaneConstants.VERTICAL_SCROLLBAR_NEVER);
-scrollPane.setBounds(10, 11, 826, 138);
-ate_food_page.add(scrollPane);
 JButton button_food_3 = new JButton("but_3");
 button_food_3.setBounds(230, 143, 100, 100);
 ate_food_page.add(button_food_3);
