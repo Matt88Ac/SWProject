@@ -126,6 +126,42 @@ public class Product {
     }
 
     private void Fill_Vegs() {
+        //Veg tomato = new Veg("Tomato", )
+
+        //Veg cucamb = new Veg("Cucumber")
+
+        //Veg carrot = new Veg("Carrot")
+
+        //Veg Purple_Onion new Veg("Purple Onion")
+
+        //Veg Onion = new Veg("Onion")
+
+        //Veg Green_Onion = new Veg("Green Onion")
+
+        //Veg Apple = new Veg("Apple")
+        
+        //Veg cabbage = new Veg("Cabbage")
+
+        //Veg aubergine = new Veg("Aubergine")
+
+        //Veg pumpkin = new Veg("Pumpkin")
+
+        //Veg garlic = new Veg("Garlic")
+
+        //Veg sweet_pepper = new Veg("Sweet Pepper")
+
+        //Veg banana = new Veg("Banana")
+
+        //Veg grapes = new Veg("Grapes")
+
+        //Veg melon = new Veg("Melon")
+
+        //Veg orange = new Veg("Orange")
+
+        //Veg pineapple = new Veg("Pineapple")
+
+
+
 
     }
 
