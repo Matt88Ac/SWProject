@@ -126,41 +126,71 @@ public class Product {
     }
 
     private void Fill_Vegs() {
-        //Veg tomato = new Veg("Tomato", )
+        Veg tomato = new Veg("Tomato", 18, 1,0.2,2.6,4,0,0,5,1.2,
+                94,13,0,0.3,10,11,24,0.17,237);
 
-        //Veg cucamb = new Veg("Cucumber")
+        Veg cucumber = new Veg("Cucumber", 12, 0.6,0.2,1.6,4,0,0,5,0.7,
+                       96,3,0,0.22,14,12,21,0.17,137);
 
-        //Veg carrot = new Veg("Carrot")
+        Veg carrot = new Veg("Carrot", 41, 0.93,0.2,4.74,4,0,0,69,2.8,
+                88.29,5.9,0,0.3,33,12,35,0.24,320);
 
-        //Veg Purple_Onion new Veg("Purple Onion")
+        Veg red_onion = new Veg("Red Onion", 30, 0.68,0.2,3.38,4,0,0,0,1.4,
+                       0,4.1,0,0,14,12,35,0.24,0);
 
-        //Veg Onion = new Veg("Onion")
+        Veg onion = new Veg("Onion", 40, 1.1,0.2,4.24,9.34,0,0,4,1.7,
+                89.11,7.4,0,0.21,23,10,29,0.17,146);
 
-        //Veg Green_Onion = new Veg("Green Onion")
+        Veg green_onion = new Veg("Green Onion", 32, 1.83,0.2,2.33,7.34,0,0,16,2.6,
+                89.83,18.8,0,1.48,72,20,37,0.39,276);
 
-        //Veg Apple = new Veg("Apple")
-        
-        //Veg cabbage = new Veg("Cabbage")
+        Veg apple = new Veg("Apple", 157, 1.97,3.45,19.97,30.77,0,0,169,1.6,
+        63.09,2.2,0,0.8,35,8,28,0.19,83);
 
-        //Veg aubergine = new Veg("Aubergine")
+        Veg cabbage = new Veg("Cabbage", 25, 1.28,0.1,3.2,5.8,0,0,18,2.5,
+                92.18,36.6,0,0.47,40,12,26,0.18,170);
 
-        //Veg pumpkin = new Veg("Pumpkin")
+        Veg aubergine = new Veg("Aubergine", 90, 0,7.5,2.5,7.5,0,0,255,2.5,
+               92.18,1.5,0,0.45,0,12,0,0.18,0);
 
-        //Veg garlic = new Veg("Garlic")
+        this.veg_food.add(tomato);
+        this.veg_food.add(cabbage);
+        this.veg_food.add(carrot);
+        this.veg_food.add(cucumber);
+        this.veg_food.add(red_onion);
+        this.veg_food.add(apple);
+        this.veg_food.add(aubergine);
+        this.veg_food.add(onion);
+        this.veg_food.add(green_onion);
 
-        //Veg sweet_pepper = new Veg("Sweet Pepper")
+        Veg pumpkin = new Veg("Pumpkin", 26, 1,0.1,2.76,6.5,0,0,1,0.5,
+                       92.18,9,0,0.8,21,12,44,0.32,340);
 
-        //Veg banana = new Veg("Banana")
+        Veg garlic = new Veg("Garlic", 149, 6.36,0.5,1,33.06,0.25,0,17,2.1,
+                58.58	,31.2,0,1.7,181,25,153,1.16,401);
 
-        //Veg grapes = new Veg("Grapes")
+        Veg sweet_pepper = new Veg("Sweet Pepper", 31, 0.99,0.3,4.2,6.03,0,0,4,2.1,
+                92.21,127.7,0,0.43,7,12,26,0.25,211);
 
-        //Veg melon = new Veg("Melon")
+        Veg banana = new Veg("Banana", 89, 1.09,0.33,12.23,22.84,0.112,0,1,2.6,
+                74.91,8.7,0.367,0.26,5,27,22,0.15,358);
 
-        //Veg orange = new Veg("Orange")
+        Veg melon = new Veg("Melon", 28, 1.11,0.1,5.69,6.58,0,0,9,0.9,
+                91.85,21.8,0.163,0.34,11,11,5,0.07,182);
 
-        //Veg pineapple = new Veg("Pineapple")
+        Veg orange = new Veg("Orange", 47, 0.94,0.12,9.35,11.75,0,0,0,2.4,
+                86.75,53.2,0.06,0.1,40,10,14,0.07,181);
 
+        Veg pineapple = new Veg("Pineapple", 50, 0.54,0.12,9.85,13.12,0,0,1,1.4,
+                86,47.8,0.112,0.29,13,12,8,0.12,109);
 
+        this.veg_food.add(pineapple);
+        this.veg_food.add(pumpkin);
+        this.veg_food.add(sweet_pepper);
+        this.veg_food.add(melon);
+        this.veg_food.add(orange);
+        this.veg_food.add(banana);
+        this.veg_food.add(garlic);
 
 
     }
