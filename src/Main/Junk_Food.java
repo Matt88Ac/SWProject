@@ -53,6 +53,7 @@ public class Junk_Food {
     }
 
     public Junk_Food Calc(double x){
+        x = x/100;
         return new Junk_Food(this.Name, this.cal*x, this.prot_g*x, this.fat_g*x, this.suger_g*x,
                 this.carbo_g*x, this.overfat_g*x, this.colesterol_mg*x, this.salt_mg*x,
                 this.sibs_g*x, this.water_g*x, this.vitamins_C_mg*x, this.vitamins_b9_micro_g*x,

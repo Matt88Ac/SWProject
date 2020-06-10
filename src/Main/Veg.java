@@ -52,6 +52,7 @@ public class Veg {
     }
 
     public Veg Calc(double x){
+        x = x/100;
         return new Veg(this.Name, this.cal*x, this.prot_g*x, this.fat_g*x, this.suger_g*x,
                 this.carbo_g*x, this.overfat_g*x, this.colesterol_mg*x, this.salt_mg*x,
                 this.sibs_g*x, this.water_g*x, this.vitamins_C_mg*x, this.vitamins_b9_micro_g*x,
@@ -59,7 +60,7 @@ public class Veg {
                 this.zinc_mg*x, this.potassium_mg*x);
     }
 
-    
+
     public double Get_Detail(String which_one){
 
         if (which_one == "Calories"){
