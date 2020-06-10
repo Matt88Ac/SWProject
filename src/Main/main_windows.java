@@ -21,11 +21,12 @@ import javax.swing.JPasswordField;
 import javax.swing.JSpinner;
 import javax.swing.SpinnerNumberModel;
 
-
+import java.util.Hashtable;
 import java.util.Scanner;
 
 import javax.swing.JComboBox;
-
+import javax.swing.JDialog;
+import javax.swing.JSlider;
 import javax.swing.DefaultComboBoxModel;
 import java.awt.event.KeyAdapter;
 import java.awt.event.KeyEvent;
@@ -35,6 +36,10 @@ import javax.swing.SwingConstants;
 import javax.swing.JScrollPane;
 import javax.swing.ScrollPaneConstants;
 import javax.swing.JRadioButton;
+import javax.swing.JSeparator;
+import javax.swing.JScrollBar;
+import java.awt.event.AdjustmentListener;
+import java.awt.event.AdjustmentEvent;
  
 public class main_windows {
 
@@ -54,7 +59,7 @@ public class main_windows {
 	private JTextField b_country_text_Field;
 	private JTextField b_company_field;
 	private JTextField food_name_text_Field;
-
+	Product prod=new Product(false);
 	/**
 	 * Launch the application.
 	 */
@@ -75,6 +80,7 @@ public class main_windows {
 	 * Create the application.
 	 */
 	public main_windows() {
+		
 		initialize();
 	}
 
@@ -97,21 +103,27 @@ public class main_windows {
 		JPanel data_analysis_page = new JPanel();
 		JPanel sport_activity_page = new JPanel();
 		frame.getContentPane().add(sport_activity_page, "name_135054560240100");
-		sport_activity_page.setLayout(null);
 		JSpinner height_spinner = new JSpinner();
 		JSpinner age_spinner = new JSpinner();
 		JComboBox Gender_comboBox = new JComboBox();
 		JComboBox Purpose_comboBox = new JComboBox();
 		
 		JButton btnNewButton_3 = new JButton("\u05D7\u05D6\u05E8\u05D4");
+		btnNewButton_3.setBounds(747, 482, 89, 23);
 		btnNewButton_3.addActionListener(new ActionListener() {
 			public void actionPerformed(ActionEvent e) {
 				Private_User_page.setVisible(true);
 				sport_activity_page.setVisible(false);
 			}
 		});
-		btnNewButton_3.setBounds(747, 482, 89, 23);
+		sport_activity_page.setLayout(null);
 		sport_activity_page.add(btnNewButton_3);
+		
+		JScrollBar walk_scrollBar = new JScrollBar();
+		walk_scrollBar.setMaximum(500000);
+		walk_scrollBar.setOrientation(JScrollBar.HORIZONTAL);
+		walk_scrollBar.setBounds(10, 32, 705, 23);
+		sport_activity_page.add(walk_scrollBar);
 		
 		JPanel set_rdata_page = new JPanel();
 		frame.getContentPane().add(set_rdata_page, "name_135834242867900");
@@ -155,9 +167,19 @@ public class main_windows {
 		business_page.setLayout(null);
 		
 		JLabel lblNewLabel_18 = new JLabel("business_page");
-		lblNewLabel_18.setFont(new Font("Tahoma", Font.PLAIN, 93));
 		lblNewLabel_18.setBounds(72, 71, 717, 355);
+		lblNewLabel_18.setFont(new Font("Tahoma", Font.PLAIN, 93));
 		business_page.add(lblNewLabel_18);
+		
+		JButton btnNewButton_5 = new JButton("\u05D9\u05E6\u05D9\u05D0");
+		btnNewButton_5.addActionListener(new ActionListener() {
+			public void actionPerformed(ActionEvent e) {
+			business_page.setVisible(false);
+			log_in_page.setVisible(true);
+			}
+		});
+		btnNewButton_5.setBounds(747, 11, 89, 23);
+		business_page.add(btnNewButton_5);
 		
 		
 		frame.getContentPane().add(Private_User_page, "name_339221586896400");
@@ -180,6 +202,7 @@ public class main_windows {
 		Private_User_page.add(lblNewLabel_19);
 		
 		JButton add_new_food_Button = new JButton("");
+		add_new_food_Button.setToolTipText("\u05DC\u05D0\u05E9\u05D9\u05E3 \u05DE\u05D5\u05E6\u05E8\u05D9\u05DD \u05D7\u05D3\u05E9\u05D9\u05DD");
 		add_new_food_Button.setBounds(10, 11, 100, 100);
 		
 		add_new_food_Button.setBackground(new Color(255, 255, 255));
@@ -188,6 +211,7 @@ public class main_windows {
 		Private_User_page.add(add_new_food_Button);
 		
 		JButton ate_food_Button = new JButton("");
+		ate_food_Button.setToolTipText("\u05EA\u05D0\u05D5\u05D3 \u05DE \u05D4\u05D0\u05D7\u05DC\u05EA\u05D9 \u05D4\u05D9\u05D5\u05DD");
 		ate_food_Button.setBounds(10, 124, 100, 100);
 		ate_food_Button.addActionListener(new ActionListener() {
 			public void actionPerformed(ActionEvent e) {
@@ -205,6 +229,7 @@ public class main_windows {
 		Private_User_page.add(add_new_food_Button);*/
 		
 		JButton data_Button_4 = new JButton("");
+		data_Button_4.setToolTipText("\u05E0\u05EA\u05D5\u05E0\u05D9\u05DD \u05E2\u05DC \u05DE\u05D4 \u05D0\u05D7\u05DC\u05EA\u05D9 ");
 		data_Button_4.setBounds(10, 235, 100, 100);
 		data_Button_4.addActionListener(new ActionListener() {
 			public void actionPerformed(ActionEvent e) {
@@ -218,6 +243,7 @@ public class main_windows {
 		Private_User_page.add(data_Button_4);
 		
 		JButton btnNewButton_6 = new JButton("");
+		btnNewButton_6.setToolTipText("\u05DC\u05E9\u05E0\u05D9\u05D5\u05EA \u05D0\u05EA \u05D4\u05E4\u05E8\u05D8\u05D9\u05DD \u05E9\u05DC\u05D9");
 		btnNewButton_6.addActionListener(new ActionListener() {
 			public void actionPerformed(ActionEvent e) {
 				Private_User_page.setVisible(false);
@@ -269,6 +295,7 @@ public class main_windows {
 		Private_User_page.add(lblNewLabel_21);
 		
 		JButton sport_Button_3_1 = new JButton("");
+		sport_Button_3_1.setToolTipText("\u05DC\u05D0\u05E9\u05D9\u05E3 \u05D0\u05EA \u05D4\u05E4\u05D9\u05DC\u05D5\u05EA \u05D4\u05D2\u05D5\u05E4\u05E0\u05D9\u05EA \u05D4\u05D9\u05D5\u05DD");
 		sport_Button_3_1.addActionListener(new ActionListener() {
 			public void actionPerformed(ActionEvent e) {
 				Private_User_page.setVisible(false);
@@ -283,6 +310,7 @@ public class main_windows {
 		Private_User_page.add(sport_Button_3_1);
 		
 		JButton btnNewButton_3_2 = new JButton("");
+		btnNewButton_3_2.setToolTipText("\u05D0\u05DE\u05DC\u05E6\u05D5\u05EA \u05DC\u05DE\u05D5\u05E6\u05E8\u05D9\u05DD \u05D9\u05D5\u05EA\u05E8 \u05EA\u05D5\u05D1\u05D9\u05DD \u05D0\u05D1\u05D5\u05E8\u05D9");
 		btnNewButton_3_2.addActionListener(new ActionListener() {
 			public void actionPerformed(ActionEvent e) {
 				Private_User_page.setVisible(false);
@@ -320,7 +348,7 @@ public class main_windows {
 		{
 			@SuppressWarnings("deprecation")
 			public void actionPerformed(ActionEvent e)
-			{
+			{	
 				File file =new File("C:\\data");
 				file.mkdirs();
 				
@@ -637,6 +665,16 @@ public class main_windows {
 		lblNewLabel_2.setIcon (new ImageIcon(runing));
 		lblNewLabel_2.setBounds(109, 0, 543, 320);
 		start_page.add(lblNewLabel_2);
+		
+		JButton btnNewButton_9 = new JButton("New button");
+		btnNewButton_9.addActionListener(new ActionListener() {
+			public void actionPerformed(ActionEvent e) {
+				start_page.setVisible(false);
+				admin_page.setVisible(true);
+			}
+		});
+		btnNewButton_9.setBounds(10, 482, 89, 23);
+		start_page.add(btnNewButton_9);
 		
 		JButton Button_back2 = new JButton("\u05D7\u05D6\u05E8\u05D4");
 		Button_back2.addMouseListener(new MouseAdapter() {
@@ -1817,41 +1855,84 @@ public class main_windows {
 		ate_food_page.setLayout(null);
 		ate_food_page.add(back_Button_3);
 JButton button_food_3 = new JButton("but_3");
-button_food_3.setBounds(230, 143, 100, 100);
+button_food_3.setBounds(230, 11, 100, 100);
 ate_food_page.add(button_food_3);
 JButton button_food_4 = new JButton("but_4");
-button_food_4.setBounds(335, 143, 100, 100);
+button_food_4.setBounds(340, 11, 100, 100);
 ate_food_page.add(button_food_4);
 JButton button_food_5 = new JButton("but_5");
-button_food_5.setBounds(440, 143, 100, 100);
+button_food_5.setBounds(450, 11, 100, 100);
 ate_food_page.add(button_food_5);
 JButton button_food_6 = new JButton("but_6");
-button_food_6.setBounds(545, 143, 100, 100);
+button_food_6.setBounds(560, 11, 100, 100);
 ate_food_page.add(button_food_6);
 JButton button_food_7 = new JButton("but_7");
-button_food_7.setBounds(650, 143, 100, 100);
+button_food_7.setBounds(667, 11, 100, 100);
 ate_food_page.add(button_food_7);
 JButton button_food_8 = new JButton("but_8");
-button_food_8.setBounds(755, 143, 100, 100);
+button_food_8.setBounds(10, 122, 100, 100);
 ate_food_page.add(button_food_8);
 JButton button_food_9 = new JButton("but_9");
-button_food_9.setBounds(860, 143, 100, 100);
+button_food_9.setBounds(120, 122, 100, 100);
 ate_food_page.add(button_food_9);
 JButton button_food_10 = new JButton("but_10");
-button_food_10.setBounds(860, 143, 100, 100);
+button_food_10.setBounds(230, 122, 100, 100);
 ate_food_page.add(button_food_10);
 JButton button_food_2 = new JButton("but_2");
-button_food_2.setBounds(127, 143, 100, 100);
+button_food_2.setBounds(120, 11, 100, 100);
 ate_food_page.add(button_food_2);
 
-JButton button_food_1 = new JButton("but_1");
+JButton button_food_1 = new JButton("\u05DC\u05D7\u05DD \u05DC\u05D1\u05DF");
+button_food_1.setBounds(10, 11, 100, 100);
 button_food_1.addActionListener(new ActionListener() {
 	public void actionPerformed(ActionEvent e) {
-	}
-});
-button_food_1.setBounds(20, 143, 100, 100);
-ate_food_page.add(button_food_1);
+		prod.d_food.get(1);
 		
+		JSlider lehemslid =new JSlider(0,1000,100);
+		lehemslid.setValue(0);
+		JFrame parent = new JFrame();
+		 JOptionPane optionPane = new JOptionPane();
+		 lehemslid.setMajorTickSpacing(100);
+		 lehemslid.setMinorTickSpacing(50);
+		 lehemslid.setPaintTicks(true);
+		 lehemslid.setPaintLabels(true);
+         
+		// Add positions label in the slider
+		Hashtable position = new Hashtable();
+		position.put(0, new JLabel("0"));
+		position.put(100, new JLabel("100"));
+		position.put(200, new JLabel("200"));
+		position.put(300, new JLabel("300"));
+		position.put(400, new JLabel("400"));
+		position.put(500, new JLabel("500"));
+		position.put(600, new JLabel("600"));
+		position.put(700, new JLabel("700"));
+		position.put(800, new JLabel("800"));
+		position.put(900, new JLabel("900"));
+		position.put(1000, new JLabel("1000"));
+		
+		         
+		// Set the label to be drawn
+		lehemslid.setLabelTable(position);
+		    optionPane.setMessage(new Object[] { "Select a value: ", lehemslid });
+		    optionPane.setMessageType(JOptionPane.QUESTION_MESSAGE);
+		    optionPane.setOptionType(JOptionPane.OK_CANCEL_OPTION);
+		    JDialog dialog = optionPane.createDialog(parent, "My Slider");
+		    dialog.setSize(500, 300);
+		    dialog.setVisible(true);
+		    
+		
+		/*---------------------------------------------------------------------------------------------------------------------------------------------------*/
+	}
+
+	
+});
+
+
+
+
+ate_food_page.add(button_food_1);
+
 		
 		frame.getContentPane().add(data_analysis_page, "name_134629289762800");
 		data_analysis_page.setLayout(null);
