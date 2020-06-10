@@ -1,5 +1,4 @@
 package Main;
-import org.jetbrains.annotations.NotNull;
 
 import java.time.LocalDate;
 
@@ -83,23 +82,6 @@ public class Private_User extends User {
 
     public double Get_Weig(){
         return this.weight;
-    }
-
-    public void Add_product_to_private_list(){
-        Meds meds = null;
-        Veg veg = null;
-        Meat_Fish_Dai mfd = null;
-        Dry_Food dry_food = null;
-        Junk_Food junk_food = null;
-
-
-
-        /*
-
-        Gotta add selection choices and stuff like that.
-
-
-         */
     }
 
     public void Update_Path(String path){ this.path = path; }
