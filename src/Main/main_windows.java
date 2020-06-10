@@ -60,6 +60,7 @@ public class main_windows {
 	private JTextField b_company_field;
 	private JTextField food_name_text_Field;
 	Product prod=new Product(false);
+	Private_User use =null;
 	/**
 	 * Launch the application.
 	 */
@@ -415,7 +416,7 @@ public class main_windows {
 										{
 											log_in_page.setVisible(false);
 											Private_User_page.setVisible(true);
-											Private_User private_user	= new Private_User(tokens[0], tokens[1],
+											 use	= new Private_User(tokens[0], tokens[1],
 													Double.parseDouble(tokens[2]),Double.parseDouble(tokens[3]),tokens[4],tokens [5],tokens [6],tokens [7],
 													Double.parseDouble(tokens[8]),Integer.parseInt(tokens[9]),Integer.parseInt(tokens[10]));
 											
@@ -567,7 +568,7 @@ public class main_windows {
 										{
 											log_in_page.setVisible(false);
 											Private_User_page.setVisible(true);
-											Private_User private_user	= new Private_User(tokens[0], tokens[1],
+											 use	= new Private_User(tokens[0], tokens[1],
 													Double.parseDouble(tokens[2]),Double.parseDouble(tokens[3]),tokens[4],tokens [5],tokens [6],tokens [7],
 													Double.parseDouble(tokens[8]),Integer.parseInt(tokens[9]),Integer.parseInt(tokens[10]));
 											
@@ -1854,7 +1855,7 @@ public class main_windows {
 		});
 		ate_food_page.setLayout(null);
 		ate_food_page.add(back_Button_3);
-JButton button_food_3 = new JButton("but_3");
+JButton button_food_3 = new JButton("\u05DC\u05D7\u05DD \u05E9\u05D7\u05D5\u05E8");
 button_food_3.setBounds(230, 11, 100, 100);
 ate_food_page.add(button_food_3);
 JButton button_food_4 = new JButton("but_4");
@@ -1878,7 +1879,50 @@ ate_food_page.add(button_food_9);
 JButton button_food_10 = new JButton("but_10");
 button_food_10.setBounds(230, 122, 100, 100);
 ate_food_page.add(button_food_10);
-JButton button_food_2 = new JButton("but_2");
+JButton button_food_2 = new JButton("\u05E4\u05E1\u05D8\u05D4");
+button_food_2.addActionListener(new ActionListener() {
+	public void actionPerformed(ActionEvent e) {
+
+		prod.d_food.get(0);
+		
+		JSlider lehemslid =new JSlider(0,1000,100);
+		lehemslid.setValue(0);
+		JFrame parent = new JFrame();
+		 JOptionPane optionPane = new JOptionPane();
+		 lehemslid.setMajorTickSpacing(100);
+		 lehemslid.setMinorTickSpacing(50);
+		 lehemslid.setPaintTicks(true);
+		 lehemslid.setPaintLabels(true);
+         
+		// Add positions label in the slider
+		Hashtable position = new Hashtable();
+		position.put(0, new JLabel("0"));
+		position.put(100, new JLabel("100"));
+		position.put(200, new JLabel("200"));
+		position.put(300, new JLabel("300"));
+		position.put(400, new JLabel("400"));
+		position.put(500, new JLabel("500"));
+		position.put(600, new JLabel("600"));
+		position.put(700, new JLabel("700"));
+		position.put(800, new JLabel("800"));
+		position.put(900, new JLabel("900"));
+		position.put(1000, new JLabel("1000"));
+		
+		         
+		// Set the label to be drawn
+		lehemslid.setLabelTable(position);
+		    optionPane.setMessage(new Object[] { "Select a value: "+lehemslid.getValue(), lehemslid });
+		    optionPane.setMessageType(JOptionPane.QUESTION_MESSAGE);
+		    optionPane.setOptionType(JOptionPane.OK_CANCEL_OPTION);
+		    JDialog dialog = optionPane.createDialog(parent,"\u05E4\u05E1\u05D8\u05D4");
+		    dialog.setSize(500, 300);
+		    dialog.setVisible(true);
+		    
+		    System.out.print(lehemslid.getValue());
+		    
+		   
+	}
+});
 button_food_2.setBounds(120, 11, 100, 100);
 ate_food_page.add(button_food_2);
 
@@ -1886,8 +1930,8 @@ JButton button_food_1 = new JButton("\u05DC\u05D7\u05DD \u05DC\u05D1\u05DF");
 button_food_1.setBounds(10, 11, 100, 100);
 button_food_1.addActionListener(new ActionListener() {
 	public void actionPerformed(ActionEvent e) {
-		prod.d_food.get(1);
 		
+		Dry_Food bra=prod.d_food.get(1);
 		JSlider lehemslid =new JSlider(0,1000,100);
 		lehemslid.setValue(0);
 		JFrame parent = new JFrame();
@@ -1922,11 +1966,10 @@ button_food_1.addActionListener(new ActionListener() {
 		    dialog.setVisible(true);
 		    
 		    System.out.print(lehemslid.getValue());
-		    
+		    bra=bra.Calc(lehemslid.getValue());
+		    System.out.print(bra);
 		   
-		
-		/*---------------------------------------------------------------------------------------------------------------------------------------------------*/
-	}
+			}
 
 	
 });
