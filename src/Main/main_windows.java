@@ -1914,13 +1914,16 @@ button_food_1.addActionListener(new ActionListener() {
 		         
 		// Set the label to be drawn
 		lehemslid.setLabelTable(position);
-		    optionPane.setMessage(new Object[] { "Select a value: ", lehemslid });
+		    optionPane.setMessage(new Object[] { "Select a value: "+lehemslid.getValue(), lehemslid });
 		    optionPane.setMessageType(JOptionPane.QUESTION_MESSAGE);
 		    optionPane.setOptionType(JOptionPane.OK_CANCEL_OPTION);
-		    JDialog dialog = optionPane.createDialog(parent, "My Slider");
+		    JDialog dialog = optionPane.createDialog(parent,"\u05DC\u05D7\u05DD \u05DC\u05D1\u05DF");
 		    dialog.setSize(500, 300);
 		    dialog.setVisible(true);
 		    
+		    System.out.print(lehemslid.getValue());
+		    
+		   
 		
 		/*---------------------------------------------------------------------------------------------------------------------------------------------------*/
 	}
