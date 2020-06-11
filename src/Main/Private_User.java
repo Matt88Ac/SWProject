@@ -1,5 +1,5 @@
 package Main;
-import org.jetbrains.annotations.NotNull;
+
 
 import java.time.LocalDate;
 
@@ -104,7 +104,7 @@ public class Private_User extends User {
 
     public void Update_Path(String path){ this.path = path; }
 
-    public void AteD(Dry_Food dry_food){
+    public void Ate_Dry_food(Dry_Food dry_food){
         this.food_det.set(0, dry_food.Get_Detail("Calories"));
         this.food_det.set(1, dry_food.Get_Detail("Protein"));
         this.food_det.set(2, dry_food.Get_Detail("Coles"));
@@ -120,7 +120,7 @@ public class Private_User extends User {
 
     }
 
-    public void AteD(Veg dry_food){
+    public void Ate_Veg_food(Veg dry_food){
         this.food_det.set(0, dry_food.Get_Detail("Calories"));
         this.food_det.set(1, dry_food.Get_Detail("Protein"));
         this.food_det.set(2, dry_food.Get_Detail("Coles"));
@@ -136,7 +136,7 @@ public class Private_User extends User {
 
     }
 
-    public void AteD(Meat_Fish_Dai dry_food){
+    public void Ate_Meat_Fish_food(Meat_Fish_Dai dry_food){
         this.food_det.set(0, dry_food.Get_Detail("Calories"));
         this.food_det.set(1, dry_food.Get_Detail("Protein"));
         this.food_det.set(2, dry_food.Get_Detail("Coles"));
@@ -153,7 +153,7 @@ public class Private_User extends User {
     }
 
 
-    public void AteD(Junk_Food dry_food){
+    public void Ate_Junk_food(Junk_Food dry_food){
         this.food_det.set(0, dry_food.Get_Detail("Calories"));
         this.food_det.set(1, dry_food.Get_Detail("Protein"));
         this.food_det.set(2, dry_food.Get_Detail("Coles"));
