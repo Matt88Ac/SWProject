@@ -50,6 +50,9 @@ public class Private_User extends User {
         this.hours_of_training_in_week = 0;
 
         this.food_det = new double[18];
+        for(int i=0; i<18; i++){
+            this.food_det[i] = 0;
+        }
 
 
     }
@@ -89,65 +92,65 @@ public class Private_User extends User {
     public void Update_Path(String path){ this.path = path; }
 
     public void Ate_Dry_food(Dry_Food dry_food){
-        this.food_det[0] = dry_food.Get_Detail("Calories");
-        this.food_det[1] = dry_food.Get_Detail("Protein");
-        this.food_det[2] =  dry_food.Get_Detail("Coles");
-        this.food_det[3] = dry_food.Get_Detail("Salt");
-        this.food_det[4] = dry_food.Get_Detail("Fat");
-        this.food_det[5] = dry_food.Get_Detail("Sugar");
-        this.food_det[6] = dry_food.Get_Detail("Phos");
-        this.food_det[7] = dry_food.Get_Detail("Potess");
-        this.food_det[8] =  dry_food.Get_Detail("Mag");
-        this.food_det[9] =  dry_food.Get_Detail("OFat");
-        this.food_det[10] =dry_food.Get_Detail("Iron");
-        this.food_det[11] =  dry_food.Get_Detail("VitC");
+        this.food_det[0] += dry_food.Get_Detail("Calories");
+        this.food_det[1] += dry_food.Get_Detail("Protein");
+        this.food_det[2] +=  dry_food.Get_Detail("Coles");
+        this.food_det[3] += dry_food.Get_Detail("Salt");
+        this.food_det[4] += dry_food.Get_Detail("Fat");
+        this.food_det[5] += dry_food.Get_Detail("Sugar");
+        this.food_det[6] += dry_food.Get_Detail("Phos");
+        this.food_det[7] += dry_food.Get_Detail("Potess");
+        this.food_det[8] +=  dry_food.Get_Detail("Mag");
+        this.food_det[9] +=  dry_food.Get_Detail("OFat");
+        this.food_det[10] += dry_food.Get_Detail("Iron");
+        this.food_det[11] +=  dry_food.Get_Detail("VitC");
 
     }
 
     public void Ate_Veg(Veg dry_food){
-        this.food_det[0] = dry_food.Get_Detail("Calories");
-        this.food_det[1] = dry_food.Get_Detail("Protein");
-        this.food_det[2] =  dry_food.Get_Detail("Coles");
-        this.food_det[3] = dry_food.Get_Detail("Salt");
-        this.food_det[4] = dry_food.Get_Detail("Fat");
-        this.food_det[5] = dry_food.Get_Detail("Sugar");
-        this.food_det[6] = dry_food.Get_Detail("Phos");
-        this.food_det[7] = dry_food.Get_Detail("Potess");
-        this.food_det[8] =  dry_food.Get_Detail("Mag");
-        this.food_det[9] =  dry_food.Get_Detail("OFat");
-        this.food_det[10] =dry_food.Get_Detail("Iron");
-        this.food_det[11] =  dry_food.Get_Detail("VitC");
+        this.food_det[0] += dry_food.Get_Detail("Calories");
+        this.food_det[1] += dry_food.Get_Detail("Protein");
+        this.food_det[2] +=  dry_food.Get_Detail("Coles");
+        this.food_det[3] += dry_food.Get_Detail("Salt");
+        this.food_det[4] += dry_food.Get_Detail("Fat");
+        this.food_det[5] += dry_food.Get_Detail("Sugar");
+        this.food_det[6] += dry_food.Get_Detail("Phos");
+        this.food_det[7] += dry_food.Get_Detail("Potess");
+        this.food_det[8] +=  dry_food.Get_Detail("Mag");
+        this.food_det[9] +=  dry_food.Get_Detail("OFat");
+        this.food_det[10] += dry_food.Get_Detail("Iron");
+        this.food_det[11] +=  dry_food.Get_Detail("VitC");
     }
 
     public void Ate_Meat_Fish_Dai(Meat_Fish_Dai dry_food){
-        this.food_det[0] = dry_food.Get_Detail("Calories");
-        this.food_det[1] = dry_food.Get_Detail("Protein");
-        this.food_det[2] =  dry_food.Get_Detail("Coles");
-        this.food_det[3] = dry_food.Get_Detail("Salt");
-        this.food_det[4] = dry_food.Get_Detail("Fat");
-        this.food_det[5] = dry_food.Get_Detail("Sugar");
-        this.food_det[6] = dry_food.Get_Detail("Phos");
-        this.food_det[7] = dry_food.Get_Detail("Potess");
-        this.food_det[8] =  dry_food.Get_Detail("Mag");
-        this.food_det[9] =  dry_food.Get_Detail("OFat");
-        this.food_det[10] =dry_food.Get_Detail("Iron");
-        this.food_det[11] =  dry_food.Get_Detail("VitC");
+        this.food_det[0] += dry_food.Get_Detail("Calories");
+        this.food_det[1] += dry_food.Get_Detail("Protein");
+        this.food_det[2] +=  dry_food.Get_Detail("Coles");
+        this.food_det[3] += dry_food.Get_Detail("Salt");
+        this.food_det[4] += dry_food.Get_Detail("Fat");
+        this.food_det[5] += dry_food.Get_Detail("Sugar");
+        this.food_det[6] += dry_food.Get_Detail("Phos");
+        this.food_det[7] += dry_food.Get_Detail("Potess");
+        this.food_det[8] +=  dry_food.Get_Detail("Mag");
+        this.food_det[9] +=  dry_food.Get_Detail("OFat");
+        this.food_det[10] += dry_food.Get_Detail("Iron");
+        this.food_det[11] +=  dry_food.Get_Detail("VitC");
     }
 
 
     public void Ate_Junk_Food(Junk_Food dry_food){
-        this.food_det[0] = dry_food.Get_Detail("Calories");
-        this.food_det[1] = dry_food.Get_Detail("Protein");
-        this.food_det[2] =  dry_food.Get_Detail("Coles");
-        this.food_det[3] = dry_food.Get_Detail("Salt");
-        this.food_det[4] = dry_food.Get_Detail("Fat");
-        this.food_det[5] = dry_food.Get_Detail("Sugar");
-        this.food_det[6] = dry_food.Get_Detail("Phos");
-        this.food_det[7] = dry_food.Get_Detail("Potess");
-        this.food_det[8] =  dry_food.Get_Detail("Mag");
-        this.food_det[9] =  dry_food.Get_Detail("OFat");
-        this.food_det[10] =dry_food.Get_Detail("Iron");
-        this.food_det[11] =  dry_food.Get_Detail("VitC");
+        this.food_det[0] += dry_food.Get_Detail("Calories");
+        this.food_det[1] += dry_food.Get_Detail("Protein");
+        this.food_det[2] +=  dry_food.Get_Detail("Coles");
+        this.food_det[3] += dry_food.Get_Detail("Salt");
+        this.food_det[4] += dry_food.Get_Detail("Fat");
+        this.food_det[5] += dry_food.Get_Detail("Sugar");
+        this.food_det[6] += dry_food.Get_Detail("Phos");
+        this.food_det[7] += dry_food.Get_Detail("Potess");
+        this.food_det[8] +=  dry_food.Get_Detail("Mag");
+        this.food_det[9] +=  dry_food.Get_Detail("OFat");
+        this.food_det[10] += dry_food.Get_Detail("Iron");
+        this.food_det[11] +=  dry_food.Get_Detail("VitC");
     }
 
 
