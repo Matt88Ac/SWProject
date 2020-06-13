@@ -3,11 +3,14 @@ package Main;
 import java.time.LocalDate;
 
 import java.io.*;
+
+import java.time.LocalDateTime;
 import java.nio.charset.Charset;
 import java.nio.charset.StandardCharsets;
 import java.nio.file.Files;
 import java.nio.file.Path;
 import java.nio.file.Paths;
+import java.time.LocalTime;
 import java.util.ArrayList;
 import java.util.List;
 import java.util.Scanner;
@@ -24,11 +27,12 @@ public class Private_User extends User {
     private double Age;
     private int Gender;
     private int Purpose;
-    private LocalDate last_time_had_sports;
+    private LocalDateTime last_time_had_sports;
     private double cals_burned_last_week;
     private double hours_of_training_in_week;
     private String path;
 
+    private LocalDateTime last_time_ate;
     public double food_det[];
 
     public Private_User(String us /*username*/, String ps /*password*/,
@@ -53,7 +57,6 @@ public class Private_User extends User {
         for(int i=0; i<18; i++){
             this.food_det[i] = 0;
         }
-
 
     }
 
@@ -105,6 +108,10 @@ public class Private_User extends User {
         this.food_det[10] += dry_food.Get_Detail("Iron");
         this.food_det[11] +=  dry_food.Get_Detail("VitC");
 
+        this.last_time_ate = LocalDateTime.now();
+        
+
+
     }
 
     public void Ate_Veg(Veg dry_food){
@@ -120,6 +127,8 @@ public class Private_User extends User {
         this.food_det[9] +=  dry_food.Get_Detail("OFat");
         this.food_det[10] += dry_food.Get_Detail("Iron");
         this.food_det[11] +=  dry_food.Get_Detail("VitC");
+        this.last_time_ate = LocalDateTime.now();
+
     }
 
     public void Ate_Meat_Fish_Dai(Meat_Fish_Dai dry_food){
@@ -135,6 +144,8 @@ public class Private_User extends User {
         this.food_det[9] +=  dry_food.Get_Detail("OFat");
         this.food_det[10] += dry_food.Get_Detail("Iron");
         this.food_det[11] +=  dry_food.Get_Detail("VitC");
+        this.last_time_ate = LocalDateTime.now();
+
     }
 
 
@@ -151,6 +162,8 @@ public class Private_User extends User {
         this.food_det[9] +=  dry_food.Get_Detail("OFat");
         this.food_det[10] += dry_food.Get_Detail("Iron");
         this.food_det[11] +=  dry_food.Get_Detail("VitC");
+        this.last_time_ate = LocalDateTime.now();
+
     }
 
 
@@ -162,10 +175,6 @@ public class Private_User extends User {
 
     public String Get_Password(){
         return this.password;
-    }
-
-    public void had_sports(double calories_burned, double training_duration_in_hours){
-        this.last_time_had_sports = LocalDate.now();
     }
 
 }
