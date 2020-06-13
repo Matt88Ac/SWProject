@@ -14,7 +14,7 @@ public abstract class User {
     public User(String us, String ps) throws IOException {
         this.password = ps;
         this.username = us;
-        this.Extract_Data();
+       // this.Extract_Data();
     }
 
     public void Extract_Data() throws IOException {
