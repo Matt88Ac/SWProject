@@ -53,7 +53,7 @@ public class Bus_User extends User{
         return this.path;
     }
 
-    public void Pull_Product_Out(String name, String type){
+  /*  public void Pull_Product_Out(String name, String type){
         if(this.path == null){
             return;
         }
@@ -67,14 +67,6 @@ public class Bus_User extends User{
             }
         }
 
-        else if (type == "Meds"){
-            for (Meds meds:this.p.meds) {
-                if (meds.Get_Name() == name){
-                    this.p.veg_food.remove(meds);
-                    return;
-                }
-            }
-        }
 
         else if(type == "Meat_Fish_Dai"){
             for (Meat_Fish_Dai mfd:this.p.MFD_food) {
@@ -107,7 +99,7 @@ public class Bus_User extends User{
         }
 
 
-    }
+    } */
 
     public String getCity() {
         return this.city;

@@ -16,7 +16,7 @@ public abstract class User {
         this.username = us;
        // this.Extract_Data();
     }
-
+/*
     public void Extract_Data() throws IOException {
         String food_path = "data\\" +"food_" + this.username + ".txt";
 
@@ -27,13 +27,9 @@ public abstract class User {
         String st;
         while ((st = br.readLine()) != null){
             if (st == "-"){
-                if(attr.get(0) == "Meds"){
-                    this.p.meds.add(new Meds(attr.get(1), attr.get(2)));
-                    i=0;
-                }
 
                 if(attr.get(0) == "Dry Food"){
-                    this.p.d_food.add(new Dry_Food(attr.get(1), Double.parseDouble(attr.get(2)), Double.parseDouble(attr.get(3)),
+                    this.p.d_food[(new Dry_Food(attr.get(1), Double.parseDouble(attr.get(2)), Double.parseDouble(attr.get(3)),
                             Double.parseDouble(attr.get(4)), Double.parseDouble(attr.get(5))
                             ,0, 0, Double.parseDouble(attr.get(6)),0,0,0,0,0,0,
                             0,0,0,0,0));
@@ -70,6 +66,6 @@ public abstract class User {
         }
 
 
-    }
+    } */
 
 }
