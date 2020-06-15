@@ -62,6 +62,12 @@ public class main_windows {
 	private JTextField food_name_text_Field;
 	Product prod=new Product(false);
 	Private_User use =null;
+	private JTextField name_set_textField;
+	private JTextField lastname_set_textField;
+	private JTextField username_set_textField;
+	private JPasswordField passwordField_set;
+	private JTextField city_set_textField;
+	private JTextField country_set_textField;
 	/**
 	 * Launch the application.
 	 */
@@ -110,37 +116,272 @@ public class main_windows {
 		JComboBox Gender_comboBox = new JComboBox();
 		JComboBox Purpose_comboBox = new JComboBox();
 		
-		JButton btnNewButton_3 = new JButton("\u05D7\u05D6\u05E8\u05D4");
-		btnNewButton_3.setBounds(747, 482, 89, 23);
-		btnNewButton_3.addActionListener(new ActionListener() {
+		
+		
+		
+		JButton btnNewButton_10 = new JButton("\u05DE\u05E1 \u05E6\u05E2\u05D3\u05D9\u05DD");
+		btnNewButton_10.addActionListener(new ActionListener() {
 			public void actionPerformed(ActionEvent e) {
-				Private_User_page.setVisible(true);
-				sport_activity_page.setVisible(false);
+				
+				JSlider stepss =new JSlider(0,1000,100);
+				stepss.setValue(0);
+				JFrame parent = new JFrame();
+				 JOptionPane optionPane = new JOptionPane();
+				 stepss.setMajorTickSpacing(100);
+				 stepss.setMinorTickSpacing(50);
+				 stepss.setPaintTicks(true);
+				 stepss.setPaintLabels(true);
+		         
+				// Add positions label in the slider
+				Hashtable position1 = new Hashtable();
+				position1.put(0, new JLabel("0"));
+				position1.put(100, new JLabel("100"));
+				position1.put(200, new JLabel("200"));
+				position1.put(300, new JLabel("300"));
+				position1.put(400, new JLabel("400"));
+				position1.put(500, new JLabel("500"));
+				position1.put(600, new JLabel("600"));
+				position1.put(700, new JLabel("700"));
+				position1.put(800, new JLabel("800"));
+				position1.put(900, new JLabel("900"));
+				position1.put(1000, new JLabel("1000"));
+				
+				         
+				// Set the label to be drawn
+				stepss.setLabelTable(position1);
+				    optionPane.setMessage(new Object[] { "Select a value: ", stepss });
+				    optionPane.setMessageType(JOptionPane.QUESTION_MESSAGE);
+				    optionPane.setOptionType(JOptionPane.OK_CANCEL_OPTION);
+				    JDialog dialog = optionPane.createDialog(parent,"\u05DE\u05E1 \u05E6\u05E2\u05D3\u05D9\u05DD");
+				    dialog.setSize(500, 300);
+				    dialog.setVisible(true);
+				  //  System.out.println(stepss.getValue());
+				    use.Activity(stepss.getValue());
+				
 			}
 		});
-		sport_activity_page.setLayout(null);
-		sport_activity_page.add(btnNewButton_3);
+		btnNewButton_10.setBounds(10, 11, 100, 100);
+		sport_activity_page.add(btnNewButton_10);
 		
-		JScrollBar walk_scrollBar = new JScrollBar();
-		walk_scrollBar.setMaximum(500000);
-		walk_scrollBar.setOrientation(JScrollBar.HORIZONTAL);
-		walk_scrollBar.setBounds(10, 32, 705, 23);
-		sport_activity_page.add(walk_scrollBar);
+		JButton btnNewButton_11 = new JButton("\u05E7\u05DC\u05E8\u05D9\u05D5\u05EA");
+		btnNewButton_11.addActionListener(new ActionListener() {
+			public void actionPerformed(ActionEvent e) {
+				
+				JSlider stepss =new JSlider(0,1000,100);
+				stepss.setValue(0);
+				JFrame parent = new JFrame();
+				 JOptionPane optionPane = new JOptionPane();
+				 stepss.setMajorTickSpacing(100);
+				 stepss.setMinorTickSpacing(50);
+				 stepss.setPaintTicks(true);
+				 stepss.setPaintLabels(true);
+		         
+				// Add positions label in the slider
+				Hashtable position1 = new Hashtable();
+				position1.put(0, new JLabel("0"));
+				position1.put(100, new JLabel("100"));
+				position1.put(200, new JLabel("200"));
+				position1.put(300, new JLabel("300"));
+				position1.put(400, new JLabel("400"));
+				position1.put(500, new JLabel("500"));
+				position1.put(600, new JLabel("600"));
+				position1.put(700, new JLabel("700"));
+				position1.put(800, new JLabel("800"));
+				position1.put(900, new JLabel("900"));
+				position1.put(1000, new JLabel("1000"));
+				
+				         
+				// Set the label to be drawn
+				stepss.setLabelTable(position1);
+				    optionPane.setMessage(new Object[] { "Select a value: ", stepss });
+				    optionPane.setMessageType(JOptionPane.QUESTION_MESSAGE);
+				    optionPane.setOptionType(JOptionPane.OK_CANCEL_OPTION);
+				    JDialog dialog = optionPane.createDialog(parent,"\u05E7\u05DC\u05E8\u05D9\u05D5\u05EA");
+				    dialog.setSize(500, 300);
+				    dialog.setVisible(true);
+				    //System.out.println(stepss.getValue());
+				    use.Burned_Calories(Double.valueOf(stepss.getValue()));
+				
+				
+			}
+		});
+		btnNewButton_11.setBounds(118, 11, 100, 100);
+		sport_activity_page.add(btnNewButton_11);
 		
 		JPanel set_rdata_page = new JPanel();
 		frame.getContentPane().add(set_rdata_page, "name_135834242867900");
-		set_rdata_page.setLayout(null);
 		JPanel recommend_food_page = new JPanel();
 		
 		JButton btnNewButton_4 = new JButton("\u05D7\u05D6\u05E8\u05D4");
+		btnNewButton_4.setBounds(747, 482, 89, 23);
 		btnNewButton_4.addActionListener(new ActionListener() {
 			public void actionPerformed(ActionEvent e) {
 				set_rdata_page.setVisible(false);
 				Private_User_page.setVisible(true);
 			}
 		});
-		btnNewButton_4.setBounds(747, 482, 89, 23);
+		set_rdata_page.setLayout(null);
 		set_rdata_page.add(btnNewButton_4);
+		
+		name_set_textField = new JTextField();
+		name_set_textField.setColumns(15);
+		name_set_textField.setBounds(586, 11, 150, 20);
+		set_rdata_page.add(name_set_textField);
+		
+		JLabel label = new JLabel("\u05E9\u05DD:");
+		label.setBounds(747, 14, 89, 14);
+		set_rdata_page.add(label);
+		
+		lastname_set_textField = new JTextField();
+		lastname_set_textField.setColumns(15);
+		lastname_set_textField.setBounds(586, 42, 150, 20);
+		set_rdata_page.add(lastname_set_textField);
+		
+		JLabel label_2 = new JLabel("\u05E9\u05DD \u05DE\u05E9\u05E4\u05D7\u05D4:");
+		label_2.setBounds(747, 45, 89, 14);
+		set_rdata_page.add(label_2);
+		
+		username_set_textField = new JTextField();
+		username_set_textField.setColumns(30);
+		username_set_textField.setBounds(586, 73, 150, 20);
+		set_rdata_page.add(username_set_textField);
+		
+		JLabel label_3 = new JLabel("\u05E9\u05DD \u05DE\u05E9\u05EA\u05DE\u05E9:");
+		label_3.setBounds(744, 76, 67, 14);
+		set_rdata_page.add(label_3);
+		
+		passwordField_set = new JPasswordField();
+		passwordField_set.setBounds(586, 104, 150, 20);
+		set_rdata_page.add(passwordField_set);
+		
+		JLabel label_4 = new JLabel("\u05E1\u05D9\u05E1\u05DE\u05D4:");
+		label_4.setBounds(744, 107, 70, 14);
+		set_rdata_page.add(label_4);
+		
+		city_set_textField = new JTextField();
+		city_set_textField.setColumns(10);
+		city_set_textField.setBounds(586, 135, 150, 20);
+		set_rdata_page.add(city_set_textField);
+		
+		JLabel label_5 = new JLabel("\u05E2\u05D9\u05E8: ");
+		label_5.setBounds(744, 138, 76, 14);
+		set_rdata_page.add(label_5);
+		
+		country_set_textField = new JTextField();
+		country_set_textField.setColumns(10);
+		country_set_textField.setBounds(586, 166, 150, 20);
+		set_rdata_page.add(country_set_textField);
+		
+		JLabel label_6 = new JLabel("\u05DE\u05D3\u05D9\u05E0\u05D4:");
+		label_6.setBounds(748, 169, 46, 14);
+		set_rdata_page.add(label_6);
+		
+		JSpinner age_set_spinner = new JSpinner();
+		age_set_spinner.setBounds(586, 197, 151, 20);
+		set_rdata_page.add(age_set_spinner);
+		
+		JLabel label_7 = new JLabel("\u05D2\u05D9\u05DC:");
+		label_7.setBounds(748, 200, 46, 14);
+		set_rdata_page.add(label_7);
+		
+		JSpinner height_set_spinner = new JSpinner();
+		height_set_spinner.setBounds(586, 228, 150, 20);
+		set_rdata_page.add(height_set_spinner);
+		
+		JLabel label_8 = new JLabel("\u05D2\u05D5\u05D1\u05D4:");
+		label_8.setBounds(748, 231, 46, 14);
+		set_rdata_page.add(label_8);
+		
+		JSpinner weight_set_spinner = new JSpinner();
+		weight_set_spinner.setBounds(587, 259, 151, 20);
+		set_rdata_page.add(weight_set_spinner);
+		
+		JLabel label_9 = new JLabel("\u05DE\u05E9\u05E7\u05DC:");
+		label_9.setBounds(748, 262, 46, 14);
+		set_rdata_page.add(label_9);
+		
+		JComboBox gend_set_comboBox = new JComboBox();
+		gend_set_comboBox.setModel(new DefaultComboBoxModel(new String[] {"\u05D6\u05DB\u05E8", "\u05E0\u05E7\u05D1\u05D4"}));
+		gend_set_comboBox.setToolTipText("...");
+		gend_set_comboBox.setMaximumRowCount(2);
+		gend_set_comboBox.setBounds(587, 290, 150, 22);
+		set_rdata_page.add(gend_set_comboBox);
+		
+		JLabel label_10 = new JLabel("\u05DE\u05D9\u05DF:");
+		label_10.setBounds(748, 293, 46, 14);
+		set_rdata_page.add(label_10);
+		
+		JComboBox Purpose_set_comboBox = new JComboBox();
+		Purpose_set_comboBox.setModel(new DefaultComboBoxModel(new String[] {"\u05DC\u05E8\u05D3\u05EA \u05D1\u05DE\u05E9\u05E7\u05DC", "\u05DC\u05D4\u05D9\u05E9\u05D0\u05E8 \u05D1\u05D0\u05D5\u05EA\u05D5 \u05DE\u05E9\u05E7\u05DC", "\u05DC\u05E2\u05DC\u05D5\u05EA \u05D1\u05DE\u05E9\u05E7\u05DC"}));
+		Purpose_set_comboBox.setToolTipText("...");
+		Purpose_set_comboBox.setMaximumRowCount(3);
+		Purpose_set_comboBox.setForeground(Color.BLACK);
+		Purpose_set_comboBox.setBounds(587, 321, 151, 22);
+		set_rdata_page.add(Purpose_set_comboBox);
+		
+		JLabel label_11 = new JLabel("\u05DE\u05D8\u05E8\u05D4:");
+		label_11.setBounds(748, 324, 46, 14);
+		set_rdata_page.add(label_11);
+		
+		JButton btnNewButton_12 = new JButton("\u05E9\u05DE\u05D5\u05E8");
+		btnNewButton_12.addActionListener(new ActionListener() {
+			public void actionPerformed(ActionEvent e) {
+				
+
+				if(username_set_textField.getText().isEmpty()||passwordField_set.getText().isEmpty()||weight_set_spinner.getValue().equals(1.0)||
+						height_set_spinner.getValue().equals(1.0)||name_set_textField.getText().isEmpty()||lastname_set_textField.getText().isEmpty()||
+						country_set_textField.getText().isEmpty()||city_set_textField.getText().isEmpty()||age_set_spinner.getValue().equals(1.0))
+				{
+					JOptionPane.showMessageDialog(null, "You have to fill all" + "!");
+
+					
+				}else {
+					File file =new File("C:\\data");
+					file.mkdirs();
+					
+				FileWriter outFile = null;
+				
+				try {
+					
+					
+					outFile = new FileWriter ("C:\\data"+"\\"+username_set_textField.getText()+".txt");
+				} catch (IOException e1) {
+					System.out.println("Error: " + e1);
+				
+				}
+				BufferedWriter outStream =new BufferedWriter(outFile);
+			
+				try {
+					
+					
+					outStream.write(username_set_textField.getText()+"\n");
+					outStream.write(passwordField_set.getPassword());
+					outStream.write("\n");
+					outStream.write(weight_set_spinner.getValue().toString()+"\n");
+					outStream.write(height_set_spinner.getValue().toString()+"\n");
+					outStream.write(name_set_textField.getText()+"\n");
+					outStream.write(lastname_set_textField.getText()+"\n");
+					outStream.write(country_set_textField.getText()+"\n");
+					outStream.write(city_set_textField.getText()+"\n");
+					outStream.write(age_set_spinner.getValue().toString()+"\n");
+					outStream.write(gend_set_comboBox.getSelectedIndex()+"\n");
+					outStream.write(Purpose_set_comboBox.getSelectedIndex()+"\n");
+					outStream.close ();
+				} catch (IOException e1) {
+					System.out.println("Error: " + e1);
+				}
+				
+				
+				
+					set_rdata_page.setVisible(false);
+					Private_User_page.setVisible(true);
+	
+				}	
+				
+			}
+		});
+		btnNewButton_12.setBounds(634, 482, 89, 23);
+		set_rdata_page.add(btnNewButton_12);
 
 		JPanel log_in_page = new JPanel();
 		log_in_page.setBackground(new Color(42, 200, 125));
@@ -197,12 +438,6 @@ public class main_windows {
 		JRadioButton fru_RadioButton = new JRadioButton("\u05E4\u05E8\u05D5\u05EA \u05D5\u05D9\u05E8\u05E7\u05D5\u05EA");
 		fru_RadioButton.setBounds(218, 69, 87, 23);
 		
-		
-		JLabel lblNewLabel_19 = new JLabel("Private_User");
-		lblNewLabel_19.setBounds(10, 430, 606, 57);
-		lblNewLabel_19.setFont(new Font("Tahoma", Font.PLAIN, 90));
-		Private_User_page.add(lblNewLabel_19);
-		
 		JButton add_new_food_Button = new JButton("");
 		add_new_food_Button.setToolTipText("\u05DC\u05D0\u05E9\u05D9\u05E3 \u05DE\u05D5\u05E6\u05E8\u05D9\u05DD \u05D7\u05D3\u05E9\u05D9\u05DD");
 		add_new_food_Button.setBounds(10, 11, 100, 100);
@@ -230,25 +465,33 @@ public class main_windows {
 		add_new_food_Button.setBounds(10, 11, 100, 100);
 		Private_User_page.add(add_new_food_Button);*/
 		
-		JButton data_Button_4 = new JButton("");
-		data_Button_4.setToolTipText("\u05E0\u05EA\u05D5\u05E0\u05D9\u05DD \u05E2\u05DC \u05DE\u05D4 \u05D0\u05D7\u05DC\u05EA\u05D9 ");
-		data_Button_4.setBounds(10, 235, 100, 100);
-		data_Button_4.addActionListener(new ActionListener() {
-			public void actionPerformed(ActionEvent e) {
-				data_analysis_page.setVisible(true);
-				Private_User_page.setVisible(false);
-			}
-		});
-		data_Button_4.setBackground(new Color(255, 255, 255));
-		Image ana = new ImageIcon(this.getClass().getResource("/data_analysis.png")).getImage();
-		data_Button_4.setIcon(new ImageIcon(ana));
-		Private_User_page.add(data_Button_4);
+		
 		
 		JButton btnNewButton_6 = new JButton("");
 		btnNewButton_6.setToolTipText("\u05DC\u05E9\u05E0\u05D9\u05D5\u05EA \u05D0\u05EA \u05D4\u05E4\u05E8\u05D8\u05D9\u05DD \u05E9\u05DC\u05D9");
 		btnNewButton_6.addActionListener(new ActionListener() {
 			public void actionPerformed(ActionEvent e) {
 				Private_User_page.setVisible(false);
+				
+				
+				name_set_textField.setText(use.Get_fname());
+				lastname_set_textField.setText(use.Get_lname());
+				username_set_textField.setText(use.Get_Username());
+				passwordField_set.setText(use.Get_Password());
+				city_set_textField.setText(use.Get_City());
+				country_set_textField.setText(use.Get_Country());
+				age_set_spinner.setValue(use.Get_Age());
+				height_set_spinner.setValue(use.Get_Hei());
+				weight_set_spinner.setValue(use.Get_Weig());
+				gend_set_comboBox.setSelectedIndex(use.Get_gender());
+				Purpose_set_comboBox.setSelectedIndex(use.Get_Path());
+				
+				
+				
+				
+				
+				
+				
 				set_rdata_page.setVisible(true);
 			}
 		});
@@ -272,29 +515,32 @@ public class main_windows {
 		});
 		Private_User_page.add(btnNewButton_7);
 		
-		JLabel lblNewLabel_9 = new JLabel(   "\u05E7\u05DC\u05D5\u05E8\u05D9\u05D5\u05EA");
-		lblNewLabel_9.setBounds(140, 27, 113, 14);
+		JLabel lblNewLabel_9 = new JLabel(   "\u05E7\u05DC\u05D5\u05E8\u05D9\u05D5\u05EA: " +0 );
+		lblNewLabel_9.setHorizontalAlignment(SwingConstants.RIGHT);
+		lblNewLabel_9.setBounds(140, 27, 110, 14);
 		Private_User_page.add(lblNewLabel_9);
 		
-		JLabel lblNewLabel_20 = new JLabel("\u05E0\u05EA\u05E8\u05D0\u05DFsalt");
-		lblNewLabel_20.setBounds(140, 53, 100, 14);
+		JLabel lblNewLabel_20 = new JLabel("\u05E0\u05EA\u05E8\u05D0\u05DF: "+0);
+		lblNewLabel_20.setHorizontalAlignment(SwingConstants.RIGHT);
+		lblNewLabel_20.setBounds(140, 53, 110, 14);
 		Private_User_page.add(lblNewLabel_20);
 		
-		JLabel lblNewLabel_20_1 = new JLabel("\u05D7\u05DC\u05D1\u05D5\u05E0\u05D9\u05DDprot");
-		lblNewLabel_20_1.setBounds(140, 83, 100, 14);
+		JLabel lblNewLabel_20_1 = new JLabel("\u05D7\u05DC\u05D1\u05D5\u05E0\u05D9\u05DD: "+0);
+		lblNewLabel_20_1.setHorizontalAlignment(SwingConstants.RIGHT);
+		lblNewLabel_20_1.setBounds(140, 83, 110, 14);
 		Private_User_page.add(lblNewLabel_20_1);
 		
-		JLabel lblNewLabel_20_2 = new JLabel("\u05E9\u05D5\u05DE\u05E0\u05D9\u05DD fat");
-		lblNewLabel_20_2.setBounds(140, 108, 100, 14);
+		JLabel lblNewLabel_20_2 = new JLabel("\u05E9\u05D5\u05DE\u05E0\u05D9\u05DD: "+0);
+		lblNewLabel_20_2.setHorizontalAlignment(SwingConstants.RIGHT);
+		lblNewLabel_20_2.setBounds(140, 108, 110, 14);
 		Private_User_page.add(lblNewLabel_20_2);
 		
-		JLabel lblNewLabel_20_3 = new JLabel("\u05E7\u05D5\u05DC\u05E1\u05D8\u05E8\u05D5\u05DC coles");
-		lblNewLabel_20_3.setBounds(140, 133, 100, 14);
+		JLabel lblNewLabel_20_3 = new JLabel("\u05E7\u05D5\u05DC\u05E1\u05D8\u05E8\u05D5\u05DC: "+0);
+		lblNewLabel_20_3.setHorizontalAlignment(SwingConstants.RIGHT);
+		lblNewLabel_20_3.setBounds(140, 133, 110, 14);
 		Private_User_page.add(lblNewLabel_20_3);
 		
-		JLabel lblNewLabel_21 = new JLabel("New label");
-		lblNewLabel_21.setBounds(395, 430, 416, 14);
-		Private_User_page.add(lblNewLabel_21);
+		
 		
 		JButton sport_Button_3_1 = new JButton("");
 		sport_Button_3_1.setToolTipText("\u05DC\u05D0\u05E9\u05D9\u05E3 \u05D0\u05EA \u05D4\u05E4\u05D9\u05DC\u05D5\u05EA \u05D4\u05D2\u05D5\u05E4\u05E0\u05D9\u05EA \u05D4\u05D9\u05D5\u05DD");
@@ -325,8 +571,9 @@ public class main_windows {
 		btnNewButton_3_2.setBackground(new Color(255, 255, 255));
 		Private_User_page.add(btnNewButton_3_2);
 		
-		JLabel lblNewLabel_38 = new JLabel("\u05E4\u05D7\u05DE\u05D9\u05DE\u05D5\u05EA carbo");
-		lblNewLabel_38.setBounds(140, 158, 80, 14);
+		JLabel lblNewLabel_38 = new JLabel("\u05E4\u05D7\u05DE\u05D9\u05DE\u05D5\u05EA:"+0);
+		lblNewLabel_38.setHorizontalAlignment(SwingConstants.RIGHT);
+		lblNewLabel_38.setBounds(140, 158, 110, 14);
 		Private_User_page.add(lblNewLabel_38);
 		
 		
@@ -1851,6 +2098,25 @@ public class main_windows {
 		back_Button_3.addActionListener(new ActionListener() {
 			public void actionPerformed(ActionEvent e) {
 				ate_food_page.setVisible(false);
+		
+				
+				lblNewLabel_9.setText( "\u05E7\u05DC\u05D5\u05E8\u05D9\u05D5\u05EA: " +Math.floor(use.food_det[0]*100)/100 );
+				
+				lblNewLabel_20.setText("\u05E0\u05EA\u05E8\u05D0\u05DF: "+Math.floor(use.food_det[3]*100)/100);
+			
+				lblNewLabel_20_1.setText("\u05D7\u05DC\u05D1\u05D5\u05E0\u05D9\u05DD: "+Math.floor(use.food_det[1]*100)/100);
+				
+				lblNewLabel_20_2.setText("\u05E9\u05D5\u05DE\u05E0\u05D9\u05DD: "+Math.floor(use.food_det[4]*100)/100);
+				
+				lblNewLabel_20_3.setText("\u05E7\u05D5\u05DC\u05E1\u05D8\u05E8\u05D5\u05DC: "+Math.floor(use.food_det[2]*100)/100);
+				
+				lblNewLabel_38.setText("\u05E4\u05D7\u05DE\u05D9\u05DE\u05D5\u05EA: "+Math.floor(use.food_det[9]*100)/100);
+				
+				
+				
+				
+				
+				
 				Private_User_page.setVisible(true);
 			}
 		});
@@ -1896,7 +2162,9 @@ button_food_3.addActionListener(new ActionListener() {
 		    dialog.setVisible(true);
 		    
 		    //System.out.print(lehemslid.getValue());
-		    bl_bra=bl_bra.Calc(lehemslid.getValue());
+		    //bl_bra=bl_bra.Calc(lehemslid.getValue());
+		    use.Ate_Dry_food(bl_bra.Calc(lehemslid.getValue()));
+		    System.out.print(use+"\n");
 		   
 	}
 });
@@ -1963,7 +2231,9 @@ button_food_2.addActionListener(new ActionListener() {
 		    dialog.setVisible(true);
 		    
 		    //System.out.print(lehemslid.getValue());
-		    past=past.Calc(lehemslid.getValue());
+		    //past=past.Calc(lehemslid.getValue());
+		    use.Ate_Dry_food(past.Calc(lehemslid.getValue()));
+		    System.out.print(use+"\n");
 		   
 	}
 });
@@ -2010,9 +2280,9 @@ button_food_1.addActionListener(new ActionListener() {
 		    dialog.setVisible(true);
 		    
 		    //System.out.print(lehemslid.getValue());
-		    Double d = new Double(lehemslid.getValue());
-		    use.Ate_Dry_food(bra.Calc(d));
-		   
+		   // Double d = new Double(lehemslid.getValue());
+		    use.Ate_Dry_food(bra.Calc(lehemslid.getValue()));
+		    System.out.print(use+"\n");
 			}
 
 	
@@ -2037,6 +2307,71 @@ ate_food_page.add(button_food_1);
 		back_Button_4.setBounds(747, 482, 89, 23);
 		data_analysis_page.add(back_Button_4);
 		
+		JLabel lblNewLabel_19 = new JLabel("\u05DB\u05DC \u05D4\u05E0\u05EA\u05D5\u05E0\u05D9\u05DD \u05E2\u05DC \u05D4\u05E6\u05E8\u05D9\u05DB\u05D4 \u05D4\u05D9\u05D5\u05DE\u05D9\u05EA \u05E9\u05DC\u05DA");
+		lblNewLabel_19.setFont(new Font("Tahoma", Font.PLAIN, 18));
+		lblNewLabel_19.setBounds(539, 11, 297, 46);
+		data_analysis_page.add(lblNewLabel_19);
+		
+		JLabel lblNewLabel_21 = new JLabel("\u05E7\u05DC\u05D5\u05E8\u05D9\u05D5\u05EA: ");
+		lblNewLabel_21.setHorizontalAlignment(SwingConstants.RIGHT);
+		lblNewLabel_21.setBounds(534, 68, 291, 14);
+		data_analysis_page.add(lblNewLabel_21);
+		
+		JLabel lblNewLabel_42 = new JLabel("\u05D7\u05DC\u05D1\u05D5\u05E0\u05D9\u05DD: ");
+		lblNewLabel_42.setHorizontalAlignment(SwingConstants.RIGHT);
+		lblNewLabel_42.setBounds(534, 93, 291, 14);
+		data_analysis_page.add(lblNewLabel_42);
+		
+		JLabel lblNewLabel_43 = new JLabel("\u05DB\u05D5\u05DC\u05E1\u05D8\u05E8\u05D5\u05DC: ");
+		lblNewLabel_43.setHorizontalAlignment(SwingConstants.RIGHT);
+		lblNewLabel_43.setBounds(534, 118, 291, 14);
+		data_analysis_page.add(lblNewLabel_43);
+		
+		JLabel lblNewLabel_44 = new JLabel("\u05E0\u05EA\u05E8\u05DF: ");
+		lblNewLabel_44.setHorizontalAlignment(SwingConstants.RIGHT);
+		lblNewLabel_44.setBounds(534, 143, 291, 14);
+		data_analysis_page.add(lblNewLabel_44);
+		
+		JLabel lblNewLabel_45 = new JLabel("\u05E9\u05D5\u05DE\u05E0\u05D9\u05DD: ");
+		lblNewLabel_45.setHorizontalAlignment(SwingConstants.RIGHT);
+		lblNewLabel_45.setBounds(534, 165, 291, 14);
+		data_analysis_page.add(lblNewLabel_45);
+		
+		JLabel lblNewLabel_46 = new JLabel("\u05E1\u05D5\u05DB\u05E8\u05D9\u05DD: ");
+		lblNewLabel_46.setHorizontalAlignment(SwingConstants.RIGHT);
+		lblNewLabel_46.setBounds(534, 190, 291, 14);
+		data_analysis_page.add(lblNewLabel_46);
+		
+		JLabel lblNewLabel_47 = new JLabel("\u05D6\u05E8\u05D7\u05DF: ");
+		lblNewLabel_47.setHorizontalAlignment(SwingConstants.RIGHT);
+		lblNewLabel_47.setBounds(534, 215, 291, 14);
+		data_analysis_page.add(lblNewLabel_47);
+		
+		JLabel lblNewLabel_48 = new JLabel("\u05D0\u05E9\u05DC\u05D2\u05DF: ");
+		lblNewLabel_48.setHorizontalAlignment(SwingConstants.RIGHT);
+		lblNewLabel_48.setBounds(534, 240, 291, 14);
+		data_analysis_page.add(lblNewLabel_48);
+		
+		JLabel lblNewLabel_49 = new JLabel("\u05DE\u05D2\u05E0\u05D6\u05D9\u05D5\u05DD: ");
+		lblNewLabel_49.setHorizontalAlignment(SwingConstants.RIGHT);
+		lblNewLabel_49.setBounds(534, 265, 291, 14);
+		data_analysis_page.add(lblNewLabel_49);
+		
+		JLabel lblNewLabel_50 = new JLabel("\u05E4\u05D7\u05DE\u05D9\u05DE\u05D5\u05EA: ");
+		lblNewLabel_50.setHorizontalAlignment(SwingConstants.RIGHT);
+		lblNewLabel_50.setBounds(534, 290, 291, 14);
+		data_analysis_page.add(lblNewLabel_50);
+		
+		JLabel lblNewLabel_51 = new JLabel("\u05D1\u05E8\u05D6\u05DC: ");
+		lblNewLabel_51.setHorizontalAlignment(SwingConstants.RIGHT);
+		lblNewLabel_51.setBounds(534, 315, 291, 14);
+		data_analysis_page.add(lblNewLabel_51);
+		
+		JLabel lblNewLabel_52 = new JLabel("\u05D5\u05D5\u05D9\u05D8\u05DE\u05D9\u05DF \u05E1\u05D9\u05D9: ");
+		lblNewLabel_52.setHorizontalAlignment(SwingConstants.RIGHT);
+		lblNewLabel_52.setBounds(534, 340, 291, 14);
+		data_analysis_page.add(lblNewLabel_52);
+		
 		
 		frame.getContentPane().add(recommend_food_page, "name_145319149516600");
 		recommend_food_page.setLayout(null);
@@ -2052,7 +2387,75 @@ ate_food_page.add(button_food_1);
 		recommend_food_page.add(btnNewButton_8);
 		
 	
+		JButton data_Button_4 = new JButton("");
+		data_Button_4.setToolTipText("\u05E0\u05EA\u05D5\u05E0\u05D9\u05DD \u05E2\u05DC \u05DE\u05D4 \u05D0\u05D7\u05DC\u05EA\u05D9 ");
+		data_Button_4.setBounds(10, 235, 100, 100);
+		data_Button_4.addActionListener(new ActionListener() {
+			public void actionPerformed(ActionEvent e) {
+				data_analysis_page.setVisible(true);
+				
+				
+				lblNewLabel_21.setText("\u05E7\u05DC\u05D5\u05E8\u05D9\u05D5\u05EA: "+Math.floor(use.food_det[0]*100)/100);
+				
+				lblNewLabel_42.setText("\u05D7\u05DC\u05D1\u05D5\u05E0\u05D9\u05DD: "+Math.floor(use.food_det[1]*100)/100);
+				
+				lblNewLabel_43.setText("\u05DB\u05D5\u05DC\u05E1\u05D8\u05E8\u05D5\u05DC: "+Math.floor(use.food_det[2]*100)/100);
+				
+				lblNewLabel_44.setText("\u05E0\u05EA\u05E8\u05DF: "+Math.floor(use.food_det[3]*100)/100);
+
+				lblNewLabel_45.setText("\u05E9\u05D5\u05DE\u05E0\u05D9\u05DD: "+Math.floor(use.food_det[4]*100)/100);
+				
+				lblNewLabel_46.setText("\u05E1\u05D5\u05DB\u05E8\u05D9\u05DD: "+Math.floor(use.food_det[5]*100)/100);
+
+				lblNewLabel_47.setText("\u05D6\u05E8\u05D7\u05DF: "+Math.floor(use.food_det[6]*100)/100);
+				
+				lblNewLabel_48.setText("\u05D0\u05E9\u05DC\u05D2\u05DF: "+Math.floor(use.food_det[7]*100)/100);
+				
+				lblNewLabel_49.setText("\u05DE\u05D2\u05E0\u05D6\u05D9\u05D5\u05DD: "+Math.floor(use.food_det[8]*100)/100);
+
+				lblNewLabel_50.setText("\u05E4\u05D7\u05DE\u05D9\u05DE\u05D5\u05EA: "+Math.floor(use.food_det[9]*100)/100);
+
+				lblNewLabel_51.setText("\u05D1\u05E8\u05D6\u05DC: "+Math.floor(use.food_det[10]*100)/100);
+				
+				lblNewLabel_52.setText("\u05D5\u05D5\u05D9\u05D8\u05DE\u05D9\u05DF \u05E1\u05D9\u05D9: "+Math.floor(use.food_det[11]*100)/100);
+				
+				
+				
+				
+				Private_User_page.setVisible(false);
+			}
+		});
 		
+		JButton btnNewButton_3 = new JButton("\u05D7\u05D6\u05E8\u05D4");
+		btnNewButton_3.setBounds(747, 482, 89, 23);
+		btnNewButton_3.addActionListener(new ActionListener() {
+			public void actionPerformed(ActionEvent e) {
+				Private_User_page.setVisible(true);
+				
+				lblNewLabel_9.setText( "\u05E7\u05DC\u05D5\u05E8\u05D9\u05D5\u05EA: " +Math.floor(use.food_det[0]*100)/100 );
+				
+				lblNewLabel_20.setText("\u05E0\u05EA\u05E8\u05D0\u05DF: "+Math.floor(use.food_det[3]*100)/100);
+			
+				lblNewLabel_20_1.setText("\u05D7\u05DC\u05D1\u05D5\u05E0\u05D9\u05DD: "+Math.floor(use.food_det[1]*100)/100);
+				
+				lblNewLabel_20_2.setText("\u05E9\u05D5\u05DE\u05E0\u05D9\u05DD: "+Math.floor(use.food_det[4]*100)/100);
+				
+				lblNewLabel_20_3.setText("\u05E7\u05D5\u05DC\u05E1\u05D8\u05E8\u05D5\u05DC: "+Math.floor(use.food_det[2]*100)/100);
+				
+				lblNewLabel_38.setText("\u05E4\u05D7\u05DE\u05D9\u05DE\u05D5\u05EA:"+Math.floor(use.food_det[9]*100)/100);
+				
+				
+				
+				sport_activity_page.setVisible(false);
+			}
+		});
+		sport_activity_page.setLayout(null);
+		sport_activity_page.add(btnNewButton_3);
+		
+		data_Button_4.setBackground(new Color(255, 255, 255));
+		Image ana = new ImageIcon(this.getClass().getResource("/data_analysis.png")).getImage();
+		data_Button_4.setIcon(new ImageIcon(ana));
+		Private_User_page.add(data_Button_4);
 		
 		
 		b_Button_save.addMouseListener(new MouseAdapter() {
