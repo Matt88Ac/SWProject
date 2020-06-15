@@ -1859,7 +1859,7 @@ JButton button_food_3 = new JButton("\u05DC\u05D7\u05DD \u05E9\u05D7\u05D5\u05E8
 button_food_3.addActionListener(new ActionListener() {
 	public void actionPerformed(ActionEvent e) {
 		
-		Dry_Food bl_bra=prod.d_food.get(0);
+		Dry_Food bl_bra=prod.d_food[0];
 		
 		JSlider lehemslid =new JSlider(0,1000,100);
 		lehemslid.setValue(0);
@@ -1926,7 +1926,7 @@ JButton button_food_2 = new JButton("\u05E4\u05E1\u05D8\u05D4");
 button_food_2.addActionListener(new ActionListener() {
 	public void actionPerformed(ActionEvent e) {
 
-		Dry_Food past=prod.d_food.get(0);
+		Dry_Food past=prod.d_food[0];
 		
 		JSlider lehemslid =new JSlider(0,1000,100);
 		lehemslid.setValue(0);
@@ -1974,7 +1974,7 @@ button_food_1.setBounds(10, 11, 100, 100);
 button_food_1.addActionListener(new ActionListener() {
 	public void actionPerformed(ActionEvent e) {
 		
-		Dry_Food bra=prod.d_food.get(1);
+		Dry_Food bra=prod.d_food[1];
 		JSlider lehemslid =new JSlider(0,1000,100);
 		lehemslid.setValue(0);
 		JFrame parent = new JFrame();
