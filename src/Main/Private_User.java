@@ -39,7 +39,6 @@ public class Private_User extends User {
         this.Gender = gender; // 1 for a female , 0 for a male ;
         this.Purpose = Purpose;//2 for Gain Weight ,1 for Stay at the same weight ,0 for  lose weight
         this.path = null;
-        this.last_time_had_sports = null;
 
         this.food_det = new double[18];
         for(int i=0; i<18; i++){
@@ -185,7 +184,7 @@ public class Private_User extends User {
     }
 
 
-    public  String Get_Path(){ return this.path; }
+    public  int Get_Path(){ return this.Purpose; }
 
     public String Get_Username() {
         return this.username;
