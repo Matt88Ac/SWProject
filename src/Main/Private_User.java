@@ -179,13 +179,14 @@ public class Private_User extends User {
     }
 
     public String toString(){
-        return this.toString(this.food_det[0])  + " " + this.toString(this.food_det[1])  + " " + this.toString(this.food_det[2])
-            + " " + this.toString(this.food_det[3]) + " " + this.toString(this.food_det[4]) + " " + this.toString(this.food_det[5])
-            + " " + this.toString(this.food_det[6]) + " " + this.toString(this.food_det[7])
-                + " " + this.toString(this.food_det[8])
-                + " " + this.toString(this.food_det[9])
-                +" " + this.toString(this.food_det[10])
-                +" " + this.toString(this.food_det[11]);
+        return "Calories: " + this.toString(this.food_det[0])  + "\n" + "Protain: " + this.toString(this.food_det[1])  + "\n" + "Cholesterol: " +
+                this.toString(this.food_det[2]) + "\n" + "Sodium: " + this.toString(this.food_det[3]) + "\n" + "Fat: " +
+                this.toString(this.food_det[4]) + "\n" + "Suger: " +  this.toString(this.food_det[5])
+            + "\n" + "Phosphorus: " + this.toString(this.food_det[6]) + "\n" + "Potassium: " + this.toString(this.food_det[7])
+                + "\n" + "Magnesium: " + this.toString(this.food_det[8])
+                + "\n" + "Fatty acids: " + this.toString(this.food_det[9])
+                +"\n" + "Iron: " + this.toString(this.food_det[10])
+                +"\n" + "Vitamin C:" +  this.toString(this.food_det[11]);
     }
 
     private String toString(double v) {
