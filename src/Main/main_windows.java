@@ -271,7 +271,7 @@ public class main_windows {
 		});
 		Private_User_page.add(btnNewButton_7);
 		
-		JLabel lblNewLabel_9 = new JLabel(" cal \u05E7\u05DC\u05D5\u05E8\u05D9\u05D5\u05EA");
+		JLabel lblNewLabel_9 = new JLabel(   "\u05E7\u05DC\u05D5\u05E8\u05D9\u05D5\u05EA");
 		lblNewLabel_9.setBounds(140, 27, 113, 14);
 		Private_User_page.add(lblNewLabel_9);
 		
@@ -1856,6 +1856,49 @@ public class main_windows {
 		ate_food_page.setLayout(null);
 		ate_food_page.add(back_Button_3);
 JButton button_food_3 = new JButton("\u05DC\u05D7\u05DD \u05E9\u05D7\u05D5\u05E8");
+button_food_3.addActionListener(new ActionListener() {
+	public void actionPerformed(ActionEvent e) {
+		
+		Dry_Food bl_bra=prod.d_food.get(0);
+		
+		JSlider lehemslid =new JSlider(0,1000,100);
+		lehemslid.setValue(0);
+		JFrame parent = new JFrame();
+		 JOptionPane optionPane = new JOptionPane();
+		 lehemslid.setMajorTickSpacing(100);
+		 lehemslid.setMinorTickSpacing(50);
+		 lehemslid.setPaintTicks(true);
+		 lehemslid.setPaintLabels(true);
+         
+		// Add positions label in the slider
+		Hashtable position = new Hashtable();
+		position.put(0, new JLabel("0"));
+		position.put(100, new JLabel("100"));
+		position.put(200, new JLabel("200"));
+		position.put(300, new JLabel("300"));
+		position.put(400, new JLabel("400"));
+		position.put(500, new JLabel("500"));
+		position.put(600, new JLabel("600"));
+		position.put(700, new JLabel("700"));
+		position.put(800, new JLabel("800"));
+		position.put(900, new JLabel("900"));
+		position.put(1000, new JLabel("1000"));
+		
+		         
+		// Set the label to be drawn
+		lehemslid.setLabelTable(position);
+		    optionPane.setMessage(new Object[] { "Select a value: ", lehemslid });
+		    optionPane.setMessageType(JOptionPane.QUESTION_MESSAGE);
+		    optionPane.setOptionType(JOptionPane.OK_CANCEL_OPTION);
+		    JDialog dialog = optionPane.createDialog(parent,"\u05E4\u05E1\u05D8\u05D4");
+		    dialog.setSize(500, 300);
+		    dialog.setVisible(true);
+		    
+		    //System.out.print(lehemslid.getValue());
+		    bl_bra=bl_bra.Calc(lehemslid.getValue());
+		   
+	}
+});
 button_food_3.setBounds(230, 11, 100, 100);
 ate_food_page.add(button_food_3);
 JButton button_food_4 = new JButton("but_4");
@@ -1883,7 +1926,7 @@ JButton button_food_2 = new JButton("\u05E4\u05E1\u05D8\u05D4");
 button_food_2.addActionListener(new ActionListener() {
 	public void actionPerformed(ActionEvent e) {
 
-		//prod.d_food.get(0);
+		Dry_Food past=prod.d_food.get(0);
 		
 		JSlider lehemslid =new JSlider(0,1000,100);
 		lehemslid.setValue(0);
@@ -1911,15 +1954,15 @@ button_food_2.addActionListener(new ActionListener() {
 		         
 		// Set the label to be drawn
 		lehemslid.setLabelTable(position);
-		    optionPane.setMessage(new Object[] { "Select a value: "+lehemslid.getValue(), lehemslid });
+		    optionPane.setMessage(new Object[] { "Select a value: ", lehemslid });
 		    optionPane.setMessageType(JOptionPane.QUESTION_MESSAGE);
 		    optionPane.setOptionType(JOptionPane.OK_CANCEL_OPTION);
 		    JDialog dialog = optionPane.createDialog(parent,"\u05E4\u05E1\u05D8\u05D4");
 		    dialog.setSize(500, 300);
 		    dialog.setVisible(true);
 		    
-		    System.out.print(lehemslid.getValue());
-		    
+		    //System.out.print(lehemslid.getValue());
+		    past=past.Calc(lehemslid.getValue());
 		   
 	}
 });
@@ -1931,7 +1974,7 @@ button_food_1.setBounds(10, 11, 100, 100);
 button_food_1.addActionListener(new ActionListener() {
 	public void actionPerformed(ActionEvent e) {
 		
-		Dry_Food bra=prod.d_food[1];
+		Dry_Food bra=prod.d_food.get(1);
 		JSlider lehemslid =new JSlider(0,1000,100);
 		lehemslid.setValue(0);
 		JFrame parent = new JFrame();
@@ -1958,16 +2001,16 @@ button_food_1.addActionListener(new ActionListener() {
 		         
 		// Set the label to be drawn
 		lehemslid.setLabelTable(position);
-		    optionPane.setMessage(new Object[] { "Select a value: "+lehemslid.getValue(), lehemslid });
+		    optionPane.setMessage(new Object[] { "Select a value: ", lehemslid });
 		    optionPane.setMessageType(JOptionPane.QUESTION_MESSAGE);
 		    optionPane.setOptionType(JOptionPane.OK_CANCEL_OPTION);
 		    JDialog dialog = optionPane.createDialog(parent,"\u05DC\u05D7\u05DD \u05DC\u05D1\u05DF");
 		    dialog.setSize(500, 300);
 		    dialog.setVisible(true);
 		    
-		    System.out.print(lehemslid.getValue());
-		    bra=bra.Calc(lehemslid.getValue());
-		    System.out.print(bra);
+		    //System.out.print(lehemslid.getValue());
+		    
+		    use.Ate_Dry_food(bra.Calc(lehemslid.getValue()));
 		   
 			}
 
