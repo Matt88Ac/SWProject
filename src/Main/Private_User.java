@@ -145,6 +145,7 @@ public class Private_User extends User {
         this.food_det[10] += dry_food.Get_Detail("Iron");
         this.food_det[11] +=  dry_food.Get_Detail("VitC");
         this.last_time_ate = LocalDateTime.now();
+        // this.
 
     }
 
