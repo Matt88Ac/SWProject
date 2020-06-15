@@ -116,8 +116,254 @@ public class main_windows {
 		JComboBox Gender_comboBox = new JComboBox();
 		JComboBox Purpose_comboBox = new JComboBox();
 		
+		JPanel veg_page = new JPanel();
+		frame.getContentPane().add(veg_page, "name_31411297190200");
+		
+		JPanel Junk_Food_page = new JPanel();
+		frame.getContentPane().add(Junk_Food_page, "name_31478926767500");
+		Junk_Food_page.setLayout(null);
+		
+		JButton btnNewButton_18 = new JButton("\u05E4\u05D9\u05E6\u05D4");
+		btnNewButton_18.addActionListener(new ActionListener() {
+			public void actionPerformed(ActionEvent e) {
+				
+Junk_Food piza=prod.j_food[0];
+				
+				JSlider pizid =new JSlider(0,1000,100);
+				pizid.setValue(0);
+				JFrame parent = new JFrame();
+				 JOptionPane optionPane = new JOptionPane();
+				 pizid.setMajorTickSpacing(100);
+				 pizid.setMinorTickSpacing(50);
+				 pizid.setPaintTicks(true);
+				 pizid.setPaintLabels(true);
+		         
+				// Add positions label in the slider
+				Hashtable position = new Hashtable();
+				position.put(0, new JLabel("0"));
+				position.put(100, new JLabel("100"));
+				position.put(200, new JLabel("200"));
+				position.put(300, new JLabel("300"));
+				position.put(400, new JLabel("400"));
+				position.put(500, new JLabel("500"));
+				position.put(600, new JLabel("600"));
+				position.put(700, new JLabel("700"));
+				position.put(800, new JLabel("800"));
+				position.put(900, new JLabel("900"));
+				position.put(1000, new JLabel("1000"));
+				
+				         
+				// Set the label to be drawn
+				pizid.setLabelTable(position);
+				    optionPane.setMessage(new Object[] { "Select a value: ", pizid });
+				    optionPane.setMessageType(JOptionPane.QUESTION_MESSAGE);
+				    optionPane.setOptionType(JOptionPane.OK_CANCEL_OPTION);
+				    JDialog dialog = optionPane.createDialog(parent,"\u05E4\u05E1\u05D8\u05D4");
+				    dialog.setSize(500, 300);
+				    dialog.setVisible(true);
+				    
+				    //System.out.print(lehemslid.getValue());
+				    //bl_bra=bl_bra.Calc(lehemslid.getValue());
+				    use.Ate_Junk_Food(piza.Calc(pizid.getValue()));
+				    //System.out.print(use+"\n");
+				
+			}
+		});
+		btnNewButton_18.setBounds(10, 11, 100, 100);
+		Junk_Food_page.add(btnNewButton_18);
+		
+		JButton btnNewButton_19 = new JButton("\u05D4\u05DE\u05D1\u05D5\u05E8\u05D2\u05E8");
+		btnNewButton_19.addActionListener(new ActionListener() {
+			public void actionPerformed(ActionEvent e) {
+				
+				Junk_Food bur=prod.j_food[1];
+				
+				JSlider burid =new JSlider(0,1000,100);
+				burid.setValue(0);
+				JFrame parent = new JFrame();
+				 JOptionPane optionPane = new JOptionPane();
+				 burid.setMajorTickSpacing(100);
+				 burid.setMinorTickSpacing(50);
+				 burid.setPaintTicks(true);
+				 burid.setPaintLabels(true);
+		         
+				// Add positions label in the slider
+				Hashtable position = new Hashtable();
+				position.put(0, new JLabel("0"));
+				position.put(100, new JLabel("100"));
+				position.put(200, new JLabel("200"));
+				position.put(300, new JLabel("300"));
+				position.put(400, new JLabel("400"));
+				position.put(500, new JLabel("500"));
+				position.put(600, new JLabel("600"));
+				position.put(700, new JLabel("700"));
+				position.put(800, new JLabel("800"));
+				position.put(900, new JLabel("900"));
+				position.put(1000, new JLabel("1000"));
+				
+				         
+				// Set the label to be drawn
+				burid.setLabelTable(position);
+				    optionPane.setMessage(new Object[] { "Select a value: ", burid });
+				    optionPane.setMessageType(JOptionPane.QUESTION_MESSAGE);
+				    optionPane.setOptionType(JOptionPane.OK_CANCEL_OPTION);
+				    JDialog dialog = optionPane.createDialog(parent,"\u05E4\u05E1\u05D8\u05D4");
+				    dialog.setSize(500, 300);
+				    dialog.setVisible(true);
+				    
+				    //System.out.print(lehemslid.getValue());
+				    //bl_bra=bl_bra.Calc(lehemslid.getValue());
+				    use.Ate_Junk_Food(bur.Calc(burid.getValue()));
+				    //System.out.print(use+"\n");
+				
+			}
+		});
+		btnNewButton_19.setBounds(120, 11, 100, 100);
+		Junk_Food_page.add(btnNewButton_19);
+		
+		JButton btnNewButton_20 = new JButton("\u05E6'\u05D9\u05E4\u05E1");
+		btnNewButton_20.addActionListener(new ActionListener() {
+			public void actionPerformed(ActionEvent e) {
+				
+				Junk_Food fri=prod.j_food[2];
+				
+				JSlider friid =new JSlider(0,1000,100);
+				friid.setValue(0);
+				JFrame parent = new JFrame();
+				 JOptionPane optionPane = new JOptionPane();
+				 friid.setMajorTickSpacing(100);
+				 friid.setMinorTickSpacing(50);
+				 friid.setPaintTicks(true);
+				 friid.setPaintLabels(true);
+		         
+				// Add positions label in the slider
+				Hashtable position = new Hashtable();
+				position.put(0, new JLabel("0"));
+				position.put(100, new JLabel("100"));
+				position.put(200, new JLabel("200"));
+				position.put(300, new JLabel("300"));
+				position.put(400, new JLabel("400"));
+				position.put(500, new JLabel("500"));
+				position.put(600, new JLabel("600"));
+				position.put(700, new JLabel("700"));
+				position.put(800, new JLabel("800"));
+				position.put(900, new JLabel("900"));
+				position.put(1000, new JLabel("1000"));
+				
+				         
+				// Set the label to be drawn
+				friid.setLabelTable(position);
+				    optionPane.setMessage(new Object[] { "Select a value: ", friid });
+				    optionPane.setMessageType(JOptionPane.QUESTION_MESSAGE);
+				    optionPane.setOptionType(JOptionPane.OK_CANCEL_OPTION);
+				    JDialog dialog = optionPane.createDialog(parent,"\u05E4\u05E1\u05D8\u05D4");
+				    dialog.setSize(500, 300);
+				    dialog.setVisible(true);
+				    
+				    //System.out.print(lehemslid.getValue());
+				    //bl_bra=bl_bra.Calc(lehemslid.getValue());
+				    use.Ate_Junk_Food(fri.Calc(friid.getValue()));
+				    //System.out.print(use+"\n");
+				
+			}
+		});
+		btnNewButton_20.setBounds(230, 11, 100, 100);
+		Junk_Food_page.add(btnNewButton_20);
+		
+		JButton btnNewButton_21 = new JButton("\u05E1\u05D5\u05E9\u05D9");
+		btnNewButton_21.addActionListener(new ActionListener() {
+			public void actionPerformed(ActionEvent e) {
+				
+				Junk_Food susi=prod.j_food[3];
+				
+				JSlider susiid =new JSlider(0,1000,100);
+				susiid.setValue(0);
+				JFrame parent = new JFrame();
+				 JOptionPane optionPane = new JOptionPane();
+				 susiid.setMajorTickSpacing(100);
+				 susiid.setMinorTickSpacing(50);
+				 susiid.setPaintTicks(true);
+				 susiid.setPaintLabels(true);
+		         
+				// Add positions label in the slider
+				Hashtable position = new Hashtable();
+				position.put(0, new JLabel("0"));
+				position.put(100, new JLabel("100"));
+				position.put(200, new JLabel("200"));
+				position.put(300, new JLabel("300"));
+				position.put(400, new JLabel("400"));
+				position.put(500, new JLabel("500"));
+				position.put(600, new JLabel("600"));
+				position.put(700, new JLabel("700"));
+				position.put(800, new JLabel("800"));
+				position.put(900, new JLabel("900"));
+				position.put(1000, new JLabel("1000"));
+				
+				         
+				// Set the label to be drawn
+				susiid.setLabelTable(position);
+				    optionPane.setMessage(new Object[] { "Select a value: ", susiid });
+				    optionPane.setMessageType(JOptionPane.QUESTION_MESSAGE);
+				    optionPane.setOptionType(JOptionPane.OK_CANCEL_OPTION);
+				    JDialog dialog = optionPane.createDialog(parent,"\u05E4\u05E1\u05D8\u05D4");
+				    dialog.setSize(500, 300);
+				    dialog.setVisible(true);
+				    
+				    //System.out.print(lehemslid.getValue());
+				    //bl_bra=bl_bra.Calc(lehemslid.getValue());
+				    use.Ate_Junk_Food(susi.Calc(susiid.getValue()));
+				    //System.out.print(use+"\n");
+				
+			}
+		});
+		btnNewButton_21.setBounds(340, 11, 100, 100);
+		Junk_Food_page.add(btnNewButton_21);
+		
+		JPanel Meat_Fish_Dai_page = new JPanel();
+		frame.getContentPane().add(Meat_Fish_Dai_page, "name_31571261321900");
+		Meat_Fish_Dai_page.setLayout(null);
+		
+		JButton btnNewButton_22 = new JButton("\u05E2\u05D5\u05E3 \u05E6\u05DC\u05D5\u05D9");
+		btnNewButton_22.setBounds(10, 11, 100, 100);
+		Meat_Fish_Dai_page.add(btnNewButton_22);
+		
+		JButton btnNewButton_23 = new JButton("\u05D1\u05E7\u05E8 \u05DE\u05D8\u05D5\u05D2\u05DF");
+		btnNewButton_23.setBounds(120, 11, 100, 100);
+		Meat_Fish_Dai_page.add(btnNewButton_23);
+		
+		JButton btnNewButton_24 = new JButton("\u05D1\u05E8\u05D5\u05D5\u05D6 \u05E6\u05DC\u05D5\u05D9");
+		btnNewButton_24.setBounds(230, 11, 100, 100);
+		Meat_Fish_Dai_page.add(btnNewButton_24);
+		
+		JButton btnNewButton_25 = new JButton("\u05DB\u05D1\u05E9 \u05E6\u05DC\u05D5\u05D9");
+		btnNewButton_25.setBounds(340, 11, 100, 100);
+		Meat_Fish_Dai_page.add(btnNewButton_25);
+		
+		JButton btnNewButton_26 = new JButton("\u05D3\u05D2 \u05D0\u05DE\u05E0\u05D5\u05DF \u05E6\u05DC\u05D5\u05D9");
+		btnNewButton_26.setBounds(450, 11, 100, 100);
+		Meat_Fish_Dai_page.add(btnNewButton_26);
+		
+		JButton btnNewButton_27 = new JButton("\u05E1\u05DC\u05DE\u05D5\u05DF \u05DE\u05D1\u05D5\u05E9\u05DC");
+		btnNewButton_27.setBounds(560, 11, 106, 100);
+		Meat_Fish_Dai_page.add(btnNewButton_27);
+		
+		JButton btnNewButton_28 = new JButton("\u05D8\u05D5\u05E0\u05D4 \u05E9\u05DE\u05D5\u05E8\u05D9\u05DD");
+		btnNewButton_28.setBounds(676, 11, 100, 100);
+		Meat_Fish_Dai_page.add(btnNewButton_28);
+		
+		JButton btnNewButton_29 = new JButton("\u05D2\u05D1\u05D9\u05E0\u05D4 \u05D0\u05DE\u05E8\u05D9\u05E7\u05D0\u05D9\u05EA");
+		btnNewButton_29.setBounds(10, 122, 117, 100);
+		Meat_Fish_Dai_page.add(btnNewButton_29);
+		
+		JButton btnNewButton_30 = new JButton("\u05E7\u05D5\u05B9\u05D8\u05B6\u05D2'");
+		btnNewButton_30.setBounds(137, 122, 100, 100);
+		Meat_Fish_Dai_page.add(btnNewButton_30);
 		
 		
+		JPanel ate_food_page = new JPanel();
+		frame.getContentPane().add(ate_food_page, "name_31670348278500");
+		ate_food_page.setLayout(null);
+	
 		
 		JButton btnNewButton_10 = new JButton("\u05DE\u05E1 \u05E6\u05E2\u05D3\u05D9\u05DD");
 		btnNewButton_10.addActionListener(new ActionListener() {
@@ -162,6 +408,18 @@ public class main_windows {
 		});
 		btnNewButton_10.setBounds(10, 11, 100, 100);
 		sport_activity_page.add(btnNewButton_10);
+		
+		JButton btnNewButton_31 = new JButton("\u05D7\u05D6\u05D5\u05E8");
+		btnNewButton_31.addActionListener(new ActionListener() {
+			public void actionPerformed(ActionEvent e) {
+				Meat_Fish_Dai_page.setVisible(false);
+				ate_food_page.setVisible(true);
+				
+			}
+		});
+		btnNewButton_31.setBounds(747, 482, 89, 23);
+		Meat_Fish_Dai_page.add(btnNewButton_31);
+		
 		
 		JButton btnNewButton_11 = new JButton("\u05E7\u05DC\u05E8\u05D9\u05D5\u05EA");
 		btnNewButton_11.addActionListener(new ActionListener() {
@@ -391,7 +649,7 @@ public class main_windows {
 		JLabel lblNewLabel = new JLabel("\u05E9\u05DD \u05DE\u05E9\u05EA\u05DE\u05E9 : ");
 		lblNewLabel.setBounds(731, 11, 95, 28);
 		log_in_page.add(lblNewLabel);
-		JPanel ate_food_page = new JPanel();
+		JPanel dry_food_page = new JPanel();
 		JButton Button_back = new JButton("\u05D7\u05D6\u05E8\u05D4");
 		Button_back.addMouseListener(new MouseAdapter() {
 			@Override
@@ -2091,37 +2349,20 @@ public class main_windows {
 		});
 		
 		
-		frame.getContentPane().add(ate_food_page, "name_133487254905400");
+		frame.getContentPane().add(dry_food_page, "name_133487254905400");
 		
 		JButton back_Button_3 = new JButton("\u05D7\u05D6\u05E8\u05D4");
 		back_Button_3.setBounds(747, 482, 89, 23);
 		back_Button_3.addActionListener(new ActionListener() {
 			public void actionPerformed(ActionEvent e) {
-				ate_food_page.setVisible(false);
-		
-				
-				lblNewLabel_9.setText( "\u05E7\u05DC\u05D5\u05E8\u05D9\u05D5\u05EA: " +Math.floor(use.food_det[0]*100)/100 );
-				
-				lblNewLabel_20.setText("\u05E0\u05EA\u05E8\u05D0\u05DF: "+Math.floor(use.food_det[3]*100)/100);
-			
-				lblNewLabel_20_1.setText("\u05D7\u05DC\u05D1\u05D5\u05E0\u05D9\u05DD: "+Math.floor(use.food_det[1]*100)/100);
-				
-				lblNewLabel_20_2.setText("\u05E9\u05D5\u05DE\u05E0\u05D9\u05DD: "+Math.floor(use.food_det[4]*100)/100);
-				
-				lblNewLabel_20_3.setText("\u05E7\u05D5\u05DC\u05E1\u05D8\u05E8\u05D5\u05DC: "+Math.floor(use.food_det[2]*100)/100);
-				
-				lblNewLabel_38.setText("\u05E4\u05D7\u05DE\u05D9\u05DE\u05D5\u05EA: "+Math.floor(use.food_det[9]*100)/100);
+				dry_food_page.setVisible(false);
 				
 				
-				
-				
-				
-				
-				Private_User_page.setVisible(true);
+				ate_food_page.setVisible(true);
 			}
 		});
-		ate_food_page.setLayout(null);
-		ate_food_page.add(back_Button_3);
+		dry_food_page.setLayout(null);
+		dry_food_page.add(back_Button_3);
 JButton button_food_3 = new JButton("\u05DC\u05D7\u05DD \u05E9\u05D7\u05D5\u05E8");
 button_food_3.addActionListener(new ActionListener() {
 	public void actionPerformed(ActionEvent e) {
@@ -2169,28 +2410,105 @@ button_food_3.addActionListener(new ActionListener() {
 	}
 });
 button_food_3.setBounds(230, 11, 100, 100);
-ate_food_page.add(button_food_3);
-JButton button_food_4 = new JButton("but_4");
+dry_food_page.add(button_food_3);
+JButton button_food_4 = new JButton("\u05D0\u05D5\u05E8\u05D6");
+button_food_4.addActionListener(new ActionListener() {
+	public void actionPerformed(ActionEvent e) {
+		
+
+		Dry_Food ris=prod.d_food[3];
+		
+		JSlider risid=new JSlider(0,1000,100);
+		risid.setValue(0);
+		JFrame parent = new JFrame();
+		 JOptionPane optionPane = new JOptionPane();
+		 risid.setMajorTickSpacing(100);
+		 risid.setMinorTickSpacing(50);
+		 risid.setPaintTicks(true);
+		 risid.setPaintLabels(true);
+         
+		// Add positions label in the slider
+		Hashtable position = new Hashtable();
+		position.put(0, new JLabel("0"));
+		position.put(100, new JLabel("100"));
+		position.put(200, new JLabel("200"));
+		position.put(300, new JLabel("300"));
+		position.put(400, new JLabel("400"));
+		position.put(500, new JLabel("500"));
+		position.put(600, new JLabel("600"));
+		position.put(700, new JLabel("700"));
+		position.put(800, new JLabel("800"));
+		position.put(900, new JLabel("900"));
+		position.put(1000, new JLabel("1000"));
+		
+		         
+		// Set the label to be drawn
+		risid.setLabelTable(position);
+		    optionPane.setMessage(new Object[] { "Select a value: ", risid });
+		    optionPane.setMessageType(JOptionPane.QUESTION_MESSAGE);
+		    optionPane.setOptionType(JOptionPane.OK_CANCEL_OPTION);
+		    JDialog dialog = optionPane.createDialog(parent,"\u05E4\u05E1\u05D8\u05D4");
+		    dialog.setSize(500, 300);
+		    dialog.setVisible(true);
+		    
+		    //System.out.print(lehemslid.getValue());
+		    //bl_bra=bl_bra.Calc(lehemslid.getValue());
+		    use.Ate_Dry_food(ris.Calc(risid.getValue()));
+		   // System.out.print(use+"\n");
+		
+	}
+});
 button_food_4.setBounds(340, 11, 100, 100);
-ate_food_page.add(button_food_4);
-JButton button_food_5 = new JButton("but_5");
+dry_food_page.add(button_food_4);
+JButton button_food_5 = new JButton("\u05E7\u05D5\u05E1\u05E7\u05D5\u05E1");
+button_food_5.addActionListener(new ActionListener() {
+	public void actionPerformed(ActionEvent e) {
+		
+
+		Dry_Food cus=prod.d_food[0];
+		
+		JSlider cusid =new JSlider(0,1000,100);
+		cusid.setValue(0);
+		JFrame parent = new JFrame();
+		 JOptionPane optionPane = new JOptionPane();
+		 cusid.setMajorTickSpacing(100);
+		 cusid.setMinorTickSpacing(50);
+		 cusid.setPaintTicks(true);
+		 cusid.setPaintLabels(true);
+         
+		// Add positions label in the slider
+		Hashtable position = new Hashtable();
+		position.put(0, new JLabel("0"));
+		position.put(100, new JLabel("100"));
+		position.put(200, new JLabel("200"));
+		position.put(300, new JLabel("300"));
+		position.put(400, new JLabel("400"));
+		position.put(500, new JLabel("500"));
+		position.put(600, new JLabel("600"));
+		position.put(700, new JLabel("700"));
+		position.put(800, new JLabel("800"));
+		position.put(900, new JLabel("900"));
+		position.put(1000, new JLabel("1000"));
+		
+		         
+		// Set the label to be drawn
+		cusid.setLabelTable(position);
+		    optionPane.setMessage(new Object[] { "Select a value: ", cusid });
+		    optionPane.setMessageType(JOptionPane.QUESTION_MESSAGE);
+		    optionPane.setOptionType(JOptionPane.OK_CANCEL_OPTION);
+		    JDialog dialog = optionPane.createDialog(parent,"\u05E4\u05E1\u05D8\u05D4");
+		    dialog.setSize(500, 300);
+		    dialog.setVisible(true);
+		    
+		    //System.out.print(lehemslid.getValue());
+		    //bl_bra=bl_bra.Calc(lehemslid.getValue());
+		    use.Ate_Dry_food(cus.Calc(cusid.getValue()));
+		    System.out.print(use+"\n");
+		
+	}
+});
 button_food_5.setBounds(450, 11, 100, 100);
-ate_food_page.add(button_food_5);
-JButton button_food_6 = new JButton("but_6");
-button_food_6.setBounds(560, 11, 100, 100);
-ate_food_page.add(button_food_6);
-JButton button_food_7 = new JButton("but_7");
-button_food_7.setBounds(667, 11, 100, 100);
-ate_food_page.add(button_food_7);
-JButton button_food_8 = new JButton("but_8");
-button_food_8.setBounds(10, 122, 100, 100);
-ate_food_page.add(button_food_8);
-JButton button_food_9 = new JButton("but_9");
-button_food_9.setBounds(120, 122, 100, 100);
-ate_food_page.add(button_food_9);
-JButton button_food_10 = new JButton("but_10");
-button_food_10.setBounds(230, 122, 100, 100);
-ate_food_page.add(button_food_10);
+dry_food_page.add(button_food_5);
 JButton button_food_2 = new JButton("\u05E4\u05E1\u05D8\u05D4");
 button_food_2.addActionListener(new ActionListener() {
 	public void actionPerformed(ActionEvent e) {
@@ -2238,7 +2556,7 @@ button_food_2.addActionListener(new ActionListener() {
 	}
 });
 button_food_2.setBounds(120, 11, 100, 100);
-ate_food_page.add(button_food_2);
+dry_food_page.add(button_food_2);
 
 JButton button_food_1 = new JButton("\u05DC\u05D7\u05DD \u05DC\u05D1\u05DF");
 button_food_1.setBounds(10, 11, 100, 100);
@@ -2291,7 +2609,7 @@ button_food_1.addActionListener(new ActionListener() {
 
 
 
-ate_food_page.add(button_food_1);
+dry_food_page.add(button_food_1);
 
 		
 		frame.getContentPane().add(data_analysis_page, "name_134629289762800");
@@ -2456,6 +2774,82 @@ ate_food_page.add(button_food_1);
 		Image ana = new ImageIcon(this.getClass().getResource("/data_analysis.png")).getImage();
 		data_Button_4.setIcon(new ImageIcon(ana));
 		Private_User_page.add(data_Button_4);
+		
+		
+		JButton btnNewButton_13 = new JButton("\u05D7\u05D6\u05D5\u05E8");
+		btnNewButton_13.addActionListener(new ActionListener() {
+			public void actionPerformed(ActionEvent e) {
+				
+				ate_food_page.setVisible(false);
+		
+				
+				lblNewLabel_9.setText( "\u05E7\u05DC\u05D5\u05E8\u05D9\u05D5\u05EA: " +Math.floor(use.food_det[0]*100)/100 );
+				
+				lblNewLabel_20.setText("\u05E0\u05EA\u05E8\u05D0\u05DF: "+Math.floor(use.food_det[3]*100)/100);
+			
+				lblNewLabel_20_1.setText("\u05D7\u05DC\u05D1\u05D5\u05E0\u05D9\u05DD: "+Math.floor(use.food_det[1]*100)/100);
+				
+				lblNewLabel_20_2.setText("\u05E9\u05D5\u05DE\u05E0\u05D9\u05DD: "+Math.floor(use.food_det[4]*100)/100);
+				
+				lblNewLabel_20_3.setText("\u05E7\u05D5\u05DC\u05E1\u05D8\u05E8\u05D5\u05DC: "+Math.floor(use.food_det[2]*100)/100);
+				
+				lblNewLabel_38.setText("\u05E4\u05D7\u05DE\u05D9\u05DE\u05D5\u05EA: "+Math.floor(use.food_det[9]*100)/100);
+				
+				
+				
+				
+				
+				
+				Private_User_page.setVisible(true);
+				
+				
+				
+			}
+		});
+		btnNewButton_13.setBounds(747, 482, 89, 23);
+		ate_food_page.add(btnNewButton_13);
+		
+		JButton btnNewButton_14 = new JButton("\u05D0\u05D5\u05DB\u05DC \u05D9\u05D1\u05E9");
+		btnNewButton_14.addActionListener(new ActionListener() {
+			public void actionPerformed(ActionEvent e) {
+				ate_food_page.setVisible(false);
+				dry_food_page.setVisible(true);
+			}
+		});
+		btnNewButton_14.setBounds(10, 11, 120, 120);
+		ate_food_page.add(btnNewButton_14);
+		
+		JButton btnNewButton_15 = new JButton("\u05D2'\u05D0\u05E0\u05E7 \u05E4\u05D5\u05D3");
+		btnNewButton_15.addActionListener(new ActionListener() {
+			public void actionPerformed(ActionEvent e) {
+			ate_food_page.setVisible(false);
+			Junk_Food_page.setVisible(true);
+				
+			}
+		});
+		btnNewButton_15.setBounds(129, 11, 120, 120);
+		ate_food_page.add(btnNewButton_15);
+		
+		JButton btnNewButton_16 = new JButton("\u05DE\u05D5\u05E6\u05E8\u05D9\u05DD\r\n \u05DE\u05DF \u05D4\u05D7\u05D9 ");
+		btnNewButton_16.addActionListener(new ActionListener() {
+			public void actionPerformed(ActionEvent e) {
+				ate_food_page.setVisible(false);
+				Meat_Fish_Dai_page.setVisible(true);
+			}
+		});
+		btnNewButton_16.setBounds(248, 11, 120, 120);
+		ate_food_page.add(btnNewButton_16);
+		
+		JButton btnNewButton_17 = new JButton("\u05DE\u05D5\u05E6\u05E8\u05D9\u05DD\r\n\u05DE\u05DF \u05D4\u05E6\u05D5\u05DE\u05D7");
+		btnNewButton_17.addActionListener(new ActionListener() {
+			public void actionPerformed(ActionEvent e) {
+				ate_food_page.setVisible(false);
+				veg_page.setVisible(true);
+			}
+		});
+		btnNewButton_17.setBounds(367, 11, 120, 120);
+		ate_food_page.add(btnNewButton_17);
+		
 		
 		
 		b_Button_save.addMouseListener(new MouseAdapter() {
