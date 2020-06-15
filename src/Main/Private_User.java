@@ -184,7 +184,7 @@ public class Private_User extends User {
     }
 
 
-    public  int Get_Path(){ return this.Purpose; }
+    public int Get_Path(){ return this.Purpose; }
 
     public String Get_Username() {
         return this.username;
