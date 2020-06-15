@@ -159,6 +159,25 @@ public class Private_User extends User {
 
     }
 
+    public boolean IsOverCalories(){
+        double BMR;
+
+        if (this.Gender == 0){
+            BMR = 10*this.weight + 6.25*this.height -5*this.Age + 5;
+        }
+
+
+        else{
+            BMR = 10*this.weight + 6.25*this.height -5*this.Age - 161;
+        }
+
+        if (BMR*1.2 > this.food_det[0]|| BMR*1.2 < this.food_det[0]){
+            return false;
+        }
+
+        return true;
+    }
+
 
     public  String Get_Path(){ return this.path; }
 
