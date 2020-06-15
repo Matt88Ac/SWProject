@@ -23,6 +23,7 @@ import javax.swing.SpinnerNumberModel;
 
 import java.util.Hashtable;
 import java.util.Scanner;
+import java.util.function.DoubleUnaryOperator;
 
 import javax.swing.JComboBox;
 import javax.swing.JDialog;
@@ -2009,8 +2010,8 @@ button_food_1.addActionListener(new ActionListener() {
 		    dialog.setVisible(true);
 		    
 		    //System.out.print(lehemslid.getValue());
-		    
-		    use.Ate_Dry_food(bra.Calc(lehemslid.getValue()));
+		    Double d = new Double(lehemslid.getValue());
+		    use.Ate_Dry_food(bra.Calc(d));
 		   
 			}
 
