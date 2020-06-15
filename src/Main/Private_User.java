@@ -178,4 +178,18 @@ public class Private_User extends User {
         return this.password;
     }
 
+    public String toString(){
+        return this.toString(this.food_det[0])  + " " + this.toString(this.food_det[1])  + " " + this.toString(this.food_det[2])
+            + " " + this.toString(this.food_det[3]) + " " + this.toString(this.food_det[4]) + " " + this.toString(this.food_det[5])
+            + " " + this.toString(this.food_det[6]) + " " + this.toString(this.food_det[7])
+                + " " + this.toString(this.food_det[8])
+                + " " + this.toString(this.food_det[9])
+                +" " + this.toString(this.food_det[10])
+                +" " + this.toString(this.food_det[11]);
+    }
+
+    private String toString(double v) {
+        return String.valueOf(v);
+    }
+
 }
