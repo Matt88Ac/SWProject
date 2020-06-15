@@ -20,8 +20,6 @@ public class Private_User extends User {
     private int Gender;
     private int Purpose;
     private LocalDateTime last_time_had_sports;
-    private double cals_burned_last_week;
-    private double hours_of_training_in_week;
     private String path;
 
     private LocalDateTime last_time_ate;
@@ -41,9 +39,7 @@ public class Private_User extends User {
         this.Gender = gender; // 1 for a female , 0 for a male ;
         this.Purpose = Purpose;//2 for Gain Weight ,1 for Stay at the same weight ,0 for  lose weight
         this.path = null;
-        this.cals_burned_last_week = 0;
         this.last_time_had_sports = null;
-        this.hours_of_training_in_week = 0;
 
         this.food_det = new double[18];
         for(int i=0; i<18; i++){
@@ -157,6 +153,16 @@ public class Private_User extends User {
         this.food_det[11] +=  dry_food.Get_Detail("VitC");
         this.last_time_ate = LocalDateTime.now();
 
+    }
+
+    public void Activity(int steps){
+        this.food_det[0] -= steps*0.05;
+        this.last_time_had_sports = LocalDateTime.now();
+    }
+
+    public void Burned_Calories(double cals){
+        this.food_det[0] -= cals;
+        this.last_time_had_sports = LocalDateTime.now();
     }
 
     public boolean IsOverCalories(){

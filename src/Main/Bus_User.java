@@ -29,7 +29,6 @@ public class Bus_User extends User{
     }
 
     public void Add_Product_To_Sell_List(){
-        Meds meds = null;
         Veg veg = null;
         Meat_Fish_Dai mfd = null;
         Dry_Food dry_food = null;
