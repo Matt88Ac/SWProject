@@ -2,20 +2,17 @@ package Main;
 import java.util.ArrayList;
 
 public class Product {
-    public ArrayList<Dry_Food> d_food = null;
-    public ArrayList<Veg> veg_food = null;
-    public ArrayList<Meat_Fish_Dai> MFD_food = null;
-    public ArrayList<Junk_Food> j_food = null;
-    public ArrayList<Meds> meds = null;
+    public Dry_Food[] d_food = null;
+    public Veg[] veg_food = null;
+    public Meat_Fish_Dai[] MFD_food = null;
+    public Junk_Food[] j_food = null;
 
     public Product(boolean private_user){
 
-            this.d_food = new ArrayList<Dry_Food>();
-            this.veg_food = new ArrayList<Veg>();
-            this.MFD_food = new ArrayList<Meat_Fish_Dai>();
-            this.meds = new ArrayList<Meds>();
-            this.j_food = new ArrayList<Junk_Food>();
-
+            this.d_food = new Dry_Food[10];
+            this.veg_food = new Veg[20];
+            this.MFD_food = new Meat_Fish_Dai[15];
+            this.j_food = new Junk_Food[10];
         if (private_user){
             return;
         }
@@ -31,7 +28,7 @@ public class Product {
     private void Fill_Dry_Food() {
         Dry_Food pasta = new Dry_Food("Pasta", 131, 5, 1.1, 0.6, 25,0, 33,
                 1,0, 62,0,7,0.5,7,18,58,0.5,44);
-        this.d_food.add(pasta);
+        this.d_food[0] = pasta;
 
         Dry_Food w_bread = new Dry_Food("White Bread",250,10,1.5,6,49,0,0,
                 439,0, 37.3, 0.4, 0, 5,73,36,125,1,115);
@@ -39,16 +36,16 @@ public class Product {
         Dry_Food b_bread = new Dry_Food("Black Bread", 259, 9,3.3,3.9,48,0,0,
                 603,0,37.3,0.4,0,2.83,73,40,125,1.14,166);
 
-        this.d_food.add(w_bread);
-        this.d_food.add(b_bread);
+        this.d_food[1] = w_bread;
+        this.d_food[2] = b_bread;
 
         Dry_Food rice = new Dry_Food("Rice", 130,2.7,0.3,0,28,0,0,
                 1,0,68.4,0,0,0.2,10,12,43,0,35);
-        this.d_food.add(rice);
+        this.d_food[3] = rice;
 
         Dry_Food couscous = new Dry_Food("Couscous", 319,4.2,6.3,0,69,1,128,
                 532,0,0,0,0,0.3,21,0,0,0,0);
-        this.d_food.add(couscous);
+        this.d_food[4] = couscous;
 
     }
 
@@ -58,16 +55,16 @@ public class Product {
 
         Junk_Food burger = new Junk_Food("Burger", 300, 16.5,11,6, 36,1.2,33,
                 440, 2, 38.5,0,0,3,62,27,134,2.5,197);
-        this.j_food.add(pizza);
-        this.j_food.add(burger);
+        this.j_food[0] = pizza;
+        this.j_food[1] = burger;
 
         Junk_Food fries =  new Junk_Food("Fries", 196, 2,13,1.25, 18.5,0,0,
                 141, 1.6, 65,9.7,0,1,9,23,52,0,401);
-        this.j_food.add(fries);
+        this.j_food[2] = fries;
 
         Junk_Food sushi = new Junk_Food("Sushi", 93,2.9,0.6,2,18.4,0,4,
                 429,1,76,1,0,0,6,13,60,0.3,47);
-        this.j_food.add(sushi);
+        this.j_food[3] = sushi;
 
 
     }
@@ -84,9 +81,9 @@ public class Product {
         Meat_Fish_Dai roasted_duck = new Meat_Fish_Dai("Roasted Duck", 337, 19, 28.3, 0,
                 0,10.6,84,59,0,52.5,0,0,2.7,11,16,
                 156,1.86,204);
-        this.MFD_food.add(roasted_beef);
-        this.MFD_food.add(roasted_chicken);
-        this.MFD_food.add(roasted_duck);
+        this.MFD_food[0] = roasted_beef;
+        this.MFD_food[1] = roasted_chicken;
+        this.MFD_food[2] = roasted_duck;
 
         Meat_Fish_Dai roasted_lamb = new Meat_Fish_Dai("Roasted Lamb", 294, 24.5, 21, 0,
                 0,4,97,72,0,53.5,0,0,1.88,17,23,
@@ -100,15 +97,15 @@ public class Product {
                 0,1.5,56,405,0,66,0.5,0,0.5,9,33,
                 319,0.5,449);
 
-        this.MFD_food.add(roasted_lamb);
-        this.MFD_food.add(cooked_tilapia);
-        this.MFD_food.add(cooked_salmon);
+        this.MFD_food[3] = roasted_lamb;
+        this.MFD_food[4] = cooked_salmon;
+        this.MFD_food[5] = cooked_tilapia;
 
         Meat_Fish_Dai raw_tuna = new Meat_Fish_Dai("Tuna", 232, 21.5, 12, 2.3,
                 9.3,2.6,83,341,0,55,2,0,1.6,69,23,
                 216,0.9,183);
 
-        this.MFD_food.add(raw_tuna);
+        this.MFD_food[6] = raw_tuna;
 
         Meat_Fish_Dai american_cheese = new Meat_Fish_Dai("American Cheese", 307, 16.1, 23, 6.2,
                 9,13,78,1279,0,45,0,0,1,1375,34,
@@ -118,8 +115,8 @@ public class Product {
                 4.8,1.3,12,307,0,81,0,0,0,111,9,
                 150,0.51,125);
 
-        this.MFD_food.add(american_cheese);
-        this.MFD_food.add(cotege_cheese);
+        this.MFD_food[7] = american_cheese;
+        this.MFD_food[8] = cotege_cheese;
 
 
 
@@ -153,15 +150,15 @@ public class Product {
         Veg aubergine = new Veg("Aubergine", 90, 0,7.5,2.5,7.5,0,0,255,2.5,
                92.18,1.5,0,0.45,0,12,0,0.18,0);
 
-        this.veg_food.add(tomato);
-        this.veg_food.add(cabbage);
-        this.veg_food.add(carrot);
-        this.veg_food.add(cucumber);
-        this.veg_food.add(red_onion);
-        this.veg_food.add(apple);
-        this.veg_food.add(aubergine);
-        this.veg_food.add(onion);
-        this.veg_food.add(green_onion);
+        this.veg_food[0] = tomato;
+        this.veg_food[1] = cabbage;
+        this.veg_food[2] = carrot;
+        this.veg_food[3] = cucumber;
+        this.veg_food[4] = apple;
+        this.veg_food[5] = aubergine;
+        this.veg_food[6] = green_onion;
+        this.veg_food[7] = onion;
+        this.veg_food[8] = red_onion;
 
         Veg pumpkin = new Veg("Pumpkin", 26, 1,0.1,2.76,6.5,0,0,1,0.5,
                        92.18,9,0,0.8,21,12,44,0.32,340);
@@ -184,13 +181,13 @@ public class Product {
         Veg pineapple = new Veg("Pineapple", 50, 0.54,0.12,9.85,13.12,0,0,1,1.4,
                 86,47.8,0.112,0.29,13,12,8,0.12,109);
 
-        this.veg_food.add(pineapple);
-        this.veg_food.add(pumpkin);
-        this.veg_food.add(sweet_pepper);
-        this.veg_food.add(melon);
-        this.veg_food.add(orange);
-        this.veg_food.add(banana);
-        this.veg_food.add(garlic);
+        this.veg_food[9] = orange;
+        this.veg_food[10] = melon;
+        this.veg_food[11] = pineapple;
+        this.veg_food[12] = pumpkin;
+        this.veg_food[13] = sweet_pepper;
+        this.veg_food[14] = banana;
+        this.veg_food[15] = garlic;
 
 
     }
