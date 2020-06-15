@@ -96,7 +96,7 @@ public class Private_User extends User {
         this.food_det[6] += dry_food.Get_Detail("Phos");
         this.food_det[7] += dry_food.Get_Detail("Potess");
         this.food_det[8] +=  dry_food.Get_Detail("Mag");
-        this.food_det[9] +=  dry_food.Get_Detail("OFat");
+        this.food_det[9] +=  dry_food.Get_Detail("Carbo");
         this.food_det[10] += dry_food.Get_Detail("Iron");
         this.food_det[11] +=  dry_food.Get_Detail("VitC");
 
@@ -116,7 +116,7 @@ public class Private_User extends User {
         this.food_det[6] += dry_food.Get_Detail("Phos");
         this.food_det[7] += dry_food.Get_Detail("Potess");
         this.food_det[8] +=  dry_food.Get_Detail("Mag");
-        this.food_det[9] +=  dry_food.Get_Detail("OFat");
+        this.food_det[9] +=  dry_food.Get_Detail("Carbo");
         this.food_det[10] += dry_food.Get_Detail("Iron");
         this.food_det[11] +=  dry_food.Get_Detail("VitC");
         this.last_time_ate = LocalDateTime.now();
@@ -133,7 +133,7 @@ public class Private_User extends User {
         this.food_det[6] += dry_food.Get_Detail("Phos");
         this.food_det[7] += dry_food.Get_Detail("Potess");
         this.food_det[8] +=  dry_food.Get_Detail("Mag");
-        this.food_det[9] +=  dry_food.Get_Detail("OFat");
+        this.food_det[9] +=  dry_food.Get_Detail("Carbo");
         this.food_det[10] += dry_food.Get_Detail("Iron");
         this.food_det[11] +=  dry_food.Get_Detail("VitC");
         this.last_time_ate = LocalDateTime.now();
@@ -152,7 +152,7 @@ public class Private_User extends User {
         this.food_det[6] += dry_food.Get_Detail("Phos");
         this.food_det[7] += dry_food.Get_Detail("Potess");
         this.food_det[8] +=  dry_food.Get_Detail("Mag");
-        this.food_det[9] +=  dry_food.Get_Detail("OFat");
+        this.food_det[9] +=  dry_food.Get_Detail("Carbo");
         this.food_det[10] += dry_food.Get_Detail("Iron");
         this.food_det[11] +=  dry_food.Get_Detail("VitC");
         this.last_time_ate = LocalDateTime.now();
