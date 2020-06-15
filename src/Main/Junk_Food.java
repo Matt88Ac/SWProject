@@ -126,6 +126,10 @@ public class Junk_Food {
             return this.calcium_mg;
         }
 
+        else if(which_one == "Carbo"){
+            return this.carbo_g;
+        }
+
         return this.zinc_mg;
     }
 
