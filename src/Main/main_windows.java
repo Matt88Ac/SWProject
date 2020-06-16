@@ -21,6 +21,7 @@ import javax.swing.JPasswordField;
 import javax.swing.JSpinner;
 import javax.swing.SpinnerNumberModel;
 
+import java.util.Date;
 import java.util.Hashtable;
 import java.util.Scanner;
 import java.util.function.DoubleUnaryOperator;
@@ -34,6 +35,7 @@ import java.awt.event.KeyEvent;
 import java.awt.event.ActionListener;
 import java.awt.event.ActionEvent;
 import javax.swing.SwingConstants;
+import javax.swing.Timer;
 import javax.swing.JScrollPane;
 import javax.swing.ScrollPaneConstants;
 import javax.swing.JRadioButton;
@@ -107,9 +109,12 @@ public class main_windows {
 		frame.getContentPane().add(start_page, "name_830499986510200");
 		start_page.setLayout(null);
 		JPanel add_food_page = new JPanel();
+		add_food_page.setBackground(new Color(254, 194, 22));
 		JSpinner weight_spinner = new JSpinner();
 		JPanel data_analysis_page = new JPanel();
+		data_analysis_page.setBackground(new Color(226,229,228));
 		JPanel sport_activity_page = new JPanel();
+		sport_activity_page.setBackground(new Color(232, 192, 90));
 		frame.getContentPane().add(sport_activity_page, "name_135054560240100");
 		JSpinner height_spinner = new JSpinner();
 		JSpinner age_spinner = new JSpinner();
@@ -117,10 +122,12 @@ public class main_windows {
 		JComboBox Purpose_comboBox = new JComboBox();
 		
 		JPanel ate_food_page = new JPanel();
+		ate_food_page.setBackground(new Color(201, 114, 54));
 		frame.getContentPane().add(ate_food_page, "name_31670348278500");
 		ate_food_page.setLayout(null);
 		
 		JPanel veg_page = new JPanel();
+		veg_page.setBackground(new Color(181,255,245));
 		frame.getContentPane().add(veg_page, "name_31411297190200");
 		veg_page.setLayout(null);
 		
@@ -950,7 +957,16 @@ public class main_windows {
 		button_14.setBounds(120, 233, 100, 100);
 		veg_page.add(button_14);
 		
+		JLabel lblNewLabel_55 = new JLabel("");
+		Image veg_gif = new ImageIcon(this.getClass().getResource("/veg_gif.gif")).getImage();
+		lblNewLabel_55.setIcon (new ImageIcon(veg_gif));
+		lblNewLabel_55.setBounds(0, 0, 846, 516);
+		veg_page.add(lblNewLabel_55);
+		
+		
+		
 		JPanel Junk_Food_page = new JPanel();
+		Junk_Food_page.setBackground(new Color(233,52,74));
 		frame.getContentPane().add(Junk_Food_page, "name_31478926767500");
 		Junk_Food_page.setLayout(null);
 		
@@ -1161,7 +1177,17 @@ Junk_Food piza=prod.j_food[0];
 		btnNewButton_32.setBounds(747, 482, 89, 23);
 		Junk_Food_page.add(btnNewButton_32);
 		
+		JLabel lblNewLabel_56 = new JLabel("");
+		Image junk = new ImageIcon(this.getClass().getResource("/junk_food_gif.gif")).getImage();
+		lblNewLabel_56.setIcon (new ImageIcon(junk));
+		lblNewLabel_56.setBounds(20, 122, 826, 474);
+		Junk_Food_page.add(lblNewLabel_56);
+		
+		
+		
+		
 		JPanel Meat_Fish_Dai_page = new JPanel();
+		Meat_Fish_Dai_page.setBackground(new Color(242,163,94));
 		frame.getContentPane().add(Meat_Fish_Dai_page, "name_31571261321900");
 		Meat_Fish_Dai_page.setLayout(null);
 		
@@ -1681,6 +1707,15 @@ Junk_Food piza=prod.j_food[0];
 		btnNewButton_31.setBounds(747, 482, 89, 23);
 		Meat_Fish_Dai_page.add(btnNewButton_31);
 		
+		JLabel lblNewLabel_58 = new JLabel("");
+		Image meat_gif = new ImageIcon(this.getClass().getResource("/meat_gif.gif")).getImage();
+		lblNewLabel_58.setIcon (new ImageIcon(meat_gif));
+		lblNewLabel_58.setBounds(251, 99, 595, 383);
+		Meat_Fish_Dai_page.add(lblNewLabel_58);
+		
+		
+
+		
 		
 		JButton btnNewButton_11 = new JButton("\u05E7\u05DC\u05E8\u05D9\u05D5\u05EA");
 		btnNewButton_11.addActionListener(new ActionListener() {
@@ -1728,6 +1763,7 @@ Junk_Food piza=prod.j_food[0];
 		sport_activity_page.add(btnNewButton_11);
 		
 		JPanel set_rdata_page = new JPanel();
+		set_rdata_page.setBackground(new Color(241,240,241));
 		frame.getContentPane().add(set_rdata_page, "name_135834242867900");
 		JPanel recommend_food_page = new JPanel();
 		
@@ -1901,6 +1937,14 @@ Junk_Food piza=prod.j_food[0];
 		});
 		btnNewButton_12.setBounds(634, 482, 89, 23);
 		set_rdata_page.add(btnNewButton_12);
+		
+		JLabel lblNewLabel_59 = new JLabel("");
+		Image update_gif = new ImageIcon(this.getClass().getResource("/update_data_gif1.gif")).getImage();
+		lblNewLabel_59.setIcon (new ImageIcon(update_gif));
+		lblNewLabel_59.setBounds(-46, 272, 321, 300);
+		set_rdata_page.add(lblNewLabel_59);
+		
+		
 
 		JPanel log_in_page = new JPanel();
 		log_in_page.setBackground(new Color(42, 200, 125));
@@ -1911,6 +1955,7 @@ Junk_Food piza=prod.j_food[0];
 		lblNewLabel.setBounds(731, 11, 95, 28);
 		log_in_page.add(lblNewLabel);
 		JPanel dry_food_page = new JPanel();
+		dry_food_page.setBackground(new Color(249,222,189));
 		JButton Button_back = new JButton("\u05D7\u05D6\u05E8\u05D4");
 		Button_back.addMouseListener(new MouseAdapter() {
 			@Override
@@ -1949,12 +1994,16 @@ Junk_Food piza=prod.j_food[0];
 		JSpinner cal_spinner = new JSpinner();
 		cal_spinner.setBounds(638, 99, 46, 20);
 		JRadioButton dro_RadioButton = new JRadioButton("\u05E7\u05D8\u05E0\u05D9\u05D5\u05EA \u05D5\u05DE\u05D0\u05DB\u05DC\u05D9\u05DD \u05D9\u05D1\u05E9\u05D9\u05DD");
+		dro_RadioButton.setBackground(new Color(254, 194, 22));
 		dro_RadioButton.setBounds(532, 69, 152, 23);
 		JRadioButton met_RadioButton = new JRadioButton("\u05D1\u05E9\u05E8 \u05D7\u05DC\u05D1 \u05D3\u05D2\u05D9\u05DD");
+		met_RadioButton.setBackground(new Color(254, 194, 22));
 		met_RadioButton.setBounds(428, 69, 109, 23);
 		JRadioButton junk_RadioButton = new JRadioButton("\u05D7\u05EA\u05D9\u05E4\u05D9\u05DD \u05D5\u05D0\u05DB\u05DC \u05DE\u05E2\u05D9\u05E8");
+		junk_RadioButton.setBackground(new Color(254, 194, 22));
 		junk_RadioButton.setBounds(307, 69, 119, 23);
 		JRadioButton fru_RadioButton = new JRadioButton("\u05E4\u05E8\u05D5\u05EA \u05D5\u05D9\u05E8\u05E7\u05D5\u05EA");
+		fru_RadioButton.setBackground(new Color(254, 194, 22));
 		fru_RadioButton.setBounds(218, 69, 87, 23);
 		
 		JButton add_new_food_Button = new JButton("");
@@ -3346,6 +3395,15 @@ Junk_Food piza=prod.j_food[0];
 		JLabel lblNewLabel_41 = new JLabel("\u05E1\u05D3\u05D5\u05EA \u05DC\u05D0 \u05D7\u05D5\u05D1\u05D4");
 		lblNewLabel_41.setBounds(721, 290, 87, 14);
 		add_food_page.add(lblNewLabel_41);
+		
+		JLabel lblNewLabel_60 = new JLabel("");
+		Image add_food = new ImageIcon(this.getClass().getResource("/add_food.gif")).getImage();
+		lblNewLabel_60.setIcon (new ImageIcon(add_food));
+		lblNewLabel_60.setBounds(-106, 101, 846, 516);
+		add_food_page.add(lblNewLabel_60);
+		
+	
+		
 		food_save_Button.addActionListener(new ActionListener() {
 			public void actionPerformed(ActionEvent e) {
 				
@@ -3871,6 +3929,13 @@ button_food_1.addActionListener(new ActionListener() {
 
 
 dry_food_page.add(button_food_1);
+JLabel lblNewLabel_57 = new JLabel("");
+Image day_food = new ImageIcon(this.getClass().getResource("/dro_food_gif.gif")).getImage();
+lblNewLabel_57.setIcon (new ImageIcon(day_food));
+lblNewLabel_57.setBounds(240, 96, 748, 328);
+dry_food_page.add(lblNewLabel_57);
+
+
 
 		
 		frame.getContentPane().add(data_analysis_page, "name_134629289762800");
@@ -3950,6 +4015,13 @@ dry_food_page.add(button_food_1);
 		lblNewLabel_52.setHorizontalAlignment(SwingConstants.RIGHT);
 		lblNewLabel_52.setBounds(534, 340, 291, 14);
 		data_analysis_page.add(lblNewLabel_52);
+		
+		JLabel lblNewLabel_61 = new JLabel("");
+		Image data_gif = new ImageIcon(this.getClass().getResource("/WastefulComfortableBongo-small.gif")).getImage();
+		lblNewLabel_61.setIcon (new ImageIcon(data_gif));
+		lblNewLabel_61.setBounds(0, -11, 846, 516);
+		data_analysis_page.add(lblNewLabel_61);
+		
 		
 		
 		frame.getContentPane().add(recommend_food_page, "name_145319149516600");
@@ -4031,10 +4103,43 @@ dry_food_page.add(button_food_1);
 		sport_activity_page.setLayout(null);
 		sport_activity_page.add(btnNewButton_3);
 		
+		JLabel lblNewLabel_53 = new JLabel("");
+		Image sport = new ImageIcon(this.getClass().getResource("/sport_gif.gif")).getImage();
+		lblNewLabel_53.setIcon (new ImageIcon(sport));
+		lblNewLabel_53.setBounds(203, 76, 543, 320);
+		sport_activity_page.add(lblNewLabel_53);
+		
+		/*JLabel lblNewLabel_2 = new JLabel("  ");
+		Image runing = new ImageIcon(this.getClass().getResource("/running_on_empty_eran_mendel_dribbble_gif.gif")).getImage();
+		lblNewLabel_2.setIcon (new ImageIcon(runing));
+		lblNewLabel_2.setBounds(109, 0, 543, 320);
+		start_page.add(lblNewLabel_2);*/
+		
 		data_Button_4.setBackground(new Color(255, 255, 255));
 		Image ana = new ImageIcon(this.getClass().getResource("/data_analysis.png")).getImage();
 		data_Button_4.setIcon(new ImageIcon(ana));
 		Private_User_page.add(data_Button_4);
+		
+		JLabel lblNewLabel_62 = new JLabel("");
+		Image hello_gif = new ImageIcon(this.getClass().getResource("/hello.gif")).getImage();
+		lblNewLabel_62.setIcon (new ImageIcon(hello_gif));
+		lblNewLabel_62.setBounds(342, 27, 420, 298);
+		Private_User_page.add(lblNewLabel_62);
+		
+		long startTime = System.currentTimeMillis();
+		long elapsedTime = 0L;
+		lblNewLabel_62.setVisible(false);
+		while (elapsedTime < 2*2*60*1000) {
+			lblNewLabel_62.setVisible(true);
+		    elapsedTime = (new Date()).getTime() - startTime;
+		}
+		lblNewLabel_62.setVisible(false);
+
+			
+			
+			
+		/*Image hello_gif = new ImageIcon(this.getClass().getResource("/data_analysis.gif")).getImage();
+		lblNewLabel_62.setIcon (new ImageIcon(hello_gif));*/
 		
 		
 		JButton btnNewButton_13 = new JButton("\u05D7\u05D6\u05D5\u05E8");
@@ -4110,6 +4215,18 @@ dry_food_page.add(button_food_1);
 		});
 		btnNewButton_17.setBounds(367, 11, 120, 120);
 		ate_food_page.add(btnNewButton_17);
+		
+		JLabel lblNewLabel_54 = new JLabel("");
+		Image eating = new ImageIcon(this.getClass().getResource("/eating_gif.gif")).getImage();
+		lblNewLabel_54.setIcon (new ImageIcon(eating));
+		lblNewLabel_54.setBounds(129, 195, 598, 310);
+		ate_food_page.add(lblNewLabel_54);
+		
+		/*JLabel lblNewLabel_2 = new JLabel("  ");
+		Image runing = new ImageIcon(this.getClass().getResource("/running_on_empty_eran_mendel_dribbble_gif.gif")).getImage();
+		lblNewLabel_2.setIcon (new ImageIcon(runing));
+		lblNewLabel_2.setBounds(109, 0, 543, 320);
+		start_page.add(lblNewLabel_2);*/
 		
 		
 		
