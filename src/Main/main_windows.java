@@ -116,8 +116,839 @@ public class main_windows {
 		JComboBox Gender_comboBox = new JComboBox();
 		JComboBox Purpose_comboBox = new JComboBox();
 		
+		JPanel ate_food_page = new JPanel();
+		frame.getContentPane().add(ate_food_page, "name_31670348278500");
+		ate_food_page.setLayout(null);
+		
 		JPanel veg_page = new JPanel();
 		frame.getContentPane().add(veg_page, "name_31411297190200");
+		veg_page.setLayout(null);
+		
+		JButton btnNewButton_33 = new JButton("\u05D7\u05D6\u05D5\u05E8");
+		btnNewButton_33.addActionListener(new ActionListener() {
+			public void actionPerformed(ActionEvent e) {
+				veg_page.setVisible(false);
+				ate_food_page.setVisible(true);
+				
+			}
+		});
+		btnNewButton_33.setBounds(747, 482, 89, 23);
+		veg_page.add(btnNewButton_33);
+		
+		JButton btnNewButton_34 = new JButton("\u05E2\u05D2\u05D1\u05E0\u05D9\u05D4");
+		btnNewButton_34.addActionListener(new ActionListener() {
+			public void actionPerformed(ActionEvent e) {
+				
+				Veg veg=prod.veg_food[0];
+				
+				JSlider vegid =new JSlider(0,1000,100);
+				vegid.setValue(0);
+				JFrame parent = new JFrame();
+				 JOptionPane optionPane = new JOptionPane();
+				 vegid.setMajorTickSpacing(100);
+				 vegid.setMinorTickSpacing(50);
+				 vegid.setPaintTicks(true);
+				 vegid.setPaintLabels(true);
+		         
+				// Add positions label in the slider
+				Hashtable position = new Hashtable();
+				position.put(0, new JLabel("0"));
+				position.put(100, new JLabel("100"));
+				position.put(200, new JLabel("200"));
+				position.put(300, new JLabel("300"));
+				position.put(400, new JLabel("400"));
+				position.put(500, new JLabel("500"));
+				position.put(600, new JLabel("600"));
+				position.put(700, new JLabel("700"));
+				position.put(800, new JLabel("800"));
+				position.put(900, new JLabel("900"));
+				position.put(1000, new JLabel("1000"));
+				
+				         
+				// Set the label to be drawn
+				vegid.setLabelTable(position);
+				    optionPane.setMessage(new Object[] { "Select a value: ", vegid });
+				    optionPane.setMessageType(JOptionPane.QUESTION_MESSAGE);
+				    optionPane.setOptionType(JOptionPane.OK_CANCEL_OPTION);
+				    JDialog dialog = optionPane.createDialog(parent,"\u05E4\u05E1\u05D8\u05D4");
+				    dialog.setSize(500, 300);
+				    dialog.setVisible(true);
+				    
+				    //System.out.print(lehemslid.getValue());
+				    //bl_bra=bl_bra.Calc(lehemslid.getValue());
+				    use.Ate_Veg(veg.Calc(vegid.getValue()));
+				    //System.out.print(use+"\n");
+				
+				
+			}
+		});
+		btnNewButton_34.setBounds(10, 11, 100, 100);
+		veg_page.add(btnNewButton_34);
+		
+		JButton button = new JButton("\u05DE\u05DC\u05E4\u05E4\u05D5\u05DF");
+		button.addActionListener(new ActionListener() {
+			public void actionPerformed(ActionEvent e) {
+				
+				
+				Veg veg=prod.veg_food[3];
+				
+				JSlider vegid =new JSlider(0,1000,100);
+				vegid.setValue(0);
+				JFrame parent = new JFrame();
+				 JOptionPane optionPane = new JOptionPane();
+				 vegid.setMajorTickSpacing(100);
+				 vegid.setMinorTickSpacing(50);
+				 vegid.setPaintTicks(true);
+				 vegid.setPaintLabels(true);
+		         
+				// Add positions label in the slider
+				Hashtable position = new Hashtable();
+				position.put(0, new JLabel("0"));
+				position.put(100, new JLabel("100"));
+				position.put(200, new JLabel("200"));
+				position.put(300, new JLabel("300"));
+				position.put(400, new JLabel("400"));
+				position.put(500, new JLabel("500"));
+				position.put(600, new JLabel("600"));
+				position.put(700, new JLabel("700"));
+				position.put(800, new JLabel("800"));
+				position.put(900, new JLabel("900"));
+				position.put(1000, new JLabel("1000"));
+				
+				         
+				// Set the label to be drawn
+				vegid.setLabelTable(position);
+				    optionPane.setMessage(new Object[] { "Select a value: ", vegid });
+				    optionPane.setMessageType(JOptionPane.QUESTION_MESSAGE);
+				    optionPane.setOptionType(JOptionPane.OK_CANCEL_OPTION);
+				    JDialog dialog = optionPane.createDialog(parent,"\u05E4\u05E1\u05D8\u05D4");
+				    dialog.setSize(500, 300);
+				    dialog.setVisible(true);
+				    
+				    //System.out.print(lehemslid.getValue());
+				    //bl_bra=bl_bra.Calc(lehemslid.getValue());
+				    use.Ate_Veg(veg.Calc(vegid.getValue()));
+				    //System.out.print(use+"\n");
+				
+				
+			}
+		});
+		button.setBounds(120, 11, 100, 100);
+		veg_page.add(button);
+		
+		JButton button_1 = new JButton("\u05D2\u05D6\u05E8");
+		button_1.addActionListener(new ActionListener() {
+			public void actionPerformed(ActionEvent e) {
+				
+				
+				Veg veg=prod.veg_food[2];
+				
+				JSlider vegid =new JSlider(0,1000,100);
+				vegid.setValue(0);
+				JFrame parent = new JFrame();
+				 JOptionPane optionPane = new JOptionPane();
+				 vegid.setMajorTickSpacing(100);
+				 vegid.setMinorTickSpacing(50);
+				 vegid.setPaintTicks(true);
+				 vegid.setPaintLabels(true);
+		         
+				// Add positions label in the slider
+				Hashtable position = new Hashtable();
+				position.put(0, new JLabel("0"));
+				position.put(100, new JLabel("100"));
+				position.put(200, new JLabel("200"));
+				position.put(300, new JLabel("300"));
+				position.put(400, new JLabel("400"));
+				position.put(500, new JLabel("500"));
+				position.put(600, new JLabel("600"));
+				position.put(700, new JLabel("700"));
+				position.put(800, new JLabel("800"));
+				position.put(900, new JLabel("900"));
+				position.put(1000, new JLabel("1000"));
+				
+				         
+				// Set the label to be drawn
+				vegid.setLabelTable(position);
+				    optionPane.setMessage(new Object[] { "Select a value: ", vegid });
+				    optionPane.setMessageType(JOptionPane.QUESTION_MESSAGE);
+				    optionPane.setOptionType(JOptionPane.OK_CANCEL_OPTION);
+				    JDialog dialog = optionPane.createDialog(parent,"\u05E4\u05E1\u05D8\u05D4");
+				    dialog.setSize(500, 300);
+				    dialog.setVisible(true);
+				    
+				    //System.out.print(lehemslid.getValue());
+				    //bl_bra=bl_bra.Calc(lehemslid.getValue());
+				    use.Ate_Veg(veg.Calc(vegid.getValue()));
+				    //System.out.print(use+"\n");
+				
+				
+			}
+		});
+		button_1.setBounds(230, 11, 100, 100);
+		veg_page.add(button_1);
+		
+		JButton button_2 = new JButton("\u05D1\u05E6\u05DC \u05D0\u05D3\u05D5\u05DD");
+		button_2.addActionListener(new ActionListener() {
+			public void actionPerformed(ActionEvent e) {
+				
+				
+				Veg veg=prod.veg_food[8];
+				
+				JSlider vegid =new JSlider(0,1000,100);
+				vegid.setValue(0);
+				JFrame parent = new JFrame();
+				 JOptionPane optionPane = new JOptionPane();
+				 vegid.setMajorTickSpacing(100);
+				 vegid.setMinorTickSpacing(50);
+				 vegid.setPaintTicks(true);
+				 vegid.setPaintLabels(true);
+		         
+				// Add positions label in the slider
+				Hashtable position = new Hashtable();
+				position.put(0, new JLabel("0"));
+				position.put(100, new JLabel("100"));
+				position.put(200, new JLabel("200"));
+				position.put(300, new JLabel("300"));
+				position.put(400, new JLabel("400"));
+				position.put(500, new JLabel("500"));
+				position.put(600, new JLabel("600"));
+				position.put(700, new JLabel("700"));
+				position.put(800, new JLabel("800"));
+				position.put(900, new JLabel("900"));
+				position.put(1000, new JLabel("1000"));
+				
+				         
+				// Set the label to be drawn
+				vegid.setLabelTable(position);
+				    optionPane.setMessage(new Object[] { "Select a value: ", vegid });
+				    optionPane.setMessageType(JOptionPane.QUESTION_MESSAGE);
+				    optionPane.setOptionType(JOptionPane.OK_CANCEL_OPTION);
+				    JDialog dialog = optionPane.createDialog(parent,"\u05E4\u05E1\u05D8\u05D4");
+				    dialog.setSize(500, 300);
+				    dialog.setVisible(true);
+				    
+				    //System.out.print(lehemslid.getValue());
+				    //bl_bra=bl_bra.Calc(lehemslid.getValue());
+				    use.Ate_Veg(veg.Calc(vegid.getValue()));
+				    //System.out.print(use+"\n");
+				
+				
+			}
+		});
+		button_2.setBounds(340, 11, 100, 100);
+		veg_page.add(button_2);
+		
+		JButton button_3 = new JButton("\u05D1\u05E6\u05DC");
+		button_3.addActionListener(new ActionListener() {
+			public void actionPerformed(ActionEvent e) {
+				
+				
+				Veg veg=prod.veg_food[7];
+				
+				JSlider vegid =new JSlider(0,1000,100);
+				vegid.setValue(0);
+				JFrame parent = new JFrame();
+				 JOptionPane optionPane = new JOptionPane();
+				 vegid.setMajorTickSpacing(100);
+				 vegid.setMinorTickSpacing(50);
+				 vegid.setPaintTicks(true);
+				 vegid.setPaintLabels(true);
+		         
+				// Add positions label in the slider
+				Hashtable position = new Hashtable();
+				position.put(0, new JLabel("0"));
+				position.put(100, new JLabel("100"));
+				position.put(200, new JLabel("200"));
+				position.put(300, new JLabel("300"));
+				position.put(400, new JLabel("400"));
+				position.put(500, new JLabel("500"));
+				position.put(600, new JLabel("600"));
+				position.put(700, new JLabel("700"));
+				position.put(800, new JLabel("800"));
+				position.put(900, new JLabel("900"));
+				position.put(1000, new JLabel("1000"));
+				
+				         
+				// Set the label to be drawn
+				vegid.setLabelTable(position);
+				    optionPane.setMessage(new Object[] { "Select a value: ", vegid });
+				    optionPane.setMessageType(JOptionPane.QUESTION_MESSAGE);
+				    optionPane.setOptionType(JOptionPane.OK_CANCEL_OPTION);
+				    JDialog dialog = optionPane.createDialog(parent,"\u05E4\u05E1\u05D8\u05D4");
+				    dialog.setSize(500, 300);
+				    dialog.setVisible(true);
+				    
+				    //System.out.print(lehemslid.getValue());
+				    //bl_bra=bl_bra.Calc(lehemslid.getValue());
+				    use.Ate_Veg(veg.Calc(vegid.getValue()));
+				    //System.out.print(use+"\n");
+				
+				
+			}
+		});
+		button_3.setBounds(450, 11, 100, 100);
+		veg_page.add(button_3);
+		
+		JButton button_4 = new JButton("\u05D1\u05E6\u05DC \u05D9\u05E8\u05D5\u05E7");
+		button_4.addActionListener(new ActionListener() {
+			public void actionPerformed(ActionEvent e) {
+				
+				
+				Veg veg=prod.veg_food[6];
+				
+				JSlider vegid =new JSlider(0,1000,100);
+				vegid.setValue(0);
+				JFrame parent = new JFrame();
+				 JOptionPane optionPane = new JOptionPane();
+				 vegid.setMajorTickSpacing(100);
+				 vegid.setMinorTickSpacing(50);
+				 vegid.setPaintTicks(true);
+				 vegid.setPaintLabels(true);
+		         
+				// Add positions label in the slider
+				Hashtable position = new Hashtable();
+				position.put(0, new JLabel("0"));
+				position.put(100, new JLabel("100"));
+				position.put(200, new JLabel("200"));
+				position.put(300, new JLabel("300"));
+				position.put(400, new JLabel("400"));
+				position.put(500, new JLabel("500"));
+				position.put(600, new JLabel("600"));
+				position.put(700, new JLabel("700"));
+				position.put(800, new JLabel("800"));
+				position.put(900, new JLabel("900"));
+				position.put(1000, new JLabel("1000"));
+				
+				         
+				// Set the label to be drawn
+				vegid.setLabelTable(position);
+				    optionPane.setMessage(new Object[] { "Select a value: ", vegid });
+				    optionPane.setMessageType(JOptionPane.QUESTION_MESSAGE);
+				    optionPane.setOptionType(JOptionPane.OK_CANCEL_OPTION);
+				    JDialog dialog = optionPane.createDialog(parent,"\u05E4\u05E1\u05D8\u05D4");
+				    dialog.setSize(500, 300);
+				    dialog.setVisible(true);
+				    
+				    //System.out.print(lehemslid.getValue());
+				    //bl_bra=bl_bra.Calc(lehemslid.getValue());
+				    use.Ate_Veg(veg.Calc(vegid.getValue()));
+				    //System.out.print(use+"\n");
+				
+				
+			}
+		});
+		button_4.setBounds(560, 11, 100, 100);
+		veg_page.add(button_4);
+		
+		JButton button_5 = new JButton("\u05EA\u05E4\u05D5\u05D7 \u05E2\u05E5");
+		button_5.addActionListener(new ActionListener() {
+			public void actionPerformed(ActionEvent e) {
+				
+				
+				Veg veg=prod.veg_food[4];
+				
+				JSlider vegid =new JSlider(0,1000,100);
+				vegid.setValue(0);
+				JFrame parent = new JFrame();
+				 JOptionPane optionPane = new JOptionPane();
+				 vegid.setMajorTickSpacing(100);
+				 vegid.setMinorTickSpacing(50);
+				 vegid.setPaintTicks(true);
+				 vegid.setPaintLabels(true);
+		         
+				// Add positions label in the slider
+				Hashtable position = new Hashtable();
+				position.put(0, new JLabel("0"));
+				position.put(100, new JLabel("100"));
+				position.put(200, new JLabel("200"));
+				position.put(300, new JLabel("300"));
+				position.put(400, new JLabel("400"));
+				position.put(500, new JLabel("500"));
+				position.put(600, new JLabel("600"));
+				position.put(700, new JLabel("700"));
+				position.put(800, new JLabel("800"));
+				position.put(900, new JLabel("900"));
+				position.put(1000, new JLabel("1000"));
+				
+				         
+				// Set the label to be drawn
+				vegid.setLabelTable(position);
+				    optionPane.setMessage(new Object[] { "Select a value: ", vegid });
+				    optionPane.setMessageType(JOptionPane.QUESTION_MESSAGE);
+				    optionPane.setOptionType(JOptionPane.OK_CANCEL_OPTION);
+				    JDialog dialog = optionPane.createDialog(parent,"\u05E4\u05E1\u05D8\u05D4");
+				    dialog.setSize(500, 300);
+				    dialog.setVisible(true);
+				    
+				    //System.out.print(lehemslid.getValue());
+				    //bl_bra=bl_bra.Calc(lehemslid.getValue());
+				    use.Ate_Veg(veg.Calc(vegid.getValue()));
+				    //System.out.print(use+"\n");
+				
+				
+			}
+		});
+		button_5.setBounds(670, 11, 100, 100);
+		veg_page.add(button_5);
+		
+		JButton button_6 = new JButton("\u05DB\u05E8\u05D5\u05D1");
+		button_6.addActionListener(new ActionListener() {
+			public void actionPerformed(ActionEvent e) {
+				
+				
+				Veg veg=prod.veg_food[1];
+				
+				JSlider vegid =new JSlider(0,1000,100);
+				vegid.setValue(0);
+				JFrame parent = new JFrame();
+				 JOptionPane optionPane = new JOptionPane();
+				 vegid.setMajorTickSpacing(100);
+				 vegid.setMinorTickSpacing(50);
+				 vegid.setPaintTicks(true);
+				 vegid.setPaintLabels(true);
+		         
+				// Add positions label in the slider
+				Hashtable position = new Hashtable();
+				position.put(0, new JLabel("0"));
+				position.put(100, new JLabel("100"));
+				position.put(200, new JLabel("200"));
+				position.put(300, new JLabel("300"));
+				position.put(400, new JLabel("400"));
+				position.put(500, new JLabel("500"));
+				position.put(600, new JLabel("600"));
+				position.put(700, new JLabel("700"));
+				position.put(800, new JLabel("800"));
+				position.put(900, new JLabel("900"));
+				position.put(1000, new JLabel("1000"));
+				
+				         
+				// Set the label to be drawn
+				vegid.setLabelTable(position);
+				    optionPane.setMessage(new Object[] { "Select a value: ", vegid });
+				    optionPane.setMessageType(JOptionPane.QUESTION_MESSAGE);
+				    optionPane.setOptionType(JOptionPane.OK_CANCEL_OPTION);
+				    JDialog dialog = optionPane.createDialog(parent,"\u05E4\u05E1\u05D8\u05D4");
+				    dialog.setSize(500, 300);
+				    dialog.setVisible(true);
+				    
+				    //System.out.print(lehemslid.getValue());
+				    //bl_bra=bl_bra.Calc(lehemslid.getValue());
+				    use.Ate_Veg(veg.Calc(vegid.getValue()));
+				    //System.out.print(use+"\n");
+				
+				
+			}
+		});
+		button_6.setBounds(10, 122, 100, 100);
+		veg_page.add(button_6);
+		
+		JButton button_7 = new JButton("\u05D7\u05E6\u05D9\u05DC");
+		button_7.addActionListener(new ActionListener() {
+			public void actionPerformed(ActionEvent e) {
+				
+				
+				Veg veg=prod.veg_food[5];
+				
+				JSlider vegid =new JSlider(0,1000,100);
+				vegid.setValue(0);
+				JFrame parent = new JFrame();
+				 JOptionPane optionPane = new JOptionPane();
+				 vegid.setMajorTickSpacing(100);
+				 vegid.setMinorTickSpacing(50);
+				 vegid.setPaintTicks(true);
+				 vegid.setPaintLabels(true);
+		         
+				// Add positions label in the slider
+				Hashtable position = new Hashtable();
+				position.put(0, new JLabel("0"));
+				position.put(100, new JLabel("100"));
+				position.put(200, new JLabel("200"));
+				position.put(300, new JLabel("300"));
+				position.put(400, new JLabel("400"));
+				position.put(500, new JLabel("500"));
+				position.put(600, new JLabel("600"));
+				position.put(700, new JLabel("700"));
+				position.put(800, new JLabel("800"));
+				position.put(900, new JLabel("900"));
+				position.put(1000, new JLabel("1000"));
+				
+				         
+				// Set the label to be drawn
+				vegid.setLabelTable(position);
+				    optionPane.setMessage(new Object[] { "Select a value: ", vegid });
+				    optionPane.setMessageType(JOptionPane.QUESTION_MESSAGE);
+				    optionPane.setOptionType(JOptionPane.OK_CANCEL_OPTION);
+				    JDialog dialog = optionPane.createDialog(parent,"\u05E4\u05E1\u05D8\u05D4");
+				    dialog.setSize(500, 300);
+				    dialog.setVisible(true);
+				    
+				    //System.out.print(lehemslid.getValue());
+				    //bl_bra=bl_bra.Calc(lehemslid.getValue());
+				    use.Ate_Veg(veg.Calc(vegid.getValue()));
+				    //System.out.print(use+"\n");
+				
+				
+			}
+		});
+		button_7.setBounds(120, 122, 100, 100);
+		veg_page.add(button_7);
+		
+		JButton button_8 = new JButton("\u05D3\u05DC\u05E2\u05EA");
+		button_8.addActionListener(new ActionListener() {
+			public void actionPerformed(ActionEvent e) {
+				
+				
+				Veg veg=prod.veg_food[12];
+				
+				JSlider vegid =new JSlider(0,1000,100);
+				vegid.setValue(0);
+				JFrame parent = new JFrame();
+				 JOptionPane optionPane = new JOptionPane();
+				 vegid.setMajorTickSpacing(100);
+				 vegid.setMinorTickSpacing(50);
+				 vegid.setPaintTicks(true);
+				 vegid.setPaintLabels(true);
+		         
+				// Add positions label in the slider
+				Hashtable position = new Hashtable();
+				position.put(0, new JLabel("0"));
+				position.put(100, new JLabel("100"));
+				position.put(200, new JLabel("200"));
+				position.put(300, new JLabel("300"));
+				position.put(400, new JLabel("400"));
+				position.put(500, new JLabel("500"));
+				position.put(600, new JLabel("600"));
+				position.put(700, new JLabel("700"));
+				position.put(800, new JLabel("800"));
+				position.put(900, new JLabel("900"));
+				position.put(1000, new JLabel("1000"));
+				
+				         
+				// Set the label to be drawn
+				vegid.setLabelTable(position);
+				    optionPane.setMessage(new Object[] { "Select a value: ", vegid });
+				    optionPane.setMessageType(JOptionPane.QUESTION_MESSAGE);
+				    optionPane.setOptionType(JOptionPane.OK_CANCEL_OPTION);
+				    JDialog dialog = optionPane.createDialog(parent,"\u05E4\u05E1\u05D8\u05D4");
+				    dialog.setSize(500, 300);
+				    dialog.setVisible(true);
+				    
+				    //System.out.print(lehemslid.getValue());
+				    //bl_bra=bl_bra.Calc(lehemslid.getValue());
+				    use.Ate_Veg(veg.Calc(vegid.getValue()));
+				    //System.out.print(use+"\n");
+				
+				
+			}
+		});
+		button_8.setBounds(230, 122, 100, 100);
+		veg_page.add(button_8);
+		
+		JButton button_9 = new JButton("\u05E9\u05D5\u05DD");
+		button_9.addActionListener(new ActionListener() {
+			public void actionPerformed(ActionEvent e) {
+				
+				
+				Veg veg=prod.veg_food[15];
+				
+				JSlider vegid =new JSlider(0,1000,100);
+				vegid.setValue(0);
+				JFrame parent = new JFrame();
+				 JOptionPane optionPane = new JOptionPane();
+				 vegid.setMajorTickSpacing(100);
+				 vegid.setMinorTickSpacing(50);
+				 vegid.setPaintTicks(true);
+				 vegid.setPaintLabels(true);
+		         
+				// Add positions label in the slider
+				Hashtable position = new Hashtable();
+				position.put(0, new JLabel("0"));
+				position.put(100, new JLabel("100"));
+				position.put(200, new JLabel("200"));
+				position.put(300, new JLabel("300"));
+				position.put(400, new JLabel("400"));
+				position.put(500, new JLabel("500"));
+				position.put(600, new JLabel("600"));
+				position.put(700, new JLabel("700"));
+				position.put(800, new JLabel("800"));
+				position.put(900, new JLabel("900"));
+				position.put(1000, new JLabel("1000"));
+				
+				         
+				// Set the label to be drawn
+				vegid.setLabelTable(position);
+				    optionPane.setMessage(new Object[] { "Select a value: ", vegid });
+				    optionPane.setMessageType(JOptionPane.QUESTION_MESSAGE);
+				    optionPane.setOptionType(JOptionPane.OK_CANCEL_OPTION);
+				    JDialog dialog = optionPane.createDialog(parent,"\u05E4\u05E1\u05D8\u05D4");
+				    dialog.setSize(500, 300);
+				    dialog.setVisible(true);
+				    
+				    //System.out.print(lehemslid.getValue());
+				    //bl_bra=bl_bra.Calc(lehemslid.getValue());
+				    use.Ate_Veg(veg.Calc(vegid.getValue()));
+				    //System.out.print(use+"\n");
+				
+				
+			}
+		});
+		button_9.setBounds(340, 122, 100, 100);
+		veg_page.add(button_9);
+		
+		JButton button_10 = new JButton("\u05D1\u05D8\u05D8\u05D4");
+		button_10.addActionListener(new ActionListener() {
+			public void actionPerformed(ActionEvent e) {
+				
+				
+				Veg veg=prod.veg_food[13];
+				
+				JSlider vegid =new JSlider(0,1000,100);
+				vegid.setValue(0);
+				JFrame parent = new JFrame();
+				 JOptionPane optionPane = new JOptionPane();
+				 vegid.setMajorTickSpacing(100);
+				 vegid.setMinorTickSpacing(50);
+				 vegid.setPaintTicks(true);
+				 vegid.setPaintLabels(true);
+		         
+				// Add positions label in the slider
+				Hashtable position = new Hashtable();
+				position.put(0, new JLabel("0"));
+				position.put(100, new JLabel("100"));
+				position.put(200, new JLabel("200"));
+				position.put(300, new JLabel("300"));
+				position.put(400, new JLabel("400"));
+				position.put(500, new JLabel("500"));
+				position.put(600, new JLabel("600"));
+				position.put(700, new JLabel("700"));
+				position.put(800, new JLabel("800"));
+				position.put(900, new JLabel("900"));
+				position.put(1000, new JLabel("1000"));
+				
+				         
+				// Set the label to be drawn
+				vegid.setLabelTable(position);
+				    optionPane.setMessage(new Object[] { "Select a value: ", vegid });
+				    optionPane.setMessageType(JOptionPane.QUESTION_MESSAGE);
+				    optionPane.setOptionType(JOptionPane.OK_CANCEL_OPTION);
+				    JDialog dialog = optionPane.createDialog(parent,"\u05E4\u05E1\u05D8\u05D4");
+				    dialog.setSize(500, 300);
+				    dialog.setVisible(true);
+				    
+				    //System.out.print(lehemslid.getValue());
+				    //bl_bra=bl_bra.Calc(lehemslid.getValue());
+				    use.Ate_Veg(veg.Calc(vegid.getValue()));
+				    //System.out.print(use+"\n");
+				
+				
+			}
+		});
+		button_10.setBounds(450, 122, 100, 100);
+		veg_page.add(button_10);
+		
+		JButton button_11 = new JButton("\u05D1\u05E0\u05E0\u05D4");
+		button_11.addActionListener(new ActionListener() {
+			public void actionPerformed(ActionEvent e) {
+				
+				
+				Veg veg=prod.veg_food[14];
+				
+				JSlider vegid =new JSlider(0,1000,100);
+				vegid.setValue(0);
+				JFrame parent = new JFrame();
+				 JOptionPane optionPane = new JOptionPane();
+				 vegid.setMajorTickSpacing(100);
+				 vegid.setMinorTickSpacing(50);
+				 vegid.setPaintTicks(true);
+				 vegid.setPaintLabels(true);
+		         
+				// Add positions label in the slider
+				Hashtable position = new Hashtable();
+				position.put(0, new JLabel("0"));
+				position.put(100, new JLabel("100"));
+				position.put(200, new JLabel("200"));
+				position.put(300, new JLabel("300"));
+				position.put(400, new JLabel("400"));
+				position.put(500, new JLabel("500"));
+				position.put(600, new JLabel("600"));
+				position.put(700, new JLabel("700"));
+				position.put(800, new JLabel("800"));
+				position.put(900, new JLabel("900"));
+				position.put(1000, new JLabel("1000"));
+				
+				         
+				// Set the label to be drawn
+				vegid.setLabelTable(position);
+				    optionPane.setMessage(new Object[] { "Select a value: ", vegid });
+				    optionPane.setMessageType(JOptionPane.QUESTION_MESSAGE);
+				    optionPane.setOptionType(JOptionPane.OK_CANCEL_OPTION);
+				    JDialog dialog = optionPane.createDialog(parent,"\u05E4\u05E1\u05D8\u05D4");
+				    dialog.setSize(500, 300);
+				    dialog.setVisible(true);
+				    
+				    //System.out.print(lehemslid.getValue());
+				    //bl_bra=bl_bra.Calc(lehemslid.getValue());
+				    use.Ate_Veg(veg.Calc(vegid.getValue()));
+				    //System.out.print(use+"\n");
+				
+				
+			}
+		});
+		button_11.setBounds(560, 122, 100, 100);
+		veg_page.add(button_11);
+		
+		JButton button_12 = new JButton("\u05DE\u05DC\u05D5\u05DF");
+		button_12.addActionListener(new ActionListener() {
+			public void actionPerformed(ActionEvent e) {
+				
+				
+				Veg veg=prod.veg_food[10];
+				
+				JSlider vegid =new JSlider(0,1000,100);
+				vegid.setValue(0);
+				JFrame parent = new JFrame();
+				 JOptionPane optionPane = new JOptionPane();
+				 vegid.setMajorTickSpacing(100);
+				 vegid.setMinorTickSpacing(50);
+				 vegid.setPaintTicks(true);
+				 vegid.setPaintLabels(true);
+		         
+				// Add positions label in the slider
+				Hashtable position = new Hashtable();
+				position.put(0, new JLabel("0"));
+				position.put(100, new JLabel("100"));
+				position.put(200, new JLabel("200"));
+				position.put(300, new JLabel("300"));
+				position.put(400, new JLabel("400"));
+				position.put(500, new JLabel("500"));
+				position.put(600, new JLabel("600"));
+				position.put(700, new JLabel("700"));
+				position.put(800, new JLabel("800"));
+				position.put(900, new JLabel("900"));
+				position.put(1000, new JLabel("1000"));
+				
+				         
+				// Set the label to be drawn
+				vegid.setLabelTable(position);
+				    optionPane.setMessage(new Object[] { "Select a value: ", vegid });
+				    optionPane.setMessageType(JOptionPane.QUESTION_MESSAGE);
+				    optionPane.setOptionType(JOptionPane.OK_CANCEL_OPTION);
+				    JDialog dialog = optionPane.createDialog(parent,"\u05E4\u05E1\u05D8\u05D4");
+				    dialog.setSize(500, 300);
+				    dialog.setVisible(true);
+				    
+				    //System.out.print(lehemslid.getValue());
+				    //bl_bra=bl_bra.Calc(lehemslid.getValue());
+				    use.Ate_Veg(veg.Calc(vegid.getValue()));
+				    //System.out.print(use+"\n");
+				
+				
+			}
+		});
+		button_12.setBounds(670, 122, 100, 100);
+		veg_page.add(button_12);
+		
+		JButton button_13 = new JButton("\u05EA\u05E4\u05D5\u05D6");
+		button_13.addActionListener(new ActionListener() {
+			public void actionPerformed(ActionEvent e) {
+				
+				
+				Veg veg=prod.veg_food[9];
+				
+				JSlider vegid =new JSlider(0,1000,100);
+				vegid.setValue(0);
+				JFrame parent = new JFrame();
+				 JOptionPane optionPane = new JOptionPane();
+				 vegid.setMajorTickSpacing(100);
+				 vegid.setMinorTickSpacing(50);
+				 vegid.setPaintTicks(true);
+				 vegid.setPaintLabels(true);
+		         
+				// Add positions label in the slider
+				Hashtable position = new Hashtable();
+				position.put(0, new JLabel("0"));
+				position.put(100, new JLabel("100"));
+				position.put(200, new JLabel("200"));
+				position.put(300, new JLabel("300"));
+				position.put(400, new JLabel("400"));
+				position.put(500, new JLabel("500"));
+				position.put(600, new JLabel("600"));
+				position.put(700, new JLabel("700"));
+				position.put(800, new JLabel("800"));
+				position.put(900, new JLabel("900"));
+				position.put(1000, new JLabel("1000"));
+				
+				         
+				// Set the label to be drawn
+				vegid.setLabelTable(position);
+				    optionPane.setMessage(new Object[] { "Select a value: ", vegid });
+				    optionPane.setMessageType(JOptionPane.QUESTION_MESSAGE);
+				    optionPane.setOptionType(JOptionPane.OK_CANCEL_OPTION);
+				    JDialog dialog = optionPane.createDialog(parent,"\u05E4\u05E1\u05D8\u05D4");
+				    dialog.setSize(500, 300);
+				    dialog.setVisible(true);
+				    
+				    //System.out.print(lehemslid.getValue());
+				    //bl_bra=bl_bra.Calc(lehemslid.getValue());
+				    use.Ate_Veg(veg.Calc(vegid.getValue()));
+				    //System.out.print(use+"\n");
+				
+				
+			}
+		});
+		button_13.setBounds(10, 234, 100, 100);
+		veg_page.add(button_13);
+		
+		JButton button_14 = new JButton("\u05D0\u05E0\u05E0\u05E1");
+		button_14.addActionListener(new ActionListener() {
+			public void actionPerformed(ActionEvent e) {
+				
+				
+				Veg veg=prod.veg_food[11];
+				
+				JSlider vegid =new JSlider(0,1000,100);
+				vegid.setValue(0);
+				JFrame parent = new JFrame();
+				 JOptionPane optionPane = new JOptionPane();
+				 vegid.setMajorTickSpacing(100);
+				 vegid.setMinorTickSpacing(50);
+				 vegid.setPaintTicks(true);
+				 vegid.setPaintLabels(true);
+		         
+				// Add positions label in the slider
+				Hashtable position = new Hashtable();
+				position.put(0, new JLabel("0"));
+				position.put(100, new JLabel("100"));
+				position.put(200, new JLabel("200"));
+				position.put(300, new JLabel("300"));
+				position.put(400, new JLabel("400"));
+				position.put(500, new JLabel("500"));
+				position.put(600, new JLabel("600"));
+				position.put(700, new JLabel("700"));
+				position.put(800, new JLabel("800"));
+				position.put(900, new JLabel("900"));
+				position.put(1000, new JLabel("1000"));
+				
+				         
+				// Set the label to be drawn
+				vegid.setLabelTable(position);
+				    optionPane.setMessage(new Object[] { "Select a value: ", vegid });
+				    optionPane.setMessageType(JOptionPane.QUESTION_MESSAGE);
+				    optionPane.setOptionType(JOptionPane.OK_CANCEL_OPTION);
+				    JDialog dialog = optionPane.createDialog(parent,"\u05E4\u05E1\u05D8\u05D4");
+				    dialog.setSize(500, 300);
+				    dialog.setVisible(true);
+				    
+				    //System.out.print(lehemslid.getValue());
+				    //bl_bra=bl_bra.Calc(lehemslid.getValue());
+				    use.Ate_Veg(veg.Calc(vegid.getValue()));
+				    //System.out.print(use+"\n");
+				
+				
+			}
+		});
+		button_14.setBounds(120, 233, 100, 100);
+		veg_page.add(button_14);
 		
 		JPanel Junk_Food_page = new JPanel();
 		frame.getContentPane().add(Junk_Food_page, "name_31478926767500");
@@ -319,78 +1150,508 @@ Junk_Food piza=prod.j_food[0];
 		btnNewButton_21.setBounds(340, 11, 100, 100);
 		Junk_Food_page.add(btnNewButton_21);
 		
+		JButton btnNewButton_32 = new JButton("\u05D7\u05D6\u05D5\u05E8");
+		btnNewButton_32.addActionListener(new ActionListener() {
+			public void actionPerformed(ActionEvent e) {
+				Junk_Food_page.setVisible(false);
+				ate_food_page.setVisible(true);
+				
+			}
+		});
+		btnNewButton_32.setBounds(747, 482, 89, 23);
+		Junk_Food_page.add(btnNewButton_32);
+		
 		JPanel Meat_Fish_Dai_page = new JPanel();
 		frame.getContentPane().add(Meat_Fish_Dai_page, "name_31571261321900");
 		Meat_Fish_Dai_page.setLayout(null);
 		
 		JButton btnNewButton_22 = new JButton("\u05E2\u05D5\u05E3 \u05E6\u05DC\u05D5\u05D9");
+		btnNewButton_22.addActionListener(new ActionListener() {
+			public void actionPerformed(ActionEvent e) {
+				
+				Meat_Fish_Dai r_chic=prod.MFD_food[1];
+				
+				JSlider r_chicid =new JSlider(0,1000,100);
+				r_chicid.setValue(0);
+				JFrame parent = new JFrame();
+				 JOptionPane optionPane = new JOptionPane();
+				 r_chicid.setMajorTickSpacing(100);
+				 r_chicid.setMinorTickSpacing(50);
+				 r_chicid.setPaintTicks(true);
+				 r_chicid.setPaintLabels(true);
+		         
+				// Add positions label in the slider
+				Hashtable position = new Hashtable();
+				position.put(0, new JLabel("0"));
+				position.put(100, new JLabel("100"));
+				position.put(200, new JLabel("200"));
+				position.put(300, new JLabel("300"));
+				position.put(400, new JLabel("400"));
+				position.put(500, new JLabel("500"));
+				position.put(600, new JLabel("600"));
+				position.put(700, new JLabel("700"));
+				position.put(800, new JLabel("800"));
+				position.put(900, new JLabel("900"));
+				position.put(1000, new JLabel("1000"));
+				
+				         
+				// Set the label to be drawn
+				r_chicid.setLabelTable(position);
+				    optionPane.setMessage(new Object[] { "Select a value: ", r_chicid });
+				    optionPane.setMessageType(JOptionPane.QUESTION_MESSAGE);
+				    optionPane.setOptionType(JOptionPane.OK_CANCEL_OPTION);
+				    JDialog dialog = optionPane.createDialog(parent,"\u05E4\u05E1\u05D8\u05D4");
+				    dialog.setSize(500, 300);
+				    dialog.setVisible(true);
+				    
+				    //System.out.print(lehemslid.getValue());
+				    //bl_bra=bl_bra.Calc(lehemslid.getValue());
+				    use.Ate_Meat_Fish_Dai(r_chic.Calc(r_chicid.getValue()));
+				    //System.out.print(use+"\n");
+				
+			}
+		});
 		btnNewButton_22.setBounds(10, 11, 100, 100);
 		Meat_Fish_Dai_page.add(btnNewButton_22);
 		
 		JButton btnNewButton_23 = new JButton("\u05D1\u05E7\u05E8 \u05DE\u05D8\u05D5\u05D2\u05DF");
+		btnNewButton_23.addActionListener(new ActionListener() {
+			public void actionPerformed(ActionEvent e) {
+				
+				Meat_Fish_Dai r_beef=prod.MFD_food[0];
+				
+				JSlider r_beefid =new JSlider(0,1000,100);
+				r_beefid.setValue(0);
+				JFrame parent = new JFrame();
+				 JOptionPane optionPane = new JOptionPane();
+				 r_beefid.setMajorTickSpacing(100);
+				 r_beefid.setMinorTickSpacing(50);
+				 r_beefid.setPaintTicks(true);
+				 r_beefid.setPaintLabels(true);
+		         
+				// Add positions label in the slider
+				Hashtable position = new Hashtable();
+				position.put(0, new JLabel("0"));
+				position.put(100, new JLabel("100"));
+				position.put(200, new JLabel("200"));
+				position.put(300, new JLabel("300"));
+				position.put(400, new JLabel("400"));
+				position.put(500, new JLabel("500"));
+				position.put(600, new JLabel("600"));
+				position.put(700, new JLabel("700"));
+				position.put(800, new JLabel("800"));
+				position.put(900, new JLabel("900"));
+				position.put(1000, new JLabel("1000"));
+				
+				         
+				// Set the label to be drawn
+				r_beefid.setLabelTable(position);
+				    optionPane.setMessage(new Object[] { "Select a value: ", r_beefid });
+				    optionPane.setMessageType(JOptionPane.QUESTION_MESSAGE);
+				    optionPane.setOptionType(JOptionPane.OK_CANCEL_OPTION);
+				    JDialog dialog = optionPane.createDialog(parent,"\u05E4\u05E1\u05D8\u05D4");
+				    dialog.setSize(500, 300);
+				    dialog.setVisible(true);
+				    
+				    //System.out.print(lehemslid.getValue());
+				    //bl_bra=bl_bra.Calc(lehemslid.getValue());
+				    use.Ate_Meat_Fish_Dai(r_beef.Calc(r_beefid.getValue()));
+				    //System.out.print(use+"\n");
+				
+				
+			}
+		});
 		btnNewButton_23.setBounds(120, 11, 100, 100);
 		Meat_Fish_Dai_page.add(btnNewButton_23);
 		
 		JButton btnNewButton_24 = new JButton("\u05D1\u05E8\u05D5\u05D5\u05D6 \u05E6\u05DC\u05D5\u05D9");
+		btnNewButton_24.addActionListener(new ActionListener() {
+			public void actionPerformed(ActionEvent e) {
+				Meat_Fish_Dai r_duck=prod.MFD_food[2];
+				
+				JSlider r_duckid =new JSlider(0,1000,100);
+				r_duckid.setValue(0);
+				JFrame parent = new JFrame();
+				 JOptionPane optionPane = new JOptionPane();
+				 r_duckid.setMajorTickSpacing(100);
+				 r_duckid.setMinorTickSpacing(50);
+				 r_duckid.setPaintTicks(true);
+				 r_duckid.setPaintLabels(true);
+		         
+				// Add positions label in the slider
+				Hashtable position = new Hashtable();
+				position.put(0, new JLabel("0"));
+				position.put(100, new JLabel("100"));
+				position.put(200, new JLabel("200"));
+				position.put(300, new JLabel("300"));
+				position.put(400, new JLabel("400"));
+				position.put(500, new JLabel("500"));
+				position.put(600, new JLabel("600"));
+				position.put(700, new JLabel("700"));
+				position.put(800, new JLabel("800"));
+				position.put(900, new JLabel("900"));
+				position.put(1000, new JLabel("1000"));
+				
+				         
+				// Set the label to be drawn
+				r_duckid.setLabelTable(position);
+				    optionPane.setMessage(new Object[] { "Select a value: ", r_duckid });
+				    optionPane.setMessageType(JOptionPane.QUESTION_MESSAGE);
+				    optionPane.setOptionType(JOptionPane.OK_CANCEL_OPTION);
+				    JDialog dialog = optionPane.createDialog(parent,"\u05E4\u05E1\u05D8\u05D4");
+				    dialog.setSize(500, 300);
+				    dialog.setVisible(true);
+				    
+				    //System.out.print(lehemslid.getValue());
+				    //bl_bra=bl_bra.Calc(lehemslid.getValue());
+				    use.Ate_Meat_Fish_Dai(r_duck.Calc(r_duckid.getValue()));
+				    //System.out.print(use+"\n");
+				
+				
+				
+			}
+		});
 		btnNewButton_24.setBounds(230, 11, 100, 100);
 		Meat_Fish_Dai_page.add(btnNewButton_24);
 		
 		JButton btnNewButton_25 = new JButton("\u05DB\u05D1\u05E9 \u05E6\u05DC\u05D5\u05D9");
+		btnNewButton_25.addActionListener(new ActionListener() {
+			public void actionPerformed(ActionEvent e) {
+				
+				Meat_Fish_Dai r_lamp=prod.MFD_food[3];
+				
+				JSlider r_lampid =new JSlider(0,1000,100);
+				r_lampid.setValue(0);
+				JFrame parent = new JFrame();
+				 JOptionPane optionPane = new JOptionPane();
+				 r_lampid.setMajorTickSpacing(100);
+				 r_lampid.setMinorTickSpacing(50);
+				 r_lampid.setPaintTicks(true);
+				 r_lampid.setPaintLabels(true);
+		         
+				// Add positions label in the slider
+				Hashtable position = new Hashtable();
+				position.put(0, new JLabel("0"));
+				position.put(100, new JLabel("100"));
+				position.put(200, new JLabel("200"));
+				position.put(300, new JLabel("300"));
+				position.put(400, new JLabel("400"));
+				position.put(500, new JLabel("500"));
+				position.put(600, new JLabel("600"));
+				position.put(700, new JLabel("700"));
+				position.put(800, new JLabel("800"));
+				position.put(900, new JLabel("900"));
+				position.put(1000, new JLabel("1000"));
+				
+				         
+				// Set the label to be drawn
+				r_lampid.setLabelTable(position);
+				    optionPane.setMessage(new Object[] { "Select a value: ", r_lampid });
+				    optionPane.setMessageType(JOptionPane.QUESTION_MESSAGE);
+				    optionPane.setOptionType(JOptionPane.OK_CANCEL_OPTION);
+				    JDialog dialog = optionPane.createDialog(parent,"\u05E4\u05E1\u05D8\u05D4");
+				    dialog.setSize(500, 300);
+				    dialog.setVisible(true);
+				    
+				    //System.out.print(lehemslid.getValue());
+				    //bl_bra=bl_bra.Calc(lehemslid.getValue());
+				    use.Ate_Meat_Fish_Dai(r_lamp.Calc(r_lampid.getValue()));
+				    //System.out.print(use+"\n");
+				
+				
+			}
+		});
 		btnNewButton_25.setBounds(340, 11, 100, 100);
 		Meat_Fish_Dai_page.add(btnNewButton_25);
 		
 		JButton btnNewButton_26 = new JButton("\u05D3\u05D2 \u05D0\u05DE\u05E0\u05D5\u05DF \u05E6\u05DC\u05D5\u05D9");
+		btnNewButton_26.addActionListener(new ActionListener() {
+			public void actionPerformed(ActionEvent e) {
+				
+				Meat_Fish_Dai r_til=prod.MFD_food[4];
+				
+				JSlider r_tilid =new JSlider(0,1000,100);
+				r_tilid.setValue(0);
+				JFrame parent = new JFrame();
+				 JOptionPane optionPane = new JOptionPane();
+				 r_tilid.setMajorTickSpacing(100);
+				 r_tilid.setMinorTickSpacing(50);
+				 r_tilid.setPaintTicks(true);
+				 r_tilid.setPaintLabels(true);
+		         
+				// Add positions label in the slider
+				Hashtable position = new Hashtable();
+				position.put(0, new JLabel("0"));
+				position.put(100, new JLabel("100"));
+				position.put(200, new JLabel("200"));
+				position.put(300, new JLabel("300"));
+				position.put(400, new JLabel("400"));
+				position.put(500, new JLabel("500"));
+				position.put(600, new JLabel("600"));
+				position.put(700, new JLabel("700"));
+				position.put(800, new JLabel("800"));
+				position.put(900, new JLabel("900"));
+				position.put(1000, new JLabel("1000"));
+				
+				         
+				// Set the label to be drawn
+				r_tilid.setLabelTable(position);
+				    optionPane.setMessage(new Object[] { "Select a value: ", r_tilid });
+				    optionPane.setMessageType(JOptionPane.QUESTION_MESSAGE);
+				    optionPane.setOptionType(JOptionPane.OK_CANCEL_OPTION);
+				    JDialog dialog = optionPane.createDialog(parent,"\u05E4\u05E1\u05D8\u05D4");
+				    dialog.setSize(500, 300);
+				    dialog.setVisible(true);
+				    
+				    //System.out.print(lehemslid.getValue());
+				    //bl_bra=bl_bra.Calc(lehemslid.getValue());
+				    use.Ate_Meat_Fish_Dai(r_til.Calc(r_tilid.getValue()));
+				    //System.out.print(use+"\n");
+				
+				
+			}
+		});
 		btnNewButton_26.setBounds(450, 11, 100, 100);
 		Meat_Fish_Dai_page.add(btnNewButton_26);
 		
 		JButton btnNewButton_27 = new JButton("\u05E1\u05DC\u05DE\u05D5\u05DF \u05DE\u05D1\u05D5\u05E9\u05DC");
+		btnNewButton_27.addActionListener(new ActionListener() {
+			public void actionPerformed(ActionEvent e) {
+				
+				Meat_Fish_Dai r_salm=prod.MFD_food[4];
+				
+				JSlider r_salmid =new JSlider(0,1000,100);
+				r_salmid.setValue(0);
+				JFrame parent = new JFrame();
+				 JOptionPane optionPane = new JOptionPane();
+				 r_salmid.setMajorTickSpacing(100);
+				 r_salmid.setMinorTickSpacing(50);
+				 r_salmid.setPaintTicks(true);
+				 r_salmid.setPaintLabels(true);
+		         
+				// Add positions label in the slider
+				Hashtable position = new Hashtable();
+				position.put(0, new JLabel("0"));
+				position.put(100, new JLabel("100"));
+				position.put(200, new JLabel("200"));
+				position.put(300, new JLabel("300"));
+				position.put(400, new JLabel("400"));
+				position.put(500, new JLabel("500"));
+				position.put(600, new JLabel("600"));
+				position.put(700, new JLabel("700"));
+				position.put(800, new JLabel("800"));
+				position.put(900, new JLabel("900"));
+				position.put(1000, new JLabel("1000"));
+				
+				         
+				// Set the label to be drawn
+				r_salmid.setLabelTable(position);
+				    optionPane.setMessage(new Object[] { "Select a value: ", r_salmid });
+				    optionPane.setMessageType(JOptionPane.QUESTION_MESSAGE);
+				    optionPane.setOptionType(JOptionPane.OK_CANCEL_OPTION);
+				    JDialog dialog = optionPane.createDialog(parent,"\u05E4\u05E1\u05D8\u05D4");
+				    dialog.setSize(500, 300);
+				    dialog.setVisible(true);
+				    
+				    //System.out.print(lehemslid.getValue());
+				    //bl_bra=bl_bra.Calc(lehemslid.getValue());
+				    use.Ate_Meat_Fish_Dai(r_salm.Calc(r_salmid.getValue()));
+				    //System.out.print(use+"\n");
+				    
+				
+			}
+		});
 		btnNewButton_27.setBounds(560, 11, 106, 100);
 		Meat_Fish_Dai_page.add(btnNewButton_27);
 		
 		JButton btnNewButton_28 = new JButton("\u05D8\u05D5\u05E0\u05D4 \u05E9\u05DE\u05D5\u05E8\u05D9\u05DD");
+		btnNewButton_28.addActionListener(new ActionListener() {
+			public void actionPerformed(ActionEvent e) {
+				
+				Meat_Fish_Dai r_tuna=prod.MFD_food[6];
+				
+				JSlider r_tunaid =new JSlider(0,1000,100);
+				r_tunaid.setValue(0);
+				JFrame parent = new JFrame();
+				 JOptionPane optionPane = new JOptionPane();
+				 r_tunaid.setMajorTickSpacing(100);
+				 r_tunaid.setMinorTickSpacing(50);
+				 r_tunaid.setPaintTicks(true);
+				 r_tunaid.setPaintLabels(true);
+		         
+				// Add positions label in the slider
+				Hashtable position = new Hashtable();
+				position.put(0, new JLabel("0"));
+				position.put(100, new JLabel("100"));
+				position.put(200, new JLabel("200"));
+				position.put(300, new JLabel("300"));
+				position.put(400, new JLabel("400"));
+				position.put(500, new JLabel("500"));
+				position.put(600, new JLabel("600"));
+				position.put(700, new JLabel("700"));
+				position.put(800, new JLabel("800"));
+				position.put(900, new JLabel("900"));
+				position.put(1000, new JLabel("1000"));
+				
+				         
+				// Set the label to be drawn
+				r_tunaid.setLabelTable(position);
+				    optionPane.setMessage(new Object[] { "Select a value: ", r_tunaid });
+				    optionPane.setMessageType(JOptionPane.QUESTION_MESSAGE);
+				    optionPane.setOptionType(JOptionPane.OK_CANCEL_OPTION);
+				    JDialog dialog = optionPane.createDialog(parent,"\u05E4\u05E1\u05D8\u05D4");
+				    dialog.setSize(500, 300);
+				    dialog.setVisible(true);
+				    
+				    //System.out.print(lehemslid.getValue());
+				    //bl_bra=bl_bra.Calc(lehemslid.getValue());
+				    use.Ate_Meat_Fish_Dai(r_tuna.Calc(r_tunaid.getValue()));
+				    //System.out.print(use+"\n");
+				
+				
+			}
+		});
 		btnNewButton_28.setBounds(676, 11, 100, 100);
 		Meat_Fish_Dai_page.add(btnNewButton_28);
 		
 		JButton btnNewButton_29 = new JButton("\u05D2\u05D1\u05D9\u05E0\u05D4 \u05D0\u05DE\u05E8\u05D9\u05E7\u05D0\u05D9\u05EA");
+		btnNewButton_29.addActionListener(new ActionListener() {
+			public void actionPerformed(ActionEvent e) {
+				
+				Meat_Fish_Dai a_chee=prod.MFD_food[7];
+				
+				JSlider a_cheeid =new JSlider(0,1000,100);
+				a_cheeid.setValue(0);
+				JFrame parent = new JFrame();
+				 JOptionPane optionPane = new JOptionPane();
+				 a_cheeid.setMajorTickSpacing(100);
+				 a_cheeid.setMinorTickSpacing(50);
+				 a_cheeid.setPaintTicks(true);
+				 a_cheeid.setPaintLabels(true);
+		         
+				// Add positions label in the slider
+				Hashtable position = new Hashtable();
+				position.put(0, new JLabel("0"));
+				position.put(100, new JLabel("100"));
+				position.put(200, new JLabel("200"));
+				position.put(300, new JLabel("300"));
+				position.put(400, new JLabel("400"));
+				position.put(500, new JLabel("500"));
+				position.put(600, new JLabel("600"));
+				position.put(700, new JLabel("700"));
+				position.put(800, new JLabel("800"));
+				position.put(900, new JLabel("900"));
+				position.put(1000, new JLabel("1000"));
+				
+				         
+				// Set the label to be drawn
+				a_cheeid.setLabelTable(position);
+				    optionPane.setMessage(new Object[] { "Select a value: ", a_cheeid });
+				    optionPane.setMessageType(JOptionPane.QUESTION_MESSAGE);
+				    optionPane.setOptionType(JOptionPane.OK_CANCEL_OPTION);
+				    JDialog dialog = optionPane.createDialog(parent,"\u05E4\u05E1\u05D8\u05D4");
+				    dialog.setSize(500, 300);
+				    dialog.setVisible(true);
+				    
+				    //System.out.print(lehemslid.getValue());
+				    //bl_bra=bl_bra.Calc(lehemslid.getValue());
+				    use.Ate_Meat_Fish_Dai(a_chee.Calc(a_cheeid.getValue()));
+				    //System.out.print(use+"\n");
+				
+				
+			}
+		});
 		btnNewButton_29.setBounds(10, 122, 117, 100);
 		Meat_Fish_Dai_page.add(btnNewButton_29);
 		
 		JButton btnNewButton_30 = new JButton("\u05E7\u05D5\u05B9\u05D8\u05B6\u05D2'");
+		btnNewButton_30.addActionListener(new ActionListener() {
+			public void actionPerformed(ActionEvent e) {
+				
+				Meat_Fish_Dai cotege=prod.MFD_food[8];
+				
+				JSlider cotegeid =new JSlider(0,1000,100);
+				cotegeid.setValue(0);
+				JFrame parent = new JFrame();
+				 JOptionPane optionPane = new JOptionPane();
+				 cotegeid.setMajorTickSpacing(100);
+				 cotegeid.setMinorTickSpacing(50);
+				 cotegeid.setPaintTicks(true);
+				 cotegeid.setPaintLabels(true);
+		         
+				// Add positions label in the slider
+				Hashtable position = new Hashtable();
+				position.put(0, new JLabel("0"));
+				position.put(100, new JLabel("100"));
+				position.put(200, new JLabel("200"));
+				position.put(300, new JLabel("300"));
+				position.put(400, new JLabel("400"));
+				position.put(500, new JLabel("500"));
+				position.put(600, new JLabel("600"));
+				position.put(700, new JLabel("700"));
+				position.put(800, new JLabel("800"));
+				position.put(900, new JLabel("900"));
+				position.put(1000, new JLabel("1000"));
+				
+				         
+				// Set the label to be drawn
+				cotegeid.setLabelTable(position);
+				    optionPane.setMessage(new Object[] { "Select a value: ", cotegeid });
+				    optionPane.setMessageType(JOptionPane.QUESTION_MESSAGE);
+				    optionPane.setOptionType(JOptionPane.OK_CANCEL_OPTION);
+				    JDialog dialog = optionPane.createDialog(parent,"\u05E4\u05E1\u05D8\u05D4");
+				    dialog.setSize(500, 300);
+				    dialog.setVisible(true);
+				    
+				    //System.out.print(lehemslid.getValue());
+				    //bl_bra=bl_bra.Calc(lehemslid.getValue());
+				    use.Ate_Meat_Fish_Dai(cotege.Calc(cotegeid.getValue()));
+				    //System.out.print(use+"\n");
+				
+				
+			}
+		});
 		btnNewButton_30.setBounds(137, 122, 100, 100);
 		Meat_Fish_Dai_page.add(btnNewButton_30);
 		
-		
-		JPanel ate_food_page = new JPanel();
-		frame.getContentPane().add(ate_food_page, "name_31670348278500");
-		ate_food_page.setLayout(null);
 	
 		
 		JButton btnNewButton_10 = new JButton("\u05DE\u05E1 \u05E6\u05E2\u05D3\u05D9\u05DD");
 		btnNewButton_10.addActionListener(new ActionListener() {
 			public void actionPerformed(ActionEvent e) {
 				
-				JSlider stepss =new JSlider(0,1000,100);
+				JSlider stepss =new JSlider(0,10000,100);
 				stepss.setValue(0);
 				JFrame parent = new JFrame();
 				 JOptionPane optionPane = new JOptionPane();
-				 stepss.setMajorTickSpacing(100);
-				 stepss.setMinorTickSpacing(50);
+				 stepss.setMajorTickSpacing(1000);
+				 stepss.setMinorTickSpacing(500);
 				 stepss.setPaintTicks(true);
 				 stepss.setPaintLabels(true);
 		         
 				// Add positions label in the slider
 				Hashtable position1 = new Hashtable();
 				position1.put(0, new JLabel("0"));
-				position1.put(100, new JLabel("100"));
-				position1.put(200, new JLabel("200"));
-				position1.put(300, new JLabel("300"));
-				position1.put(400, new JLabel("400"));
 				position1.put(500, new JLabel("500"));
-				position1.put(600, new JLabel("600"));
-				position1.put(700, new JLabel("700"));
-				position1.put(800, new JLabel("800"));
-				position1.put(900, new JLabel("900"));
 				position1.put(1000, new JLabel("1000"));
+				position1.put(1500, new JLabel("1500"));
+				position1.put(2000, new JLabel("2000"));
+				position1.put(2500, new JLabel("2500"));
+				position1.put(3000, new JLabel("3000"));
+				position1.put(3500, new JLabel("3500"));
+				position1.put(4000, new JLabel("4000"));
+				position1.put(4500, new JLabel("4500"));
+				position1.put(5000, new JLabel("5000"));
+				position1.put(5500, new JLabel("5500"));
+				position1.put(6000, new JLabel("6000"));
+				position1.put(6500, new JLabel("6500"));
+				position1.put(7000, new JLabel("7000"));
+				position1.put(7500, new JLabel("7500"));
+				position1.put(8000, new JLabel("8000"));
+				position1.put(8500, new JLabel("8500"));
+				position1.put(9000, new JLabel("9000"));
+				position1.put(9500, new JLabel("9500"));
+				position1.put(10000, new JLabel("10000"));
 				
 				         
 				// Set the label to be drawn
@@ -399,7 +1660,7 @@ Junk_Food piza=prod.j_food[0];
 				    optionPane.setMessageType(JOptionPane.QUESTION_MESSAGE);
 				    optionPane.setOptionType(JOptionPane.OK_CANCEL_OPTION);
 				    JDialog dialog = optionPane.createDialog(parent,"\u05DE\u05E1 \u05E6\u05E2\u05D3\u05D9\u05DD");
-				    dialog.setSize(500, 300);
+				    dialog.setSize(800, 300);
 				    dialog.setVisible(true);
 				  //  System.out.println(stepss.getValue());
 				    use.Activity(stepss.getValue());
