@@ -25,6 +25,8 @@ public class Ads {
 
        if (this.users_purose == 0){
 
+           
+
        }
 
        else if (this.users_purose == 1){
