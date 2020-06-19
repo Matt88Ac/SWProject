@@ -20,7 +20,6 @@ public class Private_User extends User {
     private int Gender;
     private int Purpose;
     private LocalDateTime last_time_had_sports;
-    private String path;
 
     private LocalDateTime last_time_ate;
     public double food_det[];
@@ -38,7 +37,6 @@ public class Private_User extends User {
         this.Country = country;
         this.Gender = gender; // 1 for a female , 0 for a male ;
         this.Purpose = Purpose;//2 for Gain Weight ,1 for Stay at the same weight ,0 for  lose weight
-        this.path = null;
 
         this.food_det = new double[18];
         for(int i=0; i<18; i++){
@@ -78,8 +76,6 @@ public class Private_User extends User {
     public double Get_Weig(){
         return this.weight;
     }
-
-    public void Update_Path(String path){ this.path = path; }
 
     public void Ate_Dry_food(Dry_Food dry_food){
         this.food_det[0] += dry_food.Get_Detail("Calories");

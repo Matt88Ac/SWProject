@@ -7,7 +7,6 @@ public class Bus_User extends User{
     private String company;
     private String country;
     private String city;
-    private String path = null;
 
     public Bus_User(String us, String ps, String company, String city, String country) throws IOException {
         super(us, ps);
@@ -42,14 +41,6 @@ public class Bus_User extends User{
 
 
          */
-    }
-
-    public void setPath(String path){
-        this.path = path;
-    }
-
-    public String getPath(){
-        return this.path;
     }
 
   /*  public void Pull_Product_Out(String name, String type){
