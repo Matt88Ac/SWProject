@@ -121,4 +121,20 @@ public class Eating_Stats {
         return this.exeptional_eating;
     }
 
+
+    public String toString(){
+        return "Calories: " + this.toString(this.stats[0])  + "\n" + "Protain: " + this.toString(this.stats[1])  + "\n" + "Cholesterol: " +
+                this.toString(this.stats[2]) + "\n" + "Sodium: " + this.toString(this.stats[3]) + "\n" + "Fat: " +
+                this.toString(this.stats[4]) + "\n" + "Suger: " +  this.toString(this.stats[5])
+                + "\n" + "Phosphorus: " + this.toString(this.stats[6]) + "\n" + "Potassium: " + this.toString(this.stats[7])
+                + "\n" + "Magnesium: " + this.toString(this.stats[8])
+                + "\n" + "Fatty acids: " + this.toString(this.stats[9])
+                +"\n" + "Iron: " + this.toString(this.stats[10])
+                +"\n" + "Vitamin C:" +  this.toString(this.stats[11]);
+    }
+
+    private String toString(double v) {
+        return String.valueOf(v);
+    }
+
 }
