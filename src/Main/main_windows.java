@@ -43,6 +43,7 @@ import javax.swing.JSeparator;
 import javax.swing.JScrollBar;
 import java.awt.event.AdjustmentListener;
 import java.awt.event.AdjustmentEvent;
+import javax.swing.Box;
  
 public class main_windows {
 
@@ -64,12 +65,18 @@ public class main_windows {
 	private JTextField food_name_text_Field;
 	Product prod=new Product(false);
 	Private_User use =null;
+	Bus_User bus_user=null;
 	private JTextField name_set_textField;
 	private JTextField lastname_set_textField;
 	private JTextField username_set_textField;
 	private JPasswordField passwordField_set;
 	private JTextField city_set_textField;
 	private JTextField country_set_textField;
+	private JTextField bis_name_text_Field;
+	private JTextField bis_username_text_Field;
+	private JPasswordField bis_password_Field;
+	private JTextField bis_city_text_Field;
+	private JTextField bis_cuntry_text_Field;
 	/**
 	 * Launch the application.
 	 */
@@ -105,6 +112,7 @@ public class main_windows {
 		frame.getContentPane().setLayout(new CardLayout(0, 0));
 		JPanel Private_User_page = new JPanel();
 		Private_User_page.setBackground(new Color(75,78,244));
+		JPanel set_bis_rdata_page = new JPanel();
 		JPanel start_page = new JPanel();
 		start_page.setBackground(new Color(248, 191, 88));
 		frame.getContentPane().add(start_page, "name_830499986510200");
@@ -1984,16 +1992,27 @@ Junk_Food piza=prod.j_food[0];
 		btnNewButton_5.setBounds(747, 11, 89, 23);
 		business_page.add(btnNewButton_5);
 		
-		JButton btnNewButton_35 = new JButton("New button");
-		btnNewButton_35.setBounds(10, 102, 131, 23);
+		JButton btnNewButton_35 = new JButton("\u05DC\u05E9\u05E0\u05D9\u05D5\u05EA \u05D0\u05EA \u05D4\u05E4\u05E8\u05D8\u05D9\u05DD \u05E9\u05DC\u05D9");
+		btnNewButton_35.addActionListener(new ActionListener() {
+			public void actionPerformed(ActionEvent e) {
+				set_bis_rdata_page.setVisible(true);
+				bis_name_text_Field.setText(bus_user.Get_Company_Name());
+				bis_username_text_Field.setText(bus_user.Get_Username());
+				bis_password_Field.setText(bus_user.Get_Password());
+				bis_city_text_Field.setText(bus_user.getCountry());
+				bis_cuntry_text_Field.setText(bus_user.getCity());
+				business_page.setVisible(false);
+			}
+		});
+		btnNewButton_35.setBounds(10, 102, 161, 23);
 		business_page.add(btnNewButton_35);
 		
-		JButton btnNewButton_36 = new JButton("New button");
-		btnNewButton_36.setBounds(10, 45, 131, 23);
+		JButton btnNewButton_36 = new JButton("");
+		btnNewButton_36.setBounds(10, 45, 161, 23);
 		business_page.add(btnNewButton_36);
 		
 		JButton btnNewButton_37 = new JButton("New button");
-		btnNewButton_37.setBounds(10, 73, 131, 23);
+		btnNewButton_37.setBounds(10, 73, 161, 23);
 		business_page.add(btnNewButton_37);
 		
 		
@@ -2218,7 +2237,7 @@ Junk_Food piza=prod.j_food[0];
 										if(password_Field.getText().equals(tokens [1]))											{
 												log_in_page.setVisible(false);
 												business_page.setVisible(true);
-												Bus_User bus_user=new Bus_User(tokens[0],tokens[1], tokens[2], tokens[3],tokens[4]);
+												bus_user=new Bus_User(tokens[0],tokens[1], tokens[2], tokens[3],tokens[4]);
 												
 												
 											}else 
@@ -4230,6 +4249,64 @@ dry_food_page.add(lblNewLabel_57);
 		lblNewLabel_54.setIcon (new ImageIcon(eating));
 		lblNewLabel_54.setBounds(129, 195, 598, 310);
 		ate_food_page.add(lblNewLabel_54);
+		
+		
+		frame.getContentPane().add(set_bis_rdata_page, "name_541004544022900");
+		
+		JButton btnNewButton_38 = new JButton("\u05D7\u05D6\u05E8\u05D4");
+		btnNewButton_38.setBounds(747, 482, 89, 23);
+		btnNewButton_38.addActionListener(new ActionListener() {
+			public void actionPerformed(ActionEvent e) {
+				set_bis_rdata_page.setVisible(false);
+				business_page.setVisible(true);
+			}
+		});
+		set_bis_rdata_page.setLayout(null);
+		set_bis_rdata_page.add(btnNewButton_38);
+		
+		bis_name_text_Field = new JTextField();
+		bis_name_text_Field.setColumns(15);
+		bis_name_text_Field.setBounds(561, 31, 150, 20);
+		set_bis_rdata_page.add(bis_name_text_Field);
+		
+		JLabel label_12 = new JLabel("\u05E9\u05DD \u05D4\u05D7\u05D1\u05E8\u05D4");
+		label_12.setBounds(722, 34, 89, 14);
+		set_bis_rdata_page.add(label_12);
+		
+		JLabel label_13 = new JLabel("\u05E9\u05DD \u05DE\u05E9\u05EA\u05DE\u05E9:");
+		label_13.setBounds(719, 65, 67, 14);
+		set_bis_rdata_page.add(label_13);
+		
+		bis_username_text_Field = new JTextField();
+		bis_username_text_Field.setColumns(30);
+		bis_username_text_Field.setBounds(561, 62, 150, 20);
+		set_bis_rdata_page.add(bis_username_text_Field);
+		
+		bis_password_Field = new JPasswordField();
+		bis_password_Field.setBounds(561, 93, 150, 20);
+		set_bis_rdata_page.add(bis_password_Field);
+		
+		JLabel label_14 = new JLabel("\u05E1\u05D9\u05E1\u05DE\u05D4:");
+		label_14.setBounds(719, 96, 70, 14);
+		set_bis_rdata_page.add(label_14);
+		
+		JLabel label_15 = new JLabel("\u05E2\u05D9\u05E8: ");
+		label_15.setBounds(719, 123, 76, 14);
+		set_bis_rdata_page.add(label_15);
+		
+		bis_city_text_Field = new JTextField();
+		bis_city_text_Field.setColumns(10);
+		bis_city_text_Field.setBounds(561, 121, 150, 20);
+		set_bis_rdata_page.add(bis_city_text_Field);
+		
+		bis_cuntry_text_Field = new JTextField();
+		bis_cuntry_text_Field.setColumns(10);
+		bis_cuntry_text_Field.setBounds(561, 152, 150, 20);
+		set_bis_rdata_page.add(bis_cuntry_text_Field);
+		
+		JLabel label_16 = new JLabel("\u05DE\u05D3\u05D9\u05E0\u05D4:");
+		label_16.setBounds(719, 153, 46, 14);
+		set_bis_rdata_page.add(label_16);
 		
 		/*JLabel lblNewLabel_2 = new JLabel("  ");
 		Image runing = new ImageIcon(this.getClass().getResource("/running_on_empty_eran_mendel_dribbble_gif.gif")).getImage();
