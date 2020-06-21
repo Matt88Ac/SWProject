@@ -104,6 +104,7 @@ public class main_windows {
 		frame.setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
 		frame.getContentPane().setLayout(new CardLayout(0, 0));
 		JPanel Private_User_page = new JPanel();
+		Private_User_page.setBackground(new Color(75,78,244));
 		JPanel start_page = new JPanel();
 		start_page.setBackground(new Color(248, 191, 88));
 		frame.getContentPane().add(start_page, "name_830499986510200");
@@ -1973,11 +1974,6 @@ Junk_Food piza=prod.j_food[0];
 		frame.getContentPane().add(business_page, "name_337916315403200");
 		business_page.setLayout(null);
 		
-		JLabel lblNewLabel_18 = new JLabel("business_page");
-		lblNewLabel_18.setBounds(72, 71, 717, 355);
-		lblNewLabel_18.setFont(new Font("Tahoma", Font.PLAIN, 93));
-		business_page.add(lblNewLabel_18);
-		
 		JButton btnNewButton_5 = new JButton("\u05D9\u05E6\u05D9\u05D0");
 		btnNewButton_5.addActionListener(new ActionListener() {
 			public void actionPerformed(ActionEvent e) {
@@ -1987,6 +1983,18 @@ Junk_Food piza=prod.j_food[0];
 		});
 		btnNewButton_5.setBounds(747, 11, 89, 23);
 		business_page.add(btnNewButton_5);
+		
+		JButton btnNewButton_35 = new JButton("New button");
+		btnNewButton_35.setBounds(10, 102, 131, 23);
+		business_page.add(btnNewButton_35);
+		
+		JButton btnNewButton_36 = new JButton("New button");
+		btnNewButton_36.setBounds(10, 45, 131, 23);
+		business_page.add(btnNewButton_36);
+		
+		JButton btnNewButton_37 = new JButton("New button");
+		btnNewButton_37.setBounds(10, 73, 131, 23);
+		business_page.add(btnNewButton_37);
 		
 		
 		frame.getContentPane().add(Private_User_page, "name_339221586896400");
@@ -2084,26 +2092,31 @@ Junk_Food piza=prod.j_food[0];
 		Private_User_page.add(btnNewButton_7);
 		
 		JLabel lblNewLabel_9 = new JLabel(   "\u05E7\u05DC\u05D5\u05E8\u05D9\u05D5\u05EA: " +0 );
+		lblNewLabel_9.setForeground(Color.WHITE);
 		lblNewLabel_9.setHorizontalAlignment(SwingConstants.RIGHT);
 		lblNewLabel_9.setBounds(140, 27, 110, 14);
 		Private_User_page.add(lblNewLabel_9);
 		
 		JLabel lblNewLabel_20 = new JLabel("\u05E0\u05EA\u05E8\u05D0\u05DF: "+0);
+		lblNewLabel_20.setForeground(Color.WHITE);
 		lblNewLabel_20.setHorizontalAlignment(SwingConstants.RIGHT);
 		lblNewLabel_20.setBounds(140, 53, 110, 14);
 		Private_User_page.add(lblNewLabel_20);
 		
 		JLabel lblNewLabel_20_1 = new JLabel("\u05D7\u05DC\u05D1\u05D5\u05E0\u05D9\u05DD: "+0);
+		lblNewLabel_20_1.setForeground(Color.WHITE);
 		lblNewLabel_20_1.setHorizontalAlignment(SwingConstants.RIGHT);
 		lblNewLabel_20_1.setBounds(140, 83, 110, 14);
 		Private_User_page.add(lblNewLabel_20_1);
 		
 		JLabel lblNewLabel_20_2 = new JLabel("\u05E9\u05D5\u05DE\u05E0\u05D9\u05DD: "+0);
+		lblNewLabel_20_2.setForeground(Color.WHITE);
 		lblNewLabel_20_2.setHorizontalAlignment(SwingConstants.RIGHT);
 		lblNewLabel_20_2.setBounds(140, 108, 110, 14);
 		Private_User_page.add(lblNewLabel_20_2);
 		
 		JLabel lblNewLabel_20_3 = new JLabel("\u05E7\u05D5\u05DC\u05E1\u05D8\u05E8\u05D5\u05DC: "+0);
+		lblNewLabel_20_3.setForeground(Color.WHITE);
 		lblNewLabel_20_3.setHorizontalAlignment(SwingConstants.RIGHT);
 		lblNewLabel_20_3.setBounds(140, 133, 110, 14);
 		Private_User_page.add(lblNewLabel_20_3);
@@ -2140,6 +2153,7 @@ Junk_Food piza=prod.j_food[0];
 		Private_User_page.add(btnNewButton_3_2);
 		
 		JLabel lblNewLabel_38 = new JLabel("\u05E4\u05D7\u05DE\u05D9\u05DE\u05D5\u05EA:"+0);
+		lblNewLabel_38.setForeground(Color.WHITE);
 		lblNewLabel_38.setHorizontalAlignment(SwingConstants.RIGHT);
 		lblNewLabel_38.setBounds(140, 158, 110, 14);
 		Private_User_page.add(lblNewLabel_38);
@@ -2232,10 +2246,14 @@ Junk_Food piza=prod.j_food[0];
 										{
 											log_in_page.setVisible(false);
 											Private_User_page.setVisible(true);
+											
 											 use	= new Private_User(tokens[0], tokens[1],
 													Double.parseDouble(tokens[2]),Double.parseDouble(tokens[3]),tokens[4],tokens [5],tokens [6],tokens [7],
 													Double.parseDouble(tokens[8]),Integer.parseInt(tokens[9]),Integer.parseInt(tokens[10]));
 											
+											 
+											 
+											 
 										}else 
 										{
 											JOptionPane.showMessageDialog(null, "Incorrect Password." + "!");
@@ -4123,23 +4141,14 @@ dry_food_page.add(lblNewLabel_57);
 		JLabel lblNewLabel_62 = new JLabel("");
 		Image hello_gif = new ImageIcon(this.getClass().getResource("/hello.gif")).getImage();
 		lblNewLabel_62.setIcon (new ImageIcon(hello_gif));
-		lblNewLabel_62.setBounds(342, 27, 420, 298);
+		lblNewLabel_62.setBounds(130, 0, 800, 516);
 		Private_User_page.add(lblNewLabel_62);
 		
-		long startTime = System.currentTimeMillis();
-		long elapsedTime = 0L;
-		lblNewLabel_62.setVisible(false);
-		while (elapsedTime < 2*2*60*1000) {
-			lblNewLabel_62.setVisible(true);
-		    elapsedTime = (new Date()).getTime() - startTime;
-		}
-		lblNewLabel_62.setVisible(false);
+		
+		
 
 			
 			
-			
-		/*Image hello_gif = new ImageIcon(this.getClass().getResource("/data_analysis.gif")).getImage();
-		lblNewLabel_62.setIcon (new ImageIcon(hello_gif));*/
 		
 		
 		JButton btnNewButton_13 = new JButton("\u05D7\u05D6\u05D5\u05E8");
