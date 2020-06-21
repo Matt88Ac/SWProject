@@ -201,7 +201,6 @@ public class main_windows {
 		});
 		btnNewButton_34.setBounds(10, 11, 100, 100);
 		veg_page.add(btnNewButton_34);
-		
 		JButton button = new JButton("\u05DE\u05DC\u05E4\u05E4\u05D5\u05DF");
 		button.addActionListener(new ActionListener() {
 			public void actionPerformed(ActionEvent e) {
@@ -1967,6 +1966,10 @@ Junk_Food piza=prod.j_food[0];
 		JPanel dry_food_page = new JPanel();
 		dry_food_page.setBackground(new Color(249,222,189));
 		JButton Button_back = new JButton("\u05D7\u05D6\u05E8\u05D4");
+		Button_back.addActionListener(new ActionListener() {
+			public void actionPerformed(ActionEvent e) {
+			}
+		});
 		Button_back.addMouseListener(new MouseAdapter() {
 			@Override
 			public void mouseClicked(MouseEvent e) {
@@ -1987,7 +1990,7 @@ Junk_Food piza=prod.j_food[0];
 		btnNewButton_5.addActionListener(new ActionListener() {
 			public void actionPerformed(ActionEvent e) {
 			business_page.setVisible(false);
-			log_in_page.setVisible(true);
+			start_page.setVisible(true);
 			}
 		});
 		btnNewButton_5.setBounds(747, 11, 89, 23);
@@ -2456,19 +2459,19 @@ Junk_Food piza=prod.j_food[0];
 		
 		
 		
-		
 		JButton Button_page_1 = new JButton("\u05DE\u05D9\u05E9\u05EA\u05DE\u05E9 \u05E9\u05DC\u05D9");
-		Button_page_1.addMouseListener(new MouseAdapter() {
-			@Override
-			public void mouseClicked(MouseEvent e) {
+		Button_page_1.addActionListener(new ActionListener() {
+			public void actionPerformed(ActionEvent e) {
+				name_text_Field.setText("");
+				password_Field.setText("");
 				start_page.setVisible(false);
 				log_in_page.setVisible(true);
 				name_text_Field.requestFocus();
-				
 			}
 		});
 		Button_page_1.setBounds(10, 11, 118, 23);
 		start_page.add(Button_page_1);
+
 		
 		JPanel regist_page = new JPanel();
 		regist_page.setBackground(new Color(253, 243, 228));
