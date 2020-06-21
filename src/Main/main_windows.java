@@ -2175,6 +2175,7 @@ Junk_Food piza=prod.j_food[0];
 		
 		JLabel lblNewLabel_38 = new JLabel("\u05E4\u05D7\u05DE\u05D9\u05DE\u05D5\u05EA:"+0);
 		lblNewLabel_38.setForeground(Color.WHITE);
+		
 		lblNewLabel_38.setHorizontalAlignment(SwingConstants.RIGHT);
 		lblNewLabel_38.setBounds(140, 158, 110, 14);
 		Private_User_page.add(lblNewLabel_38);
@@ -4180,9 +4181,11 @@ dry_food_page.add(lblNewLabel_57);
 				
 				ate_food_page.setVisible(false);
 		
-				
+				if(eat_s.Get_Status()==1) {
 				lblNewLabel_9.setText( "\u05E7\u05DC\u05D5\u05E8\u05D9\u05D5\u05EA: " +Math.floor(eat_s.stats[0]*100)/100 );
-				
+				}else {lblNewLabel_9.setText( "\u05E7\u05DC\u05D5\u05E8\u05D9\u05D5\u05EA: " +Math.floor(eat_s.stats[0]*100)/100 );
+				lblNewLabel_9.setForeground(Color.RED);
+				}
 				lblNewLabel_20.setText("\u05E0\u05EA\u05E8\u05D0\u05DF: "+Math.floor(eat_s.stats[3]*100)/100);
 			
 				lblNewLabel_20_1.setText("\u05D7\u05DC\u05D1\u05D5\u05E0\u05D9\u05DD: "+Math.floor(eat_s.stats[1]*100)/100);
