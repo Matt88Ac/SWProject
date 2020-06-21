@@ -113,6 +113,7 @@ public class main_windows {
 		JPanel Private_User_page = new JPanel();
 		Private_User_page.setBackground(new Color(75,78,244));
 		JPanel set_bis_rdata_page = new JPanel();
+		JPanel log_in_page = new JPanel();
 		JPanel start_page = new JPanel();
 		start_page.setBackground(new Color(248, 191, 88));
 		frame.getContentPane().add(start_page, "name_830499986510200");
@@ -1938,7 +1939,7 @@ Junk_Food piza=prod.j_food[0];
 				
 				
 					set_rdata_page.setVisible(false);
-					Private_User_page.setVisible(true);
+					log_in_page.setVisible(true);
 	
 				}	
 				
@@ -1955,7 +1956,7 @@ Junk_Food piza=prod.j_food[0];
 		
 		
 
-		JPanel log_in_page = new JPanel();
+		
 		log_in_page.setBackground(new Color(42, 200, 125));
 		frame.getContentPane().add(log_in_page, "name_830509498735800");
 		log_in_page.setLayout(null);
@@ -4308,11 +4309,60 @@ dry_food_page.add(lblNewLabel_57);
 		label_16.setBounds(719, 153, 46, 14);
 		set_bis_rdata_page.add(label_16);
 		
-		/*JLabel lblNewLabel_2 = new JLabel("  ");
-		Image runing = new ImageIcon(this.getClass().getResource("/running_on_empty_eran_mendel_dribbble_gif.gif")).getImage();
-		lblNewLabel_2.setIcon (new ImageIcon(runing));
-		lblNewLabel_2.setBounds(109, 0, 543, 320);
-		start_page.add(lblNewLabel_2);*/
+		JButton btnNewButton_39 = new JButton("\u05E9\u05DE\u05D5\u05E8");
+		btnNewButton_39.addActionListener(new ActionListener() {
+			public void actionPerformed(ActionEvent e) {
+			
+				if(bis_city_text_Field.getText().isEmpty()||
+						bis_cuntry_text_Field.getText().isEmpty()||bis_name_text_Field.getText().isEmpty()||
+						bis_password_Field.getText().isEmpty()||bis_username_text_Field.getText().isEmpty()) 
+				{
+					JOptionPane.showMessageDialog(null, "You have to fill all" + "!");	
+				}else {
+					
+					
+					
+				FileWriter outFile = null;
+				File file =new File("C:\\data");
+				file.mkdirs();
+				
+						
+				BufferedWriter outStream=null;
+				
+				try {
+					outFile = new FileWriter ("C:\\data\\"+"bus_"+bis_username_text_Field.getText()+".txt");
+				} catch (IOException e1) {
+					System.out.println("Error: " + e1);
+				
+				}
+				 outStream =new BufferedWriter(outFile);
+			
+				try {
+					
+					
+					outStream.write(bis_username_text_Field.getText()+"\n");
+					outStream.write(bis_password_Field.getPassword());
+					outStream.write("\n");
+					outStream.write(bis_name_text_Field.getText()+"\n");
+					outStream.write(bis_cuntry_text_Field.getText()+"\n");
+					outStream.write(bis_city_text_Field.getText()+"\n");
+					outStream.close ();
+				} catch (IOException e1) {
+					System.out.println("Error: " + e1);
+				}
+				
+				
+				
+				
+				set_bis_rdata_page.setVisible(false);
+					log_in_page.setVisible(true);
+				
+			}
+			}
+		});
+		btnNewButton_39.setBounds(622, 482, 89, 23);
+		set_bis_rdata_page.add(btnNewButton_39);
+		
 		
 		
 		
