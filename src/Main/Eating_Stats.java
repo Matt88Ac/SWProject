@@ -5,7 +5,13 @@ import java.time.LocalDateTime;
 public class Eating_Stats {
     public double[] stats;
     private int users_purp;
-    private int exeptional_eating = 0;
+    private boolean calories = false;
+    private boolean sod = false;
+    private boolean fat = false;
+    private boolean prot = false;
+    private boolean col = false;
+    private boolean pah = false;
+
     private double users_age;
     private int users_gender;
     private double users_h;
@@ -40,6 +46,46 @@ public class Eating_Stats {
 
         this.exeptions_check();
 
+        if(stats[3] >= 2000){
+            this.sod = true;
+        }
+
+        else{
+            this.sod = false;
+        }
+
+        if (stats[1] >= 70){
+            this.prot = true;
+        }
+
+        else{
+            this.prot = false;
+        }
+
+        if (stats[4] > 111){
+            this.fat = true;
+        }
+
+        else{
+            this.fat = false;
+        }
+
+        if (stats[9] > 3*this.users_w){
+            this.pah = true;
+        }
+
+        else{
+            this.pah = false;
+        }
+
+        if( stats[2] > 150){
+            this.col = true;
+        }
+
+        else {
+            this.col = false;
+        }
+
     }
 
     public void Ate_Veg(Veg dry_food){
@@ -57,6 +103,46 @@ public class Eating_Stats {
         this.stats[11] +=  dry_food.Get_Detail("VitC");
 
         this.exeptions_check();
+
+        if(stats[3] >= 2000){
+            this.sod = true;
+        }
+
+        else{
+            this.sod = false;
+        }
+
+        if (stats[1] >= 70){
+            this.prot = true;
+        }
+
+        else{
+            this.prot = false;
+        }
+
+        if (stats[4] > 111){
+            this.fat = true;
+        }
+
+        else{
+            this.fat = false;
+        }
+
+        if (stats[9] > 3*this.users_w){
+            this.pah = true;
+        }
+
+        else{
+            this.pah = false;
+        }
+
+        if( stats[2] > 150){
+            this.col = true;
+        }
+
+        else {
+            this.col = false;
+        }
 
     }
 
@@ -76,6 +162,45 @@ public class Eating_Stats {
 
         this.exeptions_check();
 
+        if(stats[3] >= 2000){
+            this.sod = true;
+        }
+
+        else{
+            this.sod = false;
+        }
+
+        if (stats[1] >= 70){
+            this.prot = true;
+        }
+
+        else{
+            this.prot = false;
+        }
+
+        if (stats[4] > 111){
+            this.fat = true;
+        }
+
+        else{
+            this.fat = false;
+        }
+
+        if (stats[9] > 3*this.users_w){
+            this.pah = true;
+        }
+
+        else{
+            this.pah = false;
+        }
+
+        if( stats[2] > 150){
+            this.col = true;
+        }
+
+        else {
+            this.col = false;
+        }
 
     }
 
@@ -96,6 +221,46 @@ public class Eating_Stats {
 
         this.exeptions_check();
 
+        if(stats[3] >= 2000){
+            this.sod = true;
+        }
+
+        else{
+            this.sod = false;
+        }
+
+        if (stats[1] >= 70){
+            this.prot = true;
+        }
+
+        else{
+            this.prot = false;
+        }
+
+        if (stats[4] > 111){
+            this.fat = true;
+        }
+
+        else{
+            this.fat = false;
+        }
+
+        if (stats[9] > 3*this.users_w){
+            this.pah = true;
+        }
+
+        else{
+            this.pah = false;
+        }
+
+        if( stats[2] > 150){
+            this.col = true;
+        }
+
+        else {
+            this.col = false;
+        }
+
     }
 
     public void exeptions_check(){
@@ -111,15 +276,36 @@ public class Eating_Stats {
         }
 
         if (BMR*1.2 > this.stats[0]|| BMR*1.2 < this.stats[0]){
-            this.exeptional_eating = 0;
+            this.calories = false;
         }
 
-        this.exeptional_eating = 1;
+        else {
+            this.calories = true;
+        }
     }
 
-    public int Get_Status(){
-        return this.exeptional_eating;
+    public boolean Get_Status_cal(){
+        return this.calories;
     }
+
+    public boolean Get_Status_sod(){
+        return this.sod;
+    }
+
+    public boolean Get_Status_prot(){ return this.prot; }
+
+    public boolean Get_Status_fat(){
+        return this.fat;
+    }
+
+    public boolean Get_Status_pah(){
+        return this.pah;
+    }
+
+    public boolean Get_Status_co(){
+        return this.col;
+    }
+
 
 
     public String toString(){
