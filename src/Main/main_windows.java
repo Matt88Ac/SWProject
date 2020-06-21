@@ -116,6 +116,7 @@ public class main_windows {
 		JPanel set_bis_rdata_page = new JPanel();
 		JPanel log_in_page = new JPanel();
 		JPanel start_page = new JPanel();
+		JPanel bis_add_food_page = new JPanel();
 		start_page.setBackground(new Color(248, 191, 88));
 		frame.getContentPane().add(start_page, "name_830499986510200");
 		start_page.setLayout(null);
@@ -2016,7 +2017,14 @@ Junk_Food piza=prod.j_food[0];
 		btnNewButton_36.setBounds(10, 45, 161, 23);
 		business_page.add(btnNewButton_36);
 		
-		JButton btnNewButton_37 = new JButton("\u05E2\u05E8\u05D9\u05DB\u05EA \u05DE\u05D5\u05E6\u05E8\u05D9\u05DD");
+		JButton btnNewButton_37 = new JButton("\u05D4\u05D5\u05E1\u05E4\u05D4 \u05DE\u05D5\u05E6\u05E8\u05D9\u05DD");
+		btnNewButton_37.addActionListener(new ActionListener() {
+			public void actionPerformed(ActionEvent e) {
+				business_page.setVisible(false);
+				bis_add_food_page.setVisible(true);
+				
+			}
+		});
 		btnNewButton_37.setBounds(10, 73, 161, 23);
 		business_page.add(btnNewButton_37);
 		
@@ -4366,6 +4374,20 @@ dry_food_page.add(lblNewLabel_57);
 		});
 		btnNewButton_39.setBounds(622, 482, 89, 23);
 		set_bis_rdata_page.add(btnNewButton_39);
+		
+		
+		frame.getContentPane().add(bis_add_food_page, "name_553627018607200");
+		bis_add_food_page.setLayout(null);
+		
+		JButton btnNewButton_40 = new JButton("\u05D7\u05D6\u05E8\u05D4");
+		btnNewButton_40.addActionListener(new ActionListener() {
+			public void actionPerformed(ActionEvent e) {
+				bis_add_food_page.setVisible(false);
+				business_page.setVisible(true);
+			}
+		});
+		btnNewButton_40.setBounds(747, 482, 89, 23);
+		bis_add_food_page.add(btnNewButton_40);
 		
 		
 		
