@@ -194,7 +194,7 @@ public class main_windows {
 				    
 				    //System.out.print(lehemslid.getValue());
 				    //bl_bra=bl_bra.Calc(lehemslid.getValue());
-				    use.Ate_Veg(veg.Calc(vegid.getValue()));
+				    eat_s.Ate_Veg(veg.Calc(vegid.getValue()));
 				    //System.out.print(use+"\n");
 				
 				
@@ -244,7 +244,7 @@ public class main_windows {
 				    
 				    //System.out.print(lehemslid.getValue());
 				    //bl_bra=bl_bra.Calc(lehemslid.getValue());
-				    use.Ate_Veg(veg.Calc(vegid.getValue()));
+				    eat_s.Ate_Veg(veg.Calc(vegid.getValue()));
 				    //System.out.print(use+"\n");
 				
 				
@@ -295,7 +295,7 @@ public class main_windows {
 				    
 				    //System.out.print(lehemslid.getValue());
 				    //bl_bra=bl_bra.Calc(lehemslid.getValue());
-				    use.Ate_Veg(veg.Calc(vegid.getValue()));
+				    eat_s.Ate_Veg(veg.Calc(vegid.getValue()));
 				    //System.out.print(use+"\n");
 				
 				
@@ -346,7 +346,7 @@ public class main_windows {
 				    
 				    //System.out.print(lehemslid.getValue());
 				    //bl_bra=bl_bra.Calc(lehemslid.getValue());
-				    use.Ate_Veg(veg.Calc(vegid.getValue()));
+				    eat_s.Ate_Veg(veg.Calc(vegid.getValue()));
 				    //System.out.print(use+"\n");
 				
 				
@@ -397,7 +397,7 @@ public class main_windows {
 				    
 				    //System.out.print(lehemslid.getValue());
 				    //bl_bra=bl_bra.Calc(lehemslid.getValue());
-				    use.Ate_Veg(veg.Calc(vegid.getValue()));
+				    eat_s.Ate_Veg(veg.Calc(vegid.getValue()));
 				    //System.out.print(use+"\n");
 				
 				
@@ -448,7 +448,7 @@ public class main_windows {
 				    
 				    //System.out.print(lehemslid.getValue());
 				    //bl_bra=bl_bra.Calc(lehemslid.getValue());
-				    use.Ate_Veg(veg.Calc(vegid.getValue()));
+				    eat_s.Ate_Veg(veg.Calc(vegid.getValue()));
 				    //System.out.print(use+"\n");
 				
 				
@@ -499,7 +499,7 @@ public class main_windows {
 				    
 				    //System.out.print(lehemslid.getValue());
 				    //bl_bra=bl_bra.Calc(lehemslid.getValue());
-				    use.Ate_Veg(veg.Calc(vegid.getValue()));
+				    eat_s.Ate_Veg(veg.Calc(vegid.getValue()));
 				    //System.out.print(use+"\n");
 				
 				
@@ -550,7 +550,7 @@ public class main_windows {
 				    
 				    //System.out.print(lehemslid.getValue());
 				    //bl_bra=bl_bra.Calc(lehemslid.getValue());
-				    use.Ate_Veg(veg.Calc(vegid.getValue()));
+				    eat_s.Ate_Veg(veg.Calc(vegid.getValue()));
 				    //System.out.print(use+"\n");
 				
 				
@@ -601,7 +601,7 @@ public class main_windows {
 				    
 				    //System.out.print(lehemslid.getValue());
 				    //bl_bra=bl_bra.Calc(lehemslid.getValue());
-				    use.Ate_Veg(veg.Calc(vegid.getValue()));
+				    eat_s.Ate_Veg(veg.Calc(vegid.getValue()));
 				    //System.out.print(use+"\n");
 				
 				
@@ -652,7 +652,7 @@ public class main_windows {
 				    
 				    //System.out.print(lehemslid.getValue());
 				    //bl_bra=bl_bra.Calc(lehemslid.getValue());
-				    use.Ate_Veg(veg.Calc(vegid.getValue()));
+				    eat_s.Ate_Veg(veg.Calc(vegid.getValue()));
 				    //System.out.print(use+"\n");
 				
 				
@@ -703,7 +703,7 @@ public class main_windows {
 				    
 				    //System.out.print(lehemslid.getValue());
 				    //bl_bra=bl_bra.Calc(lehemslid.getValue());
-				    use.Ate_Veg(veg.Calc(vegid.getValue()));
+				    eat_s.Ate_Veg(veg.Calc(vegid.getValue()));
 				    //System.out.print(use+"\n");
 				
 				
@@ -754,7 +754,7 @@ public class main_windows {
 				    
 				    //System.out.print(lehemslid.getValue());
 				    //bl_bra=bl_bra.Calc(lehemslid.getValue());
-				    use.Ate_Veg(veg.Calc(vegid.getValue()));
+				    eat_s.Ate_Veg(veg.Calc(vegid.getValue()));
 				    //System.out.print(use+"\n");
 				
 				
@@ -805,7 +805,7 @@ public class main_windows {
 				    
 				    //System.out.print(lehemslid.getValue());
 				    //bl_bra=bl_bra.Calc(lehemslid.getValue());
-				    use.Ate_Veg(veg.Calc(vegid.getValue()));
+				    eat_s.Ate_Veg(veg.Calc(vegid.getValue()));
 				    //System.out.print(use+"\n");
 				
 				
@@ -856,7 +856,7 @@ public class main_windows {
 				    
 				    //System.out.print(lehemslid.getValue());
 				    //bl_bra=bl_bra.Calc(lehemslid.getValue());
-				    use.Ate_Veg(veg.Calc(vegid.getValue()));
+				    eat_s.Ate_Veg(veg.Calc(vegid.getValue()));
 				    //System.out.print(use+"\n");
 				
 				
@@ -907,7 +907,7 @@ public class main_windows {
 				    
 				    //System.out.print(lehemslid.getValue());
 				    //bl_bra=bl_bra.Calc(lehemslid.getValue());
-				    use.Ate_Veg(veg.Calc(vegid.getValue()));
+				    eat_s.Ate_Veg(veg.Calc(vegid.getValue()));
 				    //System.out.print(use+"\n");
 				
 				
@@ -958,7 +958,7 @@ public class main_windows {
 				    
 				    //System.out.print(lehemslid.getValue());
 				    //bl_bra=bl_bra.Calc(lehemslid.getValue());
-				    use.Ate_Veg(veg.Calc(vegid.getValue()));
+				    eat_s.Ate_Veg(veg.Calc(vegid.getValue()));
 				    //System.out.print(use+"\n");
 				
 				
@@ -1021,7 +1021,7 @@ Junk_Food piza=prod.j_food[0];
 				    
 				    //System.out.print(lehemslid.getValue());
 				    //bl_bra=bl_bra.Calc(lehemslid.getValue());
-				    use.Ate_Junk_Food(piza.Calc(pizid.getValue()));
+				    eat_s.Ate_Junk_Food(piza.Calc(pizid.getValue()));
 				    //System.out.print(use+"\n");
 				
 			}
@@ -1070,7 +1070,7 @@ Junk_Food piza=prod.j_food[0];
 				    
 				    //System.out.print(lehemslid.getValue());
 				    //bl_bra=bl_bra.Calc(lehemslid.getValue());
-				    use.Ate_Junk_Food(bur.Calc(burid.getValue()));
+				    eat_s.Ate_Junk_Food(bur.Calc(burid.getValue()));
 				    //System.out.print(use+"\n");
 				
 			}
@@ -1119,7 +1119,7 @@ Junk_Food piza=prod.j_food[0];
 				    
 				    //System.out.print(lehemslid.getValue());
 				    //bl_bra=bl_bra.Calc(lehemslid.getValue());
-				    use.Ate_Junk_Food(fri.Calc(friid.getValue()));
+				    eat_s.Ate_Junk_Food(fri.Calc(friid.getValue()));
 				    //System.out.print(use+"\n");
 				
 			}
@@ -1168,7 +1168,7 @@ Junk_Food piza=prod.j_food[0];
 				    
 				    //System.out.print(lehemslid.getValue());
 				    //bl_bra=bl_bra.Calc(lehemslid.getValue());
-				    use.Ate_Junk_Food(susi.Calc(susiid.getValue()));
+				    eat_s.Ate_Junk_Food(susi.Calc(susiid.getValue()));
 				    //System.out.print(use+"\n");
 				
 			}
@@ -1242,7 +1242,7 @@ Junk_Food piza=prod.j_food[0];
 				    
 				    //System.out.print(lehemslid.getValue());
 				    //bl_bra=bl_bra.Calc(lehemslid.getValue());
-				    use.Ate_Meat_Fish_Dai(r_chic.Calc(r_chicid.getValue()));
+				    eat_s.Ate_Meat_Fish_Dai(r_chic.Calc(r_chicid.getValue()));
 				    //System.out.print(use+"\n");
 				
 			}
@@ -1291,7 +1291,7 @@ Junk_Food piza=prod.j_food[0];
 				    
 				    //System.out.print(lehemslid.getValue());
 				    //bl_bra=bl_bra.Calc(lehemslid.getValue());
-				    use.Ate_Meat_Fish_Dai(r_beef.Calc(r_beefid.getValue()));
+				    eat_s.Ate_Meat_Fish_Dai(r_beef.Calc(r_beefid.getValue()));
 				    //System.out.print(use+"\n");
 				
 				
@@ -1340,7 +1340,7 @@ Junk_Food piza=prod.j_food[0];
 				    
 				    //System.out.print(lehemslid.getValue());
 				    //bl_bra=bl_bra.Calc(lehemslid.getValue());
-				    use.Ate_Meat_Fish_Dai(r_duck.Calc(r_duckid.getValue()));
+				    eat_s.Ate_Meat_Fish_Dai(r_duck.Calc(r_duckid.getValue()));
 				    //System.out.print(use+"\n");
 				
 				
@@ -1391,7 +1391,7 @@ Junk_Food piza=prod.j_food[0];
 				    
 				    //System.out.print(lehemslid.getValue());
 				    //bl_bra=bl_bra.Calc(lehemslid.getValue());
-				    use.Ate_Meat_Fish_Dai(r_lamp.Calc(r_lampid.getValue()));
+				    eat_s.Ate_Meat_Fish_Dai(r_lamp.Calc(r_lampid.getValue()));
 				    //System.out.print(use+"\n");
 				
 				
@@ -1441,7 +1441,7 @@ Junk_Food piza=prod.j_food[0];
 				    
 				    //System.out.print(lehemslid.getValue());
 				    //bl_bra=bl_bra.Calc(lehemslid.getValue());
-				    use.Ate_Meat_Fish_Dai(r_til.Calc(r_tilid.getValue()));
+				    eat_s.Ate_Meat_Fish_Dai(r_til.Calc(r_tilid.getValue()));
 				    //System.out.print(use+"\n");
 				
 				
@@ -1491,7 +1491,7 @@ Junk_Food piza=prod.j_food[0];
 				    
 				    //System.out.print(lehemslid.getValue());
 				    //bl_bra=bl_bra.Calc(lehemslid.getValue());
-				    use.Ate_Meat_Fish_Dai(r_salm.Calc(r_salmid.getValue()));
+				    eat_s.Ate_Meat_Fish_Dai(r_salm.Calc(r_salmid.getValue()));
 				    //System.out.print(use+"\n");
 				    
 				
@@ -1541,7 +1541,7 @@ Junk_Food piza=prod.j_food[0];
 				    
 				    //System.out.print(lehemslid.getValue());
 				    //bl_bra=bl_bra.Calc(lehemslid.getValue());
-				    use.Ate_Meat_Fish_Dai(r_tuna.Calc(r_tunaid.getValue()));
+				    eat_s.Ate_Meat_Fish_Dai(r_tuna.Calc(r_tunaid.getValue()));
 				    //System.out.print(use+"\n");
 				
 				
@@ -1591,7 +1591,7 @@ Junk_Food piza=prod.j_food[0];
 				    
 				    //System.out.print(lehemslid.getValue());
 				    //bl_bra=bl_bra.Calc(lehemslid.getValue());
-				    use.Ate_Meat_Fish_Dai(a_chee.Calc(a_cheeid.getValue()));
+				    eat_s.Ate_Meat_Fish_Dai(a_chee.Calc(a_cheeid.getValue()));
 				    //System.out.print(use+"\n");
 				
 				
@@ -1641,7 +1641,7 @@ Junk_Food piza=prod.j_food[0];
 				    
 				    //System.out.print(lehemslid.getValue());
 				    //bl_bra=bl_bra.Calc(lehemslid.getValue());
-				    use.Ate_Meat_Fish_Dai(cotege.Calc(cotegeid.getValue()));
+				    eat_s.Ate_Meat_Fish_Dai(cotege.Calc(cotegeid.getValue()));
 				    //System.out.print(use+"\n");
 				
 				
@@ -3765,7 +3765,7 @@ button_food_3.addActionListener(new ActionListener() {
 		    
 		    //System.out.print(lehemslid.getValue());
 		    //bl_bra=bl_bra.Calc(lehemslid.getValue());
-		    use.Ate_Dry_food(bl_bra.Calc(lehemslid.getValue()));
+		    eat_s.Ate_Dry_food(bl_bra.Calc(lehemslid.getValue()));
 		    System.out.print(use+"\n");
 		   
 	}
@@ -3814,7 +3814,7 @@ button_food_4.addActionListener(new ActionListener() {
 		    
 		    //System.out.print(lehemslid.getValue());
 		    //bl_bra=bl_bra.Calc(lehemslid.getValue());
-		    use.Ate_Dry_food(ris.Calc(risid.getValue()));
+		    eat_s.Ate_Dry_food(ris.Calc(risid.getValue()));
 		   // System.out.print(use+"\n");
 		
 	}
@@ -3863,7 +3863,7 @@ button_food_5.addActionListener(new ActionListener() {
 		    
 		    //System.out.print(lehemslid.getValue());
 		    //bl_bra=bl_bra.Calc(lehemslid.getValue());
-		    use.Ate_Dry_food(cus.Calc(cusid.getValue()));
+		    eat_s.Ate_Dry_food(cus.Calc(cusid.getValue()));
 		    System.out.print(use+"\n");
 		
 	}
@@ -3911,7 +3911,7 @@ button_food_2.addActionListener(new ActionListener() {
 		    
 		    //System.out.print(lehemslid.getValue());
 		    //past=past.Calc(lehemslid.getValue());
-		    use.Ate_Dry_food(past.Calc(lehemslid.getValue()));
+		    eat_s.Ate_Dry_food(past.Calc(lehemslid.getValue()));
 		    System.out.print(use+"\n");
 		   
 	}
@@ -3960,7 +3960,7 @@ button_food_1.addActionListener(new ActionListener() {
 		    
 		    //System.out.print(lehemslid.getValue());
 		   // Double d = new Double(lehemslid.getValue());
-		    use.Ate_Dry_food(bra.Calc(lehemslid.getValue()));
+		    eat_s.Ate_Dry_food(bra.Calc(lehemslid.getValue()));
 		    //System.out.print(use+"\n");
 			}
 
