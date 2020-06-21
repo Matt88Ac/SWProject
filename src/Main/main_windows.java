@@ -78,6 +78,7 @@ public class main_windows {
 	private JPasswordField bis_password_Field;
 	private JTextField bis_city_text_Field;
 	private JTextField bis_cuntry_text_Field;
+	private JTextField bis_food_name_text_Field;
 	/**
 	 * Launch the application.
 	 */
@@ -3475,7 +3476,7 @@ Junk_Food piza=prod.j_food[0];
 				try {
 					
 					
-					outFile = new FileWriter ("C:\\data"+"\\"+"food_"+food_name_text_Field.getText()+"_"+name_text_Field.getText()+".txt");
+					outFile = new FileWriter ("C:\\data"+"\\"+"food_"+name_text_Field.getText()+".txt");
 				} catch (IOException e1) {
 					System.out.println("Error: " + e1);
 				
@@ -4377,17 +4378,244 @@ dry_food_page.add(lblNewLabel_57);
 		
 		
 		frame.getContentPane().add(bis_add_food_page, "name_553627018607200");
-		bis_add_food_page.setLayout(null);
 		
 		JButton btnNewButton_40 = new JButton("\u05D7\u05D6\u05E8\u05D4");
+		btnNewButton_40.setBounds(747, 482, 89, 23);
 		btnNewButton_40.addActionListener(new ActionListener() {
 			public void actionPerformed(ActionEvent e) {
 				bis_add_food_page.setVisible(false);
 				business_page.setVisible(true);
 			}
 		});
-		btnNewButton_40.setBounds(747, 482, 89, 23);
+		bis_add_food_page.setLayout(null);
 		bis_add_food_page.add(btnNewButton_40);
+		
+		JLabel label_17 = new JLabel("\u05E1\u05D3\u05D5\u05EA \u05D7\u05D5\u05D1\u05D4");
+		label_17.setBounds(758, 11, 67, 14);
+		bis_add_food_page.add(label_17);
+		
+		JLabel label_18 = new JLabel("\u05E9\u05DD \u05D4\u05D0\u05D5\u05DB\u05DC:");
+		label_18.setBounds(694, 11, 87, 14);
+		bis_add_food_page.add(label_18);
+		
+		bis_food_name_text_Field = new JTextField();
+		bis_food_name_text_Field.setColumns(10);
+		bis_food_name_text_Field.setBounds(532, 8, 152, 20);
+		bis_add_food_page.add(bis_food_name_text_Field);
+		
+		JLabel label_19 = new JLabel("\u05E1\u05D5\u05D2 \u05D4\u05D0\u05D5\u05DB\u05DC:");
+		label_19.setBounds(694, 61, 142, 20);
+		bis_add_food_page.add(label_19);
+		
+		JRadioButton bis_dro_RadioButton = new JRadioButton("\u05E7\u05D8\u05E0\u05D9\u05D5\u05EA \u05D5\u05DE\u05D0\u05DB\u05DC\u05D9\u05DD \u05D9\u05D1\u05E9\u05D9\u05DD");
+		bis_dro_RadioButton.setBackground(SystemColor.menu);
+		bis_dro_RadioButton.setBounds(532, 60, 152, 23);
+		bis_add_food_page.add(bis_dro_RadioButton);
+		
+		JRadioButton bis_met_RadioButton = new JRadioButton("\u05D1\u05E9\u05E8 \u05D7\u05DC\u05D1 \u05D3\u05D2\u05D9\u05DD");
+		bis_met_RadioButton.setBackground(SystemColor.menu);
+		bis_met_RadioButton.setBounds(428, 60, 109, 23);
+		bis_add_food_page.add(bis_met_RadioButton);
+		
+		JRadioButton bis_junk_RadioButton = new JRadioButton("\u05D7\u05EA\u05D9\u05E4\u05D9\u05DD \u05D5\u05D0\u05DB\u05DC \u05DE\u05E2\u05D9\u05E8");
+		bis_junk_RadioButton.setBackground(SystemColor.menu);
+		bis_junk_RadioButton.setBounds(307, 60, 119, 23);
+		bis_add_food_page.add(bis_junk_RadioButton);
+		
+		JRadioButton bis_fru_RadioButton = new JRadioButton("\u05E4\u05E8\u05D5\u05EA \u05D5\u05D9\u05E8\u05E7\u05D5\u05EA");
+		bis_fru_RadioButton.setBackground(SystemColor.menu);
+		bis_fru_RadioButton.setBounds(218, 60, 87, 23);
+		bis_add_food_page.add(bis_fru_RadioButton);
+		
+		JLabel label_20 = new JLabel("\u05D0\u05E0\u05E8\u05D2\u05D9\u05D4");
+		label_20.setBounds(694, 93, 56, 14);
+		bis_add_food_page.add(label_20);
+		
+		JSpinner bis_cal_spinner = new JSpinner();
+		bis_cal_spinner.setBounds(638, 90, 46, 20);
+		bis_add_food_page.add(bis_cal_spinner);
+		
+		JLabel label_21 = new JLabel("(\u05E7\u05DC\u05D5\u05E8\u05D9\u05D5\u05EA)");
+		label_21.setHorizontalAlignment(SwingConstants.RIGHT);
+		label_21.setBounds(572, 93, 56, 14);
+		bis_add_food_page.add(label_21);
+		
+		JLabel label_22 = new JLabel("\u05E9\u05D5\u05DE\u05E0\u05D9\u05DD");
+		label_22.setBounds(694, 124, 46, 14);
+		bis_add_food_page.add(label_22);
+		
+		JSpinner bis_Fat_spinner = new JSpinner();
+		bis_Fat_spinner.setBounds(638, 121, 46, 20);
+		bis_add_food_page.add(bis_Fat_spinner);
+		
+		JLabel label_23 = new JLabel("(\u05D2\u05E8\u05DD)");
+		label_23.setHorizontalAlignment(SwingConstants.RIGHT);
+		label_23.setBounds(582, 124, 46, 14);
+		bis_add_food_page.add(label_23);
+		
+		JLabel label_24 = new JLabel("(\u05DE''\u05D2)");
+		label_24.setHorizontalAlignment(SwingConstants.RIGHT);
+		label_24.setBounds(582, 155, 46, 14);
+		bis_add_food_page.add(label_24);
+		
+		JSpinner bis_coles_spinner = new JSpinner();
+		bis_coles_spinner.setBounds(638, 152, 46, 20);
+		bis_add_food_page.add(bis_coles_spinner);
+		
+		JLabel label_25 = new JLabel("\u05DB\u05D5\u05DC\u05E1\u05D8\u05D9\u05E8\u05D5\u05DC");
+		label_25.setBounds(694, 155, 56, 14);
+		bis_add_food_page.add(label_25);
+		
+		JLabel label_26 = new JLabel("\u05E0\u05EA\u05E8\u05D0\u05DF");
+		label_26.setBounds(694, 186, 56, 14);
+		bis_add_food_page.add(label_26);
+		
+		JSpinner bis_salt_spinner = new JSpinner();
+		bis_salt_spinner.setBounds(638, 183, 46, 20);
+		bis_add_food_page.add(bis_salt_spinner);
+		
+		JLabel label_27 = new JLabel("(\u05DE''\u05D2)");
+		label_27.setHorizontalAlignment(SwingConstants.RIGHT);
+		label_27.setBounds(582, 186, 46, 14);
+		bis_add_food_page.add(label_27);
+		
+		JLabel label_28 = new JLabel("(\u05D2\u05E8\u05DD)");
+		label_28.setHorizontalAlignment(SwingConstants.RIGHT);
+		label_28.setBounds(582, 217, 46, 14);
+		bis_add_food_page.add(label_28);
+		
+		JSpinner bis_carbo_spinner = new JSpinner();
+		bis_carbo_spinner.setBounds(638, 214, 46, 20);
+		bis_add_food_page.add(bis_carbo_spinner);
+		
+		JLabel label_29 = new JLabel("\u05E4\u05D7\u05DE\u05D9\u05DE\u05D5\u05EA");
+		label_29.setBounds(694, 217, 46, 14);
+		bis_add_food_page.add(label_29);
+		
+		JLabel label_30 = new JLabel("\u05D7\u05DC\u05D1\u05D5\u05E0\u05D9\u05DD");
+		label_30.setBounds(694, 248, 46, 14);
+		bis_add_food_page.add(label_30);
+		
+		JSpinner bis_prot_spinner = new JSpinner();
+		bis_prot_spinner.setBounds(638, 245, 46, 20);
+		bis_add_food_page.add(bis_prot_spinner);
+		
+		JLabel label_31 = new JLabel("(\u05D2\u05E8\u05DD)");
+		label_31.setHorizontalAlignment(SwingConstants.RIGHT);
+		label_31.setBounds(582, 248, 46, 14);
+		bis_add_food_page.add(label_31);
+		
+		JLabel label_32 = new JLabel("______________________________________________________");
+		label_32.setBounds(462, 251, 364, 29);
+		bis_add_food_page.add(label_32);
+		
+		JLabel label_33 = new JLabel("\u05E1\u05D3\u05D5\u05EA \u05DC\u05D0 \u05D7\u05D5\u05D1\u05D4");
+		label_33.setBounds(721, 281, 87, 14);
+		bis_add_food_page.add(label_33);
+		
+		JSpinner bis_spinner_5_1 = new JSpinner();
+		bis_spinner_5_1.setBounds(638, 303, 46, 20);
+		bis_add_food_page.add(bis_spinner_5_1);
+		
+		JLabel label_34 = new JLabel("\u05E1\u05D5\u05E7\u05E8");
+		label_34.setBounds(693, 306, 46, 14);
+		bis_add_food_page.add(label_34);
+		
+		JLabel label_35 = new JLabel("\u05E9\u05D5\u05DE\u05DF \u05E8\u05D5\u05D5\u05D9");
+		label_35.setBounds(694, 331, 46, 14);
+		bis_add_food_page.add(label_35);
+		
+		JSpinner bis_spinner_5_2 = new JSpinner();
+		bis_spinner_5_2.setBounds(638, 328, 46, 20);
+		bis_add_food_page.add(bis_spinner_5_2);
+		
+		JSpinner bis_spinner_5_3 = new JSpinner();
+		bis_spinner_5_3.setBounds(638, 353, 46, 20);
+		bis_add_food_page.add(bis_spinner_5_3);
+		
+		JLabel label_36 = new JLabel("\u05E1\u05D1\u05D9\u05DD \u05EA\u05D6\u05D5\u05E0\u05EA\u05D9\u05D9\u05DD");
+		label_36.setBounds(693, 356, 87, 14);
+		bis_add_food_page.add(label_36);
+		
+		JLabel label_37 = new JLabel("\u05DE\u05D9\u05DD");
+		label_37.setBounds(694, 381, 86, 14);
+		bis_add_food_page.add(label_37);
+		
+		JSpinner bis_spinner_5_4 = new JSpinner();
+		bis_spinner_5_4.setBounds(638, 378, 46, 20);
+		bis_add_food_page.add(bis_spinner_5_4);
+		
+		JSpinner bis_spinner_5_5 = new JSpinner();
+		bis_spinner_5_5.setBounds(638, 403, 46, 20);
+		bis_add_food_page.add(bis_spinner_5_5);
+		
+		JLabel label_38 = new JLabel("\u05D5\u05D5\u05D8\u05DE\u05D9\u05DF C");
+		label_38.setBounds(694, 406, 86, 14);
+		bis_add_food_page.add(label_38);
+		
+		JLabel label_39 = new JLabel("\u05D5\u05D5\u05D9\u05D8\u05DE\u05D9\u05DF B9");
+		label_39.setBounds(694, 435, 86, 14);
+		bis_add_food_page.add(label_39);
+		
+		JSpinner bis_spinner_5_6 = new JSpinner();
+		bis_spinner_5_6.setBounds(638, 429, 46, 20);
+		bis_add_food_page.add(bis_spinner_5_6);
+		
+		JLabel label_40 = new JLabel("\u05D0\u05E9\u05DC\u05D2\u05DF");
+		label_40.setBounds(532, 435, 46, 14);
+		bis_add_food_page.add(label_40);
+		
+		JSpinner bis_spinner_5_12 = new JSpinner();
+		bis_spinner_5_12.setBounds(476, 429, 46, 20);
+		bis_add_food_page.add(bis_spinner_5_12);
+		
+		JSpinner bis_spinner_5_11 = new JSpinner();
+		bis_spinner_5_11.setBounds(476, 403, 46, 20);
+		bis_add_food_page.add(bis_spinner_5_11);
+		
+		JLabel label_41 = new JLabel("\u05D0\u05D1\u05E5");
+		label_41.setBounds(532, 406, 46, 14);
+		bis_add_food_page.add(label_41);
+		
+		JLabel label_42 = new JLabel("\u05D6\u05E8\u05D7\u05DF");
+		label_42.setBounds(532, 381, 46, 14);
+		bis_add_food_page.add(label_42);
+		
+		JSpinner bis_spinner_5_10 = new JSpinner();
+		bis_spinner_5_10.setBounds(476, 378, 46, 20);
+		bis_add_food_page.add(bis_spinner_5_10);
+		
+		JSpinner bis_spinner_5_9 = new JSpinner();
+		bis_spinner_5_9.setBounds(476, 353, 46, 20);
+		bis_add_food_page.add(bis_spinner_5_9);
+		
+		JSpinner bis_spinner_5_8 = new JSpinner();
+		bis_spinner_5_8.setBounds(476, 328, 46, 20);
+		bis_add_food_page.add(bis_spinner_5_8);
+		
+		JSpinner bis_spinner_5_7 = new JSpinner();
+		bis_spinner_5_7.setBounds(476, 303, 46, 20);
+		bis_add_food_page.add(bis_spinner_5_7);
+		
+		JLabel label_43 = new JLabel("\u05D1\u05E8\u05D6\u05DC");
+		label_43.setBounds(532, 306, 35, 14);
+		bis_add_food_page.add(label_43);
+		
+		JLabel label_44 = new JLabel("\u05E1\u05D9\u05D3\u05DF");
+		label_44.setBounds(532, 331, 46, 14);
+		bis_add_food_page.add(label_44);
+		
+		JLabel label_45 = new JLabel("\u05DE\u05D2\u05D0\u05D6\u05D9\u05D5\u05DD");
+		label_45.setBounds(532, 356, 46, 14);
+		bis_add_food_page.add(label_45);
+		
+		JLabel lblNewLabel_18 = new JLabel("\u05DE\u05D7\u05D9\u05E8:");
+		lblNewLabel_18.setBounds(694, 36, 46, 14);
+		bis_add_food_page.add(lblNewLabel_18);
+		
+		JSpinner bis_price_spinner = new JSpinner();
+		bis_price_spinner.setBounds(638, 33, 46, 20);
+		bis_add_food_page.add(bis_price_spinner);
 		
 		
 		
