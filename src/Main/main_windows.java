@@ -2011,11 +2011,11 @@ Junk_Food piza=prod.j_food[0];
 		btnNewButton_35.setBounds(10, 102, 161, 23);
 		business_page.add(btnNewButton_35);
 		
-		JButton btnNewButton_36 = new JButton("");
+		JButton btnNewButton_36 = new JButton("\u05DE\u05D9\u05D9\u05E1 \u05DE\u05D7\u05D9\u05E8\u05D5\u05EA");
 		btnNewButton_36.setBounds(10, 45, 161, 23);
 		business_page.add(btnNewButton_36);
 		
-		JButton btnNewButton_37 = new JButton("New button");
+		JButton btnNewButton_37 = new JButton("\u05E2\u05E8\u05D9\u05DB\u05EA \u05DE\u05D5\u05E6\u05E8\u05D9\u05DD");
 		btnNewButton_37.setBounds(10, 73, 161, 23);
 		business_page.add(btnNewButton_37);
 		
