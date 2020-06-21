@@ -66,6 +66,7 @@ public class main_windows {
 	Product prod=new Product(false);
 	Private_User use =null;
 	Bus_User bus_user=null;
+	Eating_Stats eat_s =null;
 	private JTextField name_set_textField;
 	private JTextField lastname_set_textField;
 	private JTextField username_set_textField;
@@ -2273,7 +2274,7 @@ Junk_Food piza=prod.j_food[0];
 											 use	= new Private_User(tokens[0], tokens[1],
 													Double.parseDouble(tokens[2]),Double.parseDouble(tokens[3]),tokens[4],tokens [5],tokens [6],tokens [7],
 													Double.parseDouble(tokens[8]),Integer.parseInt(tokens[9]),Integer.parseInt(tokens[10]));
-											
+											  eat_s = new Eating_Stats(use);
 											 
 											 
 											 
@@ -3960,7 +3961,7 @@ button_food_1.addActionListener(new ActionListener() {
 		    //System.out.print(lehemslid.getValue());
 		   // Double d = new Double(lehemslid.getValue());
 		    use.Ate_Dry_food(bra.Calc(lehemslid.getValue()));
-		    System.out.print(use+"\n");
+		    //System.out.print(use+"\n");
 			}
 
 	
@@ -4087,29 +4088,29 @@ dry_food_page.add(lblNewLabel_57);
 				data_analysis_page.setVisible(true);
 				
 				
-				lblNewLabel_21.setText("\u05E7\u05DC\u05D5\u05E8\u05D9\u05D5\u05EA: "+Math.floor(use.food_det[0]*100)/100);
+				lblNewLabel_21.setText("\u05E7\u05DC\u05D5\u05E8\u05D9\u05D5\u05EA: "+Math.floor(eat_s.stats[0]*100)/100);
 				
-				lblNewLabel_42.setText("\u05D7\u05DC\u05D1\u05D5\u05E0\u05D9\u05DD: "+Math.floor(use.food_det[1]*100)/100);
+				lblNewLabel_42.setText("\u05D7\u05DC\u05D1\u05D5\u05E0\u05D9\u05DD: "+Math.floor(eat_s.stats[0]*100)/100);
 				
-				lblNewLabel_43.setText("\u05DB\u05D5\u05DC\u05E1\u05D8\u05E8\u05D5\u05DC: "+Math.floor(use.food_det[2]*100)/100);
+				lblNewLabel_43.setText("\u05DB\u05D5\u05DC\u05E1\u05D8\u05E8\u05D5\u05DC: "+Math.floor(eat_s.stats[2]*100)/100);
 				
-				lblNewLabel_44.setText("\u05E0\u05EA\u05E8\u05DF: "+Math.floor(use.food_det[3]*100)/100);
+				lblNewLabel_44.setText("\u05E0\u05EA\u05E8\u05DF: "+Math.floor(eat_s.stats[3]*100)/100);
 
-				lblNewLabel_45.setText("\u05E9\u05D5\u05DE\u05E0\u05D9\u05DD: "+Math.floor(use.food_det[4]*100)/100);
+				lblNewLabel_45.setText("\u05E9\u05D5\u05DE\u05E0\u05D9\u05DD: "+Math.floor(eat_s.stats[4]*100)/100);
 				
-				lblNewLabel_46.setText("\u05E1\u05D5\u05DB\u05E8\u05D9\u05DD: "+Math.floor(use.food_det[5]*100)/100);
+				lblNewLabel_46.setText("\u05E1\u05D5\u05DB\u05E8\u05D9\u05DD: "+Math.floor(eat_s.stats[5]*100)/100);
 
-				lblNewLabel_47.setText("\u05D6\u05E8\u05D7\u05DF: "+Math.floor(use.food_det[6]*100)/100);
+				lblNewLabel_47.setText("\u05D6\u05E8\u05D7\u05DF: "+Math.floor(eat_s.stats[6]*100)/100);
 				
-				lblNewLabel_48.setText("\u05D0\u05E9\u05DC\u05D2\u05DF: "+Math.floor(use.food_det[7]*100)/100);
+				lblNewLabel_48.setText("\u05D0\u05E9\u05DC\u05D2\u05DF: "+Math.floor(eat_s.stats[7]*100)/100);
 				
-				lblNewLabel_49.setText("\u05DE\u05D2\u05E0\u05D6\u05D9\u05D5\u05DD: "+Math.floor(use.food_det[8]*100)/100);
+				lblNewLabel_49.setText("\u05DE\u05D2\u05E0\u05D6\u05D9\u05D5\u05DD: "+Math.floor(eat_s.stats[8]*100)/100);
 
-				lblNewLabel_50.setText("\u05E4\u05D7\u05DE\u05D9\u05DE\u05D5\u05EA: "+Math.floor(use.food_det[9]*100)/100);
+				lblNewLabel_50.setText("\u05E4\u05D7\u05DE\u05D9\u05DE\u05D5\u05EA: "+Math.floor(eat_s.stats[9]*100)/100);
 
-				lblNewLabel_51.setText("\u05D1\u05E8\u05D6\u05DC: "+Math.floor(use.food_det[10]*100)/100);
+				lblNewLabel_51.setText("\u05D1\u05E8\u05D6\u05DC: "+Math.floor(eat_s.stats[10]*100)/100);
 				
-				lblNewLabel_52.setText("\u05D5\u05D5\u05D9\u05D8\u05DE\u05D9\u05DF \u05E1\u05D9\u05D9: "+Math.floor(use.food_det[11]*100)/100);
+				lblNewLabel_52.setText("\u05D5\u05D5\u05D9\u05D8\u05DE\u05D9\u05DF \u05E1\u05D9\u05D9: "+Math.floor(eat_s.stats[11]*100)/100);
 				
 				
 				
@@ -4124,17 +4125,17 @@ dry_food_page.add(lblNewLabel_57);
 			public void actionPerformed(ActionEvent e) {
 				Private_User_page.setVisible(true);
 				
-				lblNewLabel_9.setText( "\u05E7\u05DC\u05D5\u05E8\u05D9\u05D5\u05EA: " +Math.floor(use.food_det[0]*100)/100 );
+				lblNewLabel_9.setText( "\u05E7\u05DC\u05D5\u05E8\u05D9\u05D5\u05EA: " +Math.floor(eat_s.stats[0]*100)/100 );
 				
-				lblNewLabel_20.setText("\u05E0\u05EA\u05E8\u05D0\u05DF: "+Math.floor(use.food_det[3]*100)/100);
+				lblNewLabel_20.setText("\u05E0\u05EA\u05E8\u05D0\u05DF: "+Math.floor(eat_s.stats[3]*100)/100);
 			
-				lblNewLabel_20_1.setText("\u05D7\u05DC\u05D1\u05D5\u05E0\u05D9\u05DD: "+Math.floor(use.food_det[1]*100)/100);
+				lblNewLabel_20_1.setText("\u05D7\u05DC\u05D1\u05D5\u05E0\u05D9\u05DD: "+Math.floor(eat_s.stats[1]*100)/100);
 				
-				lblNewLabel_20_2.setText("\u05E9\u05D5\u05DE\u05E0\u05D9\u05DD: "+Math.floor(use.food_det[4]*100)/100);
+				lblNewLabel_20_2.setText("\u05E9\u05D5\u05DE\u05E0\u05D9\u05DD: "+Math.floor(eat_s.stats[4]*100)/100);
 				
-				lblNewLabel_20_3.setText("\u05E7\u05D5\u05DC\u05E1\u05D8\u05E8\u05D5\u05DC: "+Math.floor(use.food_det[2]*100)/100);
+				lblNewLabel_20_3.setText("\u05E7\u05D5\u05DC\u05E1\u05D8\u05E8\u05D5\u05DC: "+Math.floor(eat_s.stats[2]*100)/100);
 				
-				lblNewLabel_38.setText("\u05E4\u05D7\u05DE\u05D9\u05DE\u05D5\u05EA:"+Math.floor(use.food_det[9]*100)/100);
+				lblNewLabel_38.setText("\u05E4\u05D7\u05DE\u05D9\u05DE\u05D5\u05EA:"+Math.floor(eat_s.stats[9]*100)/100);
 				
 				
 				
@@ -4181,17 +4182,17 @@ dry_food_page.add(lblNewLabel_57);
 				ate_food_page.setVisible(false);
 		
 				
-				lblNewLabel_9.setText( "\u05E7\u05DC\u05D5\u05E8\u05D9\u05D5\u05EA: " +Math.floor(use.food_det[0]*100)/100 );
+				lblNewLabel_9.setText( "\u05E7\u05DC\u05D5\u05E8\u05D9\u05D5\u05EA: " +Math.floor(eat_s.stats[0]*100)/100 );
 				
-				lblNewLabel_20.setText("\u05E0\u05EA\u05E8\u05D0\u05DF: "+Math.floor(use.food_det[3]*100)/100);
+				lblNewLabel_20.setText("\u05E0\u05EA\u05E8\u05D0\u05DF: "+Math.floor(eat_s.stats[3]*100)/100);
 			
-				lblNewLabel_20_1.setText("\u05D7\u05DC\u05D1\u05D5\u05E0\u05D9\u05DD: "+Math.floor(use.food_det[1]*100)/100);
+				lblNewLabel_20_1.setText("\u05D7\u05DC\u05D1\u05D5\u05E0\u05D9\u05DD: "+Math.floor(eat_s.stats[1]*100)/100);
 				
-				lblNewLabel_20_2.setText("\u05E9\u05D5\u05DE\u05E0\u05D9\u05DD: "+Math.floor(use.food_det[4]*100)/100);
+				lblNewLabel_20_2.setText("\u05E9\u05D5\u05DE\u05E0\u05D9\u05DD: "+Math.floor(eat_s.stats[4]*100)/100);
 				
-				lblNewLabel_20_3.setText("\u05E7\u05D5\u05DC\u05E1\u05D8\u05E8\u05D5\u05DC: "+Math.floor(use.food_det[2]*100)/100);
+				lblNewLabel_20_3.setText("\u05E7\u05D5\u05DC\u05E1\u05D8\u05E8\u05D5\u05DC: "+Math.floor(eat_s.stats[2]*100)/100);
 				
-				lblNewLabel_38.setText("\u05E4\u05D7\u05DE\u05D9\u05DE\u05D5\u05EA: "+Math.floor(use.food_det[9]*100)/100);
+				lblNewLabel_38.setText("\u05E4\u05D7\u05DE\u05D9\u05DE\u05D5\u05EA: "+Math.floor(eat_s.stats[9]*100)/100);
 				
 				
 				
