@@ -120,7 +120,6 @@ public class main_windows {
 		JPanel bis_add_food_page = new JPanel();
 		start_page.setBackground(new Color(248, 191, 88));
 		frame.getContentPane().add(start_page, "name_830499986510200");
-		start_page.setLayout(null);
 		JPanel add_food_page = new JPanel();
 		add_food_page.setBackground(new Color(254, 194, 22));
 		JSpinner weight_spinner = new JSpinner();
@@ -2018,17 +2017,6 @@ Junk_Food piza=prod.j_food[0];
 		btnNewButton_36.setBounds(10, 45, 161, 23);
 		business_page.add(btnNewButton_36);
 		
-		JButton btnNewButton_37 = new JButton("\u05D4\u05D5\u05E1\u05E4\u05D4 \u05DE\u05D5\u05E6\u05E8\u05D9\u05DD");
-		btnNewButton_37.addActionListener(new ActionListener() {
-			public void actionPerformed(ActionEvent e) {
-				business_page.setVisible(false);
-				bis_add_food_page.setVisible(true);
-				
-			}
-		});
-		btnNewButton_37.setBounds(10, 73, 161, 23);
-		business_page.add(btnNewButton_37);
-		
 		
 		frame.getContentPane().add(Private_User_page, "name_339221586896400");
 		Private_User_page.setLayout(null);
@@ -2470,6 +2458,7 @@ Junk_Food piza=prod.j_food[0];
 		
 		
 		JButton Button_page_1 = new JButton("\u05DE\u05D9\u05E9\u05EA\u05DE\u05E9 \u05E9\u05DC\u05D9");
+		Button_page_1.setBounds(10, 11, 118, 23);
 		Button_page_1.addActionListener(new ActionListener() {
 			public void actionPerformed(ActionEvent e) {
 				name_text_Field.setText("");
@@ -2479,7 +2468,7 @@ Junk_Food piza=prod.j_food[0];
 				name_text_Field.requestFocus();
 			}
 		});
-		Button_page_1.setBounds(10, 11, 118, 23);
+		start_page.setLayout(null);
 		start_page.add(Button_page_1);
 
 		
@@ -2489,6 +2478,7 @@ Junk_Food piza=prod.j_food[0];
 		regist_page.setLayout(null);
 		
 		JButton Button_page_2 = new JButton("\u05DE\u05D9\u05E9\u05EA\u05DE\u05E9 \u05D7\u05D3\u05E9");
+		Button_page_2.setBounds(10, 45, 118, 23);
 		Button_page_2.addActionListener(new ActionListener() {
 			public void actionPerformed(ActionEvent e) {
 				start_page.setVisible(false);
@@ -2525,23 +2515,22 @@ Junk_Food piza=prod.j_food[0];
 				Purpose_comboBox.setSelectedIndex(0);
 			}
 		});
-		Button_page_2.setBounds(10, 45, 118, 23);
 		start_page.add(Button_page_2);
 		
 		JLabel lblNewLabel_2 = new JLabel("  ");
+		lblNewLabel_2.setBounds(109, 0, 543, 320);
 		Image runing = new ImageIcon(this.getClass().getResource("/running_on_empty_eran_mendel_dribbble_gif.gif")).getImage();
 		lblNewLabel_2.setIcon (new ImageIcon(runing));
-		lblNewLabel_2.setBounds(109, 0, 543, 320);
 		start_page.add(lblNewLabel_2);
 		
 		JButton btnNewButton_9 = new JButton("New button");
+		btnNewButton_9.setBounds(10, 482, 89, 23);
 		btnNewButton_9.addActionListener(new ActionListener() {
 			public void actionPerformed(ActionEvent e) {
 				start_page.setVisible(false);
 				admin_page.setVisible(true);
 			}
 		});
-		btnNewButton_9.setBounds(10, 482, 89, 23);
 		start_page.add(btnNewButton_9);
 		
 		JButton Button_back2 = new JButton("\u05D7\u05D6\u05E8\u05D4");
@@ -3559,10 +3548,11 @@ Junk_Food piza=prod.j_food[0];
 				spinner_5_10.setValue(0);
 				spinner_5_11.setValue(0);
 				spinner_5_12.setValue(0);
-				
-				
 				Private_User_page.setVisible(false);
 				add_food_page.setVisible(true);
+				food_name_text_Field.requestFocus();
+				
+			
 			}
 		});
 		
@@ -4616,6 +4606,131 @@ dry_food_page.add(lblNewLabel_57);
 		JSpinner bis_price_spinner = new JSpinner();
 		bis_price_spinner.setBounds(638, 33, 46, 20);
 		bis_add_food_page.add(bis_price_spinner);
+		
+		
+
+		JButton btnNewButton_37 = new JButton("\u05D4\u05D5\u05E1\u05E4\u05D4 \u05DE\u05D5\u05E6\u05E8\u05D9\u05DD");
+		btnNewButton_37.addActionListener(new ActionListener() {
+			public void actionPerformed(ActionEvent e) {
+				
+				bis_food_name_text_Field.setText("");
+				bis_price_spinner.setValue(0);
+				bis_dro_RadioButton.setSelected(false);
+				bis_met_RadioButton.setSelected(false);
+				bis_junk_RadioButton.setSelected(false);
+				bis_fru_RadioButton.setSelected(false);
+				bis_cal_spinner.setValue(0);
+				bis_Fat_spinner.setValue(0);
+				bis_coles_spinner.setValue(0);
+				bis_salt_spinner.setValue(0);
+				bis_carbo_spinner.setValue(0);
+				bis_prot_spinner.setValue(0);
+				bis_spinner_5_1.setValue(0);
+				bis_spinner_5_2.setValue(0);
+				bis_spinner_5_3.setValue(0);
+				bis_spinner_5_4.setValue(0);
+				bis_spinner_5_5.setValue(0);
+				bis_spinner_5_6.setValue(0);
+				bis_spinner_5_7.setValue(0);
+				bis_spinner_5_8.setValue(0);
+				bis_spinner_5_9.setValue(0);
+				bis_spinner_5_10.setValue(0);
+				bis_spinner_5_11.setValue(0);
+				bis_spinner_5_12.setValue(0);
+				business_page.setVisible(false);
+				bis_add_food_page.setVisible(true);
+				bis_food_name_text_Field.requestFocus();
+				
+				
+		
+				
+			}
+		});
+		btnNewButton_37.setBounds(10, 73, 161, 23);
+		business_page.add(btnNewButton_37);
+		
+		
+		
+		
+		JButton btnNewButton_41 = new JButton("\u05E9\u05DE\u05D5\u05E8");
+		btnNewButton_41.addActionListener(new ActionListener() {
+			public void actionPerformed(ActionEvent e) {
+				
+
+
+				
+				
+				if(bis_food_name_text_Field.getText().isEmpty()||bis_cal_spinner.getValue().equals(0)||bis_Fat_spinner.getValue().equals(0)||bis_coles_spinner.getValue().equals(0)||bis_salt_spinner.getValue().equals(0)||
+						bis_carbo_spinner.getValue().equals(0)||bis_prot_spinner.getValue().equals(0)||(bis_dro_RadioButton.isSelected()==false&&bis_met_RadioButton.isSelected()==false&&bis_junk_RadioButton.isSelected()==false&&bis_fru_RadioButton.isSelected()==false))
+				{
+					JOptionPane.showMessageDialog(null, "You have to fill the critic parameters" + "!");
+
+					
+				}else {
+					File file =new File("C:\\data");
+					file.mkdirs();
+					
+				FileWriter outFile = null;
+				
+				try {
+					
+					
+					outFile = new FileWriter ("C:\\data"+"\\"+"bis_food"+".txt");
+				} catch (IOException e1) {
+					System.out.println("Error: " + e1);
+				
+				}
+				BufferedWriter outStream =new BufferedWriter(outFile);
+			
+				try {
+					
+					
+					outStream.write(bis_food_name_text_Field.getText()+"\n");
+					if(bis_dro_RadioButton.isSelected()==true) 
+					outStream.write("1");
+					else if(bis_met_RadioButton.isSelected()==true)
+						outStream.write("2");
+					else if(bis_junk_RadioButton.isSelected()==true)
+						outStream.write("3");
+					else if(bis_fru_RadioButton.isSelected()==true)
+						outStream.write("4");
+					outStream.write("\n");
+					outStream.write(bis_cal_spinner.getValue().toString()+"\n");
+					outStream.write(bis_Fat_spinner.getValue().toString()+"\n");
+					outStream.write(bis_coles_spinner.getValue().toString()+"\n");
+					outStream.write(bis_salt_spinner.getValue().toString()+"\n");
+					outStream.write(bis_carbo_spinner.getValue().toString()+"\n");
+					outStream.write(bis_prot_spinner.getValue().toString()+"\n");
+					outStream.write(bis_spinner_5_1.getValue().toString()+"\n");
+					outStream.write(bis_spinner_5_2.getValue().toString()+"\n");
+					outStream.write(bis_spinner_5_3.getValue().toString()+"\n");
+					outStream.write(bis_spinner_5_4.getValue().toString()+"\n");
+					outStream.write(bis_spinner_5_5.getValue().toString()+"\n");
+					outStream.write(bis_spinner_5_6.getValue().toString()+"\n");
+					outStream.write(bis_spinner_5_7.getValue().toString()+"\n");
+					outStream.write(bis_spinner_5_8.getValue().toString()+"\n");
+					outStream.write(bis_spinner_5_9.getValue().toString()+"\n");
+					outStream.write(bis_spinner_5_10.getValue().toString()+"\n");
+					outStream.write(bis_spinner_5_11.getValue().toString()+"\n");
+					outStream.write(bis_spinner_5_12.getValue().toString()+"\n");
+					outStream.write(name_text_Field.getText()+"\n");
+					outStream.close ();
+				} catch (IOException e1) {
+					System.out.println("Error: " + e1);
+				}
+				
+				
+				
+					bis_add_food_page.setVisible(false);
+					business_page.setVisible(true);
+	
+				}	
+				
+				
+			}
+		});
+		btnNewButton_41.setBounds(619, 482, 89, 23);
+		bis_add_food_page.add(btnNewButton_41);
 		
 		
 		
