@@ -308,10 +308,12 @@ public class Eating_Stats {
 
     public void Activity(int steps){
         this.stats[0] -= steps*0.05;
+        this.exeptions_check();
     }
 
     public void Burned_Calories(double cals){
         this.stats[0] -= cals;
+        this.exeptions_check();
     }
 
 
