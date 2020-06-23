@@ -76,7 +76,7 @@ public class Private_User extends User {
     public void Burned_Calories(double cals){
         this.last_time_had_sports = LocalDateTime.now();
     }
-    
+
 
     public int Get_Path(){ return this.Purpose; }
 
@@ -87,20 +87,4 @@ public class Private_User extends User {
     public String Get_Password(){
         return this.password;
     }
-
-    public String toString(){
-        return "Calories: " + this.toString(this.food_det[0])  + "\n" + "Protain: " + this.toString(this.food_det[1])  + "\n" + "Cholesterol: " +
-                this.toString(this.food_det[2]) + "\n" + "Sodium: " + this.toString(this.food_det[3]) + "\n" + "Fat: " +
-                this.toString(this.food_det[4]) + "\n" + "Suger: " +  this.toString(this.food_det[5])
-            + "\n" + "Phosphorus: " + this.toString(this.food_det[6]) + "\n" + "Potassium: " + this.toString(this.food_det[7])
-                + "\n" + "Magnesium: " + this.toString(this.food_det[8])
-                + "\n" + "Fatty acids: " + this.toString(this.food_det[9])
-                +"\n" + "Iron: " + this.toString(this.food_det[10])
-                +"\n" + "Vitamin C:" +  this.toString(this.food_det[11]);
-    }
-
-    private String toString(double v) {
-        return String.valueOf(v);
-    }
-
 }
