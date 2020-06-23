@@ -306,6 +306,14 @@ public class Eating_Stats {
         return this.col;
     }
 
+    public void Activity(int steps){
+        this.stats[0] -= steps*0.05;
+    }
+
+    public void Burned_Calories(double cals){
+        this.stats[0] -= cals;
+    }
+
 
 
     public String toString(){

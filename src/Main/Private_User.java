@@ -20,10 +20,7 @@ public class Private_User extends User {
     private int Gender;
     private int Purpose;
     private LocalDateTime last_time_had_sports;
-
     private LocalDateTime last_time_ate;
-    public double food_det[];
-
     public Private_User(String us /*username*/, String ps /*password*/,
                         double weight, double height, String fname, String last_Name, String country, String city,
                         double age, int gender,int Purpose) throws IOException{
@@ -37,11 +34,6 @@ public class Private_User extends User {
         this.Country = country;
         this.Gender = gender; // 1 for a female , 0 for a male ;
         this.Purpose = Purpose;//2 for Gain Weight ,1 for Stay at the same weight ,0 for  lose weight
-
-        this.food_det = new double[18];
-        for(int i=0; i<18; i++){
-            this.food_det[i] = 0;
-        }
 
     }
 
@@ -77,108 +69,14 @@ public class Private_User extends User {
         return this.weight;
     }
 
-    public void Ate_Dry_food(Dry_Food dry_food){
-        this.food_det[0] += dry_food.Get_Detail("Calories");
-        this.food_det[1] += dry_food.Get_Detail("Protein");
-        this.food_det[2] +=  dry_food.Get_Detail("Coles");
-        this.food_det[3] += dry_food.Get_Detail("Salt");
-        this.food_det[4] += dry_food.Get_Detail("Fat");
-        this.food_det[5] += dry_food.Get_Detail("Sugar");
-        this.food_det[6] += dry_food.Get_Detail("Phos");
-        this.food_det[7] += dry_food.Get_Detail("Potess");
-        this.food_det[8] +=  dry_food.Get_Detail("Mag");
-        this.food_det[9] +=  dry_food.Get_Detail("Carbo");
-        this.food_det[10] += dry_food.Get_Detail("Iron");
-        this.food_det[11] +=  dry_food.Get_Detail("VitC");
-
-        this.last_time_ate = LocalDateTime.now();
-        
-
-
-    }
-
-    public void Ate_Veg(Veg dry_food){
-        this.food_det[0] += dry_food.Get_Detail("Calories");
-        this.food_det[1] += dry_food.Get_Detail("Protein");
-        this.food_det[2] +=  dry_food.Get_Detail("Coles");
-        this.food_det[3] += dry_food.Get_Detail("Salt");
-        this.food_det[4] += dry_food.Get_Detail("Fat");
-        this.food_det[5] += dry_food.Get_Detail("Sugar");
-        this.food_det[6] += dry_food.Get_Detail("Phos");
-        this.food_det[7] += dry_food.Get_Detail("Potess");
-        this.food_det[8] +=  dry_food.Get_Detail("Mag");
-        this.food_det[9] +=  dry_food.Get_Detail("Carbo");
-        this.food_det[10] += dry_food.Get_Detail("Iron");
-        this.food_det[11] +=  dry_food.Get_Detail("VitC");
-        this.last_time_ate = LocalDateTime.now();
-
-    }
-
-    public void Ate_Meat_Fish_Dai(Meat_Fish_Dai dry_food){
-        this.food_det[0] += dry_food.Get_Detail("Calories");
-        this.food_det[1] += dry_food.Get_Detail("Protein");
-        this.food_det[2] +=  dry_food.Get_Detail("Coles");
-        this.food_det[3] += dry_food.Get_Detail("Salt");
-        this.food_det[4] += dry_food.Get_Detail("Fat");
-        this.food_det[5] += dry_food.Get_Detail("Sugar");
-        this.food_det[6] += dry_food.Get_Detail("Phos");
-        this.food_det[7] += dry_food.Get_Detail("Potess");
-        this.food_det[8] +=  dry_food.Get_Detail("Mag");
-        this.food_det[9] +=  dry_food.Get_Detail("Carbo");
-        this.food_det[10] += dry_food.Get_Detail("Iron");
-        this.food_det[11] +=  dry_food.Get_Detail("VitC");
-        this.last_time_ate = LocalDateTime.now();
-        // this.
-
-    }
-
-
-    public void Ate_Junk_Food(Junk_Food dry_food){
-        this.food_det[0] += dry_food.Get_Detail("Calories");
-        this.food_det[1] += dry_food.Get_Detail("Protein");
-        this.food_det[2] +=  dry_food.Get_Detail("Coles");
-        this.food_det[3] += dry_food.Get_Detail("Salt");
-        this.food_det[4] += dry_food.Get_Detail("Fat");
-        this.food_det[5] += dry_food.Get_Detail("Sugar");
-        this.food_det[6] += dry_food.Get_Detail("Phos");
-        this.food_det[7] += dry_food.Get_Detail("Potess");
-        this.food_det[8] +=  dry_food.Get_Detail("Mag");
-        this.food_det[9] +=  dry_food.Get_Detail("Carbo");
-        this.food_det[10] += dry_food.Get_Detail("Iron");
-        this.food_det[11] +=  dry_food.Get_Detail("VitC");
-        this.last_time_ate = LocalDateTime.now();
-
-    }
-
     public void Activity(int steps){
-        this.food_det[0] -= steps*0.05;
         this.last_time_had_sports = LocalDateTime.now();
     }
 
     public void Burned_Calories(double cals){
-        this.food_det[0] -= cals;
         this.last_time_had_sports = LocalDateTime.now();
     }
-
-    public boolean IsOverCalories(){
-        double BMR;
-
-        if (this.Gender == 0){
-            BMR = 10*this.weight + 6.25*this.height -5*this.Age + 5;
-        }
-
-
-        else{
-            BMR = 10*this.weight + 6.25*this.height -5*this.Age - 161;
-        }
-
-        if (BMR*1.2 > this.food_det[0]|| BMR*1.2 < this.food_det[0]){
-            return false;
-        }
-
-        return true;
-    }
-
+    
 
     public int Get_Path(){ return this.Purpose; }
 
