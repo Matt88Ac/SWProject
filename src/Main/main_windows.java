@@ -189,7 +189,7 @@ public class main_windows {
 				    optionPane.setMessage(new Object[] { "Select a value: ", vegid });
 				    optionPane.setMessageType(JOptionPane.QUESTION_MESSAGE);
 				    optionPane.setOptionType(JOptionPane.OK_CANCEL_OPTION);
-				    JDialog dialog = optionPane.createDialog(parent,"\u05E4\u05E1\u05D8\u05D4");
+				    JDialog dialog = optionPane.createDialog(parent,"\u05E2\u05D2\u05D1\u05E0\u05D9\u05D4");
 				    dialog.setSize(500, 300);
 				    dialog.setVisible(true);
 				    
@@ -239,7 +239,7 @@ public class main_windows {
 				    optionPane.setMessage(new Object[] { "Select a value: ", vegid });
 				    optionPane.setMessageType(JOptionPane.QUESTION_MESSAGE);
 				    optionPane.setOptionType(JOptionPane.OK_CANCEL_OPTION);
-				    JDialog dialog = optionPane.createDialog(parent,"\u05E4\u05E1\u05D8\u05D4");
+				    JDialog dialog = optionPane.createDialog(parent,"\u05DE\u05DC\u05E4\u05E4\u05D5\u05DF");
 				    dialog.setSize(500, 300);
 				    dialog.setVisible(true);
 				    
@@ -290,7 +290,7 @@ public class main_windows {
 				    optionPane.setMessage(new Object[] { "Select a value: ", vegid });
 				    optionPane.setMessageType(JOptionPane.QUESTION_MESSAGE);
 				    optionPane.setOptionType(JOptionPane.OK_CANCEL_OPTION);
-				    JDialog dialog = optionPane.createDialog(parent,"\u05E4\u05E1\u05D8\u05D4");
+				    JDialog dialog = optionPane.createDialog(parent,"\u05D2\u05D6\u05E8");
 				    dialog.setSize(500, 300);
 				    dialog.setVisible(true);
 				    
@@ -341,7 +341,7 @@ public class main_windows {
 				    optionPane.setMessage(new Object[] { "Select a value: ", vegid });
 				    optionPane.setMessageType(JOptionPane.QUESTION_MESSAGE);
 				    optionPane.setOptionType(JOptionPane.OK_CANCEL_OPTION);
-				    JDialog dialog = optionPane.createDialog(parent,"\u05E4\u05E1\u05D8\u05D4");
+				    JDialog dialog = optionPane.createDialog(parent,"\u05D1\u05E6\u05DC \u05D0\u05D3\u05D5\u05DD");
 				    dialog.setSize(500, 300);
 				    dialog.setVisible(true);
 				    
@@ -392,7 +392,7 @@ public class main_windows {
 				    optionPane.setMessage(new Object[] { "Select a value: ", vegid });
 				    optionPane.setMessageType(JOptionPane.QUESTION_MESSAGE);
 				    optionPane.setOptionType(JOptionPane.OK_CANCEL_OPTION);
-				    JDialog dialog = optionPane.createDialog(parent,"\u05E4\u05E1\u05D8\u05D4");
+				    JDialog dialog = optionPane.createDialog(parent,"\u05D1\u05E6\u05DC");
 				    dialog.setSize(500, 300);
 				    dialog.setVisible(true);
 				    
@@ -443,7 +443,7 @@ public class main_windows {
 				    optionPane.setMessage(new Object[] { "Select a value: ", vegid });
 				    optionPane.setMessageType(JOptionPane.QUESTION_MESSAGE);
 				    optionPane.setOptionType(JOptionPane.OK_CANCEL_OPTION);
-				    JDialog dialog = optionPane.createDialog(parent,"\u05E4\u05E1\u05D8\u05D4");
+				    JDialog dialog = optionPane.createDialog(parent,"\u05D1\u05E6\u05DC \u05D9\u05E8\u05D5\u05E7");
 				    dialog.setSize(500, 300);
 				    dialog.setVisible(true);
 				    
@@ -494,7 +494,7 @@ public class main_windows {
 				    optionPane.setMessage(new Object[] { "Select a value: ", vegid });
 				    optionPane.setMessageType(JOptionPane.QUESTION_MESSAGE);
 				    optionPane.setOptionType(JOptionPane.OK_CANCEL_OPTION);
-				    JDialog dialog = optionPane.createDialog(parent,"\u05E4\u05E1\u05D8\u05D4");
+				    JDialog dialog = optionPane.createDialog(parent,"\u05EA\u05E4\u05D5\u05D7 \u05E2\u05E5");
 				    dialog.setSize(500, 300);
 				    dialog.setVisible(true);
 				    
@@ -545,7 +545,7 @@ public class main_windows {
 				    optionPane.setMessage(new Object[] { "Select a value: ", vegid });
 				    optionPane.setMessageType(JOptionPane.QUESTION_MESSAGE);
 				    optionPane.setOptionType(JOptionPane.OK_CANCEL_OPTION);
-				    JDialog dialog = optionPane.createDialog(parent,"\u05E4\u05E1\u05D8\u05D4");
+				    JDialog dialog = optionPane.createDialog(parent,"\u05DB\u05E8\u05D5\u05D1");
 				    dialog.setSize(500, 300);
 				    dialog.setVisible(true);
 				    
@@ -647,7 +647,7 @@ public class main_windows {
 				    optionPane.setMessage(new Object[] { "Select a value: ", vegid });
 				    optionPane.setMessageType(JOptionPane.QUESTION_MESSAGE);
 				    optionPane.setOptionType(JOptionPane.OK_CANCEL_OPTION);
-				    JDialog dialog = optionPane.createDialog(parent,"\u05E4\u05E1\u05D8\u05D4");
+				    JDialog dialog = optionPane.createDialog(parent,"\u05D3\u05DC\u05E2\u05EA");
 				    dialog.setSize(500, 300);
 				    dialog.setVisible(true);
 				    
@@ -698,7 +698,7 @@ public class main_windows {
 				    optionPane.setMessage(new Object[] { "Select a value: ", vegid });
 				    optionPane.setMessageType(JOptionPane.QUESTION_MESSAGE);
 				    optionPane.setOptionType(JOptionPane.OK_CANCEL_OPTION);
-				    JDialog dialog = optionPane.createDialog(parent,"\u05E4\u05E1\u05D8\u05D4");
+				    JDialog dialog = optionPane.createDialog(parent,"\u05E9\u05D5\u05DD");
 				    dialog.setSize(500, 300);
 				    dialog.setVisible(true);
 				    
@@ -749,7 +749,7 @@ public class main_windows {
 				    optionPane.setMessage(new Object[] { "Select a value: ", vegid });
 				    optionPane.setMessageType(JOptionPane.QUESTION_MESSAGE);
 				    optionPane.setOptionType(JOptionPane.OK_CANCEL_OPTION);
-				    JDialog dialog = optionPane.createDialog(parent,"\u05E4\u05E1\u05D8\u05D4");
+				    JDialog dialog = optionPane.createDialog(parent,"\u05D1\u05D8\u05D8\u05D4");
 				    dialog.setSize(500, 300);
 				    dialog.setVisible(true);
 				    
@@ -800,7 +800,7 @@ public class main_windows {
 				    optionPane.setMessage(new Object[] { "Select a value: ", vegid });
 				    optionPane.setMessageType(JOptionPane.QUESTION_MESSAGE);
 				    optionPane.setOptionType(JOptionPane.OK_CANCEL_OPTION);
-				    JDialog dialog = optionPane.createDialog(parent,"\u05E4\u05E1\u05D8\u05D4");
+				    JDialog dialog = optionPane.createDialog(parent,"\u05D1\u05E0\u05E0\u05D4");
 				    dialog.setSize(500, 300);
 				    dialog.setVisible(true);
 				    
@@ -851,7 +851,7 @@ public class main_windows {
 				    optionPane.setMessage(new Object[] { "Select a value: ", vegid });
 				    optionPane.setMessageType(JOptionPane.QUESTION_MESSAGE);
 				    optionPane.setOptionType(JOptionPane.OK_CANCEL_OPTION);
-				    JDialog dialog = optionPane.createDialog(parent,"\u05E4\u05E1\u05D8\u05D4");
+				    JDialog dialog = optionPane.createDialog(parent,"\u05DE\u05DC\u05D5\u05DF");
 				    dialog.setSize(500, 300);
 				    dialog.setVisible(true);
 				    
@@ -902,7 +902,7 @@ public class main_windows {
 				    optionPane.setMessage(new Object[] { "Select a value: ", vegid });
 				    optionPane.setMessageType(JOptionPane.QUESTION_MESSAGE);
 				    optionPane.setOptionType(JOptionPane.OK_CANCEL_OPTION);
-				    JDialog dialog = optionPane.createDialog(parent,"\u05E4\u05E1\u05D8\u05D4");
+				    JDialog dialog = optionPane.createDialog(parent,"\u05EA\u05E4\u05D5\u05D6");
 				    dialog.setSize(500, 300);
 				    dialog.setVisible(true);
 				    
@@ -953,7 +953,7 @@ public class main_windows {
 				    optionPane.setMessage(new Object[] { "Select a value: ", vegid });
 				    optionPane.setMessageType(JOptionPane.QUESTION_MESSAGE);
 				    optionPane.setOptionType(JOptionPane.OK_CANCEL_OPTION);
-				    JDialog dialog = optionPane.createDialog(parent,"\u05E4\u05E1\u05D8\u05D4");
+				    JDialog dialog = optionPane.createDialog(parent,"\u05D0\u05E0\u05E0\u05E1");
 				    dialog.setSize(500, 300);
 				    dialog.setVisible(true);
 				    
@@ -981,7 +981,12 @@ public class main_windows {
 		frame.getContentPane().add(Junk_Food_page, "name_31478926767500");
 		Junk_Food_page.setLayout(null);
 		
-		JButton btnNewButton_18 = new JButton("\u05E4\u05D9\u05E6\u05D4");
+		JButton btnNewButton_18 = new JButton("");
+		btnNewButton_18.setToolTipText("\u05E4\u05D9\u05E6\u05D4");
+		btnNewButton_18.setBounds(10, 11, 100, 100);
+		
+		Image pizza= new ImageIcon(this.getClass().getResource("/pizza.jpg")).getImage();
+		btnNewButton_18.setIcon(new ImageIcon(pizza));
 		btnNewButton_18.addActionListener(new ActionListener() {
 			public void actionPerformed(ActionEvent e) {
 				
@@ -1016,7 +1021,7 @@ Junk_Food piza=prod.j_food[0];
 				    optionPane.setMessage(new Object[] { "Select a value: ", pizid });
 				    optionPane.setMessageType(JOptionPane.QUESTION_MESSAGE);
 				    optionPane.setOptionType(JOptionPane.OK_CANCEL_OPTION);
-				    JDialog dialog = optionPane.createDialog(parent,"\u05E4\u05E1\u05D8\u05D4");
+				    JDialog dialog = optionPane.createDialog(parent,"\u05E4\u05D9\u05E6\u05D4");
 				    dialog.setSize(500, 300);
 				    dialog.setVisible(true);
 				    
@@ -1027,10 +1032,15 @@ Junk_Food piza=prod.j_food[0];
 				
 			}
 		});
-		btnNewButton_18.setBounds(10, 11, 100, 100);
+	
 		Junk_Food_page.add(btnNewButton_18);
 		
-		JButton btnNewButton_19 = new JButton("\u05D4\u05DE\u05D1\u05D5\u05E8\u05D2\u05E8");
+		JButton btnNewButton_19 = new JButton("");
+		btnNewButton_19.setToolTipText("\u05D4\u05DE\u05D1\u05D5\u05E8\u05D2\u05E8");
+		btnNewButton_19.setBounds(120, 11, 100, 100);
+		Image burger= new ImageIcon(this.getClass().getResource("/burger.jpg")).getImage();
+		btnNewButton_19.setIcon(new ImageIcon(burger));
+		
 		btnNewButton_19.addActionListener(new ActionListener() {
 			public void actionPerformed(ActionEvent e) {
 				
@@ -1065,7 +1075,7 @@ Junk_Food piza=prod.j_food[0];
 				    optionPane.setMessage(new Object[] { "Select a value: ", burid });
 				    optionPane.setMessageType(JOptionPane.QUESTION_MESSAGE);
 				    optionPane.setOptionType(JOptionPane.OK_CANCEL_OPTION);
-				    JDialog dialog = optionPane.createDialog(parent,"\u05E4\u05E1\u05D8\u05D4");
+				    JDialog dialog = optionPane.createDialog(parent,"\u05D4\u05DE\u05D1\u05D5\u05E8\u05D2\u05E8");
 				    dialog.setSize(500, 300);
 				    dialog.setVisible(true);
 				    
@@ -1076,10 +1086,14 @@ Junk_Food piza=prod.j_food[0];
 				
 			}
 		});
-		btnNewButton_19.setBounds(120, 11, 100, 100);
+	
 		Junk_Food_page.add(btnNewButton_19);
 		
-		JButton btnNewButton_20 = new JButton("\u05E6'\u05D9\u05E4\u05E1");
+		JButton btnNewButton_20 = new JButton("");
+		btnNewButton_20.setToolTipText("\u05E6'\u05D9\u05E4\u05E1");
+		btnNewButton_20.setBounds(230, 11, 100, 100);
+		Image chips= new ImageIcon(this.getClass().getResource("/chips.jpg")).getImage();
+		btnNewButton_20.setIcon(new ImageIcon(chips));
 		btnNewButton_20.addActionListener(new ActionListener() {
 			public void actionPerformed(ActionEvent e) {
 				
@@ -1114,7 +1128,7 @@ Junk_Food piza=prod.j_food[0];
 				    optionPane.setMessage(new Object[] { "Select a value: ", friid });
 				    optionPane.setMessageType(JOptionPane.QUESTION_MESSAGE);
 				    optionPane.setOptionType(JOptionPane.OK_CANCEL_OPTION);
-				    JDialog dialog = optionPane.createDialog(parent,"\u05E4\u05E1\u05D8\u05D4");
+				    JDialog dialog = optionPane.createDialog(parent,"\u05E6'\u05D9\u05E4\u05E1");
 				    dialog.setSize(500, 300);
 				    dialog.setVisible(true);
 				    
@@ -1125,10 +1139,17 @@ Junk_Food piza=prod.j_food[0];
 				
 			}
 		});
-		btnNewButton_20.setBounds(230, 11, 100, 100);
+	
 		Junk_Food_page.add(btnNewButton_20);
 		
-		JButton btnNewButton_21 = new JButton("\u05E1\u05D5\u05E9\u05D9");
+		JButton btnNewButton_21 = new JButton("");
+		btnNewButton_21.setToolTipText("\u05E1\u05D5\u05E9\u05D9");
+		btnNewButton_21.setBounds(340, 11, 100, 100);
+		/*
+		Image foo1= new ImageIcon(this.getClass().getResource("/159059408251378162.png")).getImage();
+		add_new_food_Button.setIcon(new ImageIcon(foo1));*/
+		Image sushi= new ImageIcon(this.getClass().getResource("/sushi100.jpg")).getImage();
+		btnNewButton_21.setIcon(new ImageIcon(sushi));
 		btnNewButton_21.addActionListener(new ActionListener() {
 			public void actionPerformed(ActionEvent e) {
 				
@@ -1163,7 +1184,7 @@ Junk_Food piza=prod.j_food[0];
 				    optionPane.setMessage(new Object[] { "Select a value: ", susiid });
 				    optionPane.setMessageType(JOptionPane.QUESTION_MESSAGE);
 				    optionPane.setOptionType(JOptionPane.OK_CANCEL_OPTION);
-				    JDialog dialog = optionPane.createDialog(parent,"\u05E4\u05E1\u05D8\u05D4");
+				    JDialog dialog = optionPane.createDialog(parent,"\u05E1\u05D5\u05E9\u05D9");
 				    dialog.setSize(500, 300);
 				    dialog.setVisible(true);
 				    
@@ -1174,7 +1195,6 @@ Junk_Food piza=prod.j_food[0];
 				
 			}
 		});
-		btnNewButton_21.setBounds(340, 11, 100, 100);
 		Junk_Food_page.add(btnNewButton_21);
 		
 		JButton btnNewButton_32 = new JButton("\u05D7\u05D6\u05D5\u05E8");
@@ -1202,7 +1222,11 @@ Junk_Food piza=prod.j_food[0];
 		frame.getContentPane().add(Meat_Fish_Dai_page, "name_31571261321900");
 		Meat_Fish_Dai_page.setLayout(null);
 		
-		JButton btnNewButton_22 = new JButton("\u05E2\u05D5\u05E3 \u05E6\u05DC\u05D5\u05D9");
+		JButton btnNewButton_22 = new JButton("");
+		btnNewButton_22.setToolTipText("\u05E2\u05D5\u05E3 \u05E6\u05DC\u05D5\u05D9");
+		btnNewButton_22.setBounds(10, 11, 100, 100);
+		Image chik= new ImageIcon(this.getClass().getResource("/chicken.jpg")).getImage();
+		btnNewButton_22.setIcon(new ImageIcon(chik));
 		btnNewButton_22.addActionListener(new ActionListener() {
 			public void actionPerformed(ActionEvent e) {
 				
@@ -1237,7 +1261,7 @@ Junk_Food piza=prod.j_food[0];
 				    optionPane.setMessage(new Object[] { "Select a value: ", r_chicid });
 				    optionPane.setMessageType(JOptionPane.QUESTION_MESSAGE);
 				    optionPane.setOptionType(JOptionPane.OK_CANCEL_OPTION);
-				    JDialog dialog = optionPane.createDialog(parent,"\u05E4\u05E1\u05D8\u05D4");
+				    JDialog dialog = optionPane.createDialog(parent,"\u05E2\u05D5\u05E3 \u05E6\u05DC\u05D5\u05D9");
 				    dialog.setSize(500, 300);
 				    dialog.setVisible(true);
 				    
@@ -1248,7 +1272,7 @@ Junk_Food piza=prod.j_food[0];
 				
 			}
 		});
-		btnNewButton_22.setBounds(10, 11, 100, 100);
+		
 		Meat_Fish_Dai_page.add(btnNewButton_22);
 		
 		JButton btnNewButton_23 = new JButton("\u05D1\u05E7\u05E8 \u05DE\u05D8\u05D5\u05D2\u05DF");
@@ -1286,7 +1310,7 @@ Junk_Food piza=prod.j_food[0];
 				    optionPane.setMessage(new Object[] { "Select a value: ", r_beefid });
 				    optionPane.setMessageType(JOptionPane.QUESTION_MESSAGE);
 				    optionPane.setOptionType(JOptionPane.OK_CANCEL_OPTION);
-				    JDialog dialog = optionPane.createDialog(parent,"\u05E4\u05E1\u05D8\u05D4");
+				    JDialog dialog = optionPane.createDialog(parent,"\u05D1\u05E7\u05E8 \u05DE\u05D8\u05D5\u05D2\u05DF");
 				    dialog.setSize(500, 300);
 				    dialog.setVisible(true);
 				    
@@ -1335,7 +1359,7 @@ Junk_Food piza=prod.j_food[0];
 				    optionPane.setMessage(new Object[] { "Select a value: ", r_duckid });
 				    optionPane.setMessageType(JOptionPane.QUESTION_MESSAGE);
 				    optionPane.setOptionType(JOptionPane.OK_CANCEL_OPTION);
-				    JDialog dialog = optionPane.createDialog(parent,"\u05E4\u05E1\u05D8\u05D4");
+				    JDialog dialog = optionPane.createDialog(parent,"\u05D1\u05E8\u05D5\u05D5\u05D6 \u05E6\u05DC\u05D5\u05D9");
 				    dialog.setSize(500, 300);
 				    dialog.setVisible(true);
 				    
@@ -1386,7 +1410,7 @@ Junk_Food piza=prod.j_food[0];
 				    optionPane.setMessage(new Object[] { "Select a value: ", r_lampid });
 				    optionPane.setMessageType(JOptionPane.QUESTION_MESSAGE);
 				    optionPane.setOptionType(JOptionPane.OK_CANCEL_OPTION);
-				    JDialog dialog = optionPane.createDialog(parent,"\u05E4\u05E1\u05D8\u05D4");
+				    JDialog dialog = optionPane.createDialog(parent,"\u05DB\u05D1\u05E9 \u05E6\u05DC\u05D5\u05D9");
 				    dialog.setSize(500, 300);
 				    dialog.setVisible(true);
 				    
@@ -1436,7 +1460,7 @@ Junk_Food piza=prod.j_food[0];
 				    optionPane.setMessage(new Object[] { "Select a value: ", r_tilid });
 				    optionPane.setMessageType(JOptionPane.QUESTION_MESSAGE);
 				    optionPane.setOptionType(JOptionPane.OK_CANCEL_OPTION);
-				    JDialog dialog = optionPane.createDialog(parent,"\u05E4\u05E1\u05D8\u05D4");
+				    JDialog dialog = optionPane.createDialog(parent,"\u05D3\u05D2 \u05D0\u05DE\u05E0\u05D5\u05DF \u05E6\u05DC\u05D5\u05D9");
 				    dialog.setSize(500, 300);
 				    dialog.setVisible(true);
 				    
@@ -1486,7 +1510,7 @@ Junk_Food piza=prod.j_food[0];
 				    optionPane.setMessage(new Object[] { "Select a value: ", r_salmid });
 				    optionPane.setMessageType(JOptionPane.QUESTION_MESSAGE);
 				    optionPane.setOptionType(JOptionPane.OK_CANCEL_OPTION);
-				    JDialog dialog = optionPane.createDialog(parent,"\u05E4\u05E1\u05D8\u05D4");
+				    JDialog dialog = optionPane.createDialog(parent,"\u05E1\u05DC\u05DE\u05D5\u05DF \u05DE\u05D1\u05D5\u05E9\u05DC");
 				    dialog.setSize(500, 300);
 				    dialog.setVisible(true);
 				    
@@ -1536,7 +1560,7 @@ Junk_Food piza=prod.j_food[0];
 				    optionPane.setMessage(new Object[] { "Select a value: ", r_tunaid });
 				    optionPane.setMessageType(JOptionPane.QUESTION_MESSAGE);
 				    optionPane.setOptionType(JOptionPane.OK_CANCEL_OPTION);
-				    JDialog dialog = optionPane.createDialog(parent,"\u05E4\u05E1\u05D8\u05D4");
+				    JDialog dialog = optionPane.createDialog(parent,"\u05D8\u05D5\u05E0\u05D4 \u05E9\u05DE\u05D5\u05E8\u05D9\u05DD");
 				    dialog.setSize(500, 300);
 				    dialog.setVisible(true);
 				    
@@ -1586,7 +1610,7 @@ Junk_Food piza=prod.j_food[0];
 				    optionPane.setMessage(new Object[] { "Select a value: ", a_cheeid });
 				    optionPane.setMessageType(JOptionPane.QUESTION_MESSAGE);
 				    optionPane.setOptionType(JOptionPane.OK_CANCEL_OPTION);
-				    JDialog dialog = optionPane.createDialog(parent,"\u05E4\u05E1\u05D8\u05D4");
+				    JDialog dialog = optionPane.createDialog(parent,"\u05D2\u05D1\u05D9\u05E0\u05D4 \u05D0\u05DE\u05E8\u05D9\u05E7\u05D0\u05D9\u05EA");
 				    dialog.setSize(500, 300);
 				    dialog.setVisible(true);
 				    
@@ -1636,7 +1660,7 @@ Junk_Food piza=prod.j_food[0];
 				    optionPane.setMessage(new Object[] { "Select a value: ", cotegeid });
 				    optionPane.setMessageType(JOptionPane.QUESTION_MESSAGE);
 				    optionPane.setOptionType(JOptionPane.OK_CANCEL_OPTION);
-				    JDialog dialog = optionPane.createDialog(parent,"\u05E4\u05E1\u05D8\u05D4");
+				    JDialog dialog = optionPane.createDialog(parent,"\u05E7\u05D5\u05B9\u05D8\u05B6\u05D2'");
 				    dialog.setSize(500, 300);
 				    dialog.setVisible(true);
 				    
@@ -3714,6 +3738,7 @@ Junk_Food piza=prod.j_food[0];
 		
 		JButton back_Button_3 = new JButton("\u05D7\u05D6\u05E8\u05D4");
 		back_Button_3.setBounds(747, 482, 89, 23);
+		
 		back_Button_3.addActionListener(new ActionListener() {
 			public void actionPerformed(ActionEvent e) {
 				dry_food_page.setVisible(false);
@@ -3724,7 +3749,12 @@ Junk_Food piza=prod.j_food[0];
 		});
 		dry_food_page.setLayout(null);
 		dry_food_page.add(back_Button_3);
-JButton button_food_3 = new JButton("\u05DC\u05D7\u05DD \u05E9\u05D7\u05D5\u05E8");
+JButton button_food_3 = new JButton("");
+button_food_3.setToolTipText("\u05DC\u05D7\u05DD \u05E9\u05D7\u05D5\u05E8");
+button_food_3.setBounds(230, 11, 100, 100);
+Image bbrad= new ImageIcon(this.getClass().getResource("/bbrad.jpg")).getImage();
+button_food_3.setIcon(new ImageIcon(bbrad));
+
 button_food_3.addActionListener(new ActionListener() {
 	public void actionPerformed(ActionEvent e) {
 		
@@ -3759,7 +3789,7 @@ button_food_3.addActionListener(new ActionListener() {
 		    optionPane.setMessage(new Object[] { "Select a value: ", lehemslid });
 		    optionPane.setMessageType(JOptionPane.QUESTION_MESSAGE);
 		    optionPane.setOptionType(JOptionPane.OK_CANCEL_OPTION);
-		    JDialog dialog = optionPane.createDialog(parent,"\u05E4\u05E1\u05D8\u05D4");
+		    JDialog dialog = optionPane.createDialog(parent,"\u05DC\u05D7\u05DD \u05E9\u05D7\u05D5\u05E8");
 		    dialog.setSize(500, 300);
 		    dialog.setVisible(true);
 		    
@@ -3772,7 +3802,11 @@ button_food_3.addActionListener(new ActionListener() {
 });
 button_food_3.setBounds(230, 11, 100, 100);
 dry_food_page.add(button_food_3);
-JButton button_food_4 = new JButton("\u05D0\u05D5\u05E8\u05D6");
+JButton button_food_4 = new JButton("");
+button_food_4.setToolTipText("\u05D0\u05D5\u05E8\u05D6");
+button_food_4.setBounds(340, 11, 100, 100);
+Image rise= new ImageIcon(this.getClass().getResource("/rise.jpg")).getImage();
+button_food_4.setIcon(new ImageIcon(rise));
 button_food_4.addActionListener(new ActionListener() {
 	public void actionPerformed(ActionEvent e) {
 		
@@ -3808,7 +3842,7 @@ button_food_4.addActionListener(new ActionListener() {
 		    optionPane.setMessage(new Object[] { "Select a value: ", risid });
 		    optionPane.setMessageType(JOptionPane.QUESTION_MESSAGE);
 		    optionPane.setOptionType(JOptionPane.OK_CANCEL_OPTION);
-		    JDialog dialog = optionPane.createDialog(parent,"\u05E4\u05E1\u05D8\u05D4");
+		    JDialog dialog = optionPane.createDialog(parent,"\u05D0\u05D5\u05E8\u05D6");
 		    dialog.setSize(500, 300);
 		    dialog.setVisible(true);
 		    
@@ -3819,9 +3853,14 @@ button_food_4.addActionListener(new ActionListener() {
 		
 	}
 });
-button_food_4.setBounds(340, 11, 100, 100);
+
 dry_food_page.add(button_food_4);
-JButton button_food_5 = new JButton("\u05E7\u05D5\u05E1\u05E7\u05D5\u05E1");
+JButton button_food_5 = new JButton("");
+button_food_5.setToolTipText("\u05E7\u05D5\u05E1\u05E7\u05D5\u05E1");
+button_food_5.setBounds(450, 11, 100, 100);
+Image kuskus= new ImageIcon(this.getClass().getResource("/kuskus.jpg")).getImage();
+button_food_5.setIcon(new ImageIcon(kuskus));
+
 button_food_5.addActionListener(new ActionListener() {
 	public void actionPerformed(ActionEvent e) {
 		
@@ -3857,7 +3896,7 @@ button_food_5.addActionListener(new ActionListener() {
 		    optionPane.setMessage(new Object[] { "Select a value: ", cusid });
 		    optionPane.setMessageType(JOptionPane.QUESTION_MESSAGE);
 		    optionPane.setOptionType(JOptionPane.OK_CANCEL_OPTION);
-		    JDialog dialog = optionPane.createDialog(parent,"\u05E4\u05E1\u05D8\u05D4");
+		    JDialog dialog = optionPane.createDialog(parent,"\u05E7\u05D5\u05E1\u05E7\u05D5\u05E1");
 		    dialog.setSize(500, 300);
 		    dialog.setVisible(true);
 		    
@@ -3868,9 +3907,13 @@ button_food_5.addActionListener(new ActionListener() {
 		
 	}
 });
-button_food_5.setBounds(450, 11, 100, 100);
+
 dry_food_page.add(button_food_5);
-JButton button_food_2 = new JButton("\u05E4\u05E1\u05D8\u05D4");
+JButton button_food_2 = new JButton("");
+button_food_2.setToolTipText("\u05E4\u05E1\u05D8\u05D4");
+button_food_2.setBounds(120, 11, 100, 100);
+Image pasta= new ImageIcon(this.getClass().getResource("/pasta.jpg")).getImage();
+button_food_2.setIcon(new ImageIcon(pasta));
 button_food_2.addActionListener(new ActionListener() {
 	public void actionPerformed(ActionEvent e) {
 
@@ -3916,11 +3959,14 @@ button_food_2.addActionListener(new ActionListener() {
 		   
 	}
 });
-button_food_2.setBounds(120, 11, 100, 100);
+
 dry_food_page.add(button_food_2);
 
-JButton button_food_1 = new JButton("\u05DC\u05D7\u05DD \u05DC\u05D1\u05DF");
+JButton button_food_1 = new JButton("");
+button_food_1.setToolTipText("\u05DC\u05D7\u05DD \u05DC\u05D1\u05DF");
 button_food_1.setBounds(10, 11, 100, 100);
+Image wbrad= new ImageIcon(this.getClass().getResource("/w_Brad.jpg")).getImage();
+button_food_1.setIcon(new ImageIcon(wbrad));
 button_food_1.addActionListener(new ActionListener() {
 	public void actionPerformed(ActionEvent e) {
 		
@@ -4137,8 +4183,6 @@ dry_food_page.add(lblNewLabel_57);
 				
 				lblNewLabel_38.setText("\u05E4\u05D7\u05DE\u05D9\u05DE\u05D5\u05EA:"+Math.floor(eat_s.stats[9]*100)/100);
 				
-				
-				
 				sport_activity_page.setVisible(false);
 			}
 		});
@@ -4181,11 +4225,10 @@ dry_food_page.add(lblNewLabel_57);
 				
 				ate_food_page.setVisible(false);
 		
-				if(eat_s.Get_Status()==1) {
+				if(eat_s.Get_Status_cal()) {
 				lblNewLabel_9.setText( "\u05E7\u05DC\u05D5\u05E8\u05D9\u05D5\u05EA: " +Math.floor(eat_s.stats[0]*100)/100 );
-				}else {lblNewLabel_9.setText( "\u05E7\u05DC\u05D5\u05E8\u05D9\u05D5\u05EA: " +Math.floor(eat_s.stats[0]*100)/100 );
 				lblNewLabel_9.setForeground(Color.RED);
-				}
+				}else {lblNewLabel_9.setText( "\u05E7\u05DC\u05D5\u05E8\u05D9\u05D5\u05EA: " +Math.floor(eat_s.stats[0]*100)/100 );}
 				lblNewLabel_20.setText("\u05E0\u05EA\u05E8\u05D0\u05DF: "+Math.floor(eat_s.stats[3]*100)/100);
 			
 				lblNewLabel_20_1.setText("\u05D7\u05DC\u05D1\u05D5\u05E0\u05D9\u05DD: "+Math.floor(eat_s.stats[1]*100)/100);
@@ -4196,15 +4239,7 @@ dry_food_page.add(lblNewLabel_57);
 				
 				lblNewLabel_38.setText("\u05E4\u05D7\u05DE\u05D9\u05DE\u05D5\u05EA: "+Math.floor(eat_s.stats[9]*100)/100);
 				
-				
-				
-				
-				
-				
 				Private_User_page.setVisible(true);
-				
-				
-				
 			}
 		});
 		btnNewButton_13.setBounds(747, 482, 89, 23);
