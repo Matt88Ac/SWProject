@@ -189,7 +189,7 @@ public class main_windows {
 				// Set the label to be drawn
 				vegid.setLabelTable(position);
 				    optionPane.setMessage(new Object[] { "Select a value: ", vegid });
-				    optionPane.setMessageType(JOptionPane.QUESTION_MESSAGE);
+				    optionPane.setMessageType(JOptionPane.PLAIN_MESSAGE);
 				    optionPane.setOptionType(JOptionPane.OK_CANCEL_OPTION);
 				    JDialog dialog = optionPane.createDialog(parent,"\u05E2\u05D2\u05D1\u05E0\u05D9\u05D4");
 				    dialog.setSize(500, 300);
@@ -239,7 +239,7 @@ public class main_windows {
 				// Set the label to be drawn
 				vegid.setLabelTable(position);
 				    optionPane.setMessage(new Object[] { "Select a value: ", vegid });
-				    optionPane.setMessageType(JOptionPane.QUESTION_MESSAGE);
+				    optionPane.setMessageType(JOptionPane.PLAIN_MESSAGE);
 				    optionPane.setOptionType(JOptionPane.OK_CANCEL_OPTION);
 				    JDialog dialog = optionPane.createDialog(parent,"\u05DE\u05DC\u05E4\u05E4\u05D5\u05DF");
 				    dialog.setSize(500, 300);
@@ -290,7 +290,7 @@ public class main_windows {
 				// Set the label to be drawn
 				vegid.setLabelTable(position);
 				    optionPane.setMessage(new Object[] { "Select a value: ", vegid });
-				    optionPane.setMessageType(JOptionPane.QUESTION_MESSAGE);
+				    optionPane.setMessageType(JOptionPane.PLAIN_MESSAGE);
 				    optionPane.setOptionType(JOptionPane.OK_CANCEL_OPTION);
 				    JDialog dialog = optionPane.createDialog(parent,"\u05D2\u05D6\u05E8");
 				    dialog.setSize(500, 300);
@@ -341,7 +341,7 @@ public class main_windows {
 				// Set the label to be drawn
 				vegid.setLabelTable(position);
 				    optionPane.setMessage(new Object[] { "Select a value: ", vegid });
-				    optionPane.setMessageType(JOptionPane.QUESTION_MESSAGE);
+				    optionPane.setMessageType(JOptionPane.PLAIN_MESSAGE);
 				    optionPane.setOptionType(JOptionPane.OK_CANCEL_OPTION);
 				    JDialog dialog = optionPane.createDialog(parent,"\u05D1\u05E6\u05DC \u05D0\u05D3\u05D5\u05DD");
 				    dialog.setSize(500, 300);
@@ -392,7 +392,7 @@ public class main_windows {
 				// Set the label to be drawn
 				vegid.setLabelTable(position);
 				    optionPane.setMessage(new Object[] { "Select a value: ", vegid });
-				    optionPane.setMessageType(JOptionPane.QUESTION_MESSAGE);
+				    optionPane.setMessageType(JOptionPane.PLAIN_MESSAGE);
 				    optionPane.setOptionType(JOptionPane.OK_CANCEL_OPTION);
 				    JDialog dialog = optionPane.createDialog(parent,"\u05D1\u05E6\u05DC");
 				    dialog.setSize(500, 300);
@@ -443,7 +443,7 @@ public class main_windows {
 				// Set the label to be drawn
 				vegid.setLabelTable(position);
 				    optionPane.setMessage(new Object[] { "Select a value: ", vegid });
-				    optionPane.setMessageType(JOptionPane.QUESTION_MESSAGE);
+				    optionPane.setMessageType(JOptionPane.PLAIN_MESSAGE);
 				    optionPane.setOptionType(JOptionPane.OK_CANCEL_OPTION);
 				    JDialog dialog = optionPane.createDialog(parent,"\u05D1\u05E6\u05DC \u05D9\u05E8\u05D5\u05E7");
 				    dialog.setSize(500, 300);
@@ -494,7 +494,7 @@ public class main_windows {
 				// Set the label to be drawn
 				vegid.setLabelTable(position);
 				    optionPane.setMessage(new Object[] { "Select a value: ", vegid });
-				    optionPane.setMessageType(JOptionPane.QUESTION_MESSAGE);
+				    optionPane.setMessageType(JOptionPane.PLAIN_MESSAGE);
 				    optionPane.setOptionType(JOptionPane.OK_CANCEL_OPTION);
 				    JDialog dialog = optionPane.createDialog(parent,"\u05EA\u05E4\u05D5\u05D7 \u05E2\u05E5");
 				    dialog.setSize(500, 300);
@@ -545,7 +545,7 @@ public class main_windows {
 				// Set the label to be drawn
 				vegid.setLabelTable(position);
 				    optionPane.setMessage(new Object[] { "Select a value: ", vegid });
-				    optionPane.setMessageType(JOptionPane.QUESTION_MESSAGE);
+				    optionPane.setMessageType(JOptionPane.PLAIN_MESSAGE);
 				    optionPane.setOptionType(JOptionPane.OK_CANCEL_OPTION);
 				    JDialog dialog = optionPane.createDialog(parent,"\u05DB\u05E8\u05D5\u05D1");
 				    dialog.setSize(500, 300);
@@ -596,7 +596,7 @@ public class main_windows {
 				// Set the label to be drawn
 				vegid.setLabelTable(position);
 				    optionPane.setMessage(new Object[] { "Select a value: ", vegid });
-				    optionPane.setMessageType(JOptionPane.QUESTION_MESSAGE);
+				    optionPane.setMessageType(JOptionPane.PLAIN_MESSAGE);
 				    optionPane.setOptionType(JOptionPane.OK_CANCEL_OPTION);
 				    JDialog dialog = optionPane.createDialog(parent,"\u05E4\u05E1\u05D8\u05D4");
 				    dialog.setSize(500, 300);
@@ -647,7 +647,7 @@ public class main_windows {
 				// Set the label to be drawn
 				vegid.setLabelTable(position);
 				    optionPane.setMessage(new Object[] { "Select a value: ", vegid });
-				    optionPane.setMessageType(JOptionPane.QUESTION_MESSAGE);
+				    optionPane.setMessageType(JOptionPane.PLAIN_MESSAGE);
 				    optionPane.setOptionType(JOptionPane.OK_CANCEL_OPTION);
 				    JDialog dialog = optionPane.createDialog(parent,"\u05D3\u05DC\u05E2\u05EA");
 				    dialog.setSize(500, 300);
@@ -698,7 +698,7 @@ public class main_windows {
 				// Set the label to be drawn
 				vegid.setLabelTable(position);
 				    optionPane.setMessage(new Object[] { "Select a value: ", vegid });
-				    optionPane.setMessageType(JOptionPane.QUESTION_MESSAGE);
+				    optionPane.setMessageType(JOptionPane.PLAIN_MESSAGE);
 				    optionPane.setOptionType(JOptionPane.OK_CANCEL_OPTION);
 				    JDialog dialog = optionPane.createDialog(parent,"\u05E9\u05D5\u05DD");
 				    dialog.setSize(500, 300);
@@ -749,7 +749,7 @@ public class main_windows {
 				// Set the label to be drawn
 				vegid.setLabelTable(position);
 				    optionPane.setMessage(new Object[] { "Select a value: ", vegid });
-				    optionPane.setMessageType(JOptionPane.QUESTION_MESSAGE);
+				    optionPane.setMessageType(JOptionPane.PLAIN_MESSAGE);
 				    optionPane.setOptionType(JOptionPane.OK_CANCEL_OPTION);
 				    JDialog dialog = optionPane.createDialog(parent,"\u05D1\u05D8\u05D8\u05D4");
 				    dialog.setSize(500, 300);
@@ -800,7 +800,7 @@ public class main_windows {
 				// Set the label to be drawn
 				vegid.setLabelTable(position);
 				    optionPane.setMessage(new Object[] { "Select a value: ", vegid });
-				    optionPane.setMessageType(JOptionPane.QUESTION_MESSAGE);
+				    optionPane.setMessageType(JOptionPane.PLAIN_MESSAGE);
 				    optionPane.setOptionType(JOptionPane.OK_CANCEL_OPTION);
 				    JDialog dialog = optionPane.createDialog(parent,"\u05D1\u05E0\u05E0\u05D4");
 				    dialog.setSize(500, 300);
@@ -851,7 +851,7 @@ public class main_windows {
 				// Set the label to be drawn
 				vegid.setLabelTable(position);
 				    optionPane.setMessage(new Object[] { "Select a value: ", vegid });
-				    optionPane.setMessageType(JOptionPane.QUESTION_MESSAGE);
+				    optionPane.setMessageType(JOptionPane.PLAIN_MESSAGE);
 				    optionPane.setOptionType(JOptionPane.OK_CANCEL_OPTION);
 				    JDialog dialog = optionPane.createDialog(parent,"\u05DE\u05DC\u05D5\u05DF");
 				    dialog.setSize(500, 300);
@@ -902,7 +902,7 @@ public class main_windows {
 				// Set the label to be drawn
 				vegid.setLabelTable(position);
 				    optionPane.setMessage(new Object[] { "Select a value: ", vegid });
-				    optionPane.setMessageType(JOptionPane.QUESTION_MESSAGE);
+				    optionPane.setMessageType(JOptionPane.PLAIN_MESSAGE);
 				    optionPane.setOptionType(JOptionPane.OK_CANCEL_OPTION);
 				    JDialog dialog = optionPane.createDialog(parent,"\u05EA\u05E4\u05D5\u05D6");
 				    dialog.setSize(500, 300);
@@ -953,7 +953,7 @@ public class main_windows {
 				// Set the label to be drawn
 				vegid.setLabelTable(position);
 				    optionPane.setMessage(new Object[] { "Select a value: ", vegid });
-				    optionPane.setMessageType(JOptionPane.QUESTION_MESSAGE);
+				    optionPane.setMessageType(JOptionPane.PLAIN_MESSAGE);
 				    optionPane.setOptionType(JOptionPane.OK_CANCEL_OPTION);
 				    JDialog dialog = optionPane.createDialog(parent,"\u05D0\u05E0\u05E0\u05E1");
 				    dialog.setSize(500, 300);
@@ -1021,7 +1021,7 @@ Junk_Food piza=prod.j_food[0];
 				// Set the label to be drawn
 				pizid.setLabelTable(position);
 				    optionPane.setMessage(new Object[] { "Select a value: ", pizid });
-				    optionPane.setMessageType(JOptionPane.QUESTION_MESSAGE);
+				    optionPane.setMessageType(JOptionPane.PLAIN_MESSAGE);
 				    optionPane.setOptionType(JOptionPane.OK_CANCEL_OPTION);
 				    JDialog dialog = optionPane.createDialog(parent,"\u05E4\u05D9\u05E6\u05D4");
 				    dialog.setSize(500, 300);
@@ -1075,7 +1075,7 @@ Junk_Food piza=prod.j_food[0];
 				// Set the label to be drawn
 				burid.setLabelTable(position);
 				    optionPane.setMessage(new Object[] { "Select a value: ", burid });
-				    optionPane.setMessageType(JOptionPane.QUESTION_MESSAGE);
+				    optionPane.setMessageType(JOptionPane.PLAIN_MESSAGE);
 				    optionPane.setOptionType(JOptionPane.OK_CANCEL_OPTION);
 				    JDialog dialog = optionPane.createDialog(parent,"\u05D4\u05DE\u05D1\u05D5\u05E8\u05D2\u05E8");
 				    dialog.setSize(500, 300);
@@ -1128,7 +1128,7 @@ Junk_Food piza=prod.j_food[0];
 				// Set the label to be drawn
 				friid.setLabelTable(position);
 				    optionPane.setMessage(new Object[] { "Select a value: ", friid });
-				    optionPane.setMessageType(JOptionPane.QUESTION_MESSAGE);
+				    optionPane.setMessageType(JOptionPane.PLAIN_MESSAGE);
 				    optionPane.setOptionType(JOptionPane.OK_CANCEL_OPTION);
 				    JDialog dialog = optionPane.createDialog(parent,"\u05E6'\u05D9\u05E4\u05E1");
 				    dialog.setSize(500, 300);
@@ -1184,7 +1184,7 @@ Junk_Food piza=prod.j_food[0];
 				// Set the label to be drawn
 				susiid.setLabelTable(position);
 				    optionPane.setMessage(new Object[] { "Select a value: ", susiid });
-				    optionPane.setMessageType(JOptionPane.QUESTION_MESSAGE);
+				    optionPane.setMessageType(JOptionPane.PLAIN_MESSAGE);
 				    optionPane.setOptionType(JOptionPane.OK_CANCEL_OPTION);
 				    JDialog dialog = optionPane.createDialog(parent,"\u05E1\u05D5\u05E9\u05D9");
 				    dialog.setSize(500, 300);
@@ -1261,7 +1261,7 @@ Junk_Food piza=prod.j_food[0];
 				// Set the label to be drawn
 				r_chicid.setLabelTable(position);
 				    optionPane.setMessage(new Object[] { "Select a value: ", r_chicid });
-				    optionPane.setMessageType(JOptionPane.QUESTION_MESSAGE);
+				    optionPane.setMessageType(JOptionPane.PLAIN_MESSAGE);
 				    optionPane.setOptionType(JOptionPane.OK_CANCEL_OPTION);
 				    JDialog dialog = optionPane.createDialog(parent,"\u05E2\u05D5\u05E3 \u05E6\u05DC\u05D5\u05D9");
 				    dialog.setSize(500, 300);
@@ -1277,7 +1277,12 @@ Junk_Food piza=prod.j_food[0];
 		
 		Meat_Fish_Dai_page.add(btnNewButton_22);
 		
-		JButton btnNewButton_23 = new JButton("\u05D1\u05E7\u05E8 \u05DE\u05D8\u05D5\u05D2\u05DF");
+		JButton btnNewButton_23 = new JButton("");
+		btnNewButton_23.setToolTipText("\u05D1\u05E7\u05E8 \u05DE\u05D8\u05D5\u05D2\u05DF");
+		btnNewButton_23.setBounds(120, 11, 100, 100);
+		Image beef= new ImageIcon(this.getClass().getResource("/beef  roast.jpg")).getImage();
+		btnNewButton_23.setIcon(new ImageIcon(beef));
+		
 		btnNewButton_23.addActionListener(new ActionListener() {
 			public void actionPerformed(ActionEvent e) {
 				
@@ -1310,7 +1315,7 @@ Junk_Food piza=prod.j_food[0];
 				// Set the label to be drawn
 				r_beefid.setLabelTable(position);
 				    optionPane.setMessage(new Object[] { "Select a value: ", r_beefid });
-				    optionPane.setMessageType(JOptionPane.QUESTION_MESSAGE);
+				    optionPane.setMessageType(JOptionPane.PLAIN_MESSAGE);
 				    optionPane.setOptionType(JOptionPane.OK_CANCEL_OPTION);
 				    JDialog dialog = optionPane.createDialog(parent,"\u05D1\u05E7\u05E8 \u05DE\u05D8\u05D5\u05D2\u05DF");
 				    dialog.setSize(500, 300);
@@ -1324,10 +1329,14 @@ Junk_Food piza=prod.j_food[0];
 				
 			}
 		});
-		btnNewButton_23.setBounds(120, 11, 100, 100);
+		
 		Meat_Fish_Dai_page.add(btnNewButton_23);
 		
-		JButton btnNewButton_24 = new JButton("\u05D1\u05E8\u05D5\u05D5\u05D6 \u05E6\u05DC\u05D5\u05D9");
+		JButton btnNewButton_24 = new JButton("");
+		btnNewButton_24.setToolTipText("\u05D1\u05E8\u05D5\u05D5\u05D6 \u05E6\u05DC\u05D5\u05D9");
+		btnNewButton_24.setBounds(230, 11, 100, 100);
+		Image duck= new ImageIcon(this.getClass().getResource("/roast-duck.jpg")).getImage();
+		btnNewButton_24.setIcon(new ImageIcon(duck));
 		btnNewButton_24.addActionListener(new ActionListener() {
 			public void actionPerformed(ActionEvent e) {
 				Meat_Fish_Dai r_duck=prod.MFD_food[2];
@@ -1359,7 +1368,7 @@ Junk_Food piza=prod.j_food[0];
 				// Set the label to be drawn
 				r_duckid.setLabelTable(position);
 				    optionPane.setMessage(new Object[] { "Select a value: ", r_duckid });
-				    optionPane.setMessageType(JOptionPane.QUESTION_MESSAGE);
+				    optionPane.setMessageType(JOptionPane.PLAIN_MESSAGE);
 				    optionPane.setOptionType(JOptionPane.OK_CANCEL_OPTION);
 				    JDialog dialog = optionPane.createDialog(parent,"\u05D1\u05E8\u05D5\u05D5\u05D6 \u05E6\u05DC\u05D5\u05D9");
 				    dialog.setSize(500, 300);
@@ -1374,10 +1383,14 @@ Junk_Food piza=prod.j_food[0];
 				
 			}
 		});
-		btnNewButton_24.setBounds(230, 11, 100, 100);
+		
 		Meat_Fish_Dai_page.add(btnNewButton_24);
 		
-		JButton btnNewButton_25 = new JButton("\u05DB\u05D1\u05E9 \u05E6\u05DC\u05D5\u05D9");
+		JButton btnNewButton_25 = new JButton("");
+		btnNewButton_25.setToolTipText("\u05DB\u05D1\u05E9 \u05E6\u05DC\u05D5\u05D9");
+		btnNewButton_25.setBounds(340, 11, 100, 100);
+		Image ship= new ImageIcon(this.getClass().getResource("/lamb-and-mutton-roast.jpg")).getImage();
+		btnNewButton_25.setIcon(new ImageIcon(ship));
 		btnNewButton_25.addActionListener(new ActionListener() {
 			public void actionPerformed(ActionEvent e) {
 				
@@ -1410,7 +1423,7 @@ Junk_Food piza=prod.j_food[0];
 				// Set the label to be drawn
 				r_lampid.setLabelTable(position);
 				    optionPane.setMessage(new Object[] { "Select a value: ", r_lampid });
-				    optionPane.setMessageType(JOptionPane.QUESTION_MESSAGE);
+				    optionPane.setMessageType(JOptionPane.PLAIN_MESSAGE);
 				    optionPane.setOptionType(JOptionPane.OK_CANCEL_OPTION);
 				    JDialog dialog = optionPane.createDialog(parent,"\u05DB\u05D1\u05E9 \u05E6\u05DC\u05D5\u05D9");
 				    dialog.setSize(500, 300);
@@ -1424,10 +1437,14 @@ Junk_Food piza=prod.j_food[0];
 				
 			}
 		});
-		btnNewButton_25.setBounds(340, 11, 100, 100);
+		
 		Meat_Fish_Dai_page.add(btnNewButton_25);
 		
-		JButton btnNewButton_26 = new JButton("\u05D3\u05D2 \u05D0\u05DE\u05E0\u05D5\u05DF \u05E6\u05DC\u05D5\u05D9");
+		JButton btnNewButton_26 = new JButton("");
+		btnNewButton_26.setToolTipText("\u05D3\u05D2 \u05D0\u05DE\u05E0\u05D5\u05DF \u05E6\u05DC\u05D5\u05D9");
+		btnNewButton_26.setBounds(450, 11, 100, 100);
+		Image amnon= new ImageIcon(this.getClass().getResource("/amnon-roast.jpg")).getImage();
+		btnNewButton_26.setIcon(new ImageIcon(amnon));
 		btnNewButton_26.addActionListener(new ActionListener() {
 			public void actionPerformed(ActionEvent e) {
 				
@@ -1460,7 +1477,7 @@ Junk_Food piza=prod.j_food[0];
 				// Set the label to be drawn
 				r_tilid.setLabelTable(position);
 				    optionPane.setMessage(new Object[] { "Select a value: ", r_tilid });
-				    optionPane.setMessageType(JOptionPane.QUESTION_MESSAGE);
+				    optionPane.setMessageType(JOptionPane.PLAIN_MESSAGE);
 				    optionPane.setOptionType(JOptionPane.OK_CANCEL_OPTION);
 				    JDialog dialog = optionPane.createDialog(parent,"\u05D3\u05D2 \u05D0\u05DE\u05E0\u05D5\u05DF \u05E6\u05DC\u05D5\u05D9");
 				    dialog.setSize(500, 300);
@@ -1474,10 +1491,15 @@ Junk_Food piza=prod.j_food[0];
 				
 			}
 		});
-		btnNewButton_26.setBounds(450, 11, 100, 100);
+		
 		Meat_Fish_Dai_page.add(btnNewButton_26);
 		
-		JButton btnNewButton_27 = new JButton("\u05E1\u05DC\u05DE\u05D5\u05DF \u05DE\u05D1\u05D5\u05E9\u05DC");
+		JButton btnNewButton_27 = new JButton("");
+		btnNewButton_27.setToolTipText("\u05E1\u05DC\u05DE\u05D5\u05DF \u05DE\u05D1\u05D5\u05E9\u05DC");
+		btnNewButton_27.setBounds(560, 11, 100, 100);
+		Image salsmon= new ImageIcon(this.getClass().getResource("/salmon.jpg")).getImage();
+		btnNewButton_27.setIcon(new ImageIcon(salsmon));
+		
 		btnNewButton_27.addActionListener(new ActionListener() {
 			public void actionPerformed(ActionEvent e) {
 				
@@ -1510,7 +1532,7 @@ Junk_Food piza=prod.j_food[0];
 				// Set the label to be drawn
 				r_salmid.setLabelTable(position);
 				    optionPane.setMessage(new Object[] { "Select a value: ", r_salmid });
-				    optionPane.setMessageType(JOptionPane.QUESTION_MESSAGE);
+				    optionPane.setMessageType(JOptionPane.PLAIN_MESSAGE);
 				    optionPane.setOptionType(JOptionPane.OK_CANCEL_OPTION);
 				    JDialog dialog = optionPane.createDialog(parent,"\u05E1\u05DC\u05DE\u05D5\u05DF \u05DE\u05D1\u05D5\u05E9\u05DC");
 				    dialog.setSize(500, 300);
@@ -1524,10 +1546,15 @@ Junk_Food piza=prod.j_food[0];
 				
 			}
 		});
-		btnNewButton_27.setBounds(560, 11, 106, 100);
+		
 		Meat_Fish_Dai_page.add(btnNewButton_27);
 		
-		JButton btnNewButton_28 = new JButton("\u05D8\u05D5\u05E0\u05D4 \u05E9\u05DE\u05D5\u05E8\u05D9\u05DD");
+		JButton btnNewButton_28 = new JButton("");
+		btnNewButton_28.setToolTipText("\u05D8\u05D5\u05E0\u05D4 \u05E9\u05DE\u05D5\u05E8\u05D9\u05DD");
+		btnNewButton_28.setBounds(676, 11, 100, 100);
+		Image tuna= new ImageIcon(this.getClass().getResource("/Tuna.jpg")).getImage();
+		btnNewButton_28.setIcon(new ImageIcon(tuna));
+		
 		btnNewButton_28.addActionListener(new ActionListener() {
 			public void actionPerformed(ActionEvent e) {
 				
@@ -1560,7 +1587,7 @@ Junk_Food piza=prod.j_food[0];
 				// Set the label to be drawn
 				r_tunaid.setLabelTable(position);
 				    optionPane.setMessage(new Object[] { "Select a value: ", r_tunaid });
-				    optionPane.setMessageType(JOptionPane.QUESTION_MESSAGE);
+				    optionPane.setMessageType(JOptionPane.PLAIN_MESSAGE);
 				    optionPane.setOptionType(JOptionPane.OK_CANCEL_OPTION);
 				    JDialog dialog = optionPane.createDialog(parent,"\u05D8\u05D5\u05E0\u05D4 \u05E9\u05DE\u05D5\u05E8\u05D9\u05DD");
 				    dialog.setSize(500, 300);
@@ -1574,10 +1601,15 @@ Junk_Food piza=prod.j_food[0];
 				
 			}
 		});
-		btnNewButton_28.setBounds(676, 11, 100, 100);
+		
 		Meat_Fish_Dai_page.add(btnNewButton_28);
 		
-		JButton btnNewButton_29 = new JButton("\u05D2\u05D1\u05D9\u05E0\u05D4 \u05D0\u05DE\u05E8\u05D9\u05E7\u05D0\u05D9\u05EA");
+		JButton btnNewButton_29 = new JButton("");
+		btnNewButton_29.setToolTipText("\u05D2\u05D1\u05D9\u05E0\u05D4 \u05D0\u05DE\u05E8\u05D9\u05E7\u05D0\u05D9\u05EA");
+		btnNewButton_29.setBounds(10, 122, 100, 100);
+		Image chees= new ImageIcon(this.getClass().getResource("/american-cheese.jpg")).getImage();
+		btnNewButton_29.setIcon(new ImageIcon(chees));
+		
 		btnNewButton_29.addActionListener(new ActionListener() {
 			public void actionPerformed(ActionEvent e) {
 				
@@ -1610,7 +1642,7 @@ Junk_Food piza=prod.j_food[0];
 				// Set the label to be drawn
 				a_cheeid.setLabelTable(position);
 				    optionPane.setMessage(new Object[] { "Select a value: ", a_cheeid });
-				    optionPane.setMessageType(JOptionPane.QUESTION_MESSAGE);
+				    optionPane.setMessageType(JOptionPane.PLAIN_MESSAGE);
 				    optionPane.setOptionType(JOptionPane.OK_CANCEL_OPTION);
 				    JDialog dialog = optionPane.createDialog(parent,"\u05D2\u05D1\u05D9\u05E0\u05D4 \u05D0\u05DE\u05E8\u05D9\u05E7\u05D0\u05D9\u05EA");
 				    dialog.setSize(500, 300);
@@ -1624,10 +1656,15 @@ Junk_Food piza=prod.j_food[0];
 				
 			}
 		});
-		btnNewButton_29.setBounds(10, 122, 117, 100);
+		
 		Meat_Fish_Dai_page.add(btnNewButton_29);
 		
-		JButton btnNewButton_30 = new JButton("\u05E7\u05D5\u05B9\u05D8\u05B6\u05D2'");
+		JButton btnNewButton_30 = new JButton("");
+		btnNewButton_30.setToolTipText("\u05E7\u05D5\u05B9\u05D8\u05B6\u05D2'");
+		btnNewButton_30.setBounds(120, 122, 100, 100);
+		Image kotg= new ImageIcon(this.getClass().getResource("/koteg.jpg")).getImage();
+		btnNewButton_30.setIcon(new ImageIcon(kotg));
+		
 		btnNewButton_30.addActionListener(new ActionListener() {
 			public void actionPerformed(ActionEvent e) {
 				
@@ -1660,8 +1697,9 @@ Junk_Food piza=prod.j_food[0];
 				// Set the label to be drawn
 				cotegeid.setLabelTable(position);
 				    optionPane.setMessage(new Object[] { "Select a value: ", cotegeid });
-				    optionPane.setMessageType(JOptionPane.QUESTION_MESSAGE);
+				    optionPane.setMessageType(JOptionPane.PLAIN_MESSAGE);
 				    optionPane.setOptionType(JOptionPane.OK_CANCEL_OPTION);
+
 				    JDialog dialog = optionPane.createDialog(parent,"\u05E7\u05D5\u05B9\u05D8\u05B6\u05D2'");
 				    dialog.setSize(500, 300);
 				    dialog.setVisible(true);
@@ -1674,7 +1712,7 @@ Junk_Food piza=prod.j_food[0];
 				
 			}
 		});
-		btnNewButton_30.setBounds(137, 122, 100, 100);
+		
 		Meat_Fish_Dai_page.add(btnNewButton_30);
 		
 	
@@ -1720,7 +1758,7 @@ Junk_Food piza=prod.j_food[0];
 				// Set the label to be drawn
 				stepss.setLabelTable(position1);
 				    optionPane.setMessage(new Object[] { "Select a value: ", stepss });
-				    optionPane.setMessageType(JOptionPane.QUESTION_MESSAGE);
+				    optionPane.setMessageType(JOptionPane.PLAIN_MESSAGE);
 				    optionPane.setOptionType(JOptionPane.OK_CANCEL_OPTION);
 				    JDialog dialog = optionPane.createDialog(parent,"\u05DE\u05E1 \u05E6\u05E2\u05D3\u05D9\u05DD");
 				    dialog.setSize(800, 300);
@@ -1785,7 +1823,7 @@ Junk_Food piza=prod.j_food[0];
 				// Set the label to be drawn
 				stepss.setLabelTable(position1);
 				    optionPane.setMessage(new Object[] { "Select a value: ", stepss });
-				    optionPane.setMessageType(JOptionPane.QUESTION_MESSAGE);
+				    optionPane.setMessageType(JOptionPane.PLAIN_MESSAGE);
 				    optionPane.setOptionType(JOptionPane.OK_CANCEL_OPTION);
 				    JDialog dialog = optionPane.createDialog(parent,"\u05E7\u05DC\u05E8\u05D9\u05D5\u05EA");
 				    dialog.setSize(500, 300);
@@ -3789,7 +3827,7 @@ button_food_3.addActionListener(new ActionListener() {
 		// Set the label to be drawn
 		lehemslid.setLabelTable(position);
 		    optionPane.setMessage(new Object[] { "Select a value: ", lehemslid });
-		    optionPane.setMessageType(JOptionPane.QUESTION_MESSAGE);
+		    optionPane.setMessageType(JOptionPane.PLAIN_MESSAGE);
 		    optionPane.setOptionType(JOptionPane.OK_CANCEL_OPTION);
 		    JDialog dialog = optionPane.createDialog(parent,"\u05DC\u05D7\u05DD \u05E9\u05D7\u05D5\u05E8");
 		    dialog.setSize(500, 300);
@@ -3842,7 +3880,7 @@ button_food_4.addActionListener(new ActionListener() {
 		// Set the label to be drawn
 		risid.setLabelTable(position);
 		    optionPane.setMessage(new Object[] { "Select a value: ", risid });
-		    optionPane.setMessageType(JOptionPane.QUESTION_MESSAGE);
+		    optionPane.setMessageType(JOptionPane.PLAIN_MESSAGE);
 		    optionPane.setOptionType(JOptionPane.OK_CANCEL_OPTION);
 		    JDialog dialog = optionPane.createDialog(parent,"\u05D0\u05D5\u05E8\u05D6");
 		    dialog.setSize(500, 300);
@@ -3896,7 +3934,7 @@ button_food_5.addActionListener(new ActionListener() {
 		// Set the label to be drawn
 		cusid.setLabelTable(position);
 		    optionPane.setMessage(new Object[] { "Select a value: ", cusid });
-		    optionPane.setMessageType(JOptionPane.QUESTION_MESSAGE);
+		    optionPane.setMessageType(JOptionPane.PLAIN_MESSAGE);
 		    optionPane.setOptionType(JOptionPane.OK_CANCEL_OPTION);
 		    JDialog dialog = optionPane.createDialog(parent,"\u05E7\u05D5\u05E1\u05E7\u05D5\u05E1");
 		    dialog.setSize(500, 300);
@@ -3948,7 +3986,7 @@ button_food_2.addActionListener(new ActionListener() {
 		// Set the label to be drawn
 		lehemslid.setLabelTable(position);
 		    optionPane.setMessage(new Object[] { "Select a value: ", lehemslid });
-		    optionPane.setMessageType(JOptionPane.QUESTION_MESSAGE);
+		    optionPane.setMessageType(JOptionPane.PLAIN_MESSAGE);
 		    optionPane.setOptionType(JOptionPane.OK_CANCEL_OPTION);
 		    JDialog dialog = optionPane.createDialog(parent,"\u05E4\u05E1\u05D8\u05D4");
 		    dialog.setSize(500, 300);
@@ -4000,7 +4038,7 @@ button_food_1.addActionListener(new ActionListener() {
 		// Set the label to be drawn
 		lehemslid.setLabelTable(position);
 		    optionPane.setMessage(new Object[] { "Select a value: ", lehemslid });
-		    optionPane.setMessageType(JOptionPane.QUESTION_MESSAGE);
+		    optionPane.setMessageType(JOptionPane.PLAIN_MESSAGE);
 		    optionPane.setOptionType(JOptionPane.OK_CANCEL_OPTION);
 		    JDialog dialog = optionPane.createDialog(parent,"\u05DC\u05D7\u05DD \u05DC\u05D1\u05DF");
 		    dialog.setSize(500, 300);
