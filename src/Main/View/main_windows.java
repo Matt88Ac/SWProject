@@ -1794,7 +1794,7 @@ Junk_Food piza=prod.j_food[0];
 				    use.Burned_Calories(Double.valueOf(stepss.getValue()));
 				
 				
-			}
+			} //*
 		});
 		btnNewButton_11.setBounds(118, 11, 100, 100);
 		sport_activity_page.add(btnNewButton_11);
