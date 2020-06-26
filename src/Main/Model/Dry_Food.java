@@ -1,4 +1,4 @@
-package Main;
+package Main.Model;
 
 public class Dry_Food {
     private String Name;

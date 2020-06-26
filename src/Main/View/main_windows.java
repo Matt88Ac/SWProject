@@ -1,4 +1,6 @@
-package Main;
+package Main.View;
+import Main.Controller.*;
+import Main.Model.*;
 
 import java.awt.*;
 import javax.swing.JFrame;

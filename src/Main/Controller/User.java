@@ -1,4 +1,6 @@
-package Main;
+package Main.Controller;
+
+import Main.Model.Product;
 
 import java.io.BufferedReader;
 import java.io.File;

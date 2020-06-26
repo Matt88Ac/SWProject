@@ -1,5 +1,4 @@
-package Main;
-import java.util.ArrayList;
+package Main.Model;
 
 public class Product {
     public Dry_Food[] d_food = null;

@@ -1,4 +1,4 @@
-package Main;
+package Main.Model;
 
 public class Meat_Fish_Dai {
     private String Name;

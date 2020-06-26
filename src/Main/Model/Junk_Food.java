@@ -1,4 +1,5 @@
-package Main;
+package Main.Model;
+
 
 public class Junk_Food {
     private String Name;

@@ -1,4 +1,7 @@
-package Main;
+package Main.Model;
+
+
+import Main.Controller.Private_User;
 
 import java.time.LocalDateTime;
 

@@ -1,4 +1,7 @@
-package Main;
+package Main.Model;
+
+
+import Main.Controller.Private_User;
 
 public class Ads {
    private Product Local_Options = new Product(false);

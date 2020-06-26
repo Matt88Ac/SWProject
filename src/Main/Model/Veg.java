@@ -1,4 +1,4 @@
-package Main;
+package Main.Model;
 
 public class Veg {
     private String Name;

@@ -1,4 +1,6 @@
-package Main;
+package Main.Controller;
+
+import Main.Model.Product;
 
 import java.time.LocalDate;
 

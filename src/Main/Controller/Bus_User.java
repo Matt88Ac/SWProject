@@ -1,8 +1,8 @@
-package Main;
+package Main.Controller;
 
 import java.io.IOException;
 
-public class Bus_User extends User{
+public class Bus_User extends User {
 
     private String company;
     private String country;
