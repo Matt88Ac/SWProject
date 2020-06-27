@@ -157,6 +157,10 @@ public class main_windows {
 		veg_page.add(btnNewButton_33);
 		
 		JButton btnNewButton_34 = new JButton("\u05E2\u05D2\u05D1\u05E0\u05D9\u05D4");
+		btnNewButton_34.setToolTipText("\u05E2\u05D2\u05D1\u05E0\u05D9\u05D4");
+		btnNewButton_34.setBounds(10, 11, 100, 100);
+		
+		
 		btnNewButton_34.addActionListener(new ActionListener() {
 			public void actionPerformed(ActionEvent e) {
 				
@@ -203,9 +207,12 @@ public class main_windows {
 				
 			}
 		});
-		btnNewButton_34.setBounds(10, 11, 100, 100);
+		
 		veg_page.add(btnNewButton_34);
 		JButton button = new JButton("\u05DE\u05DC\u05E4\u05E4\u05D5\u05DF");
+		button.setToolTipText("\u05DE\u05DC\u05E4\u05E4\u05D5\u05DF");
+		button.setBounds(120, 11, 100, 100);
+		
 		button.addActionListener(new ActionListener() {
 			public void actionPerformed(ActionEvent e) {
 				
@@ -253,10 +260,13 @@ public class main_windows {
 				
 			}
 		});
-		button.setBounds(120, 11, 100, 100);
+	
 		veg_page.add(button);
 		
 		JButton button_1 = new JButton("\u05D2\u05D6\u05E8");
+		button_1.setToolTipText("\u05D2\u05D6\u05E8");
+		button_1.setBounds(230, 11, 100, 100);
+		
 		button_1.addActionListener(new ActionListener() {
 			public void actionPerformed(ActionEvent e) {
 				
@@ -304,10 +314,13 @@ public class main_windows {
 				
 			}
 		});
-		button_1.setBounds(230, 11, 100, 100);
+	
 		veg_page.add(button_1);
 		
 		JButton button_2 = new JButton("\u05D1\u05E6\u05DC \u05D0\u05D3\u05D5\u05DD");
+		button_2.setToolTipText("\u05D1\u05E6\u05DC \u05D0\u05D3\u05D5\u05DD");
+		button_2.setBounds(340, 11, 100, 100);
+		
 		button_2.addActionListener(new ActionListener() {
 			public void actionPerformed(ActionEvent e) {
 				
@@ -355,10 +368,13 @@ public class main_windows {
 				
 			}
 		});
-		button_2.setBounds(340, 11, 100, 100);
+	
 		veg_page.add(button_2);
 		
 		JButton button_3 = new JButton("\u05D1\u05E6\u05DC");
+		button_3.setToolTipText("\u05D1\u05E6\u05DC");
+		button_3.setBounds(450, 11, 100, 100);
+		
 		button_3.addActionListener(new ActionListener() {
 			public void actionPerformed(ActionEvent e) {
 				
@@ -406,10 +422,13 @@ public class main_windows {
 				
 			}
 		});
-		button_3.setBounds(450, 11, 100, 100);
+
 		veg_page.add(button_3);
 		
 		JButton button_4 = new JButton("\u05D1\u05E6\u05DC \u05D9\u05E8\u05D5\u05E7");
+		button_4.setToolTipText("\u05D1\u05E6\u05DC \u05D9\u05E8\u05D5\u05E7");
+		button_4.setBounds(560, 11, 100, 100);
+		
 		button_4.addActionListener(new ActionListener() {
 			public void actionPerformed(ActionEvent e) {
 				
@@ -457,10 +476,13 @@ public class main_windows {
 				
 			}
 		});
-		button_4.setBounds(560, 11, 100, 100);
+
 		veg_page.add(button_4);
 		
 		JButton button_5 = new JButton("\u05EA\u05E4\u05D5\u05D7 \u05E2\u05E5");
+		button_5.setToolTipText("\u05EA\u05E4\u05D5\u05D7 \u05E2\u05E5");
+		button_5.setBounds(670, 11, 100, 100);
+		
 		button_5.addActionListener(new ActionListener() {
 			public void actionPerformed(ActionEvent e) {
 				
@@ -508,10 +530,13 @@ public class main_windows {
 				
 			}
 		});
-		button_5.setBounds(670, 11, 100, 100);
+
 		veg_page.add(button_5);
 		
 		JButton button_6 = new JButton("\u05DB\u05E8\u05D5\u05D1");
+		button_6.setToolTipText("\u05DB\u05E8\u05D5\u05D1");
+		button_6.setBounds(10, 122, 100, 100);
+		
 		button_6.addActionListener(new ActionListener() {
 			public void actionPerformed(ActionEvent e) {
 				
@@ -559,10 +584,13 @@ public class main_windows {
 				
 			}
 		});
-		button_6.setBounds(10, 122, 100, 100);
+
 		veg_page.add(button_6);
 		
 		JButton button_7 = new JButton("\u05D7\u05E6\u05D9\u05DC");
+		button_7.setToolTipText("\u05D7\u05E6\u05D9\u05DC");
+		button_7.setBounds(120, 122, 100, 100);
+		
 		button_7.addActionListener(new ActionListener() {
 			public void actionPerformed(ActionEvent e) {
 				
@@ -610,10 +638,13 @@ public class main_windows {
 				
 			}
 		});
-		button_7.setBounds(120, 122, 100, 100);
+
 		veg_page.add(button_7);
 		
 		JButton button_8 = new JButton("\u05D3\u05DC\u05E2\u05EA");
+		button_8.setToolTipText("\u05D3\u05DC\u05E2\u05EA");
+		button_8.setBounds(230, 122, 100, 100);
+		
 		button_8.addActionListener(new ActionListener() {
 			public void actionPerformed(ActionEvent e) {
 				
@@ -661,10 +692,13 @@ public class main_windows {
 				
 			}
 		});
-		button_8.setBounds(230, 122, 100, 100);
+
 		veg_page.add(button_8);
 		
 		JButton button_9 = new JButton("\u05E9\u05D5\u05DD");
+		button_9.setToolTipText("\u05E9\u05D5\u05DD");
+		button_9.setBounds(340, 122, 100, 100);
+		
 		button_9.addActionListener(new ActionListener() {
 			public void actionPerformed(ActionEvent e) {
 				
@@ -712,10 +746,13 @@ public class main_windows {
 				
 			}
 		});
-		button_9.setBounds(340, 122, 100, 100);
+		
 		veg_page.add(button_9);
 		
 		JButton button_10 = new JButton("\u05D1\u05D8\u05D8\u05D4");
+		button_10.setToolTipText("\u05D1\u05D8\u05D8\u05D4");
+		button_10.setBounds(450, 122, 100, 100);
+		
 		button_10.addActionListener(new ActionListener() {
 			public void actionPerformed(ActionEvent e) {
 				
@@ -763,10 +800,13 @@ public class main_windows {
 				
 			}
 		});
-		button_10.setBounds(450, 122, 100, 100);
+	
 		veg_page.add(button_10);
 		
 		JButton button_11 = new JButton("\u05D1\u05E0\u05E0\u05D4");
+		button_11.setToolTipText("\u05D1\u05E0\u05E0\u05D4");
+		button_11.setBounds(560, 122, 100, 100);
+		
 		button_11.addActionListener(new ActionListener() {
 			public void actionPerformed(ActionEvent e) {
 				
@@ -814,10 +854,13 @@ public class main_windows {
 				
 			}
 		});
-		button_11.setBounds(560, 122, 100, 100);
+
 		veg_page.add(button_11);
 		
 		JButton button_12 = new JButton("\u05DE\u05DC\u05D5\u05DF");
+		button_12.setToolTipText("\u05DE\u05DC\u05D5\u05DF");
+		button_12.setBounds(670, 122, 100, 100);
+		
 		button_12.addActionListener(new ActionListener() {
 			public void actionPerformed(ActionEvent e) {
 				
@@ -865,10 +908,13 @@ public class main_windows {
 				
 			}
 		});
-		button_12.setBounds(670, 122, 100, 100);
+	
 		veg_page.add(button_12);
 		
 		JButton button_13 = new JButton("\u05EA\u05E4\u05D5\u05D6");
+		button_13.setToolTipText("\u05EA\u05E4\u05D5\u05D6");
+		button_13.setBounds(10, 234, 100, 100);
+		
 		button_13.addActionListener(new ActionListener() {
 			public void actionPerformed(ActionEvent e) {
 				
@@ -916,10 +962,13 @@ public class main_windows {
 				
 			}
 		});
-		button_13.setBounds(10, 234, 100, 100);
+	
 		veg_page.add(button_13);
 		
 		JButton button_14 = new JButton("\u05D0\u05E0\u05E0\u05E1");
+		button_14.setToolTipText("\u05D0\u05E0\u05E0\u05E1");
+		button_14.setBounds(120, 233, 100, 100);
+		
 		button_14.addActionListener(new ActionListener() {
 			public void actionPerformed(ActionEvent e) {
 				
@@ -967,7 +1016,7 @@ public class main_windows {
 				
 			}
 		});
-		button_14.setBounds(120, 233, 100, 100);
+	
 		veg_page.add(button_14);
 		
 		JLabel lblNewLabel_55 = new JLabel("");
@@ -992,7 +1041,7 @@ public class main_windows {
 		btnNewButton_18.addActionListener(new ActionListener() {
 			public void actionPerformed(ActionEvent e) {
 				
-Junk_Food piza=prod.j_food[0];
+				Junk_Food piza=prod.j_food[0];
 				
 				JSlider pizid =new JSlider(0,1000,100);
 				pizid.setValue(0);
