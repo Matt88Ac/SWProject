@@ -156,11 +156,11 @@ public class main_windows {
 		btnNewButton_33.setBounds(747, 482, 89, 23);
 		veg_page.add(btnNewButton_33);
 		
-		JButton btnNewButton_34 = new JButton("\u05E2\u05D2\u05D1\u05E0\u05D9\u05D4");
+		JButton btnNewButton_34 = new JButton("");
 		btnNewButton_34.setToolTipText("\u05E2\u05D2\u05D1\u05E0\u05D9\u05D4");
 		btnNewButton_34.setBounds(10, 11, 100, 100);
-		
-		
+		Image agva= new ImageIcon(this.getClass().getResource("/agvaniya.jpg")).getImage();
+		btnNewButton_34.setIcon(new ImageIcon(agva));
 		btnNewButton_34.addActionListener(new ActionListener() {
 			public void actionPerformed(ActionEvent e) {
 				
@@ -209,10 +209,11 @@ public class main_windows {
 		});
 		
 		veg_page.add(btnNewButton_34);
-		JButton button = new JButton("\u05DE\u05DC\u05E4\u05E4\u05D5\u05DF");
+		JButton button = new JButton("");
 		button.setToolTipText("\u05DE\u05DC\u05E4\u05E4\u05D5\u05DF");
 		button.setBounds(120, 11, 100, 100);
-		
+		Image mel= new ImageIcon(this.getClass().getResource("/mlafefon.jpg")).getImage();
+		button.setIcon(new ImageIcon(mel));
 		button.addActionListener(new ActionListener() {
 			public void actionPerformed(ActionEvent e) {
 				
@@ -263,9 +264,11 @@ public class main_windows {
 	
 		veg_page.add(button);
 		
-		JButton button_1 = new JButton("\u05D2\u05D6\u05E8");
+		JButton button_1 = new JButton("");
 		button_1.setToolTipText("\u05D2\u05D6\u05E8");
 		button_1.setBounds(230, 11, 100, 100);
+		Image gez= new ImageIcon(this.getClass().getResource("/gezer.jpg")).getImage();
+		button_1.setIcon(new ImageIcon(gez));
 		
 		button_1.addActionListener(new ActionListener() {
 			public void actionPerformed(ActionEvent e) {
@@ -317,9 +320,11 @@ public class main_windows {
 	
 		veg_page.add(button_1);
 		
-		JButton button_2 = new JButton("\u05D1\u05E6\u05DC \u05D0\u05D3\u05D5\u05DD");
+		JButton button_2 = new JButton("");
 		button_2.setToolTipText("\u05D1\u05E6\u05DC \u05D0\u05D3\u05D5\u05DD");
 		button_2.setBounds(340, 11, 100, 100);
+		Image quoo= new ImageIcon(this.getClass().getResource("/batsal s.jpg")).getImage();
+		button_2.setIcon(new ImageIcon(quoo));
 		
 		button_2.addActionListener(new ActionListener() {
 			public void actionPerformed(ActionEvent e) {
@@ -371,9 +376,11 @@ public class main_windows {
 	
 		veg_page.add(button_2);
 		
-		JButton button_3 = new JButton("\u05D1\u05E6\u05DC");
+		JButton button_3 = new JButton("");
 		button_3.setToolTipText("\u05D1\u05E6\u05DC");
 		button_3.setBounds(450, 11, 100, 100);
+		Image bars= new ImageIcon(this.getClass().getResource("/batsal.jpg")).getImage();
+		button_3.setIcon(new ImageIcon(bars));
 		
 		button_3.addActionListener(new ActionListener() {
 			public void actionPerformed(ActionEvent e) {
@@ -425,9 +432,11 @@ public class main_windows {
 
 		veg_page.add(button_3);
 		
-		JButton button_4 = new JButton("\u05D1\u05E6\u05DC \u05D9\u05E8\u05D5\u05E7");
+		JButton button_4 = new JButton("");
 		button_4.setToolTipText("\u05D1\u05E6\u05DC \u05D9\u05E8\u05D5\u05E7");
 		button_4.setBounds(560, 11, 100, 100);
+		Image gree= new ImageIcon(this.getClass().getResource("/batsal g.jpg")).getImage();
+		button_4.setIcon(new ImageIcon(gree));
 		
 		button_4.addActionListener(new ActionListener() {
 			public void actionPerformed(ActionEvent e) {
@@ -479,9 +488,11 @@ public class main_windows {
 
 		veg_page.add(button_4);
 		
-		JButton button_5 = new JButton("\u05EA\u05E4\u05D5\u05D7 \u05E2\u05E5");
+		JButton button_5 = new JButton("");
 		button_5.setToolTipText("\u05EA\u05E4\u05D5\u05D7 \u05E2\u05E5");
 		button_5.setBounds(670, 11, 100, 100);
+		Image appe= new ImageIcon(this.getClass().getResource("/apples.jpg")).getImage();
+		button_5.setIcon(new ImageIcon(appe));
 		
 		button_5.addActionListener(new ActionListener() {
 			public void actionPerformed(ActionEvent e) {
@@ -533,9 +544,11 @@ public class main_windows {
 
 		veg_page.add(button_5);
 		
-		JButton button_6 = new JButton("\u05DB\u05E8\u05D5\u05D1");
+		JButton button_6 = new JButton("");
 		button_6.setToolTipText("\u05DB\u05E8\u05D5\u05D1");
 		button_6.setBounds(10, 122, 100, 100);
+		Image kru= new ImageIcon(this.getClass().getResource("/kruv.jpg")).getImage();
+		button_6.setIcon(new ImageIcon(kru));
 		
 		button_6.addActionListener(new ActionListener() {
 			public void actionPerformed(ActionEvent e) {
@@ -587,9 +600,11 @@ public class main_windows {
 
 		veg_page.add(button_6);
 		
-		JButton button_7 = new JButton("\u05D7\u05E6\u05D9\u05DC");
+		JButton button_7 = new JButton("");
 		button_7.setToolTipText("\u05D7\u05E6\u05D9\u05DC");
 		button_7.setBounds(120, 122, 100, 100);
+		Image hisi= new ImageIcon(this.getClass().getResource("/hatsil.jpg")).getImage();
+		button_7.setIcon(new ImageIcon(hisi));
 		
 		button_7.addActionListener(new ActionListener() {
 			public void actionPerformed(ActionEvent e) {
@@ -641,9 +656,11 @@ public class main_windows {
 
 		veg_page.add(button_7);
 		
-		JButton button_8 = new JButton("\u05D3\u05DC\u05E2\u05EA");
+		JButton button_8 = new JButton("");
 		button_8.setToolTipText("\u05D3\u05DC\u05E2\u05EA");
 		button_8.setBounds(230, 122, 100, 100);
+		Image dluat= new ImageIcon(this.getClass().getResource("/dlaat.jpg")).getImage();
+		button_8.setIcon(new ImageIcon(dluat));
 		
 		button_8.addActionListener(new ActionListener() {
 			public void actionPerformed(ActionEvent e) {
@@ -695,9 +712,11 @@ public class main_windows {
 
 		veg_page.add(button_8);
 		
-		JButton button_9 = new JButton("\u05E9\u05D5\u05DD");
+		JButton button_9 = new JButton("");
 		button_9.setToolTipText("\u05E9\u05D5\u05DD");
 		button_9.setBounds(340, 122, 100, 100);
+		Image shum= new ImageIcon(this.getClass().getResource("/shum.jpg")).getImage();
+		button_9.setIcon(new ImageIcon(shum));
 		
 		button_9.addActionListener(new ActionListener() {
 			public void actionPerformed(ActionEvent e) {
@@ -749,9 +768,11 @@ public class main_windows {
 		
 		veg_page.add(button_9);
 		
-		JButton button_10 = new JButton("\u05D1\u05D8\u05D8\u05D4");
+		JButton button_10 = new JButton("");
 		button_10.setToolTipText("\u05D1\u05D8\u05D8\u05D4");
 		button_10.setBounds(450, 122, 100, 100);
+		Image batat= new ImageIcon(this.getClass().getResource("/batata.jpg")).getImage();
+		button_10.setIcon(new ImageIcon(batat));
 		
 		button_10.addActionListener(new ActionListener() {
 			public void actionPerformed(ActionEvent e) {
@@ -803,9 +824,11 @@ public class main_windows {
 	
 		veg_page.add(button_10);
 		
-		JButton button_11 = new JButton("\u05D1\u05E0\u05E0\u05D4");
+		JButton button_11 = new JButton("");
 		button_11.setToolTipText("\u05D1\u05E0\u05E0\u05D4");
 		button_11.setBounds(560, 122, 100, 100);
+		Image bana= new ImageIcon(this.getClass().getResource("/banana.jpg")).getImage();
+		button_11.setIcon(new ImageIcon(bana));
 		
 		button_11.addActionListener(new ActionListener() {
 			public void actionPerformed(ActionEvent e) {
@@ -857,9 +880,11 @@ public class main_windows {
 
 		veg_page.add(button_11);
 		
-		JButton button_12 = new JButton("\u05DE\u05DC\u05D5\u05DF");
+		JButton button_12 = new JButton("");
 		button_12.setToolTipText("\u05DE\u05DC\u05D5\u05DF");
 		button_12.setBounds(670, 122, 100, 100);
+		Image melo= new ImageIcon(this.getClass().getResource("/melon.jpg")).getImage();
+		button_12.setIcon(new ImageIcon(melo));
 		
 		button_12.addActionListener(new ActionListener() {
 			public void actionPerformed(ActionEvent e) {
@@ -911,9 +936,11 @@ public class main_windows {
 	
 		veg_page.add(button_12);
 		
-		JButton button_13 = new JButton("\u05EA\u05E4\u05D5\u05D6");
+		JButton button_13 = new JButton("");
 		button_13.setToolTipText("\u05EA\u05E4\u05D5\u05D6");
 		button_13.setBounds(10, 234, 100, 100);
+		Image tupu= new ImageIcon(this.getClass().getResource("/tabuz.jpg")).getImage();
+		button_13.setIcon(new ImageIcon(tupu));
 		
 		button_13.addActionListener(new ActionListener() {
 			public void actionPerformed(ActionEvent e) {
@@ -965,9 +992,11 @@ public class main_windows {
 	
 		veg_page.add(button_13);
 		
-		JButton button_14 = new JButton("\u05D0\u05E0\u05E0\u05E1");
+		JButton button_14 = new JButton("");
 		button_14.setToolTipText("\u05D0\u05E0\u05E0\u05E1");
 		button_14.setBounds(120, 233, 100, 100);
+		Image anas= new ImageIcon(this.getClass().getResource("/ananas.jpg")).getImage();
+		button_14.setIcon(new ImageIcon(anas));
 		
 		button_14.addActionListener(new ActionListener() {
 			public void actionPerformed(ActionEvent e) {
