@@ -278,12 +278,12 @@ public class Eating_Stats {
             BMR = 10*this.users_w + 6.25*this.users_h -5*this.users_age - 161;
         }
 
-        if (BMR*1.2 < this.stats[0]||  this.stats[0] < 0){
-            this.calories = false;
+        if (BMR*1.2 < this.stats[0] ||  this.stats[0] < 0){
+            this.calories = true;
         }
 
         else {
-            this.calories = true;
+            this.calories = false;
         }
     }
 
