@@ -139,7 +139,7 @@ public class main_windows {
 		ate_food_page.setBackground(new Color(201, 114, 54));
 		frame.getContentPane().add(ate_food_page, "name_31670348278500");
 		ate_food_page.setLayout(null);
-		
+		//
 		JPanel veg_page = new JPanel();
 		veg_page.setBackground(new Color(181,255,245));
 		frame.getContentPane().add(veg_page, "name_31411297190200");
