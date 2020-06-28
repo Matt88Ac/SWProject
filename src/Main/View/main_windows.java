@@ -65,6 +65,8 @@ public class main_windows {
 	private JTextField b_country_text_Field;
 	private JTextField b_company_field;
 	private JTextField food_name_text_Field;
+
+	Ads ads = null;
 	Product prod=new Product(false);
 	Private_User use =null;
 	Bus_User bus_user=null;

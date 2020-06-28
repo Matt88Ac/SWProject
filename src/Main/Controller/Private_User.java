@@ -35,7 +35,7 @@ public class Private_User extends User {
         this.City = city;
         this.Country = country;
         this.Gender = gender; // 1 for a female , 0 for a male ;
-        this.Purpose = Purpose;//2 for Gain Weight ,1 for Stay at the same weight ,0 for  lose weight
+        this.Purpose = Purpose;//2 for Gain Weight ,1 for Stay at the same weight ,0 for lose weight
 
     }
 
