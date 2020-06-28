@@ -191,4 +191,20 @@ public class Product {
 
     }
 
+    public Food Get(String kind, int where) throws CloneNotSupportedException {
+        if (kind == "Dry Food"){
+            return (Food) this.d_food[where].clone();
+        }
+
+        else if (kind == "Junk Food"){
+            return (Food) this.j_food[where].clone();
+        }
+
+        else if (kind == "Veg"){
+            return (Food) this.veg_food[where].clone();
+        }
+
+        return (Food) this.MFD_food[where].clone();
+    }
+
 }

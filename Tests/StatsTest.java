@@ -28,13 +28,13 @@ public class StatsTest {
     }
 
     @Test
-    public void Test_Calories(){
-        stats.Ate(product.MFD_food[0]);
-        stats.Ate(product.d_food[0]);
+    public void Test_Calories() throws CloneNotSupportedException {
+        stats.Ate(product.Get("X",0));
+        stats.Ate(product.Get("Dry Food", 0));
 
         Assert.assertEquals(false, stats.Get_Status_cal());
 
-        stats.Ate(product.d_food[0].Calc(6700));
+        stats.Ate(product.Get("Dry Food", 0).Calc(6700));
 
         Assert.assertEquals(true, stats.Get_Status_cal());
 

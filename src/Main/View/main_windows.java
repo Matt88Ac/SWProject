@@ -165,9 +165,14 @@ public class main_windows {
 		btnNewButton_34.setIcon(new ImageIcon(agva));
 		btnNewButton_34.addActionListener(new ActionListener() {
 			public void actionPerformed(ActionEvent e) {
-				
-				Veg veg=prod.veg_food[0];
-				
+
+				Veg veg= null;
+				try {
+					veg = (Veg) prod.Get("Veg", 0);
+				} catch (CloneNotSupportedException ex) {
+					ex.printStackTrace();
+				}
+
 				JSlider vegid =new JSlider(0,1000,100);
 				vegid.setValue(0);
 				JFrame parent = new JFrame();
@@ -218,10 +223,15 @@ public class main_windows {
 		button.setIcon(new ImageIcon(mel));
 		button.addActionListener(new ActionListener() {
 			public void actionPerformed(ActionEvent e) {
-				
-				
-				Veg veg=prod.veg_food[3];
-				
+
+
+				Veg veg= null;
+				try {
+					veg = (Veg) prod.Get("Veg", 3);
+				} catch (CloneNotSupportedException ex) {
+					ex.printStackTrace();
+				}
+
 				JSlider vegid =new JSlider(0,1000,100);
 				vegid.setValue(0);
 				JFrame parent = new JFrame();
@@ -274,10 +284,15 @@ public class main_windows {
 		
 		button_1.addActionListener(new ActionListener() {
 			public void actionPerformed(ActionEvent e) {
-				
-				
-				Veg veg=prod.veg_food[2];
-				
+
+
+				Veg veg= null;
+				try {
+					veg = (Veg) prod.Get("Veg", 2);
+				} catch (CloneNotSupportedException ex) {
+					ex.printStackTrace();
+				}
+
 				JSlider vegid =new JSlider(0,1000,100);
 				vegid.setValue(0);
 				JFrame parent = new JFrame();
@@ -330,10 +345,15 @@ public class main_windows {
 		
 		button_2.addActionListener(new ActionListener() {
 			public void actionPerformed(ActionEvent e) {
-				
-				
-				Veg veg=prod.veg_food[8];
-				
+
+
+				Veg veg= null;
+				try {
+					veg = (Veg) prod.Get("Veg", 8);
+				} catch (CloneNotSupportedException ex) {
+					ex.printStackTrace();
+				}
+
 				JSlider vegid =new JSlider(0,1000,100);
 				vegid.setValue(0);
 				JFrame parent = new JFrame();
@@ -386,10 +406,15 @@ public class main_windows {
 		
 		button_3.addActionListener(new ActionListener() {
 			public void actionPerformed(ActionEvent e) {
-				
-				
-				Veg veg=prod.veg_food[7];
-				
+
+
+				Veg veg= null;
+				try {
+					veg = (Veg) prod.Get("Veg", 7);
+				} catch (CloneNotSupportedException ex) {
+					ex.printStackTrace();
+				}
+
 				JSlider vegid =new JSlider(0,1000,100);
 				vegid.setValue(0);
 				JFrame parent = new JFrame();
@@ -442,10 +467,15 @@ public class main_windows {
 		
 		button_4.addActionListener(new ActionListener() {
 			public void actionPerformed(ActionEvent e) {
-				
-				
-				Veg veg=prod.veg_food[6];
-				
+
+
+				Veg veg= null;
+				try {
+					veg = (Veg) prod.Get("Veg", 6);
+				} catch (CloneNotSupportedException ex) {
+					ex.printStackTrace();
+				}
+
 				JSlider vegid =new JSlider(0,1000,100);
 				vegid.setValue(0);
 				JFrame parent = new JFrame();
@@ -498,10 +528,15 @@ public class main_windows {
 		
 		button_5.addActionListener(new ActionListener() {
 			public void actionPerformed(ActionEvent e) {
-				
-				
-				Veg veg=prod.veg_food[4];
-				
+
+
+				Veg veg= null;
+				try {
+					veg = (Veg) prod.Get("Veg", 4);
+				} catch (CloneNotSupportedException ex) {
+					ex.printStackTrace();
+				}
+
 				JSlider vegid =new JSlider(0,1000,100);
 				vegid.setValue(0);
 				JFrame parent = new JFrame();
@@ -554,10 +589,15 @@ public class main_windows {
 		
 		button_6.addActionListener(new ActionListener() {
 			public void actionPerformed(ActionEvent e) {
-				
-				
-				Veg veg=prod.veg_food[1];
-				
+
+
+				Veg veg= null;
+				try {
+					veg = (Veg) prod.Get("Veg", 1);
+				} catch (CloneNotSupportedException ex) {
+					ex.printStackTrace();
+				}
+
 				JSlider vegid =new JSlider(0,1000,100);
 				vegid.setValue(0);
 				JFrame parent = new JFrame();
@@ -610,10 +650,15 @@ public class main_windows {
 		
 		button_7.addActionListener(new ActionListener() {
 			public void actionPerformed(ActionEvent e) {
-				
-				
-				Veg veg=prod.veg_food[5];
-				
+
+
+				Veg veg= null;
+				try {
+					veg = (Veg) prod.Get("Veg", 5);
+				} catch (CloneNotSupportedException ex) {
+					ex.printStackTrace();
+				}
+
 				JSlider vegid =new JSlider(0,1000,100);
 				vegid.setValue(0);
 				JFrame parent = new JFrame();
@@ -666,10 +711,15 @@ public class main_windows {
 		
 		button_8.addActionListener(new ActionListener() {
 			public void actionPerformed(ActionEvent e) {
-				
-				
-				Veg veg=prod.veg_food[12];
-				
+
+
+				Veg veg= null;
+				try {
+					veg = (Veg) prod.Get("Veg", 12);
+				} catch (CloneNotSupportedException ex) {
+					ex.printStackTrace();
+				}
+
 				JSlider vegid =new JSlider(0,1000,100);
 				vegid.setValue(0);
 				JFrame parent = new JFrame();
@@ -722,10 +772,15 @@ public class main_windows {
 		
 		button_9.addActionListener(new ActionListener() {
 			public void actionPerformed(ActionEvent e) {
-				
-				
-				Veg veg=prod.veg_food[15];
-				
+
+
+				Veg veg= null;
+				try {
+					veg = (Veg) prod.Get("Veg", 15);
+				} catch (CloneNotSupportedException ex) {
+					ex.printStackTrace();
+				}
+
 				JSlider vegid =new JSlider(0,1000,100);
 				vegid.setValue(0);
 				JFrame parent = new JFrame();
@@ -778,10 +833,15 @@ public class main_windows {
 		
 		button_10.addActionListener(new ActionListener() {
 			public void actionPerformed(ActionEvent e) {
-				
-				
-				Veg veg=prod.veg_food[13];
-				
+
+
+				Veg veg= null;
+				try {
+					veg = (Veg) prod.Get("Veg", 13);
+				} catch (CloneNotSupportedException ex) {
+					ex.printStackTrace();
+				}
+
 				JSlider vegid =new JSlider(0,1000,100);
 				vegid.setValue(0);
 				JFrame parent = new JFrame();
@@ -834,10 +894,15 @@ public class main_windows {
 		
 		button_11.addActionListener(new ActionListener() {
 			public void actionPerformed(ActionEvent e) {
-				
-				
-				Veg veg=prod.veg_food[14];
-				
+
+
+				Veg veg= null;
+				try {
+					veg = (Veg) prod.Get("Veg", 14);
+				} catch (CloneNotSupportedException ex) {
+					ex.printStackTrace();
+				}
+
 				JSlider vegid =new JSlider(0,1000,100);
 				vegid.setValue(0);
 				JFrame parent = new JFrame();
@@ -890,10 +955,15 @@ public class main_windows {
 		
 		button_12.addActionListener(new ActionListener() {
 			public void actionPerformed(ActionEvent e) {
-				
-				
-				Veg veg=prod.veg_food[10];
-				
+
+
+				Veg veg= null;
+				try {
+					veg = (Veg) prod.Get("Veg", 10);
+				} catch (CloneNotSupportedException ex) {
+					ex.printStackTrace();
+				}
+
 				JSlider vegid =new JSlider(0,1000,100);
 				vegid.setValue(0);
 				JFrame parent = new JFrame();
@@ -946,10 +1016,15 @@ public class main_windows {
 		
 		button_13.addActionListener(new ActionListener() {
 			public void actionPerformed(ActionEvent e) {
-				
-				
-				Veg veg=prod.veg_food[9];
-				
+
+
+				Veg veg= null;
+				try {
+					veg = (Veg) prod.Get("Veg", 9);
+				} catch (CloneNotSupportedException ex) {
+					ex.printStackTrace();
+				}
+
 				JSlider vegid =new JSlider(0,1000,100);
 				vegid.setValue(0);
 				JFrame parent = new JFrame();
@@ -1002,10 +1077,15 @@ public class main_windows {
 		
 		button_14.addActionListener(new ActionListener() {
 			public void actionPerformed(ActionEvent e) {
-				
-				
-				Veg veg=prod.veg_food[11];
-				
+
+
+				Veg veg= null;
+				try {
+					veg = (Veg) prod.Get("Veg", 11);
+				} catch (CloneNotSupportedException ex) {
+					ex.printStackTrace();
+				}
+
 				JSlider vegid =new JSlider(0,1000,100);
 				vegid.setValue(0);
 				JFrame parent = new JFrame();
@@ -1071,9 +1151,14 @@ public class main_windows {
 		btnNewButton_18.setIcon(new ImageIcon(pizza));
 		btnNewButton_18.addActionListener(new ActionListener() {
 			public void actionPerformed(ActionEvent e) {
-				
-				Junk_Food piza=prod.j_food[0];
-				
+
+				Junk_Food piza= null;
+				try {
+					piza = (Junk_Food) prod.Get("Junk Food", 0);
+				} catch (CloneNotSupportedException ex) {
+					ex.printStackTrace();
+				}
+
 				JSlider pizid =new JSlider(0,1000,100);
 				pizid.setValue(0);
 				JFrame parent = new JFrame();
@@ -1125,9 +1210,14 @@ public class main_windows {
 		
 		btnNewButton_19.addActionListener(new ActionListener() {
 			public void actionPerformed(ActionEvent e) {
-				
-				Junk_Food bur=prod.j_food[1];
-				
+
+				Junk_Food bur= null;
+				try {
+					bur = (Junk_Food) prod.Get("Junk Food", 1);
+				} catch (CloneNotSupportedException ex) {
+					ex.printStackTrace();
+				}
+
 				JSlider burid =new JSlider(0,1000,100);
 				burid.setValue(0);
 				JFrame parent = new JFrame();
@@ -1178,9 +1268,14 @@ public class main_windows {
 		btnNewButton_20.setIcon(new ImageIcon(chips));
 		btnNewButton_20.addActionListener(new ActionListener() {
 			public void actionPerformed(ActionEvent e) {
-				
-				Junk_Food fri=prod.j_food[2];
-				
+
+				Junk_Food fri= null;
+				try {
+					fri = (Junk_Food) prod.Get("Junk Food", 2);
+				} catch (CloneNotSupportedException ex) {
+					ex.printStackTrace();
+				}
+
 				JSlider friid =new JSlider(0,1000,100);
 				friid.setValue(0);
 				JFrame parent = new JFrame();
@@ -1234,9 +1329,14 @@ public class main_windows {
 		btnNewButton_21.setIcon(new ImageIcon(sushi));
 		btnNewButton_21.addActionListener(new ActionListener() {
 			public void actionPerformed(ActionEvent e) {
-				
-				Junk_Food susi=prod.j_food[3];
-				
+
+				Junk_Food susi= null;
+				try {
+					susi = (Junk_Food) prod.Get("Junk Food", 3);
+				} catch (CloneNotSupportedException ex) {
+					ex.printStackTrace();
+				}
+
 				JSlider susiid =new JSlider(0,1000,100);
 				susiid.setValue(0);
 				JFrame parent = new JFrame();
@@ -1311,9 +1411,14 @@ public class main_windows {
 		btnNewButton_22.setIcon(new ImageIcon(chik));
 		btnNewButton_22.addActionListener(new ActionListener() {
 			public void actionPerformed(ActionEvent e) {
-				
-				Meat_Fish_Dai r_chic=prod.MFD_food[1];
-				
+
+				Meat_Fish_Dai r_chic= null;
+				try {
+					r_chic = (Meat_Fish_Dai) prod.Get("x", 1);
+				} catch (CloneNotSupportedException ex) {
+					ex.printStackTrace();
+				}
+
 				JSlider r_chicid =new JSlider(0,1000,100);
 				r_chicid.setValue(0);
 				JFrame parent = new JFrame();
@@ -1365,9 +1470,14 @@ public class main_windows {
 		
 		btnNewButton_23.addActionListener(new ActionListener() {
 			public void actionPerformed(ActionEvent e) {
-				
-				Meat_Fish_Dai r_beef=prod.MFD_food[0];
-				
+
+				Meat_Fish_Dai r_beef= null;
+				try {
+					r_beef = (Meat_Fish_Dai) prod.Get("x", 0);
+				} catch (CloneNotSupportedException ex) {
+					ex.printStackTrace();
+				}
+
 				JSlider r_beefid =new JSlider(0,1000,100);
 				r_beefid.setValue(0);
 				JFrame parent = new JFrame();
@@ -1419,8 +1529,13 @@ public class main_windows {
 		btnNewButton_24.setIcon(new ImageIcon(duck));
 		btnNewButton_24.addActionListener(new ActionListener() {
 			public void actionPerformed(ActionEvent e) {
-				Meat_Fish_Dai r_duck=prod.MFD_food[2];
-				
+				Meat_Fish_Dai r_duck= null;
+				try {
+					r_duck = (Meat_Fish_Dai) prod.Get("x", 2);
+				} catch (CloneNotSupportedException ex) {
+					ex.printStackTrace();
+				}
+
 				JSlider r_duckid =new JSlider(0,1000,100);
 				r_duckid.setValue(0);
 				JFrame parent = new JFrame();
@@ -1473,9 +1588,14 @@ public class main_windows {
 		btnNewButton_25.setIcon(new ImageIcon(ship));
 		btnNewButton_25.addActionListener(new ActionListener() {
 			public void actionPerformed(ActionEvent e) {
-				
-				Meat_Fish_Dai r_lamp=prod.MFD_food[3];
-				
+
+				Meat_Fish_Dai r_lamp= null;
+				try {
+					r_lamp = (Meat_Fish_Dai) prod.Get("x", 3);
+				} catch (CloneNotSupportedException ex) {
+					ex.printStackTrace();
+				}
+
 				JSlider r_lampid =new JSlider(0,1000,100);
 				r_lampid.setValue(0);
 				JFrame parent = new JFrame();
@@ -1527,9 +1647,14 @@ public class main_windows {
 		btnNewButton_26.setIcon(new ImageIcon(amnon));
 		btnNewButton_26.addActionListener(new ActionListener() {
 			public void actionPerformed(ActionEvent e) {
-				
-				Meat_Fish_Dai r_til=prod.MFD_food[4];
-				
+
+				Meat_Fish_Dai r_til= null;
+				try {
+					r_til = (Meat_Fish_Dai) prod.Get("x", 4);
+				} catch (CloneNotSupportedException ex) {
+					ex.printStackTrace();
+				}
+
 				JSlider r_tilid =new JSlider(0,1000,100);
 				r_tilid.setValue(0);
 				JFrame parent = new JFrame();
@@ -1582,9 +1707,14 @@ public class main_windows {
 		
 		btnNewButton_27.addActionListener(new ActionListener() {
 			public void actionPerformed(ActionEvent e) {
-				
-				Meat_Fish_Dai r_salm=prod.MFD_food[4];
-				
+
+				Meat_Fish_Dai r_salm= null;
+				try {
+					r_salm = (Meat_Fish_Dai) prod.Get("x", 4);
+				} catch (CloneNotSupportedException ex) {
+					ex.printStackTrace();
+				}
+
 				JSlider r_salmid =new JSlider(0,1000,100);
 				r_salmid.setValue(0);
 				JFrame parent = new JFrame();
@@ -1637,9 +1767,14 @@ public class main_windows {
 		
 		btnNewButton_28.addActionListener(new ActionListener() {
 			public void actionPerformed(ActionEvent e) {
-				
-				Meat_Fish_Dai r_tuna=prod.MFD_food[6];
-				
+
+				Meat_Fish_Dai r_tuna= null;
+				try {
+					r_tuna = (Meat_Fish_Dai) prod.Get("x", 6);
+				} catch (CloneNotSupportedException ex) {
+					ex.printStackTrace();
+				}
+
 				JSlider r_tunaid =new JSlider(0,1000,100);
 				r_tunaid.setValue(0);
 				JFrame parent = new JFrame();
@@ -1692,9 +1827,14 @@ public class main_windows {
 		
 		btnNewButton_29.addActionListener(new ActionListener() {
 			public void actionPerformed(ActionEvent e) {
-				
-				Meat_Fish_Dai a_chee=prod.MFD_food[7];
-				
+
+				Meat_Fish_Dai a_chee= null;
+				try {
+					a_chee = (Meat_Fish_Dai) prod.Get("x", 7);
+				} catch (CloneNotSupportedException ex) {
+					ex.printStackTrace();
+				}
+
 				JSlider a_cheeid =new JSlider(0,1000,100);
 				a_cheeid.setValue(0);
 				JFrame parent = new JFrame();
@@ -1747,9 +1887,14 @@ public class main_windows {
 		
 		btnNewButton_30.addActionListener(new ActionListener() {
 			public void actionPerformed(ActionEvent e) {
-				
-				Meat_Fish_Dai cotege=prod.MFD_food[8];
-				
+
+				Meat_Fish_Dai cotege= null;
+				try {
+					cotege = (Meat_Fish_Dai) prod.Get("x", 8);
+				} catch (CloneNotSupportedException ex) {
+					ex.printStackTrace();
+				}
+
 				JSlider cotegeid =new JSlider(0,1000,100);
 				cotegeid.setValue(0);
 				JFrame parent = new JFrame();
@@ -3877,9 +4022,14 @@ button_food_3.setIcon(new ImageIcon(bbrad));
 
 button_food_3.addActionListener(new ActionListener() {
 	public void actionPerformed(ActionEvent e) {
-		
-		Dry_Food bl_bra=prod.d_food[0];
-		
+
+		Dry_Food bl_bra= null;
+		try {
+			bl_bra = (Dry_Food) prod.Get("Dry Food", 2);
+		} catch (CloneNotSupportedException ex) {
+			ex.printStackTrace();
+		}
+
 		JSlider lehemslid =new JSlider(0,1000,100);
 		lehemslid.setValue(0);
 		JFrame parent = new JFrame();
@@ -3929,10 +4079,15 @@ Image rise= new ImageIcon(this.getClass().getResource("/rise.jpg")).getImage();
 button_food_4.setIcon(new ImageIcon(rise));
 button_food_4.addActionListener(new ActionListener() {
 	public void actionPerformed(ActionEvent e) {
-		
 
-		Dry_Food ris=prod.d_food[3];
-		
+
+		Dry_Food ris= null;
+		try {
+			ris = (Dry_Food) prod.Get("Dry Food", 3);
+		} catch (CloneNotSupportedException ex) {
+			ex.printStackTrace();
+		}
+
 		JSlider risid=new JSlider(0,1000,100);
 		risid.setValue(0);
 		JFrame parent = new JFrame();
@@ -3983,10 +4138,15 @@ button_food_5.setIcon(new ImageIcon(kuskus));
 
 button_food_5.addActionListener(new ActionListener() {
 	public void actionPerformed(ActionEvent e) {
-		
 
-		Dry_Food cus=prod.d_food[0];
-		
+
+		Dry_Food cus= null;
+		try {
+			cus = (Dry_Food) prod.Get("Dry Food", 4);
+		} catch (CloneNotSupportedException ex) {
+			ex.printStackTrace();
+		}
+
 		JSlider cusid =new JSlider(0,1000,100);
 		cusid.setValue(0);
 		JFrame parent = new JFrame();
@@ -4037,8 +4197,13 @@ button_food_2.setIcon(new ImageIcon(pasta));
 button_food_2.addActionListener(new ActionListener() {
 	public void actionPerformed(ActionEvent e) {
 
-		Dry_Food past=prod.d_food[0];
-		
+		Dry_Food past= null;
+		try {
+			past = (Dry_Food) prod.Get("Dry Food",0);
+		} catch (CloneNotSupportedException ex) {
+			ex.printStackTrace();
+		}
+
 		JSlider lehemslid =new JSlider(0,1000,100);
 		lehemslid.setValue(0);
 		JFrame parent = new JFrame();
@@ -4089,8 +4254,13 @@ Image wbrad= new ImageIcon(this.getClass().getResource("/w_Brad.jpg")).getImage(
 button_food_1.setIcon(new ImageIcon(wbrad));
 button_food_1.addActionListener(new ActionListener() {
 	public void actionPerformed(ActionEvent e) {
-		
-		Dry_Food bra=prod.d_food[1];
+
+		Dry_Food bra= null;
+		try {
+			bra = (Dry_Food) prod.Get("Dry Food", 1);
+		} catch (CloneNotSupportedException ex) {
+			ex.printStackTrace();
+		}
 		JSlider lehemslid =new JSlider(0,1000,100);
 		lehemslid.setValue(0);
 		JFrame parent = new JFrame();
