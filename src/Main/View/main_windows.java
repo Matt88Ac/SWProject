@@ -4834,6 +4834,16 @@ dry_food_page.add(lblNewLabel_57);
 		JButton btnNewButton_42 = new JButton("\u05D4\u05D0\u05D5\u05DB\u05DC \u05E9\u05DC\u05D9");
 		btnNewButton_42.addActionListener(new ActionListener() {
 			public void actionPerformed(ActionEvent e) {
+				
+				JComboBox comboBox = new JComboBox();
+				comboBox.setModel(new DefaultComboBoxModel(use.Get_Names()));
+				
+				
+				comboBox.setToolTipText("...");
+				comboBox.setMaximumRowCount(20);
+				comboBox.setBounds(474, 11, 318, 22);
+				myfood_page.add(comboBox);
+				
 				ate_food_page.setVisible(false);
 				myfood_page.setVisible(true);
 			}
@@ -5323,11 +5333,10 @@ dry_food_page.add(lblNewLabel_57);
 		frame.getContentPane().add(myfood_page, "name_27493486359100");
 		myfood_page.setLayout(null);
 		
-		JComboBox comboBox = new JComboBox();
-		comboBox.setMaximumRowCount(20);
-		comboBox.setBounds(474, 11, 318, 22);
-		myfood_page.add(comboBox);
 		
+		
+		
+			
 		
 		
 		
