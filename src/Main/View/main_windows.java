@@ -66,7 +66,7 @@ public class main_windows {
 	private JTextField b_country_text_Field;
 	private JTextField b_company_field;
 	private JTextField food_name_text_Field;
-
+	JComboBox comboBox=null;
 	Ads ads = null;
 	Product prod=new Product(false);
 	Private_User use =null;
@@ -4386,7 +4386,7 @@ button_food_5.addActionListener(new ActionListener() {
 		} catch (IOException ex) {
 			ex.printStackTrace();
 		}
-		System.out.print(use+"\n");
+	
 		
 	}
 });
@@ -4835,15 +4835,9 @@ dry_food_page.add(lblNewLabel_57);
 		btnNewButton_42.addActionListener(new ActionListener() {
 			public void actionPerformed(ActionEvent e) {
 				
-				JComboBox comboBox = new JComboBox();
+				
 				comboBox.setModel(new DefaultComboBoxModel(use.Get_Names()));
-				
-				
-				comboBox.setToolTipText("...");
-				comboBox.setMaximumRowCount(20);
-				comboBox.setBounds(474, 11, 318, 22);
-				myfood_page.add(comboBox);
-				
+				comboBox.setMaximumRowCount(use.size);
 				ate_food_page.setVisible(false);
 				myfood_page.setVisible(true);
 			}
@@ -5333,7 +5327,85 @@ dry_food_page.add(lblNewLabel_57);
 		frame.getContentPane().add(myfood_page, "name_27493486359100");
 		myfood_page.setLayout(null);
 		
+		JButton btnNewButton_43 = new JButton("\u05D7\u05D6\u05D5\u05E8");
+		btnNewButton_43.addActionListener(new ActionListener() {
+			public void actionPerformed(ActionEvent e) {
+				myfood_page.setVisible(false);
+				ate_food_page.setVisible(true);
+			}
+		});
+		btnNewButton_43.setBounds(747, 482, 89, 23);
+		myfood_page.add(btnNewButton_43);
 		
+		comboBox = new JComboBox();
+		comboBox.setEditable(true);
+		comboBox.setToolTipText("...");
+		
+		comboBox.setBounds(474, 11, 318, 22);
+		myfood_page.add(comboBox);
+		
+		JButton btnNewButton_44 = new JButton("\u05D1\u05D7\u05E8");
+		btnNewButton_44.addActionListener(new ActionListener() {
+			public void actionPerformed(ActionEvent e) {
+				int index=comboBox.getSelectedIndex();
+				if(index<use.size) {
+	
+
+		JSlider cusid =new JSlider(0,1000,100);
+		cusid.setValue(0);
+		JFrame parent = new JFrame();
+		 JOptionPane optionPane = new JOptionPane();
+		 cusid.setMajorTickSpacing(100);
+		 cusid.setMinorTickSpacing(50);
+		 cusid.setPaintTicks(true);
+		 cusid.setPaintLabels(true);
+         
+		// Add positions label in the slider
+		Hashtable position = new Hashtable();
+		position.put(0, new JLabel("0"));
+		position.put(100, new JLabel("100"));
+		position.put(200, new JLabel("200"));
+		position.put(300, new JLabel("300"));
+		position.put(400, new JLabel("400"));
+		position.put(500, new JLabel("500"));
+		position.put(600, new JLabel("600"));
+		position.put(700, new JLabel("700"));
+		position.put(800, new JLabel("800"));
+		position.put(900, new JLabel("900"));
+		position.put(1000, new JLabel("1000"));
+		
+		         
+		// Set the label to be drawn
+		cusid.setLabelTable(position);
+		    optionPane.setMessage(new Object[] { "Select a value: ", cusid });
+		    optionPane.setMessageType(JOptionPane.PLAIN_MESSAGE);
+		    optionPane.setOptionType(JOptionPane.OK_CANCEL_OPTION);
+		    JDialog dialog = optionPane.createDialog(parent, use.my_collection[index].GetName());
+		    dialog.setSize(500, 300);
+		    dialog.setVisible(true);
+		    
+		    //System.out.print(lehemslid.getValue());
+		    //bl_bra=bl_bra.Calc(lehemslid.getValue());
+		try {
+			eat_s.Ate(use.my_collection[index].Calc(cusid.getValue()));
+		} catch (IOException ex) {
+			ex.printStackTrace();
+			}
+				}else {return;}
+					}
+						}
+		);
+		btnNewButton_44.setBounds(638, 482, 89, 23);
+		myfood_page.add(btnNewButton_44);
+		
+		
+		
+		/*JComboBox comboBox = new JComboBox();
+				
+				comboBox.setToolTipText("...");
+				comboBox.setMaximumRowCount(20);
+				comboBox.setBounds(474, 11, 318, 22);
+				myfood_page.add(comboBox);*/
 		
 		
 			
