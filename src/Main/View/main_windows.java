@@ -2105,7 +2105,7 @@ public class main_windows {
 				    dialog.setSize(800, 300);
 				    dialog.setVisible(true);
 				  //  System.out.println(stepss.getValue());
-				    use.Activity(stepss.getValue());
+				    eat_s.Activity(stepss.getValue());
 				
 			}
 		});
@@ -2170,7 +2170,7 @@ public class main_windows {
 				    dialog.setSize(500, 300);
 				    dialog.setVisible(true);
 				    //System.out.println(stepss.getValue());
-				    use.Burned_Calories(Double.valueOf(stepss.getValue()));
+				    eat_s.Burned_Calories(Double.valueOf(stepss.getValue()));
 				
 				
 			}
@@ -4659,17 +4659,35 @@ dry_food_page.add(lblNewLabel_57);
 			public void actionPerformed(ActionEvent e) {
 				Private_User_page.setVisible(true);
 				
+				if(eat_s.Get_Status_cal()) {
 				lblNewLabel_9.setText( "\u05E7\u05DC\u05D5\u05E8\u05D9\u05D5\u05EA: " +Math.floor(eat_s.stats[0]*100)/100 );
+				lblNewLabel_9.setForeground(Color.RED);
+				}else {lblNewLabel_9.setText( "\u05E7\u05DC\u05D5\u05E8\u05D9\u05D5\u05EA: " +Math.floor(eat_s.stats[0]*100)/100 );}
 				
+				if(eat_s.Get_Status_sod()) {
 				lblNewLabel_20.setText("\u05E0\u05EA\u05E8\u05D0\u05DF: "+Math.floor(eat_s.stats[3]*100)/100);
-			
+				lblNewLabel_20.setForeground(Color.RED);
+				}else {lblNewLabel_20.setText("\u05E0\u05EA\u05E8\u05D0\u05DF: "+Math.floor(eat_s.stats[3]*100)/100);}
+				
+				if(eat_s.Get_Status_prot()) {
 				lblNewLabel_20_1.setText("\u05D7\u05DC\u05D1\u05D5\u05E0\u05D9\u05DD: "+Math.floor(eat_s.stats[1]*100)/100);
+				lblNewLabel_20_1.setForeground(Color.RED);
+				}else {lblNewLabel_20_1.setText("\u05D7\u05DC\u05D1\u05D5\u05E0\u05D9\u05DD: "+Math.floor(eat_s.stats[1]*100)/100);}
 				
+				if(eat_s.Get_Status_fat()) {
 				lblNewLabel_20_2.setText("\u05E9\u05D5\u05DE\u05E0\u05D9\u05DD: "+Math.floor(eat_s.stats[4]*100)/100);
+				lblNewLabel_20_2.setForeground(Color.RED);
+				}else {lblNewLabel_20_2.setText("\u05E9\u05D5\u05DE\u05E0\u05D9\u05DD: "+Math.floor(eat_s.stats[4]*100)/100);}
 				
+				if(eat_s.Get_Status_co()) {
 				lblNewLabel_20_3.setText("\u05E7\u05D5\u05DC\u05E1\u05D8\u05E8\u05D5\u05DC: "+Math.floor(eat_s.stats[2]*100)/100);
+				lblNewLabel_20_3.setForeground(Color.RED);
+				}else {lblNewLabel_20_3.setText("\u05E7\u05D5\u05DC\u05E1\u05D8\u05E8\u05D5\u05DC: "+Math.floor(eat_s.stats[2]*100)/100);}
 				
-				lblNewLabel_38.setText("\u05E4\u05D7\u05DE\u05D9\u05DE\u05D5\u05EA:"+Math.floor(eat_s.stats[9]*100)/100);
+				if(eat_s.Get_Status_pah()) {
+				lblNewLabel_38.setText("\u05E4\u05D7\u05DE\u05D9\u05DE\u05D5\u05EA: "+Math.floor(eat_s.stats[9]*100)/100);
+				lblNewLabel_38.setForeground(Color.RED);
+				}else {lblNewLabel_38.setText("\u05E4\u05D7\u05DE\u05D9\u05DE\u05D5\u05EA: "+Math.floor(eat_s.stats[9]*100)/100);}
 				
 				sport_activity_page.setVisible(false);
 			}
