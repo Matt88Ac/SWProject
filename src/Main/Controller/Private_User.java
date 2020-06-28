@@ -96,17 +96,20 @@ public class Private_User extends User {
     private void Extract_Private_Collection() throws IOException {
         String fname = "C:\\data\\food_"  + this.username +" .txt";
         File f1 = new File(fname);
-        f1.createNewFile();
-
+        if(f1.createNewFile()){
+            return;
+        }
 
         String readF = new Scanner(new File(fname)).useDelimiter("\\A").next();
         String splitHere = "\n";
         String[] tokens = readF.split(this.username);
 
+
         int size = tokens.length;
 
         for (int i=0; i<size; i++){
             String[] data = tokens[i].split(splitHere);
+            //this.my_collection[i] = new Food(data[0], )
             
 
         }
