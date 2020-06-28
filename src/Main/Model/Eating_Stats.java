@@ -46,238 +46,8 @@ public class Eating_Stats {
         this.stats[9] +=  food.Get_Detail("Carbo");
         this.stats[10] += food.Get_Detail("Iron");
         this.stats[11] +=  food.Get_Detail("VitC");
-    }
-
-    public void Ate_Dry_food(Dry_Food dry_food){
-        this.stats[0] += dry_food.Get_Detail("Calories");
-        this.stats[1] += dry_food.Get_Detail("Protein");
-        this.stats[2] +=  dry_food.Get_Detail("Coles");
-        this.stats[3] += dry_food.Get_Detail("Salt");
-        this.stats[4] += dry_food.Get_Detail("Fat");
-        this.stats[5] += dry_food.Get_Detail("Sugar");
-        this.stats[6] += dry_food.Get_Detail("Phos");
-        this.stats[7] += dry_food.Get_Detail("Potess");
-        this.stats[8] +=  dry_food.Get_Detail("Mag");
-        this.stats[9] +=  dry_food.Get_Detail("Carbo");
-        this.stats[10] += dry_food.Get_Detail("Iron");
-        this.stats[11] +=  dry_food.Get_Detail("VitC");
 
         this.exeptions_check();
-
-        if(stats[3] >= 2000){
-            this.sod = true;
-        }
-
-        else{
-            this.sod = false;
-        }
-
-        if (stats[1] >= 70){
-            this.prot = true;
-        }
-
-        else{
-            this.prot = false;
-        }
-
-        if (stats[4] > 111){
-            this.fat = true;
-        }
-
-        else{
-            this.fat = false;
-        }
-
-        if (stats[9] > 3*this.users_w){
-            this.pah = true;
-        }
-
-        else{
-            this.pah = false;
-        }
-
-        if( stats[2] > 150){
-            this.col = true;
-        }
-
-        else {
-            this.col = false;
-        }
-
-    }
-
-    public void Ate_Veg(Veg dry_food){
-        this.stats[0] += dry_food.Get_Detail("Calories");
-        this.stats[1] += dry_food.Get_Detail("Protein");
-        this.stats[2] +=  dry_food.Get_Detail("Coles");
-        this.stats[3] += dry_food.Get_Detail("Salt");
-        this.stats[4] += dry_food.Get_Detail("Fat");
-        this.stats[5] += dry_food.Get_Detail("Sugar");
-        this.stats[6] += dry_food.Get_Detail("Phos");
-        this.stats[7] += dry_food.Get_Detail("Potess");
-        this.stats[8] +=  dry_food.Get_Detail("Mag");
-        this.stats[9] +=  dry_food.Get_Detail("Carbo");
-        this.stats[10] += dry_food.Get_Detail("Iron");
-        this.stats[11] +=  dry_food.Get_Detail("VitC");
-
-        this.exeptions_check();
-
-        if(stats[3] >= 2000){
-            this.sod = true;
-        }
-
-        else{
-            this.sod = false;
-        }
-
-        if (stats[1] >= 70){
-            this.prot = true;
-        }
-
-        else{
-            this.prot = false;
-        }
-
-        if (stats[4] > 111){
-            this.fat = true;
-        }
-
-        else{
-            this.fat = false;
-        }
-
-        if (stats[9] > 3*this.users_w){
-            this.pah = true;
-        }
-
-        else{
-            this.pah = false;
-        }
-
-        if( stats[2] > 150){
-            this.col = true;
-        }
-
-        else {
-            this.col = false;
-        }
-
-    }
-
-    public void Ate_Meat_Fish_Dai(Meat_Fish_Dai dry_food){
-        this.stats[0] += dry_food.Get_Detail("Calories");
-        this.stats[1] += dry_food.Get_Detail("Protein");
-        this.stats[2] +=  dry_food.Get_Detail("Coles");
-        this.stats[3] += dry_food.Get_Detail("Salt");
-        this.stats[4] += dry_food.Get_Detail("Fat");
-        this.stats[5] += dry_food.Get_Detail("Sugar");
-        this.stats[6] += dry_food.Get_Detail("Phos");
-        this.stats[7] += dry_food.Get_Detail("Potess");
-        this.stats[8] +=  dry_food.Get_Detail("Mag");
-        this.stats[9] +=  dry_food.Get_Detail("Carbo");
-        this.stats[10] += dry_food.Get_Detail("Iron");
-        this.stats[11] +=  dry_food.Get_Detail("VitC");
-
-        this.exeptions_check();
-
-        if(stats[3] >= 2000){
-            this.sod = true;
-        }
-
-        else{
-            this.sod = false;
-        }
-
-        if (stats[1] >= 70){
-            this.prot = true;
-        }
-
-        else{
-            this.prot = false;
-        }
-
-        if (stats[4] > 111){
-            this.fat = true;
-        }
-
-        else{
-            this.fat = false;
-        }
-
-        if (stats[9] > 3*this.users_w){
-            this.pah = true;
-        }
-
-        else{
-            this.pah = false;
-        }
-
-        if( stats[2] > 150){
-            this.col = true;
-        }
-
-        else {
-            this.col = false;
-        }
-
-    }
-
-
-    public void Ate_Junk_Food(Junk_Food dry_food){
-        this.stats[0] += dry_food.Get_Detail("Calories");
-        this.stats[1] += dry_food.Get_Detail("Protein");
-        this.stats[2] +=  dry_food.Get_Detail("Coles");
-        this.stats[3] += dry_food.Get_Detail("Salt");
-        this.stats[4] += dry_food.Get_Detail("Fat");
-        this.stats[5] += dry_food.Get_Detail("Sugar");
-        this.stats[6] += dry_food.Get_Detail("Phos");
-        this.stats[7] += dry_food.Get_Detail("Potess");
-        this.stats[8] +=  dry_food.Get_Detail("Mag");
-        this.stats[9] +=  dry_food.Get_Detail("Carbo");
-        this.stats[10] += dry_food.Get_Detail("Iron");
-        this.stats[11] +=  dry_food.Get_Detail("VitC");
-
-        this.exeptions_check();
-
-        if(stats[3] >= 2000){
-            this.sod = true;
-        }
-
-        else{
-            this.sod = false;
-        }
-
-        if (stats[1] >= 70){
-            this.prot = true;
-        }
-
-        else{
-            this.prot = false;
-        }
-
-        if (stats[4] > 111){
-            this.fat = true;
-        }
-
-        else{
-            this.fat = false;
-        }
-
-        if (stats[9] > 3*this.users_w){
-            this.pah = true;
-        }
-
-        else{
-            this.pah = false;
-        }
-
-        if( stats[2] > 150){
-            this.col = true;
-        }
-
-        else {
-            this.col = false;
-        }
 
     }
 
@@ -299,6 +69,47 @@ public class Eating_Stats {
 
         else {
             this.calories = false;
+        }
+
+
+        if(stats[3] >= 2000){
+            this.sod = true;
+        }
+
+        else{
+            this.sod = false;
+        }
+
+        if (stats[1] >= 70){
+            this.prot = true;
+        }
+
+        else{
+            this.prot = false;
+        }
+
+        if (stats[4] > 111){
+            this.fat = true;
+        }
+
+        else{
+            this.fat = false;
+        }
+
+        if (stats[9] > 3*this.users_w){
+            this.pah = true;
+        }
+
+        else{
+            this.pah = false;
+        }
+
+        if( stats[2] > 150){
+            this.col = true;
+        }
+
+        else {
+            this.col = false;
         }
     }
 

@@ -29,8 +29,8 @@ public class StatsTest {
 
     @Test
     public void Test_Calories(){
-        stats.Ate_Meat_Fish_Dai(product.MFD_food[0]);
-        stats.Ate_Dry_food(product.d_food[0]);
+        stats.Ate(product.MFD_food[0]);
+        stats.Ate(product.d_food[0]);
 
         Assert.assertEquals(false, stats.Get_Status_cal());
 
