@@ -114,7 +114,7 @@ public class Private_User extends User {
             names[i] = this.my_collection[i].GetName();
         }
 
-        return names;
+        return names.clone();
     }
 
 }
