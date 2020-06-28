@@ -1,6 +1,7 @@
 package Main.Model;
 
-public class Veg {
+public class Veg extends Food{
+   /*
     private String Name;
     private double cal;
     private double prot_g;
@@ -19,13 +20,18 @@ public class Veg {
     private double magnis_mg;
     private double phos_mg;
     private double zinc_mg;
-    private double potassium_mg;
+    private double potassium_mg; */
 
     public Veg(String name, double Cal, double Prot, double Fat, double sug, double carbo, double ofat, double coles,
                double salt, double sib, double water, double vitC, double vitb9, double iro, double calcium,
                double mag, double pho, double zinc, double potas){
 
-        this.Name = name;
+        super(name, Cal, Prot, Fat, sug, carbo,  ofat,  coles, salt,  sib,  water,  vitC,  vitb9,  iro,  calcium,
+         mag,  pho,  zinc,  potas);
+
+
+
+        /*this.Name = name;
         this.cal = Cal;
         this.calcium_mg = calcium;
         this.carbo_g = carbo;
@@ -45,8 +51,12 @@ public class Veg {
         this.iron_mg = iro;
         this.zinc_mg = zinc;
 
+
+         */
+
     }
 
+    /*
     public String GetName(){
         return this.Name;
     }
@@ -133,6 +143,6 @@ public class Veg {
         return this.zinc_mg;
     }
 
-
+*/
 
 }

@@ -33,6 +33,21 @@ public class Eating_Stats {
         }
     }
 
+    public void Ate(Food food){
+        this.stats[0] += food.Get_Detail("Calories");
+        this.stats[1] += food.Get_Detail("Protein");
+        this.stats[2] +=  food.Get_Detail("Coles");
+        this.stats[3] += food.Get_Detail("Salt");
+        this.stats[4] += food.Get_Detail("Fat");
+        this.stats[5] += food.Get_Detail("Sugar");
+        this.stats[6] += food.Get_Detail("Phos");
+        this.stats[7] += food.Get_Detail("Potess");
+        this.stats[8] +=  food.Get_Detail("Mag");
+        this.stats[9] +=  food.Get_Detail("Carbo");
+        this.stats[10] += food.Get_Detail("Iron");
+        this.stats[11] +=  food.Get_Detail("VitC");
+    }
+
     public void Ate_Dry_food(Dry_Food dry_food){
         this.stats[0] += dry_food.Get_Detail("Calories");
         this.stats[1] += dry_food.Get_Detail("Protein");

@@ -1,29 +1,15 @@
 package Main.Model;
 
-public class Dry_Food {
-    private String Name;
-    private double cal;
-    private double prot_g;
-    private double fat_g;
-    private double suger_g;
-    private double carbo_g;
-    private double overfat_g;
-    private double colesterol_mg;
-    private double salt_mg;
-    private double sibs_g;
-    private double water_g;
-    private double vitamins_C_mg;
-    private double vitamins_b9_micro_g;
-    private double iron_mg;
-    private double calcium_mg;
-    private double magnis_mg;
-    private double phos_mg;
-    private double zinc_mg;
-    private double potassium_mg;
+public class Dry_Food extends Food{
 
     public Dry_Food(String name, double Cal, double Prot, double Fat, double sug, double carbo, double ofat, double coles,
                     double salt, double sib, double water, double vitC, double vitb9, double iro, double calcium,
                     double mag, double pho, double zinc, double potas){
+
+        super(name, Cal, Prot, Fat, sug, carbo,  ofat,  coles, salt,  sib,  water,  vitC,  vitb9,  iro,  calcium,
+                mag,  pho,  zinc,  potas);
+
+        /*
         this.Name = name;
         this.cal = Cal;
         this.calcium_mg = calcium;
@@ -43,8 +29,11 @@ public class Dry_Food {
         this.salt_mg = salt;
         this.iron_mg = iro;
         this.zinc_mg = zinc;
-    }
 
+
+         */
+    }
+/*
     public String GetName(){
         return this.Name;
     }
@@ -128,5 +117,7 @@ public class Dry_Food {
 
         return this.zinc_mg;
     }
+
+ */
 
 }

@@ -1,6 +1,7 @@
 package Main.Model;
 
-public class Meat_Fish_Dai {
+public class Meat_Fish_Dai extends Food{
+   /*
     private String Name;
     private double cal;
     private double prot_g;
@@ -19,13 +20,18 @@ public class Meat_Fish_Dai {
     private double magnis_mg;
     private double phos_mg;
     private double zinc_mg;
-    private double potassium_mg;
+    private double potassium_mg; */
 
     public Meat_Fish_Dai(String name, double Cal, double Prot, double Fat, double sug, double carbo, double ofat, double coles,
-                         double salt, double sib, double water, double vitC, double vitb9, double iro, double calcium,
-                         double mag, double pho, double zinc, double potas){
+               double salt, double sib, double water, double vitC, double vitb9, double iro, double calcium,
+               double mag, double pho, double zinc, double potas){
 
-        this.Name = name;
+        super(name, Cal, Prot, Fat, sug, carbo,  ofat,  coles, salt,  sib,  water,  vitC,  vitb9,  iro,  calcium,
+                mag,  pho,  zinc,  potas);
+
+
+
+        /*this.Name = name;
         this.cal = Cal;
         this.calcium_mg = calcium;
         this.carbo_g = carbo;
@@ -44,20 +50,26 @@ public class Meat_Fish_Dai {
         this.salt_mg = salt;
         this.iron_mg = iro;
         this.zinc_mg = zinc;
+
+
+         */
+
     }
 
+    /*
     public String GetName(){
         return this.Name;
     }
 
-    public Meat_Fish_Dai Calc(double x){
+    public Veg Calc(double x){
         x = x/100;
-        return new Meat_Fish_Dai(this.Name, this.cal*x, this.prot_g*x, this.fat_g*x, this.suger_g*x,
+        return new Veg(this.Name, this.cal*x, this.prot_g*x, this.fat_g*x, this.suger_g*x,
                 this.carbo_g*x, this.overfat_g*x, this.colesterol_mg*x, this.salt_mg*x,
                 this.sibs_g*x, this.water_g*x, this.vitamins_C_mg*x, this.vitamins_b9_micro_g*x,
                 this.iron_mg*x, this.calcium_mg*x, this.magnis_mg*x, this.phos_mg*x,
                 this.zinc_mg*x, this.potassium_mg*x);
     }
+
 
     public double Get_Detail(String which_one){
 
@@ -65,19 +77,19 @@ public class Meat_Fish_Dai {
             return this.cal;
         }
 
-        else if (which_one == "Iron"){
+       else if (which_one == "Iron"){
             return this.iron_mg;
         }
 
-        else if (which_one == "VitC"){
+       else if (which_one == "VitC"){
             return this.vitamins_C_mg;
         }
 
-        else if (which_one == "vitB9"){
+       else if (which_one == "vitB9"){
             return this.vitamins_b9_micro_g;
         }
 
-        else if (which_one == "Fat"){
+       else if (which_one == "Fat"){
             return this.fat_g;
         }
 
@@ -130,5 +142,7 @@ public class Meat_Fish_Dai {
 
         return this.zinc_mg;
     }
+
+*/
 
 }

@@ -34,7 +34,7 @@ public class StatsTest {
 
         Assert.assertEquals(false, stats.Get_Status_cal());
 
-        stats.Ate_Dry_food(product.d_food[0].Calc(6700));
+        stats.Ate(product.d_food[0].Calc(6700));
 
         Assert.assertEquals(true, stats.Get_Status_cal());
 
