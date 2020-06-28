@@ -2,17 +2,13 @@ package Main.Controller;
 
 import Main.Model.Food;
 import Main.Model.Product;
-
-import java.time.LocalDate;
-
 import java.io.*;
-
-import java.time.LocalDateTime;
 import java.util.Scanner;
 
 
 public class Private_User extends User {
     public Food[] my_collection = new Food[20];
+    int size = 0;
 
     private double weight;
     private double height;
@@ -23,7 +19,6 @@ public class Private_User extends User {
     private double Age;
     private int Gender;
     private int Purpose;
-    private LocalDateTime last_time_had_sports;
     public Private_User(String us /*username*/, String ps /*password*/,
                         double weight, double height, String fname, String last_Name, String country, String city,
                         double age, int gender,int Purpose) throws IOException{
@@ -38,7 +33,7 @@ public class Private_User extends User {
         this.Gender = gender; // 1 for a female , 0 for a male ;
         this.Purpose = Purpose;//2 for Gain Weight ,1 for Stay at the same weight ,0 for lose weight
 
-        //this.Extract_Private_Collection();
+        this.Extract_Private_Collection();
 
     }
 
@@ -74,15 +69,6 @@ public class Private_User extends User {
         return this.weight;
     }
 
-    public void Activity(int steps){
-        this.last_time_had_sports = LocalDateTime.now();
-    }
-
-    public void Burned_Calories(double cals){
-        this.last_time_had_sports = LocalDateTime.now();
-    }
-
-
     public int Get_Path(){ return this.Purpose; }
 
     public String Get_Username() {
@@ -94,7 +80,7 @@ public class Private_User extends User {
     }
 
     private void Extract_Private_Collection() throws IOException {
-        String fname = "C:\\data\\food_"  + this.username +" .txt";
+        String fname = "C:\\data\\food_"  + this.username +".txt";
         File f1 = new File(fname);
         if(f1.createNewFile()){
             return;
@@ -106,12 +92,17 @@ public class Private_User extends User {
 
 
         int size = tokens.length;
+        this.size = size;
 
-        for (int i=0; i<size; i++){
+        for (int i=0; i<size-1; i++){
             String[] data = tokens[i].split(splitHere);
-            //this.my_collection[i] = new Food(data[0], )
-            
-
+            this.my_collection[i] = new Food(data[0],
+                    Double.valueOf(data[2]), Double.valueOf(data[7]), Double.valueOf(data[3]),
+                    Double.valueOf(data[8]), Double.valueOf(data[6]), Double.valueOf(data[9]),
+                    Double.valueOf(data[4]), Double.valueOf(data[5]), Double.valueOf(data[10]),
+                    Double.valueOf(data[11]), Double.valueOf(data[12]), Double.valueOf(data[13]),
+                    Double.valueOf(data[14]), Double.valueOf(data[15]), Double.valueOf(data[16]),
+                    Double.valueOf(data[17]), Double.valueOf(data[18]), Double.valueOf(data[19]));
         }
 
     }
