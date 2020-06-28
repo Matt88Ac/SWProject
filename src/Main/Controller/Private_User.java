@@ -111,7 +111,7 @@ public class Private_User extends User {
         String[] names = new String[20];
 
         for (int i=0; i < this.size; i++){
-            names[i] = this.my_collection[i].GetName();
+            names[i] = this.my_collection[i].GetName().toString();
         }
 
         return names.clone();
