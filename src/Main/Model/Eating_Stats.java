@@ -97,9 +97,7 @@ public class Eating_Stats {
             }
 
         }
-
-        System.out.println(stats[0] + "\n" + stats[1]);
-
+        
     }
 
     public void Ate(Food food) throws IOException {
