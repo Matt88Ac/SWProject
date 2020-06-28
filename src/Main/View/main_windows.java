@@ -67,10 +67,11 @@ public class main_windows {
 	private JTextField food_name_text_Field;
 
 	Ads ads = null;
-	Product prod=new Product(false);
+	Product prod= new Product(false);
 	Private_User use =null;
 	Bus_User bus_user=null;
 	Eating_Stats eat_s =null;
+
 	private JTextField name_set_textField;
 	private JTextField lastname_set_textField;
 	private JTextField username_set_textField;
@@ -83,6 +84,10 @@ public class main_windows {
 	private JTextField bis_city_text_Field;
 	private JTextField bis_cuntry_text_Field;
 	private JTextField bis_food_name_text_Field;
+	Product prod=new Product(false);
+	Private_User use =null;
+	Bus_User bus_user=null;
+	Eating_Stats eat_s =null;
 	/**
 	 * Launch the application.
 	 */
@@ -116,36 +121,55 @@ public class main_windows {
 		frame.setBounds(0,0, 852, 545);
 		frame.setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
 		frame.getContentPane().setLayout(new CardLayout(0, 0));
-		JPanel Private_User_page = new JPanel();
-		Private_User_page.setBackground(new Color(75,78,244));
-		JPanel set_bis_rdata_page = new JPanel();
-		JPanel log_in_page = new JPanel();
+		
+		
+		
 		JPanel start_page = new JPanel();
-		JPanel bis_add_food_page = new JPanel();
-		start_page.setBackground(new Color(248, 191, 88));
-		frame.getContentPane().add(start_page, "name_830499986510200");
+		JPanel log_in_page = new JPanel();
+		JPanel Private_User_page = new JPanel();
+		JPanel set_bis_rdata_page = new JPanel();
+		JPanel regist_page = new JPanel();
+		JPanel regist_page_Business = new JPanel();
+		JPanel business_page = new JPanel();
+		JPanel ate_food_page = new JPanel();
+		JPanel veg_page = new JPanel();
+		JPanel Junk_Food_page = new JPanel();
+		JPanel Meat_Fish_Dai_page = new JPanel();
+		JPanel dry_food_page = new JPanel();
 		JPanel add_food_page = new JPanel();
-		add_food_page.setBackground(new Color(254, 194, 22));
-		JSpinner weight_spinner = new JSpinner();
 		JPanel data_analysis_page = new JPanel();
-		data_analysis_page.setBackground(new Color(226,229,228));
 		JPanel sport_activity_page = new JPanel();
-		sport_activity_page.setBackground(new Color(232, 192, 90));
-		frame.getContentPane().add(sport_activity_page, "name_135054560240100");
+		JPanel set_rdata_page = new JPanel();
+		JPanel recommend_food_page = new JPanel();
+		JPanel bis_add_food_page = new JPanel();
+		JPanel admin_page = new JPanel();
+		
+		JSpinner weight_spinner = new JSpinner();
 		JSpinner height_spinner = new JSpinner();
 		JSpinner age_spinner = new JSpinner();
 		JComboBox Gender_comboBox = new JComboBox();
 		JComboBox Purpose_comboBox = new JComboBox();
 		
-		JPanel ate_food_page = new JPanel();
+		start_page.setBackground(new Color(248, 191, 88));
+		frame.getContentPane().add(start_page, "name_830499986510200");
+		
+		add_food_page.setBackground(new Color(254, 194, 22));
+		data_analysis_page.setBackground(new Color(226,229,228));
+		
+		sport_activity_page.setBackground(new Color(232, 192, 90));
+		frame.getContentPane().add(sport_activity_page, "name_135054560240100");
+		
 		ate_food_page.setBackground(new Color(201, 114, 54));
 		frame.getContentPane().add(ate_food_page, "name_31670348278500");
+		
 		ate_food_page.setLayout(null);
-		//
-		JPanel veg_page = new JPanel();
+		Private_User_page.setBackground(new Color(75,78,244));
+		
 		veg_page.setBackground(new Color(181,255,245));
 		frame.getContentPane().add(veg_page, "name_31411297190200");
 		veg_page.setLayout(null);
+		
+		
 		
 		JButton btnNewButton_33 = new JButton("\u05D7\u05D6\u05D5\u05E8");
 		btnNewButton_33.addActionListener(new ActionListener() {
@@ -157,6 +181,8 @@ public class main_windows {
 		});
 		btnNewButton_33.setBounds(747, 482, 89, 23);
 		veg_page.add(btnNewButton_33);
+		
+		
 		
 		JButton btnNewButton_34 = new JButton("");
 		btnNewButton_34.setToolTipText("\u05E2\u05D2\u05D1\u05E0\u05D9\u05D4");
@@ -205,8 +231,6 @@ public class main_windows {
 				    //bl_bra=bl_bra.Calc(lehemslid.getValue());
 				    eat_s.Ate_Veg(veg.Calc(vegid.getValue()));
 				    //System.out.print(use+"\n");
-				
-				
 			}
 		});
 		
@@ -1058,7 +1082,7 @@ public class main_windows {
 		
 		
 		
-		JPanel Junk_Food_page = new JPanel();
+	
 		Junk_Food_page.setBackground(new Color(233,52,74));
 		frame.getContentPane().add(Junk_Food_page, "name_31478926767500");
 		Junk_Food_page.setLayout(null);
@@ -1299,7 +1323,7 @@ public class main_windows {
 		
 		
 		
-		JPanel Meat_Fish_Dai_page = new JPanel();
+		
 		Meat_Fish_Dai_page.setBackground(new Color(242,163,94));
 		frame.getContentPane().add(Meat_Fish_Dai_page, "name_31571261321900");
 		Meat_Fish_Dai_page.setLayout(null);
@@ -1917,10 +1941,10 @@ public class main_windows {
 		btnNewButton_11.setBounds(118, 11, 100, 100);
 		sport_activity_page.add(btnNewButton_11);
 		
-		JPanel set_rdata_page = new JPanel();
+		
 		set_rdata_page.setBackground(new Color(241,240,241));
 		frame.getContentPane().add(set_rdata_page, "name_135834242867900");
-		JPanel recommend_food_page = new JPanel();
+		
 		
 		JButton btnNewButton_4 = new JButton("\u05D7\u05D6\u05E8\u05D4");
 		btnNewButton_4.setBounds(747, 482, 89, 23);
@@ -2109,7 +2133,7 @@ public class main_windows {
 		JLabel lblNewLabel = new JLabel("\u05E9\u05DD \u05DE\u05E9\u05EA\u05DE\u05E9 : ");
 		lblNewLabel.setBounds(731, 11, 95, 28);
 		log_in_page.add(lblNewLabel);
-		JPanel dry_food_page = new JPanel();
+		
 		dry_food_page.setBackground(new Color(249,222,189));
 		JButton Button_back = new JButton("\u05D7\u05D6\u05E8\u05D4");
 		Button_back.addActionListener(new ActionListener() {
@@ -2128,7 +2152,7 @@ public class main_windows {
 		Button_back.setBounds(737, 472, 89, 23);
 		log_in_page.add(Button_back);
 		
-		JPanel business_page = new JPanel();
+		
 		frame.getContentPane().add(business_page, "name_337916315403200");
 		business_page.setLayout(null);
 		
@@ -2337,7 +2361,7 @@ public class main_windows {
 		name_text_Field.setBounds(513, 11, 208, 28);
 		log_in_page.add(name_text_Field);
 		name_text_Field.setColumns(10);
-		JPanel admin_page = new JPanel();
+		
 		JButton login_Button = new JButton("\u05D0\u05D9\u05E9\u05D5\u05E8");
 		
 		
@@ -2617,7 +2641,7 @@ public class main_windows {
 		start_page.add(Button_page_1);
 
 		
-		JPanel regist_page = new JPanel();
+		
 		regist_page.setBackground(new Color(253, 243, 228));
 		frame.getContentPane().add(regist_page, "name_830513354330700");
 		regist_page.setLayout(null);
@@ -2905,7 +2929,7 @@ public class main_windows {
 		regist_page.add(country_text_Field);
 		country_text_Field.setColumns(10);
 		
-		JPanel regist_page_Business = new JPanel();
+		
 		regist_page_Business.setBackground(new Color(227, 227, 227));
 		
 		JButton Button_goto_Business = new JButton("\u05DE\u05E9\u05EA\u05DE\u05E9 \u05E2\u05E1\u05E7\u05D9");
