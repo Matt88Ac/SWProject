@@ -1,5 +1,6 @@
 package Main.Controller;
 
+import Main.Model.Food;
 import Main.Model.Product;
 
 import java.time.LocalDate;
@@ -7,11 +8,12 @@ import java.time.LocalDate;
 import java.io.*;
 
 import java.time.LocalDateTime;
-
+import java.util.Scanner;
 
 
 public class Private_User extends User {
-    public Product all_prod = new Product(false);
+    public Food[] my_collection = new Food[20];
+
     private double weight;
     private double height;
     private String First_Name;
@@ -35,6 +37,8 @@ public class Private_User extends User {
         this.Country = country;
         this.Gender = gender; // 1 for a female , 0 for a male ;
         this.Purpose = Purpose;//2 for Gain Weight ,1 for Stay at the same weight ,0 for lose weight
+
+        this.Extract_Private_Collection();
 
     }
 
@@ -87,5 +91,25 @@ public class Private_User extends User {
 
     public String Get_Password(){
         return this.password;
+    }
+
+    private void Extract_Private_Collection() throws IOException {
+        String fname = "C:\\data\\food_"  + this.username +" .txt";
+        File f1 = new File(fname);
+        f1.createNewFile();
+
+
+        String readF = new Scanner(new File(fname)).useDelimiter("\\A").next();
+        String splitHere = "\n";
+        String[] tokens = readF.split(this.username);
+
+        int size = tokens.length;
+
+        for (int i=0; i<size; i++){
+            String[] data = tokens[i].split(splitHere);
+            
+
+        }
+
     }
 }
