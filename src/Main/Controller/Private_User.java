@@ -8,7 +8,7 @@ import java.util.Scanner;
 
 public class Private_User extends User {
     public Food[] my_collection = new Food[20];
-    int size = 0;
+    public int size = 0;
 
     private double weight;
     private double height;
@@ -92,7 +92,7 @@ public class Private_User extends User {
 
 
         int size = tokens.length;
-        this.size = size;
+        this.size = size-1;
 
         for (int i=0; i<size-1; i++){
             String[] data = tokens[i].split(splitHere);
@@ -106,4 +106,15 @@ public class Private_User extends User {
         }
 
     }
+
+    public String[] Get_Names(){
+        String[] names = new String[20];
+
+        for (int i=0; i < this.size; i++){
+            names[i] = this.my_collection[i].GetName();
+        }
+
+        return names.clone();
+    }
+
 }
