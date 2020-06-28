@@ -16,6 +16,7 @@ import java.io.File;
 import java.io.FileNotFoundException;
 import java.io.FileWriter;
 import java.io.IOException;
+import java.io.PrintWriter;
 
 import javax.swing.ImageIcon;
 import javax.swing.JTextField;
@@ -3933,51 +3934,57 @@ public class main_windows {
 				try {
 					
 					
-					outFile = new FileWriter ("C:\\data"+"\\"+"food_"+name_text_Field.getText()+".txt");
+					outFile = new FileWriter ("C:\\data"+"\\"+"food_"+name_text_Field.getText()+".txt",true);
 				} catch (IOException e1) {
 					System.out.println("Error: " + e1);
 				
 				}
 				BufferedWriter outStream =new BufferedWriter(outFile);
-			
+				PrintWriter pw = new PrintWriter(outStream);
+				pw.print(food_name_text_Field.getText()+"\n");
+				if(dro_RadioButton.isSelected()==true) 
+				pw.print("1");
+				else if(met_RadioButton.isSelected()==true)
+					pw.print("2");
+				else if(junk_RadioButton.isSelected()==true)
+					pw.print("3");
+				else if(fru_RadioButton.isSelected()==true)
+					pw.print("4");
+				pw.print("\n");
+				pw.print(cal_spinner.getValue().toString()+"\n");
+				pw.print(Fat_spinner.getValue().toString()+"\n");
+				pw.print(coles_spinner.getValue().toString()+"\n");
+				pw.print(salt_spinner.getValue().toString()+"\n");
+				pw.print(carbo_spinner.getValue().toString()+"\n");
+				pw.print(prot_spinner.getValue().toString()+"\n");
+				pw.print(spinner_5_1.getValue().toString()+"\n");
+				pw.print(spinner_5_2.getValue().toString()+"\n");
+				pw.print(spinner_5_3.getValue().toString()+"\n");
+				pw.print(spinner_5_4.getValue().toString()+"\n");
+				pw.print(spinner_5_5.getValue().toString()+"\n");
+				pw.print(spinner_5_6.getValue().toString()+"\n");
+				pw.print(spinner_5_7.getValue().toString()+"\n");
+				pw.print(spinner_5_8.getValue().toString()+"\n");
+				pw.print(spinner_5_9.getValue().toString()+"\n");
+				pw.print(spinner_5_10.getValue().toString()+"\n");
+				pw.print(spinner_5_11.getValue().toString()+"\n");
+				pw.print(spinner_5_12.getValue().toString()+"\n");
+				pw.print(name_text_Field.getText()+"\n");
+				pw.close ();
+				
+				
 				try {
-					
-					
-					outStream.write(food_name_text_Field.getText()+"\n");
-					if(dro_RadioButton.isSelected()==true) 
-					outStream.write("1");
-					else if(met_RadioButton.isSelected()==true)
-						outStream.write("2");
-					else if(junk_RadioButton.isSelected()==true)
-						outStream.write("3");
-					else if(fru_RadioButton.isSelected()==true)
-						outStream.write("4");
-					outStream.write("\n");
-					outStream.write(cal_spinner.getValue().toString()+"\n");
-					outStream.write(Fat_spinner.getValue().toString()+"\n");
-					outStream.write(coles_spinner.getValue().toString()+"\n");
-					outStream.write(salt_spinner.getValue().toString()+"\n");
-					outStream.write(carbo_spinner.getValue().toString()+"\n");
-					outStream.write(prot_spinner.getValue().toString()+"\n");
-					outStream.write(spinner_5_1.getValue().toString()+"\n");
-					outStream.write(spinner_5_2.getValue().toString()+"\n");
-					outStream.write(spinner_5_3.getValue().toString()+"\n");
-					outStream.write(spinner_5_4.getValue().toString()+"\n");
-					outStream.write(spinner_5_5.getValue().toString()+"\n");
-					outStream.write(spinner_5_6.getValue().toString()+"\n");
-					outStream.write(spinner_5_7.getValue().toString()+"\n");
-					outStream.write(spinner_5_8.getValue().toString()+"\n");
-					outStream.write(spinner_5_9.getValue().toString()+"\n");
-					outStream.write(spinner_5_10.getValue().toString()+"\n");
-					outStream.write(spinner_5_11.getValue().toString()+"\n");
-					outStream.write(spinner_5_12.getValue().toString()+"\n");
-					outStream.write(name_text_Field.getText()+"\n");
-					outStream.close ();
+					outStream.close();
 				} catch (IOException e1) {
-					System.out.println("Error: " + e1);
+					// TODO Auto-generated catch block
+					e1.printStackTrace();
 				}
-				
-				
+				try {
+					outFile.close();
+				} catch (IOException e1) {
+					// TODO Auto-generated catch block
+					e1.printStackTrace();
+				}
 				
 					add_food_page.setVisible(false);
 					Private_User_page.setVisible(true);
@@ -4612,6 +4619,10 @@ dry_food_page.add(lblNewLabel_57);
 		});
 		btnNewButton_8.setBounds(747, 482, 89, 23);
 		recommend_food_page.add(btnNewButton_8);
+		
+		JLabel lblNewLabel_63 = new JLabel("");
+		lblNewLabel_63.setBounds(36, 24, 46, 14);
+		recommend_food_page.add(lblNewLabel_63);
 		
 	
 		JButton data_Button_4 = new JButton("");
