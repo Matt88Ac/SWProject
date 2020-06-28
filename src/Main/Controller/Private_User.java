@@ -93,16 +93,20 @@ public class Private_User extends User {
 
         int size = tokens.length;
         this.size = size-1;
-
         for (int i=0; i<size-1; i++){
             String[] data = tokens[i].split(splitHere);
-            this.my_collection[i] = new Food(data[0],
-                    Double.valueOf(data[2]), Double.valueOf(data[7]), Double.valueOf(data[3]),
-                    Double.valueOf(data[8]), Double.valueOf(data[6]), Double.valueOf(data[9]),
-                    Double.valueOf(data[4]), Double.valueOf(data[5]), Double.valueOf(data[10]),
-                    Double.valueOf(data[11]), Double.valueOf(data[12]), Double.valueOf(data[13]),
-                    Double.valueOf(data[14]), Double.valueOf(data[15]), Double.valueOf(data[16]),
-                    Double.valueOf(data[17]), Double.valueOf(data[18]), Double.valueOf(data[19]));
+            int flag = 0;
+            if (i>0){
+                flag = 1;
+            }
+
+            this.my_collection[i] = new Food(data[0+flag],
+                    Double.valueOf(data[2+flag]), Double.valueOf(data[7+flag]), Double.valueOf(data[3+flag]),
+                    Double.valueOf(data[8+flag]), Double.valueOf(data[6+flag]), Double.valueOf(data[9+flag]),
+                    Double.valueOf(data[4+flag]), Double.valueOf(data[5+flag]), Double.valueOf(data[10+flag]),
+                    Double.valueOf(data[11+flag]), Double.valueOf(data[12+flag]), Double.valueOf(data[13+flag]),
+                    Double.valueOf(data[14+flag]), Double.valueOf(data[15+flag]), Double.valueOf(data[16+flag]),
+                    Double.valueOf(data[17+flag]), Double.valueOf(data[18+flag]), Double.valueOf(data[19+flag]));
         }
 
     }
@@ -119,7 +123,7 @@ public class Private_User extends User {
 
 
     public Food By_Name(String Name) throws CloneNotSupportedException {
-        for (int i=0; i< this.size+1; i++){
+        for (int i=0; i< this.size; i++){
             if (this.my_collection[i].GetName() == Name){
                 return my_collection[i].clone();
             }
