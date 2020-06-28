@@ -2,8 +2,14 @@ package Main.Model;
 
 
 import Main.Controller.Private_User;
+import javafx.util.converter.DateStringConverter;
+import javafx.util.converter.DateTimeStringConverter;
 
+import java.io.*;
+import java.time.LocalDate;
 import java.time.LocalDateTime;
+import java.util.Date;
+import java.util.Scanner;
 
 public class Eating_Stats {
     public double[] stats;
@@ -19,21 +25,84 @@ public class Eating_Stats {
     private int users_gender;
     private double users_h;
     private double users_w;
+    private String username;
 
-    public Eating_Stats(Private_User user){
+    public Eating_Stats(Private_User user) throws IOException {
         this.stats = new double[18];
         this.users_age = user.Get_Age();
         this.users_purp = user.Get_Path();
         this.users_gender = user.Get_gender();
         this.users_h = user.Get_Hei();
         this.users_w = user.Get_Weig();
+        this.username = user.Get_Username();
 
-        for(int i=0; i<18; i++) {
-            this.stats[i] = 0;
+        LocalDate t = LocalDate.now();
+        String fname = "C:\\data\\stats_" + this.username +".txt";
+        File file1 = new File(fname);
+        if (file1.createNewFile()){
+            for(int i=0; i<18; i++) {
+                this.stats[i] = 0;
+            }
+
+            FileWriter data = new FileWriter("C:\\data\\stats_" + this.username + ".txt");
+            data.write(t.toString() + '\n' + "0"
+                    + '\n' + "0"
+                    + '\n' + "0"
+                    + '\n' + "0"
+                    + '\n' + "0"
+                    + '\n' + "0"
+                    + '\n' +"0"
+                    + '\n' + "0"
+                    + '\n' + "0"
+                    + '\n' + "0"
+                    + '\n' + "0"
+                    + '\n' + "0"
+            );
+            data.close();
         }
+
+        else {
+            String readF = new Scanner(new File(fname)).useDelimiter("\\A").next();
+            String splitHere = "\n";
+            String[] tokens = readF.split(splitHere);
+
+            String ltd = tokens[0];
+
+            if (!t.toString().equals(ltd)) {
+                for (int i = 0; i < 18; i++) {
+                    this.stats[i] = 0;
+                }
+
+                FileWriter data = new FileWriter("C:\\data\\stats_" + this.username + ".txt");
+                data.write(t.toString() + '\n' + "0"
+                        + '\n' + "0"
+                        + '\n' + "0"
+                        + '\n' + "0"
+                        + '\n' + "0"
+                        + '\n' + "0"
+                        + '\n' + "0"
+                        + '\n' + "0"
+                        + '\n' + "0"
+                        + '\n' + "0"
+                        + '\n' + "0"
+                        + '\n' + "0"
+                );
+
+                data.close();
+            }
+            else {
+                for (int i = 1; i < 13; i++) {
+                    this.stats[i - 1] = Double.valueOf(tokens[i]);
+                }
+            }
+
+        }
+
+        System.out.println(stats[0] + "\n" + stats[1]);
+
     }
 
-    public void Ate(Food food){
+    public void Ate(Food food) throws IOException {
         this.stats[0] += food.Get_Detail("Calories");
         this.stats[1] += food.Get_Detail("Protein");
         this.stats[2] +=  food.Get_Detail("Coles");
@@ -49,6 +118,23 @@ public class Eating_Stats {
 
         this.exeptions_check();
 
+        LocalDate t = LocalDate.now();
+        FileWriter data = new FileWriter("C:\\data\\stats_" + this.username + ".txt");
+        data.write(t.toString() + '\n' + this.stats[0]
+                + '\n' + this.stats[1]
+                + '\n' + this.stats[2]
+                + '\n' + this.stats[3]
+                + '\n' + this.stats[4]
+                + '\n' + this.stats[5]
+                + '\n' + this.stats[6]
+                + '\n' + this.stats[7]
+                + '\n' + this.stats[8]
+                + '\n' + this.stats[9]
+                + '\n' + this.stats[10]
+                + '\n' + this.stats[11]
+        );
+
+        data.close();
     }
 
     public void exeptions_check(){
@@ -57,7 +143,6 @@ public class Eating_Stats {
         if (this.users_gender == 0){
             BMR = 10*this.users_w + 6.25*this.users_h -5*this.users_age + 5;
         }
-
 
         else{
             BMR = 10*this.users_w + 6.25*this.users_h -5*this.users_age - 161;
@@ -112,6 +197,10 @@ public class Eating_Stats {
             this.col = false;
         }
     }
+
+
+
+
 
     public boolean Get_Status_cal(){
         return this.calories;

@@ -28,7 +28,7 @@ public class StatsTest {
     }
 
     @Test
-    public void Test_Calories() throws CloneNotSupportedException {
+    public void Test_Calories() throws CloneNotSupportedException, IOException {
         stats.Ate(product.Get("X",0));
         stats.Ate(product.Get("Dry Food", 0));
 

@@ -208,8 +208,12 @@ public class main_windows {
 				    
 				    //System.out.print(lehemslid.getValue());
 				    //bl_bra=bl_bra.Calc(lehemslid.getValue());
-				    eat_s.Ate(veg.Calc(vegid.getValue()));
-				    //System.out.print(use+"\n");
+				try {
+					eat_s.Ate(veg.Calc(vegid.getValue()));
+				} catch (IOException ex) {
+					ex.printStackTrace();
+				}
+				//System.out.print(use+"\n");
 				
 
 			}
@@ -267,8 +271,12 @@ public class main_windows {
 				    
 				    //System.out.print(lehemslid.getValue());
 				    //bl_bra=bl_bra.Calc(lehemslid.getValue());
-				    eat_s.Ate(veg.Calc(vegid.getValue()));
-				    //System.out.print(use+"\n");
+				try {
+					eat_s.Ate(veg.Calc(vegid.getValue()));
+				} catch (IOException ex) {
+					ex.printStackTrace();
+				}
+				//System.out.print(use+"\n");
 				
 				
 			}
@@ -328,8 +336,12 @@ public class main_windows {
 				    
 				    //System.out.print(lehemslid.getValue());
 				    //bl_bra=bl_bra.Calc(lehemslid.getValue());
-				    eat_s.Ate(veg.Calc(vegid.getValue()));
-				    //System.out.print(use+"\n");
+				try {
+					eat_s.Ate(veg.Calc(vegid.getValue()));
+				} catch (IOException ex) {
+					ex.printStackTrace();
+				}
+				//System.out.print(use+"\n");
 				
 				
 			}
@@ -389,8 +401,12 @@ public class main_windows {
 				    
 				    //System.out.print(lehemslid.getValue());
 				    //bl_bra=bl_bra.Calc(lehemslid.getValue());
-				    eat_s.Ate(veg.Calc(vegid.getValue()));
-				    //System.out.print(use+"\n");
+				try {
+					eat_s.Ate(veg.Calc(vegid.getValue()));
+				} catch (IOException ex) {
+					ex.printStackTrace();
+				}
+				//System.out.print(use+"\n");
 				
 				
 			}
@@ -450,8 +466,12 @@ public class main_windows {
 				    
 				    //System.out.print(lehemslid.getValue());
 				    //bl_bra=bl_bra.Calc(lehemslid.getValue());
-				    eat_s.Ate(veg.Calc(vegid.getValue()));
-				    //System.out.print(use+"\n");
+				try {
+					eat_s.Ate(veg.Calc(vegid.getValue()));
+				} catch (IOException ex) {
+					ex.printStackTrace();
+				}
+				//System.out.print(use+"\n");
 				
 				
 			}
@@ -511,8 +531,12 @@ public class main_windows {
 				    
 				    //System.out.print(lehemslid.getValue());
 				    //bl_bra=bl_bra.Calc(lehemslid.getValue());
-				    eat_s.Ate(veg.Calc(vegid.getValue()));
-				    //System.out.print(use+"\n");
+				try {
+					eat_s.Ate(veg.Calc(vegid.getValue()));
+				} catch (IOException ex) {
+					ex.printStackTrace();
+				}
+				//System.out.print(use+"\n");
 				
 				
 			}
@@ -572,8 +596,12 @@ public class main_windows {
 				    
 				    //System.out.print(lehemslid.getValue());
 				    //bl_bra=bl_bra.Calc(lehemslid.getValue());
-				    eat_s.Ate(veg.Calc(vegid.getValue()));
-				    //System.out.print(use+"\n");
+				try {
+					eat_s.Ate(veg.Calc(vegid.getValue()));
+				} catch (IOException ex) {
+					ex.printStackTrace();
+				}
+				//System.out.print(use+"\n");
 				
 				
 			}
@@ -633,8 +661,12 @@ public class main_windows {
 				    
 				    //System.out.print(lehemslid.getValue());
 				    //bl_bra=bl_bra.Calc(lehemslid.getValue());
-				    eat_s.Ate(veg.Calc(vegid.getValue()));
-				    //System.out.print(use+"\n");
+				try {
+					eat_s.Ate(veg.Calc(vegid.getValue()));
+				} catch (IOException ex) {
+					ex.printStackTrace();
+				}
+				//System.out.print(use+"\n");
 				
 				
 			}
@@ -694,8 +726,12 @@ public class main_windows {
 				    
 				    //System.out.print(lehemslid.getValue());
 				    //bl_bra=bl_bra.Calc(lehemslid.getValue());
-				    eat_s.Ate(veg.Calc(vegid.getValue()));
-				    //System.out.print(use+"\n");
+				try {
+					eat_s.Ate(veg.Calc(vegid.getValue()));
+				} catch (IOException ex) {
+					ex.printStackTrace();
+				}
+				//System.out.print(use+"\n");
 				
 				
 			}
@@ -755,8 +791,12 @@ public class main_windows {
 				    
 				    //System.out.print(lehemslid.getValue());
 				    //bl_bra=bl_bra.Calc(lehemslid.getValue());
-				    eat_s.Ate(veg.Calc(vegid.getValue()));
-				    //System.out.print(use+"\n");
+				try {
+					eat_s.Ate(veg.Calc(vegid.getValue()));
+				} catch (IOException ex) {
+					ex.printStackTrace();
+				}
+				//System.out.print(use+"\n");
 				
 				
 			}
@@ -816,8 +856,12 @@ public class main_windows {
 				    
 				    //System.out.print(lehemslid.getValue());
 				    //bl_bra=bl_bra.Calc(lehemslid.getValue());
-				    eat_s.Ate(veg.Calc(vegid.getValue()));
-				    //System.out.print(use+"\n");
+				try {
+					eat_s.Ate(veg.Calc(vegid.getValue()));
+				} catch (IOException ex) {
+					ex.printStackTrace();
+				}
+				//System.out.print(use+"\n");
 				
 				
 			}
@@ -877,8 +921,12 @@ public class main_windows {
 				    
 				    //System.out.print(lehemslid.getValue());
 				    //bl_bra=bl_bra.Calc(lehemslid.getValue());
-				    eat_s.Ate(veg.Calc(vegid.getValue()));
-				    //System.out.print(use+"\n");
+				try {
+					eat_s.Ate(veg.Calc(vegid.getValue()));
+				} catch (IOException ex) {
+					ex.printStackTrace();
+				}
+				//System.out.print(use+"\n");
 				
 				
 			}
@@ -938,8 +986,12 @@ public class main_windows {
 				    
 				    //System.out.print(lehemslid.getValue());
 				    //bl_bra=bl_bra.Calc(lehemslid.getValue());
-				    eat_s.Ate(veg.Calc(vegid.getValue()));
-				    //System.out.print(use+"\n");
+				try {
+					eat_s.Ate(veg.Calc(vegid.getValue()));
+				} catch (IOException ex) {
+					ex.printStackTrace();
+				}
+				//System.out.print(use+"\n");
 				
 				
 			}
@@ -999,8 +1051,12 @@ public class main_windows {
 				    
 				    //System.out.print(lehemslid.getValue());
 				    //bl_bra=bl_bra.Calc(lehemslid.getValue());
-				    eat_s.Ate(veg.Calc(vegid.getValue()));
-				    //System.out.print(use+"\n");
+				try {
+					eat_s.Ate(veg.Calc(vegid.getValue()));
+				} catch (IOException ex) {
+					ex.printStackTrace();
+				}
+				//System.out.print(use+"\n");
 				
 				
 			}
@@ -1060,8 +1116,12 @@ public class main_windows {
 				    
 				    //System.out.print(lehemslid.getValue());
 				    //bl_bra=bl_bra.Calc(lehemslid.getValue());
-				    eat_s.Ate(veg.Calc(vegid.getValue()));
-				    //System.out.print(use+"\n");
+				try {
+					eat_s.Ate(veg.Calc(vegid.getValue()));
+				} catch (IOException ex) {
+					ex.printStackTrace();
+				}
+				//System.out.print(use+"\n");
 				
 				
 			}
@@ -1121,8 +1181,12 @@ public class main_windows {
 				    
 				    //System.out.print(lehemslid.getValue());
 				    //bl_bra=bl_bra.Calc(lehemslid.getValue());
-				    eat_s.Ate(veg.Calc(vegid.getValue()));
-				    //System.out.print(use+"\n");
+				try {
+					eat_s.Ate(veg.Calc(vegid.getValue()));
+				} catch (IOException ex) {
+					ex.printStackTrace();
+				}
+				//System.out.print(use+"\n");
 				
 				
 			}
@@ -1194,8 +1258,12 @@ public class main_windows {
 				    
 				    //System.out.print(lehemslid.getValue());
 				    //bl_bra=bl_bra.Calc(lehemslid.getValue());
-				    eat_s.Ate(piza.Calc(pizid.getValue()));
-				    //System.out.print(use+"\n");
+				try {
+					eat_s.Ate(piza.Calc(pizid.getValue()));
+				} catch (IOException ex) {
+					ex.printStackTrace();
+				}
+				//System.out.print(use+"\n");
 				
 			}
 		});
@@ -1253,8 +1321,12 @@ public class main_windows {
 				    
 				    //System.out.print(lehemslid.getValue());
 				    //bl_bra=bl_bra.Calc(lehemslid.getValue());
-				    eat_s.Ate(bur.Calc(burid.getValue()));
-				    //System.out.print(use+"\n");
+				try {
+					eat_s.Ate(bur.Calc(burid.getValue()));
+				} catch (IOException ex) {
+					ex.printStackTrace();
+				}
+				//System.out.print(use+"\n");
 				
 			}
 		});
@@ -1311,8 +1383,12 @@ public class main_windows {
 				    
 				    //System.out.print(lehemslid.getValue());
 				    //bl_bra=bl_bra.Calc(lehemslid.getValue());
-				    eat_s.Ate(fri.Calc(friid.getValue()));
-				    //System.out.print(use+"\n");
+				try {
+					eat_s.Ate(fri.Calc(friid.getValue()));
+				} catch (IOException ex) {
+					ex.printStackTrace();
+				}
+				//System.out.print(use+"\n");
 				
 			}
 		});
@@ -1372,8 +1448,12 @@ public class main_windows {
 				    
 				    //System.out.print(lehemslid.getValue());
 				    //bl_bra=bl_bra.Calc(lehemslid.getValue());
-				    eat_s.Ate(susi.Calc(susiid.getValue()));
-				    //System.out.print(use+"\n");
+				try {
+					eat_s.Ate(susi.Calc(susiid.getValue()));
+				} catch (IOException ex) {
+					ex.printStackTrace();
+				}
+				//System.out.print(use+"\n");
 				
 			}
 		});
@@ -1454,8 +1534,12 @@ public class main_windows {
 				    
 				    //System.out.print(lehemslid.getValue());
 				    //bl_bra=bl_bra.Calc(lehemslid.getValue());
-				    eat_s.Ate(r_chic.Calc(r_chicid.getValue()));
-				    //System.out.print(use+"\n");
+				try {
+					eat_s.Ate(r_chic.Calc(r_chicid.getValue()));
+				} catch (IOException ex) {
+					ex.printStackTrace();
+				}
+				//System.out.print(use+"\n");
 				
 			}
 		});
@@ -1513,8 +1597,12 @@ public class main_windows {
 				    
 				    //System.out.print(lehemslid.getValue());
 				    //bl_bra=bl_bra.Calc(lehemslid.getValue());
-				    eat_s.Ate(r_beef.Calc(r_beefid.getValue()));
-				    //System.out.print(use+"\n");
+				try {
+					eat_s.Ate(r_beef.Calc(r_beefid.getValue()));
+				} catch (IOException ex) {
+					ex.printStackTrace();
+				}
+				//System.out.print(use+"\n");
 				
 				
 			}
@@ -1571,8 +1659,12 @@ public class main_windows {
 				    
 				    //System.out.print(lehemslid.getValue());
 				    //bl_bra=bl_bra.Calc(lehemslid.getValue());
-				    eat_s.Ate(r_duck.Calc(r_duckid.getValue()));
-				    //System.out.print(use+"\n");
+				try {
+					eat_s.Ate(r_duck.Calc(r_duckid.getValue()));
+				} catch (IOException ex) {
+					ex.printStackTrace();
+				}
+				//System.out.print(use+"\n");
 				
 				
 				
@@ -1631,8 +1723,12 @@ public class main_windows {
 				    
 				    //System.out.print(lehemslid.getValue());
 				    //bl_bra=bl_bra.Calc(lehemslid.getValue());
-				    eat_s.Ate(r_lamp.Calc(r_lampid.getValue()));
-				    //System.out.print(use+"\n");
+				try {
+					eat_s.Ate(r_lamp.Calc(r_lampid.getValue()));
+				} catch (IOException ex) {
+					ex.printStackTrace();
+				}
+				//System.out.print(use+"\n");
 				
 				
 			}
@@ -1690,8 +1786,12 @@ public class main_windows {
 				    
 				    //System.out.print(lehemslid.getValue());
 				    //bl_bra=bl_bra.Calc(lehemslid.getValue());
-				    eat_s.Ate(r_til.Calc(r_tilid.getValue()));
-				    //System.out.print(use+"\n");
+				try {
+					eat_s.Ate(r_til.Calc(r_tilid.getValue()));
+				} catch (IOException ex) {
+					ex.printStackTrace();
+				}
+				//System.out.print(use+"\n");
 				
 				
 			}
@@ -1750,8 +1850,12 @@ public class main_windows {
 				    
 				    //System.out.print(lehemslid.getValue());
 				    //bl_bra=bl_bra.Calc(lehemslid.getValue());
-				    eat_s.Ate(r_salm.Calc(r_salmid.getValue()));
-				    //System.out.print(use+"\n");
+				try {
+					eat_s.Ate(r_salm.Calc(r_salmid.getValue()));
+				} catch (IOException ex) {
+					ex.printStackTrace();
+				}
+				//System.out.print(use+"\n");
 				    
 				
 			}
@@ -1810,8 +1914,12 @@ public class main_windows {
 				    
 				    //System.out.print(lehemslid.getValue());
 				    //bl_bra=bl_bra.Calc(lehemslid.getValue());
-				    eat_s.Ate(r_tuna.Calc(r_tunaid.getValue()));
-				    //System.out.print(use+"\n");
+				try {
+					eat_s.Ate(r_tuna.Calc(r_tunaid.getValue()));
+				} catch (IOException ex) {
+					ex.printStackTrace();
+				}
+				//System.out.print(use+"\n");
 				
 				
 			}
@@ -1870,8 +1978,12 @@ public class main_windows {
 				    
 				    //System.out.print(lehemslid.getValue());
 				    //bl_bra=bl_bra.Calc(lehemslid.getValue());
-				    eat_s.Ate(a_chee.Calc(a_cheeid.getValue()));
-				    //System.out.print(use+"\n");
+				try {
+					eat_s.Ate(a_chee.Calc(a_cheeid.getValue()));
+				} catch (IOException ex) {
+					ex.printStackTrace();
+				}
+				//System.out.print(use+"\n");
 				
 				
 			}
@@ -1931,8 +2043,12 @@ public class main_windows {
 				    
 				    //System.out.print(lehemslid.getValue());
 				    //bl_bra=bl_bra.Calc(lehemslid.getValue());
-				    eat_s.Ate(cotege.Calc(cotegeid.getValue()));
-				    //System.out.print(use+"\n");
+				try {
+					eat_s.Ate(cotege.Calc(cotegeid.getValue()));
+				} catch (IOException ex) {
+					ex.printStackTrace();
+				}
+				//System.out.print(use+"\n");
 				
 				
 			}
@@ -4065,8 +4181,12 @@ button_food_3.addActionListener(new ActionListener() {
 		    
 		    //System.out.print(lehemslid.getValue());
 		    //bl_bra=bl_bra.Calc(lehemslid.getValue());
-		    eat_s.Ate(bl_bra.Calc(lehemslid.getValue()));
-		    System.out.print(use+"\n");
+		try {
+			eat_s.Ate(bl_bra.Calc(lehemslid.getValue()));
+		} catch (IOException ex) {
+			ex.printStackTrace();
+		}
+		System.out.print(use+"\n");
 		   
 	}
 });
@@ -4123,8 +4243,12 @@ button_food_4.addActionListener(new ActionListener() {
 		    
 		    //System.out.print(lehemslid.getValue());
 		    //bl_bra=bl_bra.Calc(lehemslid.getValue());
-		    eat_s.Ate(ris.Calc(risid.getValue()));
-		   // System.out.print(use+"\n");
+		try {
+			eat_s.Ate(ris.Calc(risid.getValue()));
+		} catch (IOException ex) {
+			ex.printStackTrace();
+		}
+		// System.out.print(use+"\n");
 		
 	}
 });
@@ -4182,8 +4306,12 @@ button_food_5.addActionListener(new ActionListener() {
 		    
 		    //System.out.print(lehemslid.getValue());
 		    //bl_bra=bl_bra.Calc(lehemslid.getValue());
-		    eat_s.Ate(cus.Calc(cusid.getValue()));
-		    System.out.print(use+"\n");
+		try {
+			eat_s.Ate(cus.Calc(cusid.getValue()));
+		} catch (IOException ex) {
+			ex.printStackTrace();
+		}
+		System.out.print(use+"\n");
 		
 	}
 });
@@ -4239,8 +4367,12 @@ button_food_2.addActionListener(new ActionListener() {
 		    
 		    //System.out.print(lehemslid.getValue());
 		    //past=past.Calc(lehemslid.getValue());
-		    eat_s.Ate(past.Calc(lehemslid.getValue()));
-		    System.out.print(use+"\n");
+		try {
+			eat_s.Ate(past.Calc(lehemslid.getValue()));
+		} catch (IOException ex) {
+			ex.printStackTrace();
+		}
+		System.out.print(use+"\n");
 		   
 	}
 });
@@ -4296,8 +4428,12 @@ button_food_1.addActionListener(new ActionListener() {
 		    
 		    //System.out.print(lehemslid.getValue());
 		   // Double d = new Double(lehemslid.getValue());
-		    eat_s.Ate(bra.Calc(lehemslid.getValue()));
-		    //System.out.print(use+"\n");
+		try {
+			eat_s.Ate(bra.Calc(lehemslid.getValue()));
+		} catch (IOException ex) {
+			ex.printStackTrace();
+		}
+		//System.out.print(use+"\n");
 			}
 
 	
