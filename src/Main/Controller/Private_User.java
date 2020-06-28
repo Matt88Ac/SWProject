@@ -117,4 +117,14 @@ public class Private_User extends User {
         return names.clone();
     }
 
+
+    public Food By_Name(String Name) throws CloneNotSupportedException {
+        for (int i=0; i< this.size+1; i++){
+            if (this.my_collection[i].GetName() == Name){
+                return my_collection[i].clone();
+            }
+        }
+        return null;
+    }
+
 }
