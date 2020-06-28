@@ -79,7 +79,7 @@ public class Private_User extends User {
         return this.password;
     }
 
-    private void Extract_Private_Collection() throws IOException {
+    public void Extract_Private_Collection() throws IOException {
         String fname = "C:\\data\\food_"  + this.username +".txt";
         File f1 = new File(fname);
         if(f1.createNewFile()){
