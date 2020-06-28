@@ -123,6 +123,7 @@ public class main_windows {
 		JPanel log_in_page = new JPanel();
 		JPanel start_page = new JPanel();
 		JPanel bis_add_food_page = new JPanel();
+		JPanel myfood_page = new JPanel();
 		start_page.setBackground(new Color(248, 191, 88));
 		frame.getContentPane().add(start_page, "name_830499986510200");
 		JPanel add_food_page = new JPanel();
@@ -3985,7 +3986,12 @@ public class main_windows {
 					// TODO Auto-generated catch block
 					e1.printStackTrace();
 				}
-				
+				try {
+					use.Extract_Private_Collection();
+				} catch (IOException e1) {
+					// TODO Auto-generated catch block
+					e1.printStackTrace();
+				}
 					add_food_page.setVisible(false);
 					Private_User_page.setVisible(true);
 	
@@ -4825,6 +4831,16 @@ dry_food_page.add(lblNewLabel_57);
 		lblNewLabel_54.setBounds(129, 195, 598, 310);
 		ate_food_page.add(lblNewLabel_54);
 		
+		JButton btnNewButton_42 = new JButton("\u05D4\u05D0\u05D5\u05DB\u05DC \u05E9\u05DC\u05D9");
+		btnNewButton_42.addActionListener(new ActionListener() {
+			public void actionPerformed(ActionEvent e) {
+				ate_food_page.setVisible(false);
+				myfood_page.setVisible(true);
+			}
+		});
+		btnNewButton_42.setBounds(497, 11, 120, 120);
+		ate_food_page.add(btnNewButton_42);
+		
 		
 		frame.getContentPane().add(set_bis_rdata_page, "name_541004544022900");
 		
@@ -5302,6 +5318,15 @@ dry_food_page.add(lblNewLabel_57);
 		});
 		btnNewButton_41.setBounds(619, 482, 89, 23);
 		bis_add_food_page.add(btnNewButton_41);
+		
+		
+		frame.getContentPane().add(myfood_page, "name_27493486359100");
+		myfood_page.setLayout(null);
+		
+		JComboBox comboBox = new JComboBox();
+		comboBox.setMaximumRowCount(20);
+		comboBox.setBounds(474, 11, 318, 22);
+		myfood_page.add(comboBox);
 		
 		
 		
