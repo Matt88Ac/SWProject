@@ -22,7 +22,6 @@ public class Private_User extends User {
     private int Gender;
     private int Purpose;
     private LocalDateTime last_time_had_sports;
-    private LocalDateTime last_time_ate;
     public Private_User(String us /*username*/, String ps /*password*/,
                         double weight, double height, String fname, String last_Name, String country, String city,
                         double age, int gender,int Purpose) throws IOException{

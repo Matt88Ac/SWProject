@@ -97,7 +97,7 @@ public class Eating_Stats {
             }
 
         }
-        
+
     }
 
     public void Ate(Food food) throws IOException {
