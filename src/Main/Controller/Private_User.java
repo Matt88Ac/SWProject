@@ -33,6 +33,11 @@ public class Private_User extends User {
         this.Gender = gender; // 1 for a female , 0 for a male ;
         this.Purpose = Purpose;//2 for Gain Weight ,1 for Stay at the same weight ,0 for lose weight
 
+        for(int i=0; i<20; i++){
+            my_collection[i] = new Food(" ",0,0,0,0,0,0,0,0,0,
+                    0,0,0,0,0,0,0,0,0);
+        }
+
         this.Extract_Private_Collection();
 
     }
