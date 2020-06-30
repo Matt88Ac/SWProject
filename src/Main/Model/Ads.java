@@ -1,7 +1,11 @@
 package Main.Model;
 
-
 import Main.Controller.Private_User;
+
+import java.sql.Time;
+import java.time.LocalTime;
+import java.time.LocalTime.*;
+
 
 public class Ads {
    private Product Local_Options = new Product(false);
@@ -25,21 +29,210 @@ public class Ads {
        return AdsHolder.INSTANCE;
     }
 
-    public String[] Advertise(double calories_ate){
-       String[] ad = new String[10];
+    public String Advertise(boolean consuming_state){
+       String ad = null;
+        LocalTime t = LocalTime.now();
+        if (t.getHour() <= 12){
 
-       if (this.users_purose == 0){
+            if (this.users_purose == 0){
+
+                // Male
+                if (this.user.Get_gender() == 0){
+
+                    if (consuming_state){
+                        ad = new String("You've had enough for now. From now on to the rest of the day, ease with vegetables.");
+                    }
+
+                    else{
+                        ad = new String("Our recommendation for you is to settle with an Omelet and Salad, or something similar.");
+                    }
 
 
-       }
+                }
 
-       else if (this.users_purose == 1){
+                // Female
+                else{
+                    if (consuming_state){
+                        ad = new String("You've had enough for now. From now on to the rest of the day, ease with vegetables.");
+                    }
 
-       }
+                    else{
+                        ad = new String("Our recommendation for you is to settle with an Omelet and Salad, or something similar.");
+                    }
+
+                }
+
+
+            }
+
+            // Stay as is.
+            else if (this.users_purose == 1){
+
+                // Male
+                if (this.user.Get_gender() == 0){
+
+
+
+
+                }
+
+                // Female
+                else{
+
+
+
+
+                }
+
+
+            }
+
+            // Gain weight.
+            else{
+
+                // Male
+                if (this.user.Get_gender() == 0){
+
+
+
+                }
+
+                // Female
+                else{
+
+
+
+                }
+
+            }
+
+        }
+
+        else if ( 12 < t.getHour() && t.getHour() <= 18) {
+            if (this.users_purose == 0){
+
+                // Male
+                if (this.user.Get_gender() == 0){
+
+
+
+                }
+
+                // Female
+                else{
+
+
+
+                }
+
+
+            }
+
+            // Stay as is.
+            else if (this.users_purose == 1){
+
+                // Male
+                if (this.user.Get_gender() == 0){
+
+
+
+
+                }
+
+                // Female
+                else{
+
+
+
+
+                }
+
+
+            }
+
+            // Gain weight.
+            else{
+
+                // Male
+                if (this.user.Get_gender() == 0){
+
+
+
+                }
+
+                // Female
+                else{
+
+
+
+                }
+
+            }
+        }
 
        else{
 
-       }
+            if (this.users_purose == 0){
+
+                // Male
+                if (this.user.Get_gender() == 0){
+                    
+
+                }
+
+                // Female
+                else{
+
+
+
+                }
+
+
+            }
+
+            // Stay as is.
+            else if (this.users_purose == 1){
+
+                // Male
+                if (this.user.Get_gender() == 0){
+
+
+
+
+                }
+
+                // Female
+                else{
+
+
+
+
+                }
+
+
+            }
+
+            // Gain weight.
+            else{
+
+                // Male
+                if (this.user.Get_gender() == 0){
+
+
+
+                }
+
+                // Female
+                else{
+
+
+
+                }
+
+            }
+
+
+        }
 
        return ad;
     }
