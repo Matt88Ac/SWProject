@@ -30,7 +30,6 @@ public class Ads {
 
        if (this.users_purose == 0){
 
-           
 
        }
 
@@ -45,7 +44,9 @@ public class Ads {
        return ad;
     }
 
-
+    public void SetNull(){
+       AdsHolder.INSTANCE = null;
+    }
 
 
 

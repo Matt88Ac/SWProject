@@ -2513,6 +2513,7 @@ public class main_windows {
 				start_page.setVisible(false);
 				name_text_Field.setText("");
 				password_Field.setText("");
+				ads.SetNull();
 				
 			
 			}
@@ -2676,10 +2677,11 @@ public class main_windows {
 											log_in_page.setVisible(false);
 											Private_User_page.setVisible(true);
 											
-											 use	= new Private_User(tokens[0], tokens[1],
+											 use = new Private_User(tokens[0], tokens[1],
 													Double.parseDouble(tokens[2]),Double.parseDouble(tokens[3]),tokens[4],tokens [5],tokens [6],tokens [7],
 													Double.parseDouble(tokens[8]),Integer.parseInt(tokens[9]),Integer.parseInt(tokens[10]));
 											  eat_s = new Eating_Stats(use);
+											  ads = Ads.getInstance(use);
 
 												if(eat_s.Get_Status_cal()) {
 												lblNewLabel_9.setText( "\u05E7\u05DC\u05D5\u05E8\u05D9\u05D5\u05EA: " +Math.floor(eat_s.stats[0]*100)/100 );
@@ -2861,10 +2863,11 @@ public class main_windows {
 										{
 											log_in_page.setVisible(false);
 											Private_User_page.setVisible(true);
-											 use	= new Private_User(tokens[0], tokens[1],
+											 use = new Private_User(tokens[0], tokens[1],
 													Double.parseDouble(tokens[2]),Double.parseDouble(tokens[3]),tokens[4],tokens [5],tokens [6],tokens [7],
 													Double.parseDouble(tokens[8]),Integer.parseInt(tokens[9]),Integer.parseInt(tokens[10]));
 											eat_s =new Eating_Stats(use);
+											ads = Ads.getInstance(use);
 
 											if(eat_s.Get_Status_cal()) {
 											lblNewLabel_9.setText( "\u05E7\u05DC\u05D5\u05E8\u05D9\u05D5\u05EA: " +Math.floor(eat_s.stats[0]*100)/100 );
