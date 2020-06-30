@@ -24,10 +24,8 @@ import javax.swing.JPasswordField;
 import javax.swing.JSpinner;
 import javax.swing.SpinnerNumberModel;
 
-import java.util.Date;
 import java.util.Hashtable;
 import java.util.Scanner;
-import java.util.function.DoubleUnaryOperator;
 
 import javax.swing.JComboBox;
 import javax.swing.JDialog;
@@ -38,19 +36,12 @@ import java.awt.event.KeyEvent;
 import java.awt.event.ActionListener;
 import java.awt.event.ActionEvent;
 import javax.swing.SwingConstants;
-import javax.swing.Timer;
-import javax.swing.JScrollPane;
-import javax.swing.ScrollPaneConstants;
+
 import javax.swing.JRadioButton;
-import javax.swing.JSeparator;
-import javax.swing.JScrollBar;
-import java.awt.event.AdjustmentListener;
-import java.awt.event.AdjustmentEvent;
-import javax.swing.Box;
- 
+
+@SuppressWarnings({"ALL", "rawtypes"})
 public class main_windows {
 
-	protected static final String J0ptionPane = null;
 	public JFrame frame;
 	private JTextField name_text_Field;
 	private JPasswordField password_Field;
@@ -5221,7 +5212,7 @@ dry_food_page.add(lblNewLabel_57);
 		JButton btnNewButton_37 = new JButton("\u05D4\u05D5\u05E1\u05E4\u05D4 \u05DE\u05D5\u05E6\u05E8\u05D9\u05DD");
 		btnNewButton_37.addActionListener(new ActionListener() {
 			public void actionPerformed(ActionEvent e) {
-				
+
 				bis_food_name_text_Field.setText("");
 				bis_price_spinner.setValue(0);
 				bis_dro_RadioButton.setSelected(false);
@@ -5249,10 +5240,10 @@ dry_food_page.add(lblNewLabel_57);
 				business_page.setVisible(false);
 				bis_add_food_page.setVisible(true);
 				bis_food_name_text_Field.requestFocus();
-				
-				
-		
-				
+
+
+
+
 			}
 		});
 		btnNewButton_37.setBounds(10, 73, 161, 23);
@@ -5295,13 +5286,13 @@ dry_food_page.add(lblNewLabel_57);
 					
 					
 					outStream.write(bis_food_name_text_Field.getText()+"\n");
-					if(bis_dro_RadioButton.isSelected()==true) 
+					if(bis_dro_RadioButton.isSelected())
 					outStream.write("1");
-					else if(bis_met_RadioButton.isSelected()==true)
+					else if(bis_met_RadioButton.isSelected())
 						outStream.write("2");
-					else if(bis_junk_RadioButton.isSelected()==true)
+					else if(bis_junk_RadioButton.isSelected())
 						outStream.write("3");
-					else if(bis_fru_RadioButton.isSelected()==true)
+					else if(bis_fru_RadioButton.isSelected())
 						outStream.write("4");
 					outStream.write("\n");
 					outStream.write(bis_cal_spinner.getValue().toString()+"\n");
