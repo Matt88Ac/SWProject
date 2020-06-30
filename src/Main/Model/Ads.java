@@ -176,7 +176,7 @@ public class Ads {
 
                 // Male
                 if (this.user.Get_gender() == 0){
-                    
+
 
                 }
 

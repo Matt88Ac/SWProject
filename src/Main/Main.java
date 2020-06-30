@@ -1,13 +1,12 @@
 package Main;
-import org.apache.commons.math3.complex.*;
-
+import Main.View.main_windows;
 
 public class Main {
 
 	public static void main(String[] args)
 	{
-		Complex x = new Complex(1,2);
-		System.out.println(x);
+		main_windows w = new main_windows();
+		w.frame.setVisible(true);
     }
 
 }

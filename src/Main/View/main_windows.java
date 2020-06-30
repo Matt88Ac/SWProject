@@ -51,7 +51,7 @@ import javax.swing.Box;
 public class main_windows {
 
 	protected static final String J0ptionPane = null;
-	private JFrame frame;
+	public JFrame frame;
 	private JTextField name_text_Field;
 	private JPasswordField password_Field;
 	private JTextField user_name_text_Field;
@@ -87,7 +87,7 @@ public class main_windows {
 	/**
 	 * Launch the application.
 	 */
-	public static void main(String[] args) {
+	/*public static void main(String[] args) {
 		EventQueue.invokeLater(new Runnable() {
 			public void run() {
 				try {
@@ -98,7 +98,7 @@ public class main_windows {
 				}
 			}
 		});
-	}
+	} */
 
 	/**
 	 * Create the application.
@@ -2301,9 +2301,15 @@ public class main_windows {
 			public void actionPerformed(ActionEvent e) {
 				
 
-				if(username_set_textField.getText().isEmpty()||passwordField_set.getText().isEmpty()||weight_set_spinner.getValue().equals(1.0)||
-						height_set_spinner.getValue().equals(1.0)||name_set_textField.getText().isEmpty()||lastname_set_textField.getText().isEmpty()||
-						country_set_textField.getText().isEmpty()||city_set_textField.getText().isEmpty()||age_set_spinner.getValue().equals(1.0))
+				if(username_set_textField.getText().isEmpty()||
+						passwordField_set.getText().isEmpty()||
+						weight_set_spinner.getValue().toString().equals("1")||
+						height_set_spinner.getValue().toString().equals("1")||
+						name_set_textField.getText().isEmpty()||
+						lastname_set_textField.getText().isEmpty()||
+						country_set_textField.getText().isEmpty()||
+						city_set_textField.getText().isEmpty() ||
+						age_set_spinner.getValue().toString().equals("1"))
 				{
 					JOptionPane.showMessageDialog(null, "You have to fill all" + "!");
 
@@ -2631,7 +2637,7 @@ public class main_windows {
 					
 					 int flag=0;
 					File dir = new File (user_id);
-					for (File f : dir.listFiles()) 
+					for (File f : dir.listFiles())
 					{
 						String tmp_bus = "bus_" + name_text_Field.getText()	+".txt";
 						String tmp_reg_user = name_text_Field.getText() + ".txt";
@@ -3260,9 +3266,15 @@ public class main_windows {
 			public void actionPerformed(ActionEvent e) {
 				
 
-				if(username_text_Field.getText().isEmpty()||passwordField.getText().isEmpty()||weight_spinner.getValue().equals(1.0)||
-						height_spinner.getValue().equals(1.0)||user_name_text_Field.getText().isEmpty()||user_lastname_text_Field.getText().isEmpty()||
-						country_text_Field.getText().isEmpty()||city_text_Field.getText().isEmpty()||age_spinner.getValue().equals(1.0))
+				if(username_text_Field.getText().isEmpty()||
+						passwordField.getText().isEmpty()||
+						weight_spinner.getValue().toString().equals("1")||
+						height_spinner.getValue().toString().equals("1")||
+						user_name_text_Field.getText().isEmpty()||
+						user_lastname_text_Field.getText().isEmpty()||
+						country_text_Field.getText().isEmpty()||
+						city_text_Field.getText().isEmpty()||
+						age_spinner.getValue().toString().equals("1"))
 				{
 					JOptionPane.showMessageDialog(null, "You have to fill all" + "!");
 
@@ -3323,9 +3335,15 @@ public class main_windows {
 			public void mouseClicked(MouseEvent e) {
 			
 				
-				if(username_text_Field.getText().isEmpty()||passwordField.getText().isEmpty()||weight_spinner.getValue().equals(1.0)||
-						height_spinner.getValue().equals(1.0)||user_name_text_Field.getText().isEmpty()||user_lastname_text_Field.getText().isEmpty()||
-						country_text_Field.getText().isEmpty()||city_text_Field.getText().isEmpty()||age_spinner.getValue().equals(1.0))
+				if(username_text_Field.getText().isEmpty()||
+						passwordField.getText().isEmpty()||
+						weight_spinner.getValue().toString().equals("1")||
+						height_spinner.getValue().toString().equals("1")||
+						user_name_text_Field.getText().isEmpty()||
+						user_lastname_text_Field.getText().isEmpty()||
+						country_text_Field.getText().isEmpty()||
+						city_text_Field.getText().isEmpty()||
+						age_spinner.getValue().toString().equals("1"))
 				{
 					JOptionPane.showMessageDialog(null, "You have to fill all" + "!");
 
@@ -3731,32 +3749,32 @@ public class main_windows {
 		add_food_page.add(lblNewLabel_29);
 		
 	
-		cal_spinner.setModel(new SpinnerNumberModel(new Integer(0), new Integer(0), null, new Integer(1)));
+		cal_spinner.setModel(new SpinnerNumberModel(0, 0, null, 1));
 		add_food_page.add(cal_spinner);
 		
 		JSpinner Fat_spinner = new JSpinner();
 		Fat_spinner.setBounds(638, 130, 46, 20);
-		Fat_spinner.setModel(new SpinnerNumberModel(new Integer(0), new Integer(0), null, new Integer(1)));
+		Fat_spinner.setModel(new SpinnerNumberModel(0, 0, null, 1));
 		add_food_page.add(Fat_spinner);
 		
 		JSpinner coles_spinner = new JSpinner();
 		coles_spinner.setBounds(638, 161, 46, 20);
-		coles_spinner.setModel(new SpinnerNumberModel(new Integer(0), new Integer(0), null, new Integer(1)));
+		coles_spinner.setModel(new SpinnerNumberModel( 0, 0, null, 1));
 		add_food_page.add(coles_spinner);
 		
 		JSpinner salt_spinner = new JSpinner();
 		salt_spinner.setBounds(638, 192, 46, 20);
-		salt_spinner.setModel(new SpinnerNumberModel(new Integer(0), new Integer(0), null, new Integer(1)));
+		salt_spinner.setModel(new SpinnerNumberModel(0,  0, null, 1));
 		add_food_page.add(salt_spinner);
 		
 		JSpinner carbo_spinner = new JSpinner();
 		carbo_spinner.setBounds(638, 223, 46, 20);
-		carbo_spinner.setModel(new SpinnerNumberModel(new Integer(0), new Integer(0), null, new Integer(1)));
+		carbo_spinner.setModel(new SpinnerNumberModel(0, 0, null, 1));
 		add_food_page.add(carbo_spinner);
 		
 		JSpinner prot_spinner = new JSpinner();
 		prot_spinner.setBounds(638, 254, 46, 20);
-		prot_spinner.setModel(new SpinnerNumberModel(new Integer(0), new Integer(0), null, new Integer(1)));
+		prot_spinner.setModel(new SpinnerNumberModel(0, 0, null, 1));
 		add_food_page.add(prot_spinner);
 		
 		JLabel lblNewLabel_30 = new JLabel("(\u05E7\u05DC\u05D5\u05E8\u05D9\u05D5\u05EA)");
@@ -3839,62 +3857,62 @@ public class main_windows {
 		
 		JSpinner spinner_5_1 = new JSpinner();
 		spinner_5_1.setBounds(638, 312, 46, 20);
-		spinner_5_1.setModel(new SpinnerNumberModel(new Integer(0), new Integer(0), null, new Integer(1)));
+		spinner_5_1.setModel(new SpinnerNumberModel(0, 0, null, 1));
 		add_food_page.add(spinner_5_1);
 		
 		JSpinner spinner_5_2 = new JSpinner();
 		spinner_5_2.setBounds(638, 337, 46, 20);
-		spinner_5_2.setModel(new SpinnerNumberModel(new Integer(0), new Integer(0), null, new Integer(1)));
+		spinner_5_2.setModel(new SpinnerNumberModel(0, 0, null, 1));
 		add_food_page.add(spinner_5_2);
 		
 		JSpinner spinner_5_3 = new JSpinner();
 		spinner_5_3.setBounds(638, 362, 46, 20);
-		spinner_5_3.setModel(new SpinnerNumberModel(new Integer(0), new Integer(0), null, new Integer(1)));
+		spinner_5_3.setModel(new SpinnerNumberModel(0, 0, null, 1));
 		add_food_page.add(spinner_5_3);
 		
 		JSpinner spinner_5_4 = new JSpinner();
 		spinner_5_4.setBounds(638, 387, 46, 20);
-		spinner_5_4.setModel(new SpinnerNumberModel(new Integer(0), new Integer(0), null, new Integer(1)));
+		spinner_5_4.setModel(new SpinnerNumberModel(0, 0, null, 1));
 		add_food_page.add(spinner_5_4);
 		
 		JSpinner spinner_5_5 = new JSpinner();
 		spinner_5_5.setBounds(638, 412, 46, 20);
-		spinner_5_5.setModel(new SpinnerNumberModel(new Integer(0), new Integer(0), null, new Integer(1)));
+		spinner_5_5.setModel(new SpinnerNumberModel(0, 0, null, 1));
 		add_food_page.add(spinner_5_5);
 		
 		JSpinner spinner_5_6 = new JSpinner();
 		spinner_5_6.setBounds(638, 438, 46, 20);
-		spinner_5_6.setModel(new SpinnerNumberModel(new Integer(0), new Integer(0), null, new Integer(1)));
+		spinner_5_6.setModel(new SpinnerNumberModel(0, 0, null, 1));
 		add_food_page.add(spinner_5_6);
 		
 		JSpinner spinner_5_7 = new JSpinner();
 		spinner_5_7.setBounds(476, 312, 46, 20);
-		spinner_5_7.setModel(new SpinnerNumberModel(new Integer(0), new Integer(0), null, new Integer(1)));
+		spinner_5_7.setModel(new SpinnerNumberModel(0, 0, null, 1));
 		add_food_page.add(spinner_5_7);
 		
 		JSpinner spinner_5_8 = new JSpinner();
 		spinner_5_8.setBounds(476, 337, 46, 20);
-		spinner_5_8.setModel(new SpinnerNumberModel(new Integer(0), new Integer(0), null, new Integer(1)));
+		spinner_5_8.setModel(new SpinnerNumberModel(0, 0, null, 1));
 		add_food_page.add(spinner_5_8);
 		
 		JSpinner spinner_5_9 = new JSpinner();
 		spinner_5_9.setBounds(476, 362, 46, 20);
-		spinner_5_9.setModel(new SpinnerNumberModel(new Integer(0), new Integer(0), null, new Integer(1)));
+		spinner_5_9.setModel(new SpinnerNumberModel(0, 0, null, 1));
 		add_food_page.add(spinner_5_9);
 		
 		JSpinner spinner_5_10 = new JSpinner();
 		spinner_5_10.setBounds(476, 387, 46, 20);
-		spinner_5_10.setModel(new SpinnerNumberModel(new Integer(0), new Integer(0), null, new Integer(1)));
+		spinner_5_10.setModel(new SpinnerNumberModel(0, 0, null, 1));
 		add_food_page.add(spinner_5_10);
 		
 		JSpinner spinner_5_11 = new JSpinner();
 		spinner_5_11.setBounds(476, 412, 46, 20);
-		spinner_5_11.setModel(new SpinnerNumberModel(new Integer(0), new Integer(0), null, new Integer(1)));
+		spinner_5_11.setModel(new SpinnerNumberModel(0, 0, null, 1));
 		add_food_page.add(spinner_5_11);
 		
 		JSpinner spinner_5_12 = new JSpinner();
 		spinner_5_12.setBounds(476, 438, 46, 20);
-		spinner_5_12.setModel(new SpinnerNumberModel(new Integer(0), new Integer(0), null, new Integer(1)));
+		spinner_5_12.setModel(new SpinnerNumberModel(0, 0, null, 1));
 		add_food_page.add(spinner_5_12);
 		
 		JLabel lblNewLabel_39 = new JLabel("______________________________________________________");
