@@ -2302,7 +2302,7 @@ public class main_windows {
 				
 
 				if(username_set_textField.getText().isEmpty()||
-						passwordField_set.getText().isEmpty() ||
+						String.valueOf(passwordField_set.getPassword()).isEmpty() ||
 						weight_set_spinner.getValue().toString().equals("1")||
 						height_set_spinner.getValue().toString().equals("1")||
 						name_set_textField.getText().isEmpty()||
@@ -3267,7 +3267,7 @@ public class main_windows {
 				
 
 				if(username_text_Field.getText().isEmpty()||
-						passwordField.getText().isEmpty()||
+						String.valueOf(passwordField.getPassword()).isEmpty()||
 						weight_spinner.getValue().toString().equals("1")||
 						height_spinner.getValue().toString().equals("1")||
 						user_name_text_Field.getText().isEmpty()||
@@ -3335,7 +3335,7 @@ public class main_windows {
 
 
 				if(username_text_Field.getText().isEmpty()||
-						passwordField.getText().isEmpty()||
+						String.valueOf(passwordField.getPassword()).isEmpty()||
 						weight_spinner.getValue().toString().equals("1")||
 						height_spinner.getValue().toString().equals("1")||
 						user_name_text_Field.getText().isEmpty()||
@@ -4927,7 +4927,7 @@ dry_food_page.add(lblNewLabel_57);
 			
 				if(bis_city_text_Field.getText().isEmpty()||
 						bis_cuntry_text_Field.getText().isEmpty()||bis_name_text_Field.getText().isEmpty()||
-						bis_password_Field.getText().isEmpty()||bis_username_text_Field.getText().isEmpty()) 
+						String.valueOf(bis_password_Field.getPassword()).isEmpty()||bis_username_text_Field.getText().isEmpty())
 				{
 					JOptionPane.showMessageDialog(null, "You have to fill all" + "!");	
 				}else {
@@ -5427,7 +5427,7 @@ dry_food_page.add(lblNewLabel_57);
 			
 				if(b_city_text_Field.getText().isEmpty()||
 						b_country_text_Field.getText().isEmpty()||b_company_field.getText().isEmpty()||
-						passwordField_1.getText().isEmpty()||b_username_text_Field.getText().isEmpty()) 
+						String.valueOf(passwordField_1.getPassword()).isEmpty()||b_username_text_Field.getText().isEmpty())
 				{
 					JOptionPane.showMessageDialog(null, "You have to fill all" + "!");	
 				}else {
@@ -5472,7 +5472,7 @@ dry_food_page.add(lblNewLabel_57);
 
 				if(b_city_text_Field.getText().isEmpty()||
 						b_country_text_Field.getText().isEmpty()||b_company_field.getText().isEmpty()||
-						passwordField_1.getText().isEmpty()||b_username_text_Field.getText().isEmpty()) 
+						String.valueOf(passwordField_1.getPassword()).isEmpty()||b_username_text_Field.getText().isEmpty())
 				{
 					JOptionPane.showMessageDialog(null, "You have to fill all" + "!");	
 				}else {
