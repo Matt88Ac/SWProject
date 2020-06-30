@@ -2302,7 +2302,7 @@ public class main_windows {
 				
 
 				if(username_set_textField.getText().isEmpty()||
-						passwordField_set.getText().isEmpty()||
+						passwordField_set.getText().isEmpty() ||
 						weight_set_spinner.getValue().toString().equals("1")||
 						height_set_spinner.getValue().toString().equals("1")||
 						name_set_textField.getText().isEmpty()||
@@ -3314,8 +3314,7 @@ public class main_windows {
 				} catch (IOException e1) {
 					System.out.println("Error: " + e1);
 				}
-				
-				
+
 				
 					regist_page.setVisible(false);
 					start_page.setVisible(true);
@@ -3333,8 +3332,8 @@ public class main_windows {
 		Button_save.addMouseListener(new MouseAdapter() {
 			@Override
 			public void mouseClicked(MouseEvent e) {
-			
-				
+
+
 				if(username_text_Field.getText().isEmpty()||
 						passwordField.getText().isEmpty()||
 						weight_spinner.getValue().toString().equals("1")||
@@ -3347,8 +3346,6 @@ public class main_windows {
 				{
 					JOptionPane.showMessageDialog(null, "You have to fill all" + "!");
 
-					
-					
 				}else {
 				FileWriter outFile = null;
 				File file =new File("C:\\data");
@@ -3357,13 +3354,13 @@ public class main_windows {
 					outFile = new FileWriter ("C:\\data"+"\\"+username_text_Field.getText()+".txt");
 				} catch (IOException e1) {
 					System.out.println("Error: " + e1);
-				
+
 				}
 				BufferedWriter outStream =new BufferedWriter(outFile);
-			
+
 				try {
-					
-					
+
+
 					outStream.write(username_text_Field.getText()+"\n");
 					outStream.write(passwordField.getPassword());
 					outStream.write("\n");
@@ -3380,10 +3377,10 @@ public class main_windows {
 				} catch (IOException e1) {
 					System.out.println("Error: " + e1);
 				}
-				
-				
-				
-				
+
+
+
+
 					regist_page.setVisible(false);
 					start_page.setVisible(true);
 
