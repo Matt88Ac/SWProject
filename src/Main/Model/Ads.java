@@ -174,18 +174,6 @@ public class Ads {
 
             if (this.users_purose == 0){
 
-                // Male
-                if (this.user.Get_gender() == 0){
-
-
-                }
-
-                // Female
-                else{
-
-
-
-                }
 
 
             }
@@ -193,41 +181,13 @@ public class Ads {
             // Stay as is.
             else if (this.users_purose == 1){
 
-                // Male
-                if (this.user.Get_gender() == 0){
 
-
-
-
-                }
-
-                // Female
-                else{
-
-
-
-
-                }
 
 
             }
 
             // Gain weight.
             else{
-
-                // Male
-                if (this.user.Get_gender() == 0){
-
-
-
-                }
-
-                // Female
-                else{
-
-
-
-                }
 
             }
 
