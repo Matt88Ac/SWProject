@@ -91,6 +91,10 @@ public class Private_User extends User {
             return;
         }
 
+        if(f1.length() == 0){
+            return;
+        }
+
         String readF = new Scanner(new File(fname)).useDelimiter("\\A").next();
         String splitHere = "\n";
         String[] tokens = readF.split(this.username);
@@ -113,6 +117,7 @@ public class Private_User extends User {
                     Double.valueOf(data[14+flag]), Double.valueOf(data[15+flag]), Double.valueOf(data[16+flag]),
                     Double.valueOf(data[17+flag]), Double.valueOf(data[18+flag]), Double.valueOf(data[19+flag]));
         }
+
 
     }
 
