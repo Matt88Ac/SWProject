@@ -1,11 +1,7 @@
 package Main.Model;
 
 import Main.Controller.Private_User;
-
-import java.sql.Time;
 import java.time.LocalTime;
-import java.time.LocalTime.*;
-
 
 public class Ads {
    private Product Local_Options = new Product(false);
@@ -110,41 +106,34 @@ public class Ads {
 
         else if ( 12 < t.getHour() && t.getHour() <= 18) {
             if (this.users_purose == 0){
+                if (consuming_state){
 
-                // Male
-                if (this.user.Get_gender() == 0){
-
-
+                    ad = new String("Well, you've had enough for today. If you're gonna be staying up late," +
+                            "have a green salad or any other small meal. Otherwise, call it a day.");
 
                 }
 
-                // Female
                 else{
-
-
-
+                    ad = new String("Now is your time. Consume carbohydrates and calories as much as you" +
+                            " can. Seriously though, low-fat-meat with some form of potatoes is what you need right now, in" +
+                            " order finishing up this day right. Pay attention to the calories counter.");
                 }
-
 
             }
 
             // Stay as is.
             else if (this.users_purose == 1){
-
-                // Male
-                if (this.user.Get_gender() == 0){
-
-
-
+                if (consuming_state){
+                    ad = new String("Since you check out what's going on here, we'll" +
+                            " take the guess that you're hungry. If you're gonna be staying up late," +
+                            " you could allow yourself a decent meal. Otherwise, every raw veg's salad would " +
+                            "get the job done for you.");
 
                 }
 
-                // Female
                 else{
-
-
-
-
+                    ad = new String("A large meal seems to be the right thing to do right now. " +
+                            "Try to involve meat or dairies, dehydrated foods high in carbohydrate, and vegetables.");
                 }
 
 
@@ -153,19 +142,19 @@ public class Ads {
             // Gain weight.
             else{
 
-                // Male
-                if (this.user.Get_gender() == 0){
-
-
-
+                if (consuming_state){
+                    ad = new String("You're at the right way now. Rationally, you could have whatever you " +
+                            "fancy at this point. Our suggestion: One last large meal before you wrap your da up." +
+                            " Involve meat or dairies, dehydrated foods high in carbohydrate, and vegetables.");
                 }
 
-                // Female
                 else{
-
-
-
+                    ad = new String("At this point, you gotta pick up the pace of your daily-calories-" +
+                            "consuming, in order to achieve your goal. Our suggestion:" +
+                            " A real large meal, full of fat and calories. Something like a Hamburger, a Pizza " +
+                            "or s steak with potatoes in your favorite form.");
                 }
+
 
             }
         }

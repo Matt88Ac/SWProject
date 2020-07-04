@@ -1,6 +1,6 @@
 package Main.Model;
 
-public class Product {
+public class Product  {
     public Dry_Food[] d_food = null;
     public Veg[] veg_food = null;
     public Meat_Fish_Dai[] MFD_food = null;
