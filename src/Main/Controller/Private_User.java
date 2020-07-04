@@ -138,7 +138,7 @@ public class Private_User extends User {
                 return my_collection[i].clone();
             }
         }
-        return null;
+        return this.my_collection[19].clone();
     }
 
 }

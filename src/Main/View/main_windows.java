@@ -5358,8 +5358,12 @@ dry_food_page.add(lblNewLabel_57);
 
 			public void actionPerformed(ActionEvent e) {
 				int index=comboBox.getSelectedIndex();
-				if (index >= use.size){
-					comboBox.setSelectedIndex(0);
+				if ( index < 0){
+					index = 19;
+				}
+
+				else if (index > use.size){
+					index = 0;
 				}
 
 
