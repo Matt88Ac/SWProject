@@ -2596,7 +2596,7 @@ public class main_windows {
 				JEditorPane dtrpnOlegRudoy = new JEditorPane();
 				dtrpnOlegRudoy.setFont(new Font("TimesRoman", Font.PLAIN, 20));
 				dtrpnOlegRudoy.setText(ads.Advertise(eat_s.Get_Status_cal()));
-				dtrpnOlegRudoy.setBounds(10, 11, 810, 90);
+				dtrpnOlegRudoy.setBounds(10, 11, 810, 130);
 				dtrpnOlegRudoy.setBackground(SystemColor.menu);
 				recommend_food_page.add(dtrpnOlegRudoy);
 				
