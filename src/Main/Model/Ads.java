@@ -28,6 +28,8 @@ public class Ads {
     public String Advertise(boolean consuming_state){
        String ad = null;
         LocalTime t = LocalTime.now();
+        System.out.println(t.getHour());
+
         if (t.getHour() <= 12){
 
             if (this.users_purose == 0){
@@ -36,11 +38,11 @@ public class Ads {
                 if (this.user.Get_gender() == 0){
 
                     if (consuming_state){
-                        ad = new String("You've had enough for now.\n From now on to the rest of the day,\n ease with vegetables.\n");
+                        ad = "You've had enough for now.\n From now on to the rest of the day,\n ease with vegetables.\n";
                     }
 
                     else{
-                        ad = new String("Our recommendation for you is to settle with an Omelet and Salad,\n or something similar.\n");
+                        ad = "Our recommendation for you is to settle with an Omelet and Salad,\n or something similar.\n";
                     }
 
 
@@ -49,74 +51,33 @@ public class Ads {
                 // Female
                 else{
                     if (consuming_state){
-                        ad = new String("You've had enough for now.\n From now on to the rest of the day,\n ease with vegetables.\n");
+                        ad = "You've had enough for now.\n From now on to the rest of the day,\n ease with vegetables.\n";
                     }
 
                     else{
-                        ad = new String("Our recommendation for you is to settle with an Omelet and Salad,\n or something similar\n.");
+                        ad = "Our recommendation for you is to settle with an Omelet and Salad,\n or something similar\n.";
                     }
 
                 }
 
-
-            }
-
-            // Stay as is.
-            else if (this.users_purose == 1){
-
-                // Male
-                if (this.user.Get_gender() == 0){
-
-
-
-
-                }
-
-                // Female
-                else{
-
-
-
-
-                }
-
-
-            }
-
-            // Gain weight.
-            else{
-
-                // Male
-                if (this.user.Get_gender() == 0){
-
-
-
-                }
-
-                // Female
-                else{
-
-
-
-                }
 
             }
 
         }
 
-        else if ( 12 < t.getHour() && t.getHour() <= 18) {
+        else if (t.getHour() <= 18) {
             if (this.users_purose == 0){
                 if (consuming_state){
 
-                    ad = new String("Well, you've had enough for today.\n If you're gonna be staying up late," +
-                            "have a green salad or any other small meal.\n Otherwise, call it a day.\n");
+                    ad = "Well, you've had enough for today.\n If you're gonna be staying up late," +
+                            "have a green salad or any other small meal.\n Otherwise, call it a day.\n";
 
                 }
 
                 else{
-                    ad = new String("Now is your time.\n Consume carbohydrates and calories as much as you can.\n" +
+                    ad = "Now is your time.\n Consume carbohydrates and calories as much as you can.\n" +
                             "Seriously though, low-fat-meat with some form of potatoes is what you need right now,\n" +
-                            "in order finishing up this day right.\n Pay attention to the calories counter.\n");
+                            "in order finishing up this day right.\n Pay attention to the calories counter.\n";
                 }
 
             }
@@ -124,16 +85,16 @@ public class Ads {
             // Stay as is.
             else if (this.users_purose == 1){
                 if (consuming_state){
-                    ad = new String("Since you check out what's going on here,\n " +
+                    ad = "Since you check out what's going on here,\n " +
                             "we'll take the guess that you're hungry.\n If you're gonna be staying up late," +
                             " you could allow yourself a decent meal.\n Otherwise, every raw veg's salad would " +
-                            "get the job done for you.\n");
+                            "get the job done for you.\n";
 
                 }
 
                 else{
-                    ad = new String("A large meal seems to be the right thing to do right now.\n " +
-                            "Try to involve meat or dairies,\n dehydrated foods high in carbohydrate and vegetables.\n");
+                    ad = "A large meal seems to be the right thing to do right now.\n " +
+                            "Try to involve meat or dairies,\n dehydrated foods high in carbohydrate and vegetables.\n";
                 }
 
 
@@ -143,17 +104,15 @@ public class Ads {
             else{
 
                 if (consuming_state){
-                    ad = new String("You're at the right way now.\n Rationally, you could have whatever you " +
+                    ad = "You're at the right way now.\n Rationally, you could have whatever you " +
                             "fancy at this point.\n Our suggestion: One last large meal before you wrap your da up.\n" +
-                            " Involve meat or dairies, dehydrated foods high in carbohydrate, and vegetables.\n");
+                            " Involve meat or dairies, dehydrated foods high in carbohydrate, and vegetables.\n";
                 }
 
-                else{
-                    ad = new String("At this point, you gotta pick up the pace of your daily-calories-" +
-                            "consuming, in order to achieve your goal.\n Our suggestion:" +
-                            " A real large meal, full of fat and calories.\n Something like a Hamburger, a Pizza " +
-                            "or s steak with potatoes in your favorite form.\n");
-                }
+                else ad = "At this point, you gotta pick up the pace of your daily-calories-" +
+                        "consuming, in order to achieve your goal.\n Our suggestion:" +
+                        " A real large meal, full of fat and calories.\n Something like a Hamburger, a Pizza " +
+                        "or s steak with potatoes in your favorite form.\n";
 
 
             }
@@ -164,15 +123,15 @@ public class Ads {
             if (this.users_purose == 0){
                 if (consuming_state){
 
-                    ad = new String("Well, you've had enough for today.\n If you're gonna be staying up late," +
-                            "have a green salad or any other small meal.\n Otherwise, call it a day.\n");
+                    ad = "Well, you've had enough for today.\n If you're gonna be staying up late," +
+                            "have a green salad or any other small meal.\n Otherwise, call it a day.\n";
 
                 }
 
                 else{
-                    ad = new String("Now is your time.\n Consume carbohydrates and calories as much as you" +
+                    ad = "Now is your time.\n Consume carbohydrates and calories as much as you" +
                             " can.\n Seriously though, low-fat-meat with some form of potatoes is what you need right now, in" +
-                            " order finishing up this day right.\n Pay attention to the calories counter.\n");
+                            " order finishing up this day right.\n Pay attention to the calories counter.\n";
                 }
 
             }
@@ -180,16 +139,16 @@ public class Ads {
             // Stay as is.
             else if (this.users_purose == 1){
                 if (consuming_state){
-                    ad = new String("Since you check out what's going on here, we'll" +
+                    ad = "Since you check out what's going on here, we'll" +
                             " take the guess that you're hungry.\n If you're gonna be staying up late," +
                             " you could allow yourself a decent meal.\n Otherwise, every raw veg's salad would " +
-                            "get the job done for you.\n");
+                            "get the job done for you.\n";
 
                 }
 
                 else{
-                    ad = new String("A large meal seems to be the right thing to do right now.\n" +
-                            "Try to involve meat or dairies,\n dehydrated foods high in carbohydrate, and vegetables.\n");
+                    ad = "A large meal seems to be the right thing to do right now.\n" +
+                            "Try to involve meat or dairies,\n dehydrated foods high in carbohydrate, and vegetables.\n";
                 }
 
 
@@ -199,16 +158,16 @@ public class Ads {
             else{
 
                 if (consuming_state){
-                    ad = new String("You're at the right way now.\n Rationally, you could have whatever you " +
+                    ad = "You're at the right way now.\n Rationally, you could have whatever you " +
                             "fancy at this point.\n Our suggestion: One last large meal before you wrap your da up.\n" +
-                            " Involve meat or dairies, dehydrated foods high in carbohydrate, and vegetables.\n");
+                            " Involve meat or dairies, dehydrated foods high in carbohydrate, and vegetables.\n";
                 }
 
                 else{
-                    ad = new String("At this point, you gotta pick up the pace of your daily-calories-" +
+                    ad = "At this point, you gotta pick up the pace of your daily-calories-" +
                             "consuming, in order to achieve your goal.\n Our suggestion:" +
                             " A real large meal, full of fat and calories.\n Something like a Hamburger, a Pizza " +
-                            "or s steak with potatoes in your favorite form.\n");
+                            "or s steak with potatoes in your favorite form.\n";
                 }
 
 
