@@ -28,7 +28,7 @@ public class Ads {
     public String Advertise(boolean consuming_state){
        String ad = null;
         LocalTime t = LocalTime.now();
-        System.out.println(t.getHour());
+        //System.out.println(t.getHour());
 
         if (t.getHour() <= 12){
 
