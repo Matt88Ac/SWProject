@@ -2581,6 +2581,14 @@ public class main_windows {
 		sport_Button_3_1.setBackground(new Color(255, 255, 255));
 		Private_User_page.add(sport_Button_3_1);
 		
+		
+		JEditorPane dtrpnOlegRudoy = new JEditorPane();
+		dtrpnOlegRudoy.setFont(new Font("TimesRoman", Font.PLAIN, 20));
+		dtrpnOlegRudoy.setBounds(10, 11, 810, 130);
+		dtrpnOlegRudoy.setBackground(new Color(62, 179, 212));
+		recommend_food_page.add(dtrpnOlegRudoy);
+		
+		
 		JButton reco_Button = new JButton("");
 		reco_Button.setToolTipText("\u05D0\u05DE\u05DC\u05E6\u05D5\u05EA \u05DC\u05DE\u05D5\u05E6\u05E8\u05D9\u05DD \u05D9\u05D5\u05EA\u05E8 \u05EA\u05D5\u05D1\u05D9\u05DD \u05D0\u05D1\u05D5\u05E8\u05D9");
 		reco_Button.addActionListener(new ActionListener() {
@@ -2594,12 +2602,10 @@ public class main_windows {
 				lblNewLabel_65.setBounds(10, 11, 794, 188);
 				recommend_food_page.add(lblNewLabel_65);
 				*/
-				JEditorPane dtrpnOlegRudoy = new JEditorPane();
-				dtrpnOlegRudoy.setFont(new Font("TimesRoman", Font.PLAIN, 20));
+				
+				
 				dtrpnOlegRudoy.setText(ads.Advertise(eat_s.Get_Status_cal()));
-				dtrpnOlegRudoy.setBounds(10, 11, 810, 130);
-				dtrpnOlegRudoy.setBackground(new Color(62, 179, 212));
-				recommend_food_page.add(dtrpnOlegRudoy);
+				
 				
 				recommend_food_page.setVisible(true);
 			}
@@ -4667,6 +4673,7 @@ dry_food_page.add(lblNewLabel_57);
 		btnNewButton_8.addActionListener(new ActionListener() {
 			public void actionPerformed(ActionEvent e) {
 				Private_User_page.setVisible(true);
+				
 				recommend_food_page.setVisible(false);
 			}
 		});
@@ -4678,6 +4685,7 @@ dry_food_page.add(lblNewLabel_57);
 		lblNewLabel_63.setIcon (new ImageIcon(reco_gif));
 		lblNewLabel_63.setBounds(10, 174, 550, 331);
 		recommend_food_page.add(lblNewLabel_63);
+		
 		
 		
 		
