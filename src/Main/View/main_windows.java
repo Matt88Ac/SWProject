@@ -2104,7 +2104,12 @@ public class main_windows {
 				    dialog.setSize(800, 300);
 				    dialog.setVisible(true);
 				  //  System.out.println(stepss.getValue());
-				    eat_s.Activity(stepss.getValue());
+				    try {
+						eat_s.Activity(stepss.getValue());
+					} catch (IOException e1) {
+						// TODO Auto-generated catch block
+						e1.printStackTrace();
+					}
 				
 			}
 		});
@@ -2169,7 +2174,12 @@ public class main_windows {
 				    dialog.setSize(500, 300);
 				    dialog.setVisible(true);
 				    //System.out.println(stepss.getValue());
-				    eat_s.Burned_Calories(Double.valueOf(stepss.getValue()));
+				    try {
+						eat_s.Burned_Calories(Double.valueOf(stepss.getValue()));
+					} catch (IOException e1) {
+						// TODO Auto-generated catch block
+						e1.printStackTrace();
+					}
 				
 				
 			}
