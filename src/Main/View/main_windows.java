@@ -2693,7 +2693,7 @@ public class main_windows {
 										if(password_Field.getText().equals(tokens[1]))
 										{
 											log_in_page.setVisible(false);
-											Private_User_page.setVisible(true);
+											
 											
 											 use = new Private_User(tokens[0], tokens[1],
 													Double.parseDouble(tokens[2]),Double.parseDouble(tokens[3]),tokens[4],tokens [5],tokens [6],tokens [7],
@@ -2702,36 +2702,42 @@ public class main_windows {
 											  ads = Ads.getInstance(use);
 
 												if(eat_s.Get_Status_cal()) {
-												lblNewLabel_9.setText( "\u05E7\u05DC\u05D5\u05E8\u05D9\u05D5\u05EA: " +Math.floor(eat_s.stats[0]*100)/100 );
-												lblNewLabel_9.setForeground(Color.RED);
-												}else {lblNewLabel_9.setText( "\u05E7\u05DC\u05D5\u05E8\u05D9\u05D5\u05EA: " +Math.floor(eat_s.stats[0]*100)/100 );}
-												
-												if(eat_s.Get_Status_sod()) {
-												lblNewLabel_20.setText("\u05E0\u05EA\u05E8\u05D0\u05DF: "+Math.floor(eat_s.stats[3]*100)/100);
-												lblNewLabel_20.setForeground(Color.RED);
-												}else {lblNewLabel_20.setText("\u05E0\u05EA\u05E8\u05D0\u05DF: "+Math.floor(eat_s.stats[3]*100)/100);}
-												
-												if(eat_s.Get_Status_prot()) {
-												lblNewLabel_20_1.setText("\u05D7\u05DC\u05D1\u05D5\u05E0\u05D9\u05DD: "+Math.floor(eat_s.stats[1]*100)/100);
-												lblNewLabel_20_1.setForeground(Color.RED);
-												}else {lblNewLabel_20_1.setText("\u05D7\u05DC\u05D1\u05D5\u05E0\u05D9\u05DD: "+Math.floor(eat_s.stats[1]*100)/100);}
-												
-												if(eat_s.Get_Status_fat()) {
-												lblNewLabel_20_2.setText("\u05E9\u05D5\u05DE\u05E0\u05D9\u05DD: "+Math.floor(eat_s.stats[4]*100)/100);
-												lblNewLabel_20_2.setForeground(Color.RED);
-												}else {lblNewLabel_20_2.setText("\u05E9\u05D5\u05DE\u05E0\u05D9\u05DD: "+Math.floor(eat_s.stats[4]*100)/100);}
-												
-												if(eat_s.Get_Status_co()) {
-												lblNewLabel_20_3.setText("\u05E7\u05D5\u05DC\u05E1\u05D8\u05E8\u05D5\u05DC: "+Math.floor(eat_s.stats[2]*100)/100);
-												lblNewLabel_20_3.setForeground(Color.RED);
-												}else {lblNewLabel_20_3.setText("\u05E7\u05D5\u05DC\u05E1\u05D8\u05E8\u05D5\u05DC: "+Math.floor(eat_s.stats[2]*100)/100);}
-												
-												if(eat_s.Get_Status_pah()) {
-												lblNewLabel_38.setText("\u05E4\u05D7\u05DE\u05D9\u05DE\u05D5\u05EA: "+Math.floor(eat_s.stats[9]*100)/100);
-												lblNewLabel_38.setForeground(Color.RED);
-												}else {lblNewLabel_38.setText("\u05E4\u05D7\u05DE\u05D9\u05DE\u05D5\u05EA: "+Math.floor(eat_s.stats[9]*100)/100);}
-												
-											 
+													lblNewLabel_9.setText( "\u05E7\u05DC\u05D5\u05E8\u05D9\u05D5\u05EA: " +Math.floor(eat_s.stats[0]*100)/100 );
+													lblNewLabel_9.setForeground(Color.RED);
+													}else {lblNewLabel_9.setText( "\u05E7\u05DC\u05D5\u05E8\u05D9\u05D5\u05EA: " +Math.floor(eat_s.stats[0]*100)/100 );
+													lblNewLabel_9.setForeground(Color.WHITE);}
+													
+													if(eat_s.Get_Status_sod()) {
+													lblNewLabel_20.setText("\u05E0\u05EA\u05E8\u05D0\u05DF: "+Math.floor(eat_s.stats[3]*100)/100);
+													lblNewLabel_20.setForeground(Color.RED);
+													}else {lblNewLabel_20.setText("\u05E0\u05EA\u05E8\u05D0\u05DF: "+Math.floor(eat_s.stats[3]*100)/100);
+													lblNewLabel_20.setForeground(Color.WHITE);}
+													
+													if(eat_s.Get_Status_prot()) {
+													lblNewLabel_20_1.setText("\u05D7\u05DC\u05D1\u05D5\u05E0\u05D9\u05DD: "+Math.floor(eat_s.stats[1]*100)/100);
+													lblNewLabel_20_1.setForeground(Color.RED);
+													}else {lblNewLabel_20_1.setText("\u05D7\u05DC\u05D1\u05D5\u05E0\u05D9\u05DD: "+Math.floor(eat_s.stats[1]*100)/100);
+													lblNewLabel_20_1.setForeground(Color.WHITE);}
+													
+													if(eat_s.Get_Status_fat()) {
+													lblNewLabel_20_2.setText("\u05E9\u05D5\u05DE\u05E0\u05D9\u05DD: "+Math.floor(eat_s.stats[4]*100)/100);
+													lblNewLabel_20_2.setForeground(Color.RED);
+													}else {lblNewLabel_20_2.setText("\u05E9\u05D5\u05DE\u05E0\u05D9\u05DD: "+Math.floor(eat_s.stats[4]*100)/100);
+													lblNewLabel_20_2.setForeground(Color.WHITE);}
+													
+													if(eat_s.Get_Status_co()) {
+													lblNewLabel_20_3.setText("\u05E7\u05D5\u05DC\u05E1\u05D8\u05E8\u05D5\u05DC: "+Math.floor(eat_s.stats[2]*100)/100);
+													lblNewLabel_20_3.setForeground(Color.RED);
+													}else {lblNewLabel_20_3.setText("\u05E7\u05D5\u05DC\u05E1\u05D8\u05E8\u05D5\u05DC: "+Math.floor(eat_s.stats[2]*100)/100);
+													lblNewLabel_20_3.setForeground(Color.WHITE);}
+													
+													if(eat_s.Get_Status_pah()) {
+													lblNewLabel_38.setText("\u05E4\u05D7\u05DE\u05D9\u05DE\u05D5\u05EA: "+Math.floor(eat_s.stats[9]*100)/100);
+													lblNewLabel_38.setForeground(Color.RED);
+													}else {lblNewLabel_38.setText("\u05E4\u05D7\u05DE\u05D9\u05DE\u05D5\u05EA: "+Math.floor(eat_s.stats[9]*100)/100);
+													lblNewLabel_38.setForeground(Color.WHITE);}
+													
+													Private_User_page.setVisible(true);
 											 
 										}else 
 										{
