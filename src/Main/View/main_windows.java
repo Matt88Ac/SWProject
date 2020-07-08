@@ -38,6 +38,11 @@ import java.awt.event.ActionEvent;
 import javax.swing.SwingConstants;
 
 import javax.swing.JRadioButton;
+import javax.swing.UIManager;
+import javax.swing.JTextPane;
+import javax.swing.JEditorPane;
+import javax.swing.DropMode;
+import javax.swing.GrayFilter;
 
 @SuppressWarnings({"ALL", "rawtypes"})
 public class main_windows {
@@ -115,6 +120,7 @@ public class main_windows {
 		JPanel start_page = new JPanel();
 		JPanel bis_add_food_page = new JPanel();
 		JPanel myfood_page = new JPanel();
+		myfood_page.setBackground(new Color(47, 191, 145));
 		start_page.setBackground(new Color(248, 191, 88));
 		frame.getContentPane().add(start_page, "name_830499986510200");
 		JPanel add_food_page = new JPanel();
@@ -2564,19 +2570,34 @@ public class main_windows {
 		sport_Button_3_1.setBackground(new Color(255, 255, 255));
 		Private_User_page.add(sport_Button_3_1);
 		
-		JButton btnNewButton_3_2 = new JButton("");
-		btnNewButton_3_2.setToolTipText("\u05D0\u05DE\u05DC\u05E6\u05D5\u05EA \u05DC\u05DE\u05D5\u05E6\u05E8\u05D9\u05DD \u05D9\u05D5\u05EA\u05E8 \u05EA\u05D5\u05D1\u05D9\u05DD \u05D0\u05D1\u05D5\u05E8\u05D9");
-		btnNewButton_3_2.addActionListener(new ActionListener() {
+		JButton reco_Button = new JButton("");
+		reco_Button.setToolTipText("\u05D0\u05DE\u05DC\u05E6\u05D5\u05EA \u05DC\u05DE\u05D5\u05E6\u05E8\u05D9\u05DD \u05D9\u05D5\u05EA\u05E8 \u05EA\u05D5\u05D1\u05D9\u05DD \u05D0\u05D1\u05D5\u05E8\u05D9");
+		reco_Button.addActionListener(new ActionListener() {
 			public void actionPerformed(ActionEvent e) {
 				Private_User_page.setVisible(false);
+				/*
+				JLabel lblNewLabel_65 = new JLabel(ads.Advertise(eat_s.Get_Status_cal()));
+				lblNewLabel_65.setEnabled(true);
+				lblNewLabel_65.setFont(new Font("Aharoni", Font.PLAIN, 20));
+				lblNewLabel_65.setHorizontalAlignment(SwingConstants.CENTER);
+				lblNewLabel_65.setBounds(10, 11, 794, 188);
+				recommend_food_page.add(lblNewLabel_65);
+				*/
+				JEditorPane dtrpnOlegRudoy = new JEditorPane();
+				dtrpnOlegRudoy.setFont(new Font("TimesRoman", Font.PLAIN, 20));
+				dtrpnOlegRudoy.setText(ads.Advertise(eat_s.Get_Status_cal()));
+				dtrpnOlegRudoy.setBounds(10, 11, 810, 90);
+				dtrpnOlegRudoy.setBackground(SystemColor.menu);
+				recommend_food_page.add(dtrpnOlegRudoy);
+				
 				recommend_food_page.setVisible(true);
 			}
 		});
-		btnNewButton_3_2.setBounds(120, 235, 100, 100);
+		reco_Button.setBounds(120, 235, 100, 100);
 		Image rec = new ImageIcon(this.getClass().getResource("/recommend_food_1.png")).getImage();
-		btnNewButton_3_2.setIcon(new ImageIcon(rec));	
-		btnNewButton_3_2.setBackground(new Color(255, 255, 255));
-		Private_User_page.add(btnNewButton_3_2);
+		reco_Button.setIcon(new ImageIcon(rec));	
+		reco_Button.setBackground(new Color(255, 255, 255));
+		Private_User_page.add(reco_Button);
 		
 		JLabel lblNewLabel_38 = new JLabel("\u05E4\u05D7\u05DE\u05D9\u05DE\u05D5\u05EA:"+0);
 		lblNewLabel_38.setForeground(Color.WHITE);
@@ -4635,9 +4656,9 @@ dry_food_page.add(lblNewLabel_57);
 		btnNewButton_8.setBounds(747, 482, 89, 23);
 		recommend_food_page.add(btnNewButton_8);
 		
-		JLabel lblNewLabel_63 = new JLabel("");
-		lblNewLabel_63.setBounds(36, 24, 46, 14);
-		recommend_food_page.add(lblNewLabel_63);
+		
+		
+		
 		
 	
 		JButton data_Button_4 = new JButton("");
@@ -4686,35 +4707,41 @@ dry_food_page.add(lblNewLabel_57);
 				Private_User_page.setVisible(true);
 				
 				if(eat_s.Get_Status_cal()) {
-				lblNewLabel_9.setText( "\u05E7\u05DC\u05D5\u05E8\u05D9\u05D5\u05EA: " +Math.floor(eat_s.stats[0]*100)/100 );
-				lblNewLabel_9.setForeground(Color.RED);
-				}else {lblNewLabel_9.setText( "\u05E7\u05DC\u05D5\u05E8\u05D9\u05D5\u05EA: " +Math.floor(eat_s.stats[0]*100)/100 );}
-				
+					lblNewLabel_9.setText( "\u05E7\u05DC\u05D5\u05E8\u05D9\u05D5\u05EA: " +Math.floor(eat_s.stats[0]*100)/100 );
+					lblNewLabel_9.setForeground(Color.RED);
+					}else {lblNewLabel_9.setText( "\u05E7\u05DC\u05D5\u05E8\u05D9\u05D5\u05EA: " +Math.floor(eat_s.stats[0]*100)/100 );
+					lblNewLabel_9.setForeground(Color.WHITE);}
+					
 				if(eat_s.Get_Status_sod()) {
-				lblNewLabel_20.setText("\u05E0\u05EA\u05E8\u05D0\u05DF: "+Math.floor(eat_s.stats[3]*100)/100);
-				lblNewLabel_20.setForeground(Color.RED);
-				}else {lblNewLabel_20.setText("\u05E0\u05EA\u05E8\u05D0\u05DF: "+Math.floor(eat_s.stats[3]*100)/100);}
-				
+					lblNewLabel_20.setText("\u05E0\u05EA\u05E8\u05D0\u05DF: "+Math.floor(eat_s.stats[3]*100)/100);
+					lblNewLabel_20.setForeground(Color.RED);
+					}else {lblNewLabel_20.setText("\u05E0\u05EA\u05E8\u05D0\u05DF: "+Math.floor(eat_s.stats[3]*100)/100);
+					lblNewLabel_20.setForeground(Color.WHITE);}
+					
 				if(eat_s.Get_Status_prot()) {
-				lblNewLabel_20_1.setText("\u05D7\u05DC\u05D1\u05D5\u05E0\u05D9\u05DD: "+Math.floor(eat_s.stats[1]*100)/100);
-				lblNewLabel_20_1.setForeground(Color.RED);
-				}else {lblNewLabel_20_1.setText("\u05D7\u05DC\u05D1\u05D5\u05E0\u05D9\u05DD: "+Math.floor(eat_s.stats[1]*100)/100);}
-				
+					lblNewLabel_20_1.setText("\u05D7\u05DC\u05D1\u05D5\u05E0\u05D9\u05DD: "+Math.floor(eat_s.stats[1]*100)/100);
+					lblNewLabel_20_1.setForeground(Color.RED);
+					}else {lblNewLabel_20_1.setText("\u05D7\u05DC\u05D1\u05D5\u05E0\u05D9\u05DD: "+Math.floor(eat_s.stats[1]*100)/100);
+					lblNewLabel_20_1.setForeground(Color.WHITE);}
+					
 				if(eat_s.Get_Status_fat()) {
-				lblNewLabel_20_2.setText("\u05E9\u05D5\u05DE\u05E0\u05D9\u05DD: "+Math.floor(eat_s.stats[4]*100)/100);
-				lblNewLabel_20_2.setForeground(Color.RED);
-				}else {lblNewLabel_20_2.setText("\u05E9\u05D5\u05DE\u05E0\u05D9\u05DD: "+Math.floor(eat_s.stats[4]*100)/100);}
-				
+					lblNewLabel_20_2.setText("\u05E9\u05D5\u05DE\u05E0\u05D9\u05DD: "+Math.floor(eat_s.stats[4]*100)/100);
+					lblNewLabel_20_2.setForeground(Color.RED);
+					}else {lblNewLabel_20_2.setText("\u05E9\u05D5\u05DE\u05E0\u05D9\u05DD: "+Math.floor(eat_s.stats[4]*100)/100);
+					lblNewLabel_20_2.setForeground(Color.WHITE);}
+					
 				if(eat_s.Get_Status_co()) {
-				lblNewLabel_20_3.setText("\u05E7\u05D5\u05DC\u05E1\u05D8\u05E8\u05D5\u05DC: "+Math.floor(eat_s.stats[2]*100)/100);
-				lblNewLabel_20_3.setForeground(Color.RED);
-				}else {lblNewLabel_20_3.setText("\u05E7\u05D5\u05DC\u05E1\u05D8\u05E8\u05D5\u05DC: "+Math.floor(eat_s.stats[2]*100)/100);}
-				
+					lblNewLabel_20_3.setText("\u05E7\u05D5\u05DC\u05E1\u05D8\u05E8\u05D5\u05DC: "+Math.floor(eat_s.stats[2]*100)/100);
+					lblNewLabel_20_3.setForeground(Color.RED);
+					}else {lblNewLabel_20_3.setText("\u05E7\u05D5\u05DC\u05E1\u05D8\u05E8\u05D5\u05DC: "+Math.floor(eat_s.stats[2]*100)/100);
+					lblNewLabel_20_3.setForeground(Color.WHITE);}
+					
 				if(eat_s.Get_Status_pah()) {
-				lblNewLabel_38.setText("\u05E4\u05D7\u05DE\u05D9\u05DE\u05D5\u05EA: "+Math.floor(eat_s.stats[9]*100)/100);
-				lblNewLabel_38.setForeground(Color.RED);
-				}else {lblNewLabel_38.setText("\u05E4\u05D7\u05DE\u05D9\u05DE\u05D5\u05EA: "+Math.floor(eat_s.stats[9]*100)/100);}
-				
+					lblNewLabel_38.setText("\u05E4\u05D7\u05DE\u05D9\u05DE\u05D5\u05EA: "+Math.floor(eat_s.stats[9]*100)/100);
+					lblNewLabel_38.setForeground(Color.RED);
+					}else {lblNewLabel_38.setText("\u05E4\u05D7\u05DE\u05D9\u05DE\u05D5\u05EA: "+Math.floor(eat_s.stats[9]*100)/100);
+					lblNewLabel_38.setForeground(Color.WHITE);}
+					
 				sport_activity_page.setVisible(false);
 			}
 		});
@@ -4760,32 +4787,38 @@ dry_food_page.add(lblNewLabel_57);
 				if(eat_s.Get_Status_cal()) {
 				lblNewLabel_9.setText( "\u05E7\u05DC\u05D5\u05E8\u05D9\u05D5\u05EA: " +Math.floor(eat_s.stats[0]*100)/100 );
 				lblNewLabel_9.setForeground(Color.RED);
-				}else {lblNewLabel_9.setText( "\u05E7\u05DC\u05D5\u05E8\u05D9\u05D5\u05EA: " +Math.floor(eat_s.stats[0]*100)/100 );}
+				}else {lblNewLabel_9.setText( "\u05E7\u05DC\u05D5\u05E8\u05D9\u05D5\u05EA: " +Math.floor(eat_s.stats[0]*100)/100 );
+				lblNewLabel_9.setForeground(Color.WHITE);}
 				
 				if(eat_s.Get_Status_sod()) {
 				lblNewLabel_20.setText("\u05E0\u05EA\u05E8\u05D0\u05DF: "+Math.floor(eat_s.stats[3]*100)/100);
 				lblNewLabel_20.setForeground(Color.RED);
-				}else {lblNewLabel_20.setText("\u05E0\u05EA\u05E8\u05D0\u05DF: "+Math.floor(eat_s.stats[3]*100)/100);}
+				}else {lblNewLabel_20.setText("\u05E0\u05EA\u05E8\u05D0\u05DF: "+Math.floor(eat_s.stats[3]*100)/100);
+				lblNewLabel_20.setForeground(Color.WHITE);}
 				
 				if(eat_s.Get_Status_prot()) {
 				lblNewLabel_20_1.setText("\u05D7\u05DC\u05D1\u05D5\u05E0\u05D9\u05DD: "+Math.floor(eat_s.stats[1]*100)/100);
 				lblNewLabel_20_1.setForeground(Color.RED);
-				}else {lblNewLabel_20_1.setText("\u05D7\u05DC\u05D1\u05D5\u05E0\u05D9\u05DD: "+Math.floor(eat_s.stats[1]*100)/100);}
+				}else {lblNewLabel_20_1.setText("\u05D7\u05DC\u05D1\u05D5\u05E0\u05D9\u05DD: "+Math.floor(eat_s.stats[1]*100)/100);
+				lblNewLabel_20_1.setForeground(Color.WHITE);}
 				
 				if(eat_s.Get_Status_fat()) {
 				lblNewLabel_20_2.setText("\u05E9\u05D5\u05DE\u05E0\u05D9\u05DD: "+Math.floor(eat_s.stats[4]*100)/100);
 				lblNewLabel_20_2.setForeground(Color.RED);
-				}else {lblNewLabel_20_2.setText("\u05E9\u05D5\u05DE\u05E0\u05D9\u05DD: "+Math.floor(eat_s.stats[4]*100)/100);}
+				}else {lblNewLabel_20_2.setText("\u05E9\u05D5\u05DE\u05E0\u05D9\u05DD: "+Math.floor(eat_s.stats[4]*100)/100);
+				lblNewLabel_20_2.setForeground(Color.WHITE);}
 				
 				if(eat_s.Get_Status_co()) {
 				lblNewLabel_20_3.setText("\u05E7\u05D5\u05DC\u05E1\u05D8\u05E8\u05D5\u05DC: "+Math.floor(eat_s.stats[2]*100)/100);
 				lblNewLabel_20_3.setForeground(Color.RED);
-				}else {lblNewLabel_20_3.setText("\u05E7\u05D5\u05DC\u05E1\u05D8\u05E8\u05D5\u05DC: "+Math.floor(eat_s.stats[2]*100)/100);}
+				}else {lblNewLabel_20_3.setText("\u05E7\u05D5\u05DC\u05E1\u05D8\u05E8\u05D5\u05DC: "+Math.floor(eat_s.stats[2]*100)/100);
+				lblNewLabel_20_3.setForeground(Color.WHITE);}
 				
 				if(eat_s.Get_Status_pah()) {
 				lblNewLabel_38.setText("\u05E4\u05D7\u05DE\u05D9\u05DE\u05D5\u05EA: "+Math.floor(eat_s.stats[9]*100)/100);
 				lblNewLabel_38.setForeground(Color.RED);
-				}else {lblNewLabel_38.setText("\u05E4\u05D7\u05DE\u05D9\u05DE\u05D5\u05EA: "+Math.floor(eat_s.stats[9]*100)/100);}
+				}else {lblNewLabel_38.setText("\u05E4\u05D7\u05DE\u05D9\u05DE\u05D5\u05EA: "+Math.floor(eat_s.stats[9]*100)/100);
+				lblNewLabel_38.setForeground(Color.WHITE);}
 				
 				Private_User_page.setVisible(true);
 			}
@@ -5408,6 +5441,12 @@ dry_food_page.add(lblNewLabel_57);
 		);
 		btnNewButton_44.setBounds(638, 482, 89, 23);
 		myfood_page.add(btnNewButton_44);
+		
+		JLabel lblNewLabel_64 = new JLabel("");
+		Image frig_gif = new ImageIcon(this.getClass().getResource("/frig.gif")).getImage();
+		lblNewLabel_64.setIcon (new ImageIcon(frig_gif));
+		lblNewLabel_64.setBounds(-254, 0, 755, 516);
+		myfood_page.add(lblNewLabel_64);
 		
 		
 
