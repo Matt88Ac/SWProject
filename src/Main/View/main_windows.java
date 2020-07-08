@@ -2191,6 +2191,7 @@ public class main_windows {
 		set_rdata_page.setBackground(new Color(241,240,241));
 		frame.getContentPane().add(set_rdata_page, "name_135834242867900");
 		JPanel recommend_food_page = new JPanel();
+		recommend_food_page.setBackground(new Color(62, 179, 212));
 		
 		JButton btnNewButton_4 = new JButton("\u05D7\u05D6\u05E8\u05D4");
 		btnNewButton_4.setBounds(747, 482, 89, 23);
@@ -2597,7 +2598,7 @@ public class main_windows {
 				dtrpnOlegRudoy.setFont(new Font("TimesRoman", Font.PLAIN, 20));
 				dtrpnOlegRudoy.setText(ads.Advertise(eat_s.Get_Status_cal()));
 				dtrpnOlegRudoy.setBounds(10, 11, 810, 130);
-				dtrpnOlegRudoy.setBackground(SystemColor.menu);
+				dtrpnOlegRudoy.setBackground(new Color(62, 179, 212));
 				recommend_food_page.add(dtrpnOlegRudoy);
 				
 				recommend_food_page.setVisible(true);
@@ -4671,6 +4672,12 @@ dry_food_page.add(lblNewLabel_57);
 		});
 		btnNewButton_8.setBounds(747, 482, 89, 23);
 		recommend_food_page.add(btnNewButton_8);
+		
+		JLabel lblNewLabel_63 = new JLabel("");
+		Image reco_gif = new ImageIcon(this.getClass().getResource("/reco.gif")).getImage();
+		lblNewLabel_63.setIcon (new ImageIcon(reco_gif));
+		lblNewLabel_63.setBounds(10, 174, 550, 331);
+		recommend_food_page.add(lblNewLabel_63);
 		
 		
 		
