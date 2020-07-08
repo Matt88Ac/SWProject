@@ -163,7 +163,9 @@ public class Eating_Stats {
 
 
 
-    public boolean Get_Status_cal(){
+    public boolean Get_Status_cal()
+    {
+        this.exeptions_check();
         return this.calories;
     }
 
