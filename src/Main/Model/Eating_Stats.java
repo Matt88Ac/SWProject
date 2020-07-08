@@ -95,6 +95,8 @@ public class Eating_Stats {
 
         }
 
+        this.exeptions_check();
+
     }
 
     public void Ate(Food food) throws IOException {
