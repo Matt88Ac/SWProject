@@ -145,54 +145,18 @@ public class Eating_Stats {
             BMR = 10*this.users_w + 6.25*this.users_h -5*this.users_age - 161;
         }
 
-        if (BMR*1.2 < this.stats[0] ||  this.stats[0] < 0){
-            this.calories = true;
-        }
-
-        else {
-            this.calories = false;
-        }
+        this.calories = BMR * 1.2 < this.stats[0] || this.stats[0] < 0;
 
 
-        if(stats[3] >= 2000){
-            this.sod = true;
-        }
+        this.sod = stats[3] >= 2000;
 
-        else{
-            this.sod = false;
-        }
+        this.prot = stats[1] >= 70;
 
-        if (stats[1] >= 70){
-            this.prot = true;
-        }
+        this.fat = stats[4] > 111;
 
-        else{
-            this.prot = false;
-        }
+        this.pah = stats[9] > 3 * this.users_w;
 
-        if (stats[4] > 111){
-            this.fat = true;
-        }
-
-        else{
-            this.fat = false;
-        }
-
-        if (stats[9] > 3*this.users_w){
-            this.pah = true;
-        }
-
-        else{
-            this.pah = false;
-        }
-
-        if( stats[2] > 150){
-            this.col = true;
-        }
-
-        else {
-            this.col = false;
-        }
+        this.col = stats[2] > 150;
     }
 
 
