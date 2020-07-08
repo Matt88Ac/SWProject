@@ -221,14 +221,50 @@ public class Eating_Stats {
         return this.col;
     }
 
-    public void Activity(int steps){
+    public void Activity(int steps) throws IOException {
         this.stats[0] -= steps*0.05;
         this.exeptions_check();
+        LocalDate t = LocalDate.now();
+        FileWriter data = new FileWriter("C:\\data\\stats_" + this.username + ".txt");
+        data.write(t.toString() + '\n' + this.stats[0]
+                + '\n' + this.stats[1]
+                + '\n' + this.stats[2]
+                + '\n' + this.stats[3]
+                + '\n' + this.stats[4]
+                + '\n' + this.stats[5]
+                + '\n' + this.stats[6]
+                + '\n' + this.stats[7]
+                + '\n' + this.stats[8]
+                + '\n' + this.stats[9]
+                + '\n' + this.stats[10]
+                + '\n' + this.stats[11]
+        );
+
+        data.close();
+
     }
 
-    public void Burned_Calories(double cals){
+    public void Burned_Calories(double cals) throws IOException {
         this.stats[0] -= cals;
         this.exeptions_check();
+
+        LocalDate t = LocalDate.now();
+        FileWriter data = new FileWriter("C:\\data\\stats_" + this.username + ".txt");
+        data.write(t.toString() + '\n' + this.stats[0]
+                + '\n' + this.stats[1]
+                + '\n' + this.stats[2]
+                + '\n' + this.stats[3]
+                + '\n' + this.stats[4]
+                + '\n' + this.stats[5]
+                + '\n' + this.stats[6]
+                + '\n' + this.stats[7]
+                + '\n' + this.stats[8]
+                + '\n' + this.stats[9]
+                + '\n' + this.stats[10]
+                + '\n' + this.stats[11]
+        );
+
+        data.close();
     }
 
 
