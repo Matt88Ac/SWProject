@@ -2449,7 +2449,7 @@ public class main_windows {
 		JRadioButton met_RadioButton = new JRadioButton("\u05D1\u05E9\u05E8 \u05D7\u05DC\u05D1 \u05D3\u05D2\u05D9\u05DD");
 		met_RadioButton.setBackground(new Color(254, 194, 22));
 		met_RadioButton.setBounds(428, 69, 109, 23);
-		JRadioButton junk_RadioButton = new JRadioButton("\u05D7\u05EA\u05D9\u05E4\u05D9\u05DD \u05D5\u05D0\u05DB\u05DC \u05DE\u05E2\u05D9\u05E8");
+		JRadioButton junk_RadioButton = new JRadioButton("\u05D7\u05D8\u05D9\u05E4\u05D9\u05DD \u05D5\u05D0\u05DB\u05DC \u05DE\u05D4\u05D9\u05E8");
 		junk_RadioButton.setBackground(new Color(254, 194, 22));
 		junk_RadioButton.setBounds(307, 69, 119, 23);
 		JRadioButton fru_RadioButton = new JRadioButton("\u05E4\u05E8\u05D5\u05EA \u05D5\u05D9\u05E8\u05E7\u05D5\u05EA");
@@ -2457,7 +2457,7 @@ public class main_windows {
 		fru_RadioButton.setBounds(218, 69, 87, 23);
 		
 		JButton add_new_food_Button = new JButton("");
-		add_new_food_Button.setToolTipText("\u05DC\u05D0\u05E9\u05D9\u05E3 \u05DE\u05D5\u05E6\u05E8\u05D9\u05DD \u05D7\u05D3\u05E9\u05D9\u05DD");
+		add_new_food_Button.setToolTipText("\u05DC\u05D4\u05E1\u05D9\u05E3 \u05DE\u05D5\u05E6\u05E8\u05D9\u05DD \u05D7\u05D3\u05E9\u05D9\u05DD");
 		add_new_food_Button.setBounds(10, 11, 100, 100);
 		
 		add_new_food_Button.setBackground(new Color(255, 255, 255));
@@ -2466,7 +2466,7 @@ public class main_windows {
 		Private_User_page.add(add_new_food_Button);
 		
 		JButton ate_food_Button = new JButton("");
-		ate_food_Button.setToolTipText("\u05EA\u05D0\u05D5\u05D3 \u05DE \u05D4\u05D0\u05D7\u05DC\u05EA\u05D9 \u05D4\u05D9\u05D5\u05DD");
+		ate_food_Button.setToolTipText("\u05EA\u05E2\u05D5\u05D3 \u05DE\u05D4 \u05D0\u05DB\u05DC\u05EA\u05D9 \u05D4\u05D9\u05D5\u05DD");
 		ate_food_Button.setBounds(10, 124, 100, 100);
 		ate_food_Button.addActionListener(new ActionListener() {
 			public void actionPerformed(ActionEvent e) {
@@ -2486,7 +2486,7 @@ public class main_windows {
 		
 		
 		JButton btnNewButton_6 = new JButton("");
-		btnNewButton_6.setToolTipText("\u05DC\u05E9\u05E0\u05D9\u05D5\u05EA \u05D0\u05EA \u05D4\u05E4\u05E8\u05D8\u05D9\u05DD \u05E9\u05DC\u05D9");
+		btnNewButton_6.setToolTipText("\u05DC\u05E9\u05E0\u05D5\u05EA \u05D0\u05EA \u05D4\u05E4\u05E8\u05D8\u05D9\u05DD \u05E9\u05DC\u05D9");
 		btnNewButton_6.addActionListener(new ActionListener() {
 			public void actionPerformed(ActionEvent e) {
 				Private_User_page.setVisible(false);
@@ -2519,7 +2519,7 @@ public class main_windows {
 		btnNewButton_6.setIcon(new ImageIcon(ima));
 		Private_User_page.add(btnNewButton_6);
 		
-		JButton btnNewButton_7 = new JButton("\u05D9\u05E6\u05D9\u05D0");
+		JButton btnNewButton_7 = new JButton("\u05D9\u05E6\u05D9\u05D0\u05D4");
 		btnNewButton_7.setBounds(722, 23, 89, 23);
 		btnNewButton_7.addActionListener(new ActionListener() {
 			public void actionPerformed(ActionEvent e) {
@@ -2540,7 +2540,7 @@ public class main_windows {
 		lblNewLabel_9.setBounds(140, 27, 110, 14);
 		Private_User_page.add(lblNewLabel_9);
 		
-		JLabel lblNewLabel_20 = new JLabel("\u05E0\u05EA\u05E8\u05D0\u05DF: "+0);
+		JLabel lblNewLabel_20 = new JLabel("\u05E0\u05EA\u05E8\u05DF: 0");
 		lblNewLabel_20.setForeground(Color.WHITE);
 		lblNewLabel_20.setHorizontalAlignment(SwingConstants.RIGHT);
 		lblNewLabel_20.setBounds(140, 53, 110, 14);
@@ -2558,7 +2558,7 @@ public class main_windows {
 		lblNewLabel_20_2.setBounds(140, 108, 110, 14);
 		Private_User_page.add(lblNewLabel_20_2);
 		
-		JLabel lblNewLabel_20_3 = new JLabel("\u05E7\u05D5\u05DC\u05E1\u05D8\u05E8\u05D5\u05DC: "+0);
+		JLabel lblNewLabel_20_3 = new JLabel("\u05DB\u05D5\u05DC\u05E1\u05D8\u05E8\u05D5\u05DC: 0");
 		lblNewLabel_20_3.setForeground(Color.WHITE);
 		lblNewLabel_20_3.setHorizontalAlignment(SwingConstants.RIGHT);
 		lblNewLabel_20_3.setBounds(140, 133, 110, 14);
@@ -2567,7 +2567,7 @@ public class main_windows {
 		
 		
 		JButton sport_Button_3_1 = new JButton("");
-		sport_Button_3_1.setToolTipText("\u05DC\u05D0\u05E9\u05D9\u05E3 \u05D0\u05EA \u05D4\u05E4\u05D9\u05DC\u05D5\u05EA \u05D4\u05D2\u05D5\u05E4\u05E0\u05D9\u05EA \u05D4\u05D9\u05D5\u05DD");
+		sport_Button_3_1.setToolTipText("\u05DC\u05D4\u05D5\u05E1\u05D9\u05E3 \u05D0\u05EA \u05D4\u05E4\u05E2\u05D9\u05DC\u05D5\u05EA \u05D4\u05D2\u05D5\u05E4\u05E0\u05D9\u05EA \u05D4\u05D9\u05D5\u05DD");
 		sport_Button_3_1.addActionListener(new ActionListener() {
 			public void actionPerformed(ActionEvent e) {
 				Private_User_page.setVisible(false);
@@ -2590,7 +2590,7 @@ public class main_windows {
 		
 		
 		JButton reco_Button = new JButton("");
-		reco_Button.setToolTipText("\u05D0\u05DE\u05DC\u05E6\u05D5\u05EA \u05DC\u05DE\u05D5\u05E6\u05E8\u05D9\u05DD \u05D9\u05D5\u05EA\u05E8 \u05EA\u05D5\u05D1\u05D9\u05DD \u05D0\u05D1\u05D5\u05E8\u05D9");
+		reco_Button.setToolTipText("\u05D4\u05DE\u05DC\u05E6\u05D5\u05EA \u05DC\u05DE\u05D5\u05E6\u05E8\u05D9\u05DD \u05D9\u05D5\u05EA\u05E8 \u05D8\u05D5\u05D1\u05D9\u05DD \u05E2\u05D1\u05D5\u05E8\u05D9");
 		reco_Button.addActionListener(new ActionListener() {
 			public void actionPerformed(ActionEvent e) {
 				Private_User_page.setVisible(false);
@@ -2725,9 +2725,9 @@ public class main_windows {
 													lblNewLabel_9.setForeground(Color.WHITE);}
 													
 													if(eat_s.Get_Status_sod()) {
-													lblNewLabel_20.setText("\u05E0\u05EA\u05E8\u05D0\u05DF: "+Math.floor(eat_s.stats[3]*100)/100);
+													lblNewLabel_20.setText("\u05E0\u05EA\u05E8\u05DF: "+Math.floor(eat_s.stats[3]*100)/100);
 													lblNewLabel_20.setForeground(Color.RED);
-													}else {lblNewLabel_20.setText("\u05E0\u05EA\u05E8\u05D0\u05DF: "+Math.floor(eat_s.stats[3]*100)/100);
+													}else {lblNewLabel_20.setText("\u05E0\u05EA\u05E8\u05DF: "+Math.floor(eat_s.stats[3]*100)/100);
 													lblNewLabel_20.setForeground(Color.WHITE);}
 													
 													if(eat_s.Get_Status_prot()) {
@@ -2743,9 +2743,9 @@ public class main_windows {
 													lblNewLabel_20_2.setForeground(Color.WHITE);}
 													
 													if(eat_s.Get_Status_co()) {
-													lblNewLabel_20_3.setText("\u05E7\u05D5\u05DC\u05E1\u05D8\u05E8\u05D5\u05DC: "+Math.floor(eat_s.stats[2]*100)/100);
+													lblNewLabel_20_3.setText("\u05DB\u05D5\u05DC\u05E1\u05D8\u05E8\u05D5\u05DC: "+Math.floor(eat_s.stats[2]*100)/100);
 													lblNewLabel_20_3.setForeground(Color.RED);
-													}else {lblNewLabel_20_3.setText("\u05E7\u05D5\u05DC\u05E1\u05D8\u05E8\u05D5\u05DC: "+Math.floor(eat_s.stats[2]*100)/100);
+													}else {lblNewLabel_20_3.setText("\u05DB\u05D5\u05DC\u05E1\u05D8\u05E8\u05D5\u05DC: "+Math.floor(eat_s.stats[2]*100)/100);
 													lblNewLabel_20_3.setForeground(Color.WHITE);}
 													
 													if(eat_s.Get_Status_pah()) {
@@ -2916,9 +2916,9 @@ public class main_windows {
 											}else {lblNewLabel_9.setText( "\u05E7\u05DC\u05D5\u05E8\u05D9\u05D5\u05EA: " +Math.floor(eat_s.stats[0]*100)/100 );}
 											
 											if(eat_s.Get_Status_sod()) {
-											lblNewLabel_20.setText("\u05E0\u05EA\u05E8\u05D0\u05DF: "+Math.floor(eat_s.stats[3]*100)/100);
+											lblNewLabel_20.setText("\u05E0\u05EA\u05E8\u05DF: "+Math.floor(eat_s.stats[3]*100)/100);
 											lblNewLabel_20.setForeground(Color.RED);
-											}else {lblNewLabel_20.setText("\u05E0\u05EA\u05E8\u05D0\u05DF: "+Math.floor(eat_s.stats[3]*100)/100);}
+											}else {lblNewLabel_20.setText("\u05E0\u05EA\u05E8\u05DF: "+Math.floor(eat_s.stats[3]*100)/100);}
 											
 											if(eat_s.Get_Status_prot()) {
 											lblNewLabel_20_1.setText("\u05D7\u05DC\u05D1\u05D5\u05E0\u05D9\u05DD: "+Math.floor(eat_s.stats[1]*100)/100);
@@ -2931,9 +2931,9 @@ public class main_windows {
 											}else {lblNewLabel_20_2.setText("\u05E9\u05D5\u05DE\u05E0\u05D9\u05DD: "+Math.floor(eat_s.stats[4]*100)/100);}
 											
 											if(eat_s.Get_Status_co()) {
-											lblNewLabel_20_3.setText("\u05E7\u05D5\u05DC\u05E1\u05D8\u05E8\u05D5\u05DC: "+Math.floor(eat_s.stats[2]*100)/100);
+											lblNewLabel_20_3.setText("\u05DB\u05D5\u05DC\u05E1\u05D8\u05E8\u05D5\u05DC: "+Math.floor(eat_s.stats[2]*100)/100);
 											lblNewLabel_20_3.setForeground(Color.RED);
-											}else {lblNewLabel_20_3.setText("\u05E7\u05D5\u05DC\u05E1\u05D8\u05E8\u05D5\u05DC: "+Math.floor(eat_s.stats[2]*100)/100);}
+											}else {lblNewLabel_20_3.setText("\u05DB\u05D5\u05DC\u05E1\u05D8\u05E8\u05D5\u05DC: "+Math.floor(eat_s.stats[2]*100)/100);}
 											
 											if(eat_s.Get_Status_pah()) {
 											lblNewLabel_38.setText("\u05E4\u05D7\u05DE\u05D9\u05DE\u05D5\u05EA: "+Math.floor(eat_s.stats[9]*100)/100);
@@ -3036,16 +3036,6 @@ public class main_windows {
 		Image runing = new ImageIcon(this.getClass().getResource("/running_on_empty_eran_mendel_dribbble_gif.gif")).getImage();
 		lblNewLabel_2.setIcon (new ImageIcon(runing));
 		start_page.add(lblNewLabel_2);
-		
-		JButton btnNewButton_9 = new JButton("New button");
-		btnNewButton_9.setBounds(10, 482, 89, 23);
-		btnNewButton_9.addActionListener(new ActionListener() {
-			public void actionPerformed(ActionEvent e) {
-				start_page.setVisible(false);
-				admin_page.setVisible(true);
-			}
-		});
-		start_page.add(btnNewButton_9);
 		
 		JButton Button_back2 = new JButton("\u05D7\u05D6\u05E8\u05D4");
 		Button_back2.addMouseListener(new MouseAdapter() {
@@ -3760,7 +3750,7 @@ public class main_windows {
 		lblNewLabel_24.setBounds(694, 102, 56, 14);
 		add_food_page.add(lblNewLabel_24);
 		
-		JLabel lblNewLabel_25 = new JLabel("\u05E0\u05EA\u05E8\u05D0\u05DF");
+		JLabel lblNewLabel_25 = new JLabel("\u05E0\u05EA\u05E8\u05DF");
 		lblNewLabel_25.setBounds(694, 195, 56, 14);
 		add_food_page.add(lblNewLabel_25);
 		
@@ -3839,7 +3829,7 @@ public class main_windows {
 		lblNewLabel_30_5.setHorizontalAlignment(SwingConstants.RIGHT);
 		add_food_page.add(lblNewLabel_30_5);
 		
-		JLabel lblNewLabel_31 = new JLabel("\u05E1\u05D5\u05E7\u05E8");
+		JLabel lblNewLabel_31 = new JLabel("\u05E1\u05D5\u05DB\u05E8");
 		lblNewLabel_31.setBounds(693, 315, 46, 14);
 		add_food_page.add(lblNewLabel_31);
 		
@@ -4693,7 +4683,7 @@ dry_food_page.add(lblNewLabel_57);
 		
 	
 		JButton data_Button_4 = new JButton("");
-		data_Button_4.setToolTipText("\u05E0\u05EA\u05D5\u05E0\u05D9\u05DD \u05E2\u05DC \u05DE\u05D4 \u05D0\u05D7\u05DC\u05EA\u05D9 ");
+		data_Button_4.setToolTipText("\u05E0\u05EA\u05D5\u05E0\u05D9\u05DD \u05E2\u05DC \u05DE\u05D4 \u05D0\u05DB\u05DC\u05EA\u05D9 ");
 		data_Button_4.setBounds(10, 235, 100, 100);
 		data_Button_4.addActionListener(new ActionListener() {
 			public void actionPerformed(ActionEvent e) {
@@ -4744,9 +4734,9 @@ dry_food_page.add(lblNewLabel_57);
 					lblNewLabel_9.setForeground(Color.WHITE);}
 					
 				if(eat_s.Get_Status_sod()) {
-					lblNewLabel_20.setText("\u05E0\u05EA\u05E8\u05D0\u05DF: "+Math.floor(eat_s.stats[3]*100)/100);
+					lblNewLabel_20.setText("\u05E0\u05EA\u05E8\u05DF: "+Math.floor(eat_s.stats[3]*100)/100);
 					lblNewLabel_20.setForeground(Color.RED);
-					}else {lblNewLabel_20.setText("\u05E0\u05EA\u05E8\u05D0\u05DF: "+Math.floor(eat_s.stats[3]*100)/100);
+					}else {lblNewLabel_20.setText("\u05E0\u05EA\u05E8\u05DF: "+Math.floor(eat_s.stats[3]*100)/100);
 					lblNewLabel_20.setForeground(Color.WHITE);}
 					
 				if(eat_s.Get_Status_prot()) {
@@ -4762,9 +4752,9 @@ dry_food_page.add(lblNewLabel_57);
 					lblNewLabel_20_2.setForeground(Color.WHITE);}
 					
 				if(eat_s.Get_Status_co()) {
-					lblNewLabel_20_3.setText("\u05E7\u05D5\u05DC\u05E1\u05D8\u05E8\u05D5\u05DC: "+Math.floor(eat_s.stats[2]*100)/100);
+					lblNewLabel_20_3.setText("\u05DB\u05D5\u05DC\u05E1\u05D8\u05E8\u05D5\u05DC: "+Math.floor(eat_s.stats[2]*100)/100);
 					lblNewLabel_20_3.setForeground(Color.RED);
-					}else {lblNewLabel_20_3.setText("\u05E7\u05D5\u05DC\u05E1\u05D8\u05E8\u05D5\u05DC: "+Math.floor(eat_s.stats[2]*100)/100);
+					}else {lblNewLabel_20_3.setText("\u05DB\u05D5\u05DC\u05E1\u05D8\u05E8\u05D5\u05DC: "+Math.floor(eat_s.stats[2]*100)/100);
 					lblNewLabel_20_3.setForeground(Color.WHITE);}
 					
 				if(eat_s.Get_Status_pah()) {
@@ -4822,9 +4812,9 @@ dry_food_page.add(lblNewLabel_57);
 				lblNewLabel_9.setForeground(Color.WHITE);}
 				
 				if(eat_s.Get_Status_sod()) {
-				lblNewLabel_20.setText("\u05E0\u05EA\u05E8\u05D0\u05DF: "+Math.floor(eat_s.stats[3]*100)/100);
+				lblNewLabel_20.setText("\u05E0\u05EA\u05E8\u05DF: "+Math.floor(eat_s.stats[3]*100)/100);
 				lblNewLabel_20.setForeground(Color.RED);
-				}else {lblNewLabel_20.setText("\u05E0\u05EA\u05E8\u05D0\u05DF: "+Math.floor(eat_s.stats[3]*100)/100);
+				}else {lblNewLabel_20.setText("\u05E0\u05EA\u05E8\u05DF: "+Math.floor(eat_s.stats[3]*100)/100);
 				lblNewLabel_20.setForeground(Color.WHITE);}
 				
 				if(eat_s.Get_Status_prot()) {
@@ -4840,9 +4830,9 @@ dry_food_page.add(lblNewLabel_57);
 				lblNewLabel_20_2.setForeground(Color.WHITE);}
 				
 				if(eat_s.Get_Status_co()) {
-				lblNewLabel_20_3.setText("\u05E7\u05D5\u05DC\u05E1\u05D8\u05E8\u05D5\u05DC: "+Math.floor(eat_s.stats[2]*100)/100);
+				lblNewLabel_20_3.setText("\u05DB\u05D5\u05DC\u05E1\u05D8\u05E8\u05D5\u05DC: "+Math.floor(eat_s.stats[2]*100)/100);
 				lblNewLabel_20_3.setForeground(Color.RED);
-				}else {lblNewLabel_20_3.setText("\u05E7\u05D5\u05DC\u05E1\u05D8\u05E8\u05D5\u05DC: "+Math.floor(eat_s.stats[2]*100)/100);
+				}else {lblNewLabel_20_3.setText("\u05DB\u05D5\u05DC\u05E1\u05D8\u05E8\u05D5\u05DC: "+Math.floor(eat_s.stats[2]*100)/100);
 				lblNewLabel_20_3.setForeground(Color.WHITE);}
 				
 				if(eat_s.Get_Status_pah()) {
@@ -4888,7 +4878,7 @@ dry_food_page.add(lblNewLabel_57);
 		btnNewButton_16.setBounds(248, 11, 120, 120);
 		ate_food_page.add(btnNewButton_16);
 		
-		JButton btnNewButton_17 = new JButton("\u05DE\u05D5\u05E6\u05E8\u05D9\u05DD\r\n\u05DE\u05DF \u05D4\u05E6\u05D5\u05DE\u05D7");
+		JButton btnNewButton_17 = new JButton("\u05DE\u05D5\u05E6\u05E8\u05D9\u05DD \r\n\u05DE\u05DF \u05D4\u05E6\u05D5\u05DE\u05D7");
 		btnNewButton_17.addActionListener(new ActionListener() {
 			public void actionPerformed(ActionEvent e) {
 				ate_food_page.setVisible(false);
@@ -5071,7 +5061,7 @@ dry_food_page.add(lblNewLabel_57);
 		bis_met_RadioButton.setBounds(428, 60, 109, 23);
 		bis_add_food_page.add(bis_met_RadioButton);
 		
-		JRadioButton bis_junk_RadioButton = new JRadioButton("\u05D7\u05EA\u05D9\u05E4\u05D9\u05DD \u05D5\u05D0\u05DB\u05DC \u05DE\u05E2\u05D9\u05E8");
+		JRadioButton bis_junk_RadioButton = new JRadioButton("\u05D7\u05D8\u05D9\u05E4\u05D9\u05DD \u05D5\u05D0\u05DB\u05DC \u05DE\u05D4\u05D9\u05E8");
 		bis_junk_RadioButton.setBackground(SystemColor.menu);
 		bis_junk_RadioButton.setBounds(307, 60, 119, 23);
 		bis_add_food_page.add(bis_junk_RadioButton);
@@ -5120,7 +5110,7 @@ dry_food_page.add(lblNewLabel_57);
 		label_25.setBounds(694, 155, 56, 14);
 		bis_add_food_page.add(label_25);
 		
-		JLabel label_26 = new JLabel("\u05E0\u05EA\u05E8\u05D0\u05DF");
+		JLabel label_26 = new JLabel("\u05E0\u05EA\u05E8\u05DF");
 		label_26.setBounds(694, 186, 56, 14);
 		bis_add_food_page.add(label_26);
 		
@@ -5171,7 +5161,7 @@ dry_food_page.add(lblNewLabel_57);
 		bis_spinner_5_1.setBounds(638, 303, 46, 20);
 		bis_add_food_page.add(bis_spinner_5_1);
 		
-		JLabel label_34 = new JLabel("\u05E1\u05D5\u05E7\u05E8");
+		JLabel label_34 = new JLabel("\u05E1\u05D5\u05DB\u05E8");
 		label_34.setBounds(693, 306, 46, 14);
 		bis_add_food_page.add(label_34);
 		
@@ -5414,7 +5404,7 @@ dry_food_page.add(lblNewLabel_57);
 		comboBox.setEditable(true);
 		comboBox.setToolTipText("...");
 		
-		comboBox.setBounds(474, 11, 318, 22);
+		comboBox.setBounds(427, 11, 318, 22);
 		myfood_page.add(comboBox);
 		
 		JButton btnNewButton_44 = new JButton("\u05D1\u05D7\u05E8");
@@ -5478,6 +5468,11 @@ dry_food_page.add(lblNewLabel_57);
 		lblNewLabel_64.setIcon (new ImageIcon(frig_gif));
 		lblNewLabel_64.setBounds(-254, 0, 755, 516);
 		myfood_page.add(lblNewLabel_64);
+		
+		JLabel lblNewLabel_65 = new JLabel("\u05D4\u05D0\u05DB\u05DC \u05E9\u05DC\u05D9:");
+		lblNewLabel_65.setFont(new Font("Tahoma", Font.BOLD, 14));
+		lblNewLabel_65.setBounds(757, 11, 79, 22);
+		myfood_page.add(lblNewLabel_65);
 		
 		
 
