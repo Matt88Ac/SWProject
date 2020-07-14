@@ -3000,13 +3000,13 @@ public class main_windows {
 
 				username_text_Field.setText("");
 				passwordField.setText("");
-				weight_spinner.setValue(1);
-				height_spinner.setValue(1);
+				weight_spinner.setValue(30);
+				height_spinner.setValue(100);
 				user_name_text_Field.setText("");
 				user_lastname_text_Field.setText("");
 				country_text_Field.setText("");
 				city_text_Field.setText("");
-				age_spinner.setValue(1);
+				age_spinner.setValue(5);
 				Gender_comboBox.setSelectedIndex(0);
 				Purpose_comboBox.setSelectedIndex(0);
 			}
@@ -3018,13 +3018,13 @@ public class main_windows {
 				regist_page.setVisible(true);
 				username_text_Field.setText("");
 				passwordField.setText("");
-				weight_spinner.setValue(0);
-				height_spinner.setValue(0);
+				weight_spinner.setValue(30);
+				height_spinner.setValue(100);
 				user_name_text_Field.setText("");
 				user_lastname_text_Field.setText("");
 				country_text_Field.setText("");
 				city_text_Field.setText("");
-				age_spinner.setValue(0);
+				age_spinner.setValue(5);
 				Gender_comboBox.setSelectedIndex(0);
 				Purpose_comboBox.setSelectedIndex(0);
 			}
@@ -3181,7 +3181,7 @@ public class main_windows {
 		
 		
 		
-		weight_spinner.setModel(new SpinnerNumberModel(1.0, 0.0, 300.0, 1.0));
+		weight_spinner.setModel(new SpinnerNumberModel(30.0, 10.0, 300.0, 1.0));
 		weight_spinner.setBounds(576, 290, 151, 20);
 		regist_page.add(weight_spinner);
 		weight_spinner.addKeyListener(new KeyAdapter() {
@@ -3195,7 +3195,7 @@ public class main_windows {
 		});
 		
 		
-		height_spinner.setModel(new SpinnerNumberModel(1.0, 1.0, 300.0, 1.0));
+		height_spinner.setModel(new SpinnerNumberModel(100.0, 50.0, 300.0, 5.0));
 		height_spinner.setBounds(576, 259, 150, 20);
 		regist_page.add(height_spinner);
 		height_spinner.addKeyListener(new KeyAdapter() {
@@ -3209,7 +3209,7 @@ public class main_windows {
 		});
 		
 		
-		age_spinner.setModel(new SpinnerNumberModel(1.0, 1.0, 120.0, 1.0));
+		age_spinner.setModel(new SpinnerNumberModel(5.0, 5.0, 120.0, 1.0));
 		age_spinner.setBounds(575, 228, 151, 20);
 		regist_page.add(age_spinner);
 		age_spinner.addKeyListener(new KeyAdapter() {
